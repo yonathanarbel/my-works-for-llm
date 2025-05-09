@@ -1,0 +1,7 @@
+Okay, here's the bullet list based on the provided text:
+
+*   ## TL;DR ≤100 words
+    Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they've effectively garnered widespread support from legislators and even traditional opponents of tort reform, leading to the broad adoption of these laws.
+
+*   ## Section Summaries ≤120 words each
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that commercial interests and tort reformers have successfully promoted apology laws, which prevent apologies from being used as evidence in court. He identifies these laws as a new and powerful platform for these groups to advance their specific agendas. Professor Yonathan Arbel of the University of Alabama School of Law further writes that this strategic approach has been remarkably effective. By framing these laws using the appealing language of apologies, proponents have managed to gain support from lawmakers and, significantly, even from those who typically oppose tort reform, resulting in the widespread enactment of such legislation.
