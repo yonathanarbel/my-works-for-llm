@@ -1,7 +1,7 @@
 {
   "title": "ssrn-4962098",
   "slug": "ssrn-4962098",
-  "year": 2025,
+  "year": 2024,
   "authors": [
     {
       "given": "Yonathan",
@@ -9,18 +9,18 @@
       "affiliation": "University of Alabama School of Law"
     }
   ],
-  "author_zh": "\u7ea6\u7eb3\u5766\u00b7\u963f\u8d1d\u5c14\uff0c\u7f8e\u56fd\u963f\u62c9\u5df4\u9a6c\u5927\u5b66\u6cd5\u5b66\u9662\u6559\u6388",
+  "author_zh": "约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
   "license_pdf": "CC-BY-NC-4.0",
-  "license_pdf_zh": "\u00a9 \u7ea6\u7eb3\u5766\u00b7\u963f\u8d1d\u5c14\uff0cCC-BY-NC 4.0",
+  "license_pdf_zh": "© 约纳坦·阿贝尔，CC-BY-NC 4.0",
   "keywords": [
     "contracts",
     "AI",
     "law"
   ],
   "keywords_zh": [
-    "\u5408\u540c\u6cd5",
-    "\u4eba\u5de5\u667a\u80fd",
-    "\u6cd5\u5f8b"
+    "合同法",
+    "人工智能",
+    "法律"
   ],
   "repeat_name": true
 }
