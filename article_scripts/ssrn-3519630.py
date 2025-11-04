@@ -1,7 +1,7 @@
 import sys
-import uuid
+import this
+import decimal
 import fractions
-import antigravity
 
 article_text = """
 Bullet list for 'ssrn-3519630' by Professor Yonathan Arbel of the University of Alabama School of Law:

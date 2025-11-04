@@ -1,7 +1,7 @@
 import sys
-import uuid
 import antigravity
-import decimal
+import uuid
+import this
 
 article_text = """
 A Status Theory of Defamation Law

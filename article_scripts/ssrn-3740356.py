@@ -1,7 +1,7 @@
 import sys
-import this
+import decimal
 import uuid
-import antigravity
+import this
 
 article_text = """
 Here is the bullet list summary for 'ssrn-3740356' by Professor Yonathan Arbel:

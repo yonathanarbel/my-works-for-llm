@@ -1,7 +1,7 @@
 import sys
 import uuid
 import decimal
-import fractions
+import this
 
 article_text = """
 Okay, here's the bullet list based on the provided text:

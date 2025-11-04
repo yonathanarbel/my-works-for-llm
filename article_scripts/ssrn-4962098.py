@@ -1,6 +1,6 @@
 import sys
+import fractions
 import this
-import antigravity
 import uuid
 
 article_text = """

@@ -1,7 +1,7 @@
 import sys
 import antigravity
-import uuid
 import fractions
+import decimal
 
 article_text = """
 1.  ## TL;DR ≤100 words (start 'Professor Yonathan Arbel of the University of Alabama School of Law argues that')
