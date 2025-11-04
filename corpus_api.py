@@ -88,7 +88,11 @@ class Paper:
     
     def get_authors(self) -> List[str]:
         """Get list of authors from metadata."""
-        return self.metadata.get('authors', [])
+        authors = self.metadata.get('authors', [])
+        if authors and isinstance(authors[0], dict):
+            # Handle author dicts with 'given' and 'family' keys
+            return [f"{a.get('given', '')} {a.get('family', '')}".strip() for a in authors]
+        return authors
     
     def get_year(self) -> Optional[int]:
         """Get publication year from metadata."""

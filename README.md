@@ -5,6 +5,8 @@ repository packages lightly processed versions of each paper alongside synthetic
 scripts so the works can be explored programmatically or ingested into downstream large
 language model (LLM) pipelines.
 
+**📚 New to this repository?** Start with the [Quick Start Guide](QUICK_START.md) | [Usage Examples](USAGE_EXAMPLES.md)
+
 ## Why this corpus matters
 
 - **Unified access to scholarship.** All of Professor Arbel's public writing in one place,

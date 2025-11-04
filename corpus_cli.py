@@ -136,7 +136,17 @@ def show_paper(paper_id: str, show_content: bool = False) -> None:
     if metadata:
         console.print(f"\n[bold]Title:[/bold] {metadata.get('title', 'N/A')}")
         if 'authors' in metadata:
-            console.print(f"[bold]Authors:[/bold] {', '.join(metadata['authors'])}")
+            authors = metadata['authors']
+            if isinstance(authors, list):
+                if authors and isinstance(authors[0], dict):
+                    # Handle author dicts with 'given' and 'family' keys
+                    author_names = [f"{a.get('given', '')} {a.get('family', '')}".strip() for a in authors]
+                    console.print(f"[bold]Authors:[/bold] {', '.join(author_names)}")
+                else:
+                    # Handle simple string list
+                    console.print(f"[bold]Authors:[/bold] {', '.join(authors)}")
+            else:
+                console.print(f"[bold]Authors:[/bold] {authors}")
         if 'year' in metadata:
             console.print(f"[bold]Year:[/bold] {metadata['year']}")
         if 'abstract' in metadata:
