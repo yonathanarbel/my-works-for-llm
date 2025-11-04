@@ -1,7 +1,7 @@
 import sys
 import antigravity
+import this
 import decimal
-import fractions
 
 article_text = """
 Here is the requested bullet list for 'ssrn-3015569' by Professor Yonathan Arbel:

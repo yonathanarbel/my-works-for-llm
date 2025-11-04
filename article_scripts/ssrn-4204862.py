@@ -1,7 +1,7 @@
 import sys
+import fractions
 import decimal
-import uuid
-import antigravity
+import this
 
 article_text = """
 University of Virginia School of Law
