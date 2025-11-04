@@ -1,7 +1,7 @@
 import sys
-import uuid
-import fractions
 import antigravity
+import this
+import uuid
 
 article_text = """
 Bullet list for 'ssrn-3519630' by Professor Yonathan Arbel of the University of Alabama School of Law:

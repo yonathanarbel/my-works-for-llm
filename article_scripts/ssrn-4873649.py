@@ -1,7 +1,7 @@
 import sys
 import fractions
-import this
 import uuid
+import this
 
 article_text = """
 Here is the requested information for 'ssrn-4873649' by Professor Yonathan Arbel:

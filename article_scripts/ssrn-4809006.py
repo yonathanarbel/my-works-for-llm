@@ -1,7 +1,7 @@
 import sys
+import this
 import antigravity
 import uuid
-import this
 
 article_text = """
 Here is the bullet list for 'ssrn-4809006' by Professor Yonathan Arbel of the University of Alabama School of Law, based on the provided excerpts:

@@ -1,7 +1,7 @@
 import sys
-import fractions
-import antigravity
 import decimal
+import antigravity
+import this
 
 article_text = """
 Here's the requested information based on the provided text:

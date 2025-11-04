@@ -1,7 +1,7 @@
 import sys
-import fractions
-import uuid
 import antigravity
+import uuid
+import this
 
 article_text = """
 Okay, here are the summaries based on the provided text:

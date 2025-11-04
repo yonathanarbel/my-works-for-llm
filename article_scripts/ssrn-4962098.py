@@ -1,7 +1,7 @@
 import sys
+import fractions
+import decimal
 import this
-import antigravity
-import uuid
 
 article_text = """
 Here is the bullet list for "The Readability of Contracts: A Big Data Analysis" (ssrn-4962098) by Professor Yonathan Arbel:

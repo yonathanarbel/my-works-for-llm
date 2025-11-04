@@ -1,7 +1,7 @@
 import sys
-import uuid
+import decimal
 import antigravity
-import fractions
+import uuid
 
 article_text = """
 Okay, here are the bullet points based on the provided text:

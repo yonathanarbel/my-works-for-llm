@@ -1,7 +1,7 @@
 import sys
+import this
 import uuid
 import decimal
-import this
 
 article_text = """
 Here is the bullet list for 'ssrn-4631897' by Professor Yonathan Arbel:

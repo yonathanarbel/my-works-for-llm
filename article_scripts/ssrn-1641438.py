@@ -1,7 +1,7 @@
 import sys
 import antigravity
-import fractions
 import decimal
+import fractions
 
 article_text = """
 ---
