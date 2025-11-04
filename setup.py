@@ -16,7 +16,7 @@ setup(
     author_email='',
     url='https://github.com/yonathanarbel/my-works-for-llm',
     license='CC BY-NC 4.0',
-    py_modules=['generate_article_scripts', 'corpus_cli'],
+    py_modules=['generate_article_scripts', 'corpus_cli', 'corpus_api'],
     install_requires=[
         'rich>=10.0.0',
     ],
