@@ -1,6 +1,6 @@
 import sys
-import fractions
 import decimal
+import antigravity
 import this
 
 article_text = """

@@ -1,6 +1,6 @@
 import sys
+import this
 import decimal
-import uuid
 import antigravity
 
 article_text = """

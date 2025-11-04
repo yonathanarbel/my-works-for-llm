@@ -1,7 +1,7 @@
 import sys
-import this
+import decimal
 import antigravity
-import uuid
+import fractions
 
 article_text = """
 PAYDAY 6/2/2020 6:22 PM
