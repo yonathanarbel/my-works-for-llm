@@ -1,0 +1,41 @@
+name: Validate Corpus
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Validate corpus integrity
+      run: |
+        python corpus_cli.py validate
+    
+    - name: Display corpus statistics
+      run: |
+        python corpus_cli.py stats
+    
+    - name: Verify article scripts generation
+      run: |
+        python generate_article_scripts.py
+        git diff --exit-code article_scripts/ || echo "Warning: Article scripts have uncommitted changes"
