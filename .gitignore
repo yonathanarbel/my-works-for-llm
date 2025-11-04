@@ -41,3 +41,13 @@ Thumbs.db
 *.tmp
 *.bak
 *.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Example outputs
+examples/corpus_export.json
+examples/corpus_stats.json
+examples/*.json
+examples/*.txt
