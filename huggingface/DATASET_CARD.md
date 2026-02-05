@@ -21,7 +21,7 @@ Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM resear
 
 Each record contains:
 - `paper_id` (e.g., `ssrn-5377475`)
-- `content_type` (`summary` or `paper`)
+- `content_type` (`summary`, `one_pager`, `study_pack`, or `paper`)
 - `language` (`en`, `zh`, or `und`)
 - `source_path` (path in the GitHub repo)
 - `metadata` (JSON metadata)
@@ -42,4 +42,3 @@ See the repository license and per-paper metadata (many papers specify `CC-BY-NC
 ## Citation
 
 See `CITATION.cff` in the GitHub repo.
-
