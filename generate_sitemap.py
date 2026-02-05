@@ -2,8 +2,9 @@
 """
 Generate sitemap.xml for the corpus.
 
-Includes summaries (English/Chinese when present) and full-text paper.txt files
-so crawlers and downstream tooling can discover canonical URLs.
+    Includes summaries (English/Chinese when present), extended study assets, and
+    full-text paper.txt files so crawlers and downstream tooling can discover
+    canonical URLs.
 """
 
 from __future__ import annotations
@@ -26,6 +27,8 @@ def _iter_urls(papers_dir: Path) -> Iterable[tuple[str, str]]:
         candidates = [
             paper_dir / "summary.md",
             paper_dir / "summary.zh.md",
+            paper_dir / "one_pager.md",
+            paper_dir / "study_pack.md",
             paper_dir / "paper.txt",
             paper_dir / "scholarlyarticle.jsonld",
         ]

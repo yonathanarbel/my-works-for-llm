@@ -63,6 +63,18 @@
     },
     {
       "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-5377475/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-5377475/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
       "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.txt",
       "encodingFormat": "text/plain",
       "name": "papers/ssrn-5377475/paper.txt"

@@ -168,6 +168,8 @@ def _build_media_objects(raw_base: str, paper_dir: Path, papers_dir: Path) -> li
     for filename, fmt in [
         ("summary.md", "text/markdown"),
         ("summary.zh.md", "text/markdown"),
+        ("one_pager.md", "text/markdown"),
+        ("study_pack.md", "text/markdown"),
         ("paper.txt", "text/plain"),
         ("paper.pdf", "application/pdf"),
     ]:
@@ -302,4 +304,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

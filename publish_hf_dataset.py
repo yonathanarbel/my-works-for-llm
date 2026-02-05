@@ -27,8 +27,8 @@ def main() -> int:
     parser.add_argument(
         "--include",
         nargs="+",
-        choices=["summary", "summary_zh", "paper"],
-        default=["summary", "summary_zh", "paper"],
+        choices=["summary", "summary_zh", "one_pager", "study_pack", "paper"],
+        default=["summary", "summary_zh", "one_pager", "study_pack", "paper"],
         help="Which content to export/upload.",
     )
     parser.add_argument("--workdir", default="dist/hf", help="Local staging directory (default: dist/hf).")
@@ -81,4 +81,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

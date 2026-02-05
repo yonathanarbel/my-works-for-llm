@@ -49,6 +49,8 @@ def _paper_urls(base_url: str, paper_id: str) -> dict[str, str]:
         "page": f"{base_url}papers/{paper_id}/",
         "raw_summary": f"{RAW_BASE}papers/{paper_id}/summary.md",
         "raw_summary_zh": f"{RAW_BASE}papers/{paper_id}/summary.zh.md",
+        "raw_one_pager": f"{RAW_BASE}papers/{paper_id}/one_pager.md",
+        "raw_study_pack": f"{RAW_BASE}papers/{paper_id}/study_pack.md",
         "raw_text": f"{RAW_BASE}papers/{paper_id}/paper.txt",
         "raw_pdf": f"{RAW_BASE}papers/{paper_id}/paper.pdf",
         "repo_tree": f"{REPO_BASE}/tree/main/papers/{paper_id}",
@@ -117,6 +119,8 @@ class PaperInfo:
     abstract: str | None
     summary_md: str | None
     summary_zh_md: str | None
+    one_pager_md: str | None
+    study_pack_md: str | None
     scholarly_jsonld: dict[str, Any] | None
     updated: datetime
 
@@ -176,11 +180,17 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     summary_zh_path = paper_dir / "summary.zh.md"
     summary_zh_md = _read_text(summary_zh_path) if summary_zh_path.exists() else None
 
+    one_pager_path = paper_dir / "one_pager.md"
+    one_pager_md = _read_text(one_pager_path) if one_pager_path.exists() else None
+
+    study_pack_path = paper_dir / "study_pack.md"
+    study_pack_md = _read_text(study_pack_path) if study_pack_path.exists() else None
+
     scholarly_path = paper_dir / "scholarlyarticle.jsonld"
     scholarly_jsonld = _read_json(scholarly_path) if scholarly_path.exists() else None
 
     # Updated timestamp: prefer summary, else paper.txt, else metadata.
-    candidates = [summary_path, paper_dir / "paper.txt", metadata_path]
+    candidates = [summary_path, one_pager_path, study_pack_path, paper_dir / "paper.txt", metadata_path]
     mtime = None
     for path in candidates:
         if path.exists():
@@ -198,6 +208,8 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
         abstract=abstract,
         summary_md=summary_md,
         summary_zh_md=summary_zh_md,
+        one_pager_md=one_pager_md,
+        study_pack_md=study_pack_md,
         scholarly_jsonld=scholarly_jsonld,
         updated=updated,
     )
@@ -327,6 +339,10 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
     links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_summary'])}\">Summary (MD)</a>")
     if paper.summary_zh_md:
         links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_summary_zh'])}\">中文摘要 (MD)</a>")
+    if paper.one_pager_md:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_one_pager'])}\">One-pager (MD)</a>")
+    if paper.study_pack_md:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_study_pack'])}\">Study pack (MD)</a>")
     links.append(f"<a class=\"btn\" href=\"{html.escape(urls['repo_tree'])}\">Files</a>")
 
     scholarly_json = ""
@@ -352,6 +368,24 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
 </section>
 """
 
+    one_pager_html = ""
+    if paper.one_pager_md:
+        one_pager_html = f"""
+<section>
+  <h2>One-page summary</h2>
+  <pre class="md">{html.escape(paper.one_pager_md.strip())}</pre>
+</section>
+"""
+
+    study_pack_html = ""
+    if paper.study_pack_md:
+        study_pack_html = f"""
+<section>
+  <h2>Study pack</h2>
+  <pre class="md">{html.escape(paper.study_pack_md.strip())}</pre>
+</section>
+"""
+
     summary_zh_html = ""
     if paper.summary_zh_md:
         summary_zh_html = f"""
@@ -368,6 +402,8 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
   <div class="actions">{''.join(links)}</div>
   {abstract_html}
   {summary_html}
+  {one_pager_html}
+  {study_pack_html}
   {summary_zh_html}
 </article>
 """

@@ -29,7 +29,7 @@ def _read_json(path: Path) -> dict[str, Any]:
 @dataclass(frozen=True)
 class ExportRecord:
     paper_id: str
-    content_type: str  # paper | summary
+    content_type: str  # paper | summary | one_pager | study_pack
     language: str  # en | zh | und
     source_path: str
     text: str
@@ -96,6 +96,34 @@ def _build_records(papers_dir: Path, include: set[str], only: set[str] | None) -
                         language="zh",
                         source_path=str(summary_zh_path.relative_to(papers_dir.parent)).replace("\\", "/"),
                         text=_read_text(summary_zh_path),
+                        metadata=metadata,
+                    )
+                )
+
+        if "one_pager" in include:
+            one_pager_path = paper_dir / "one_pager.md"
+            if one_pager_path.exists():
+                records.append(
+                    ExportRecord(
+                        paper_id=paper_id,
+                        content_type="one_pager",
+                        language="en",
+                        source_path=str(one_pager_path.relative_to(papers_dir.parent)).replace("\\", "/"),
+                        text=_read_text(one_pager_path),
+                        metadata=metadata,
+                    )
+                )
+
+        if "study_pack" in include:
+            study_pack_path = paper_dir / "study_pack.md"
+            if study_pack_path.exists():
+                records.append(
+                    ExportRecord(
+                        paper_id=paper_id,
+                        content_type="study_pack",
+                        language="en",
+                        source_path=str(study_pack_path.relative_to(papers_dir.parent)).replace("\\", "/"),
+                        text=_read_text(study_pack_path),
                         metadata=metadata,
                     )
                 )
@@ -174,8 +202,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument(
         "--include",
         nargs="+",
-        choices=["summary", "summary_zh", "paper"],
-        default=["summary", "summary_zh", "paper"],
+        choices=["summary", "summary_zh", "one_pager", "study_pack", "paper"],
+        default=["summary", "summary_zh", "one_pager", "study_pack", "paper"],
         help="Which content types to export.",
     )
     parser.add_argument(
@@ -214,4 +242,3 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
