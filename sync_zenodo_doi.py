@@ -91,11 +91,12 @@ def find_concept_doi(*, zenodo_api: str, repo_url: str) -> str | None:
         return None
 
     filtered: list[tuple[ZenodoHit, dict[str, Any]]] = []
+    needle = repo_url.rstrip("/")
     for rec in hits:
         if not isinstance(rec, dict):
             continue
         all_urls = _extract_repo_urls(rec)
-        if repo_url in all_urls:
+        if any(isinstance(u, str) and needle in u for u in all_urls):
             filtered.append((_hit_from_record(rec), rec))
 
     if not filtered:
@@ -300,4 +301,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
