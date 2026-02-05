@@ -26,7 +26,7 @@ def load_metadata(paper_id: str) -> Dict[str, Any]:
     """Load metadata.json for a specific paper if it exists."""
     metadata_path = PAPERS_DIR / paper_id / 'metadata.json'
     if metadata_path.exists():
-        return json.loads(metadata_path.read_text())
+        return json.loads(metadata_path.read_text(encoding='utf-8'))
     return {}
 
 
@@ -97,7 +97,7 @@ def search_papers(query: str, field: str = 'all') -> None:
         
         if field == 'all' or field == 'summary':
             if summary_path.exists():
-                content = summary_path.read_text().lower()
+                content = summary_path.read_text(encoding='utf-8', errors='replace').lower()
                 if query_lower in content:
                     matches.append((paper_id, 'summary', 'Match in summary'))
                     continue
@@ -161,7 +161,7 @@ def show_paper(paper_id: str, show_content: bool = False) -> None:
         if summary_path.exists():
             console.print("\n[bold]Summary:[/bold]")
             console.print("-" * 60)
-            console.print(summary_path.read_text())
+            console.print(summary_path.read_text(encoding='utf-8', errors='replace'))
 
 
 def stats() -> None:
@@ -234,16 +234,16 @@ def validate() -> None:
         metadata_path = paper_dir / 'metadata.json'
         if metadata_path.exists():
             try:
-                json.loads(metadata_path.read_text())
+                json.loads(metadata_path.read_text(encoding='utf-8'))
             except json.JSONDecodeError:
                 issues.append(f"{paper_id}: Invalid JSON in metadata.json")
     
     if issues:
         console.print(f"[yellow]Found {len(issues)} issues:[/yellow]\n")
         for issue in issues:
-            console.print(f"  • {issue}")
+            console.print(f"  - {issue}")
     else:
-        console.print("[green]✓ All validations passed![/green]")
+        console.print("[green]All validations passed![/green]")
 
 
 def main():

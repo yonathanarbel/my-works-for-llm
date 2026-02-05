@@ -50,10 +50,10 @@ def main():
 
         if text_path:
             console.print(f"[bold cyan]Processing {text_path}")
-            text = text_path.read_text()
+            text = text_path.read_text(encoding='utf-8', errors='replace')
             script_content = generate_script(text)
             script_path = OUTPUT_DIR / f"{article_dir.name}.py"
-            script_path.write_text(script_content)
+            script_path.write_text(script_content, encoding='utf-8')
             console.print(f"[green]Created {script_path}")
         else:
             console.print(f"[yellow]Skipping {article_dir} - no text found")
