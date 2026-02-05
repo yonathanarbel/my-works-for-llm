@@ -1,0 +1,26 @@
+{
+  "title": "ssrn-5377475",
+  "slug": "ssrn-5377475",
+  "year": 2026,
+  "authors": [
+    {
+      "given": "Yonathan",
+      "family": "Arbel",
+      "affiliation": "University of Alabama School of Law"
+    }
+  ],
+  "author_zh": "约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
+  "license_pdf": "CC-BY-NC-4.0",
+  "license_pdf_zh": "© 约纳坦·阿贝尔，CC-BY-NC 4.0",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "keywords_zh": [
+    "合同法",
+    "人工智能",
+    "法律"
+  ],
+  "repeat_name": true
+}
