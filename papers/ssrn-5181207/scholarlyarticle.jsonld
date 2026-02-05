@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "TAX LEVERS FOR A SAFER AI FUTURE",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-5181207"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "5181207"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5181207/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5181207"
+  ],
+  "datePublished": "2025",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that a \"capability-safety gap\" in AI development, where private firms reap rewards while society bears risks, creates a social misalignment. He proposes using tax policy to address this by re-conceptualizing R&D credits to incentivize safety research, offering consumer credits for safe AI, imposing penalties for non-compliance, and redistributing penalty revenue. This approach aims to embed safety imperatives directly into the economic architecture of AI development, aligning private profit with social welfare.",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-5181207/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-5181207/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-5181207/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-5181207/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-5181207"
+  }
+}

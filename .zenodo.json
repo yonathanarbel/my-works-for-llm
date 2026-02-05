@@ -1,0 +1,27 @@
+{
+  "title": "my-works-for-llm: Machine-readable corpus of Yonathan Arbel's scholarship",
+  "upload_type": "dataset",
+  "description": "Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research. The repository packages lightly processed versions of each paper alongside summaries and tooling for programmatic access and dataset export.",
+  "creators": [
+    {
+      "name": "Arbel, Yonathan A.",
+      "affiliation": "University of Alabama School of Law"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "keywords": [
+    "contracts",
+    "artificial intelligence",
+    "legal scholarship",
+    "empirical legal studies",
+    "consumer protection"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/yonathanarbel/my-works-for-llm",
+      "scheme": "url"
+    }
+  ]
+}
+

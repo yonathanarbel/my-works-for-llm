@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "VILLANOVA",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-2835482"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "2835482"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-2835482/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2835482"
+  ],
+  "datePublished": "2016",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they've effectively garnered widespread support from legislators and even traditional opponents of tort reform, leading to the broad adoption of these laws.",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-2835482/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-2835482/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-2835482/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-2835482/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-2835482/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-2835482/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-2835482/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-2835482/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-2835482"
+  }
+}

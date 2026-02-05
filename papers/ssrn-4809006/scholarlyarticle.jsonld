@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-4809006"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "4809006"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4809006/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4809006"
+  ],
+  "datePublished": "2024",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues for critically examining and updating legal doctrines by incorporating factors like time in contract interpretation, the profound societal and legal impacts of AI (including \"AI Lies\" in ssrn-4809006), and economic or behavioral insights into legal practice and individual rights. He challenges static views and advocates for dynamic, context-aware approaches to emerging legal challenges and established principles, from unbundling legal services to understanding copyright in the age of generative AI and the subtleties of price obfuscation and information disclosure.",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4809006/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4809006/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4809006/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4809006/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4809006/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-4809006/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4809006/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-4809006/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-4809006"
+  }
+}

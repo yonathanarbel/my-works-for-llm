@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "CONTRACT REMEDIES IN ACTION: SPECIFIC PERFORMANCE",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-1641438"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "1641438"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-1641438/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1641438"
+  ],
+  "datePublished": "2015",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "How is a right to specific performance of a contract used by parties? Despite longstanding scholarly interest in the topic, this question has been largely left unexplored. This Article presents a qualitative study of parties and attorneys involved in specific performance litigation. It investigates how parties choose between remedies, whether they negotiate after judgment for specific performance, whether specific performance is implemented, and the difficulties involved in its implementation. The findings reveal important theoretical oversights and challenges to prevailing law. In practice, many plaintiffs opt out of specific performance. This is puzzling as expectation damages are notoriously under compensatory relative to performance. A primary explanation is that it is harder to execute specific relief than a money judgment. Focusing attention on execution provides a valuable lesson: in exactly these circumstances where U.S. law grants specific performance—unique goods—it is least valuable due to a lack of clear standards by which to evaluate performance. Another explanation is lawyer’s bias: attorneys will often advise clients to sue for money damages to ensure easy collection of their own fees.",
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-1641438/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-1641438/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-1641438/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-1641438/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-1641438/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-1641438/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-1641438"
+  }
+}

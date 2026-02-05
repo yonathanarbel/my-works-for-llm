@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "\\\\jciprod01\\productn\\G\\GWN\\90-1\\GWN102.txt unknown Seq: 1 17-FEB-22 12:20",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-3740356"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "3740356"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3740356/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3740356"
+  ],
+  "datePublished": "2022",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "What does it mean to have machines that can read, explain, and evaluate contracts? Recent advances in machine learning have led to a fundamental breakthrough in machine language models, portending a profound shift in the ability of machines to process text. Such a shift has far-reaching consequences for diverse areas of law, which are predicated on, and justified by, the exis- tence of information barriers. Our object here is to provide a general frame- work for evaluating the legal and policy implications of employing language models as “smart readers”—tools that read, analyze, and assess contracts, dis- closures, and privacy policies. Synthesizing state-of-the-art developments, we identify four core capabili- ties of smart readers. Based on real-world examples produced by new ma- chine-learning models, we demonstrate that smart readers can: simplify complex legal language; personalize the contractual presentation to the user’s specific sociocultural identity; interpret the meaning of contractual terms; and benchmark and rank contracts based on their quality. Nevertheless, the implications of smart readers are more complex than initially meets the eye. Although smart readers can overcome traditional infor-",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-3740356/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-3740356/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-3740356/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-3740356/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-3740356/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-3740356/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-3740356/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-3740356/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-3740356"
+  }
+}

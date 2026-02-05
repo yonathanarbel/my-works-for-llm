@@ -27,6 +27,7 @@ def _iter_urls(papers_dir: Path) -> Iterable[tuple[str, str]]:
             paper_dir / "summary.md",
             paper_dir / "summary.zh.md",
             paper_dir / "paper.txt",
+            paper_dir / "scholarlyarticle.jsonld",
         ]
 
         for path in candidates:
@@ -74,4 +75,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

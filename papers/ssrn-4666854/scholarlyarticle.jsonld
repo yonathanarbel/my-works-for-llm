@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Systemic Regulation of Artificial Intelligence",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-4666854"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "4666854"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4666854/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666854"
+  ],
+  "datePublished": "2024",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    }
+  ],
+  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that AI presents comprehensive, society-wide risks, from current harms like bias to potential existential threats, primarily due to the critical AI alignment problem. He advocates for systemic, precautionary regulation targeting AI as a technology, not just its applications. This approach is necessary due to AI's unique characteristics, its potential for rapid, unexpected advancements, and the inadequacy of existing legal frameworks. Arbel explores domestic, litigation-based, and international governance strategies to manage these profound challenges and ensure AI develops safely and beneficially.",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "keywords": [
+    "contracts",
+    "AI",
+    "law"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4666854/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4666854/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4666854/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4666854/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4666854/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-4666854/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4666854/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-4666854/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-4666854"
+  }
+}

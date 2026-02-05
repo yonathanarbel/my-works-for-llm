@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this corpus in research, please cite it."
+title: "my-works-for-llm"
+type: dataset
+authors:
+  - family-names: "Arbel"
+    given-names: "Yonathan A."
+    affiliation: "University of Alabama School of Law"
+repository-code: "https://github.com/yonathanarbel/my-works-for-llm"
+url: "https://github.com/yonathanarbel/my-works-for-llm"
+abstract: "Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research."
+keywords:
+  - contracts
+  - artificial intelligence
+  - legal scholarship
+  - empirical legal studies
+  - consumer protection
+  - reasonable person
+license: "CC-BY-NC-4.0"
+date-released: 2026-02-05
+

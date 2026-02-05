@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yonathanarbel.github.io/my-works-for-llm/sitemap.xml
