@@ -1,14 +1,61 @@
+/*
+University of Virginia School of Law (ssrn-4204862) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(University of Virginia School of Law
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-4204862";
+static const std::string TITLE = R"MW4LLM(University of Virginia School of Law)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862)MW4LLM";
+static const int YEAR = 0;
+static const std::vector<std::string> AUTHORS = {};
+static const std::vector<std::string> KEYWORDS = {};
+
+static const std::string SUMMARY_MD = R"MW4LLM()MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM()MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# University of Virginia School of Law — one-page summary
+
+**Paper ID:** `ssrn-4204862`
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862
+
+## TL;DR
+
+False information poses a threat to individuals, groups, and society. Many people struggle to judge the veracity of the information around them, whether that information travels through newspapers, talk radio, TV, or Twitter. Concerned with the spread of misinformation and harmful falsehoods, much of the policy, popular, and scholarly conversation today revolves around proposals to expand the regulation of individuals, platforms, and the media. While more regulation may seem inevitable, it faces constitutional and political hurdles. Furthermore, regulation can have undesirable side effects and be ripe for abuse by powerful actors, public and private. This Article presents an alternative for fighting misinformation that avoids many pitfalls of regulation: truth bounties. We develop a contractual mechanism that would enable individuals, media, and others to pledge money to support the credibility of their communications. Any person could claim the bounty by presenting evidence of the falsity of the communication before a dedicated body of private arbitrators. Under the system we envision, anyone consuming information on the internet would know immediately if a given communication had a bounty attached, whether the communication had been challenged, and
+
+## Files
+
+- Full text: `papers/ssrn-4204862/paper.txt`
+- PDF: `papers/ssrn-4204862/paper.pdf`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: University of Virginia School of Law (ssrn-4204862)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862
+- Full text: `papers/ssrn-4204862/paper.txt`
+
+## Elevator pitch
+
+False information poses a threat to individuals, groups, and society. Many people struggle to judge the veracity of the information around them, whether that information travels through newspapers, talk radio, TV, or Twitter. Concerned with the spread of misinformation and harmful falsehoods, much of the policy, popular, and scholarly conversation today revolves around proposals to expand the regulation of individuals, platforms, and the media. While more regulation may seem inevitable, it faces constitutional and political hurdles. Furthermore, regulation can have undesirable side effects and be ripe for abuse by powerful actors, public and private. This Article presents an alternative for fighting misinformation that avoids many pitfalls of regulation: truth bounties. We develop a contractual mechanism that would enable individuals, media, and others to pledge money to support the credibility of their communications. Any person could claim the bounty by presenting evidence of the falsity of the communication before a dedicated body of private arbitrators. Under the system we envision, anyone consuming information on the internet would know immediately if a given communication had a bounty attached, whether the communication had been challenged, and
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(University of Virginia School of Law
 Public Law and Legal Theory Research Paper Series 2022-61
 Law and Economics Research Paper Series 2022-19
 September 2022
@@ -2535,9 +2582,33 @@ can expand to others, the right kind of virality.
 190 HASEN, supra note 4, at 26.
 191 Interestingly, Hasen does not take this approach. He advocates regulations ranging from
 funding disclosure rules to bans on targeting of election speech. HASEN, supra note 4, at 77-132.
-Electronic copy available at: https://ssrn.com/abstract=4204862)EOF";
+Electronic copy available at: https://ssrn.com/abstract=4204862)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

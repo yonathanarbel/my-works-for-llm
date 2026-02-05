@@ -1,12 +1,59 @@
-use std::collections::HashMap;
-use std::fs::File;
-use std::io::prelude::*;
-use rand::Rng;
-use serde_json::Value;
-use reqwest;
-use tokio;
+/*!
+A Status Theory of Defamation Law (ssrn-4021605) — corpus code wrapper
 
-const ARTICLE_TEXT: &str = r#"A Status Theory of Defamation Law
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
+pub const PAPER_ID: &str = "ssrn-4021605";
+pub const TITLE: &str = r#"A Status Theory of Defamation Law"#;
+pub const SSRN_URL: &str = r#"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605"#;
+pub const YEAR: i32 = 0;
+
+pub static AUTHORS: &[&str] = &[
+];
+
+pub static KEYWORDS: &[&str] = &[
+];
+
+pub const SUMMARY_MD: &str = r#""#;
+pub const SUMMARY_ZH_MD: &str = r#""#;
+pub const ONE_PAGER_MD: &str = r#"# A Status Theory of Defamation Law — one-page summary
+
+**Paper ID:** `ssrn-4021605`
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605
+
+## TL;DR
+
+Yonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.
+
+## Files
+
+- Full text: `papers/ssrn-4021605/paper.txt`
+- PDF: `papers/ssrn-4021605/paper.pdf`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+"#;
+pub const STUDY_PACK_MD: &str = r#"# Study pack: A Status Theory of Defamation Law (ssrn-4021605)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605
+- Full text: `papers/ssrn-4021605/paper.txt`
+
+## Elevator pitch
+
+Yonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+"#;
+pub const ARTICLE_TEXT: &str = r#"A Status Theory of Defamation Law
 Yonathan A. Arbel∗
 Alabama Working Paper Series, 4021605, Comments welcome!
 Defamation law occupies a privileged position in our constitutional order.
@@ -2489,6 +2536,37 @@ status, and punching-down is welfare-minimizing. Rearranging, this implies that
 𝑥𝑥 = 𝑛𝑛−1 ∎
 Electronic copy available at: https://ssrn.com/abstract=4021605"#;
 
+#[derive(Clone, Debug)]
+pub struct Paper<'a> {
+  pub paper_id: &'a str,
+  pub title: &'a str,
+  pub ssrn_url: &'a str,
+  pub year: i32,
+  pub authors: &'a [&'a str],
+  pub keywords: &'a [&'a str],
+  pub summary_md: &'a str,
+  pub summary_zh_md: &'a str,
+  pub one_pager_md: &'a str,
+  pub study_pack_md: &'a str,
+  pub article_text: &'a str,
+}
+
+pub fn as_paper() -> Paper<'static> {
+  Paper {
+    paper_id: PAPER_ID,
+    title: TITLE,
+    ssrn_url: SSRN_URL,
+    year: YEAR,
+    authors: AUTHORS,
+    keywords: KEYWORDS,
+    summary_md: SUMMARY_MD,
+    summary_zh_md: SUMMARY_ZH_MD,
+    one_pager_md: ONE_PAGER_MD,
+    study_pack_md: STUDY_PACK_MD,
+    article_text: ARTICLE_TEXT,
+  }
+}
+
 fn main() {
-    println\!("{}", ARTICLE_TEXT);
+  print!("{}", ARTICLE_TEXT);
 }

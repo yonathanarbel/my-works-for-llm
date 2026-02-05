@@ -75,6 +75,11 @@ def _paper_urls(base_url: str, paper_id: str) -> dict[str, str]:
         "raw_study_pack": f"{RAW_BASE}papers/{paper_id}/study_pack.md",
         "raw_text": f"{RAW_BASE}papers/{paper_id}/paper.txt",
         "raw_pdf": f"{RAW_BASE}papers/{paper_id}/paper.pdf",
+        "raw_py": f"{RAW_BASE}papers/{paper_id}/paper.py",
+        "raw_js": f"{RAW_BASE}papers/{paper_id}/paper.js",
+        "raw_cpp": f"{RAW_BASE}papers/{paper_id}/paper.cpp",
+        "raw_go": f"{RAW_BASE}papers/{paper_id}/paper.go",
+        "raw_rs": f"{RAW_BASE}papers/{paper_id}/paper.rs",
         "repo_tree": f"{REPO_BASE}/tree/main/papers/{paper_id}",
     }
 
@@ -143,6 +148,11 @@ class PaperInfo:
     summary_zh_md: str | None
     one_pager_md: str | None
     study_pack_md: str | None
+    has_paper_py: bool
+    has_paper_js: bool
+    has_paper_cpp: bool
+    has_paper_go: bool
+    has_paper_rs: bool
     scholarly_jsonld: dict[str, Any] | None
     updated: datetime
 
@@ -208,6 +218,12 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     study_pack_path = paper_dir / "study_pack.md"
     study_pack_md = _read_text(study_pack_path) if study_pack_path.exists() else None
 
+    has_paper_py = (paper_dir / "paper.py").exists()
+    has_paper_js = (paper_dir / "paper.js").exists()
+    has_paper_cpp = (paper_dir / "paper.cpp").exists()
+    has_paper_go = (paper_dir / "paper.go").exists()
+    has_paper_rs = (paper_dir / "paper.rs").exists()
+
     scholarly_path = paper_dir / "scholarlyarticle.jsonld"
     scholarly_jsonld = _read_json(scholarly_path) if scholarly_path.exists() else None
 
@@ -235,6 +251,11 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
         summary_zh_md=summary_zh_md,
         one_pager_md=one_pager_md,
         study_pack_md=study_pack_md,
+        has_paper_py=has_paper_py,
+        has_paper_js=has_paper_js,
+        has_paper_cpp=has_paper_cpp,
+        has_paper_go=has_paper_go,
+        has_paper_rs=has_paper_rs,
         scholarly_jsonld=scholarly_jsonld,
         updated=updated,
     )
@@ -368,6 +389,16 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
         links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_one_pager'])}\">One-pager (MD)</a>")
     if paper.study_pack_md:
         links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_study_pack'])}\">Study pack (MD)</a>")
+    if paper.has_paper_py:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_py'])}\">Python</a>")
+    if paper.has_paper_js:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_js'])}\">JavaScript</a>")
+    if paper.has_paper_cpp:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_cpp'])}\">C++</a>")
+    if paper.has_paper_go:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_go'])}\">Go</a>")
+    if paper.has_paper_rs:
+        links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_rs'])}\">Rust</a>")
     links.append(f"<a class=\"btn\" href=\"{html.escape(urls['repo_tree'])}\">Files</a>")
 
     scholarly_json = ""

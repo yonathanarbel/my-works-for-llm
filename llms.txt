@@ -1,6 +1,12 @@
 # Yonathan Arbel – Corpus
 # 约纳坦·阿贝尔 – 语料库
 
+## Notes
+- Each paper lives in `papers/<paper_id>/`.
+- Full text: `paper.txt` (plus `paper.pdf` when licensed).
+- Code wrappers: `paper.cpp`, `paper.go`, `paper.rs`, `paper.py`, `paper.js` (full text + summaries + study assets embedded as code for code-centric ingestion).
+- Study assets: `summary.md` (EN), `summary.zh.md` (ZH), and `one_pager.md` + `study_pack.md`.
+
 ## Papers
 - [ssrn-2820650](papers/ssrn-2820650/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
 - [ssrn-2820650 中文](papers/ssrn-2820650/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。

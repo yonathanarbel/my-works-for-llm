@@ -1,18 +1,64 @@
+/*
+Book Review: Civil Justice (ssrn-3272595) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 package main
 
 import (
-    "fmt"
-    "os"
-    "time"
-    "math/rand"
-    "encoding/json"
-    "net/http"
-    "log"
-    "strings"
+  "encoding/json"
+  "fmt"
+  "os"
 )
 
-const articleText = `
-Book Review: Civil Justice
+const PaperID = "ssrn-3272595"
+const Title = `Book Review: Civil Justice`
+const SSRNURL = `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3272595`
+const Year = 2018
+var Authors = []string{"Yonathan Arbel"}
+var Keywords = []string{"contracts", "AI", "law"}
+
+const SummaryMD = `Okay, here are the summaries based on the provided text:
+
+1.  ## TL;DR ≤100 words
+    Professor Yonathan Arbel of the University of Alabama School of Law argues that while Professor Croley's *Civil Justice Reconsidered* aptly describes the civil justice crisis of cost and inaccessibility, its diagnosis of under-participation by meritorious plaintiffs is not empirically proven and its reliance on win rates is misleading. Arbel contends Croley's proposed reforms, like increasing case volume, would overwhelm the system, especially concerning the neglected crisis in debt collection. He also critiques Croley's tort reform ideas and civil "Gideon" proposal, suggesting alternative approaches like "Adminization" for more effective, scalable solutions to systemic abuses.
+
+2.  ## Section Summaries ≤120 words each
+
+    **Section 1: Introduction to Croley's "Civil Justice Reconsidered"**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that Professor Croley's book, *Civil Justice Reconsidered*, compellingly argues the civil justice system is in crisis due to excessive costs, slowness, and inaccessibility, undermining its core functions. This collection of essays by leading scholars examines facets like the "vanishing trial" and pro se litigation challenges, proposing complex solutions. Arbel notes Croley's accessible book, likened to a robust camel adapted to its environment, leverages his synoptic view and practical expertise to offer a clear, comprehensive exposition for policymakers and citizens, despite civil litigation not appearing intelligently designed.
+
+    **Section 2: Croley's Core Arguments and Arbel's Initial Caveats**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that Croley first dispels the perception of a U.S. civil litigation system corrupted by rapacious plaintiffs, finding little empirical evidence of pro-plaintiff bias and deeming abuse claims overstated. Croley's second proposition is that the system's true problem is under-participation by meritorious plaintiffs deterred by costs and complexity, proposing streamlined procedures for 'more cases, less litigation'. While Arbel sees Croley's book as a trusted guide for practical reforms, he notes a caveat: its dual goals—arguing over-litigation isn't severe while under-litigation is—are not always consonant, with the under-participation point lacking direct empirical proof.
+
+    **Section 3: Critiquing Croley on Under-Participation, Win Rates, and Debt Collection**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that while Croley argues expensive litigation suggests under-participation, he fails to rigorously prove a shortfall of socially important cases. Croley's use of plaintiff win rates to imply a neutral system is problematic, as reforms to include more meritorious plaintiffs would then suggest bias by that same metric. Arbel notes win rates can be misleading, citing the Israeli criminal justice system. He criticizes the insufficient attention paid to debt collection lawsuits, the most voluminous civil cases, where alarming evidence shows a "broken system" of default judgments on scant evidence, which Croley's marginalist approach would likely overwhelm.
+
+    **Section 4: Arbel's Alternative Proposals and Further Critiques of Croley**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes about his "Adminization" proposal, where a governmental agency audits court cases and levies fines, creating cost-effective, scalable consumer protection. He observes that tort reform has shapeshifted, with strategies like apology laws acting as covert reform. While Croley's tort reform proposals are sensible, Arbel argues they don't address new frontiers like tortfeasors using strategic apologies. Finally, he suggests Croley's recommendation for a civil "Gideon" right, mandating subsidized lawyering for indigent plaintiffs, may prove counter-productive.`
+const SummaryZHMD = `好的，以下是基于您提供的英文文本翻译的正式中文摘要：
+
+1.  ## 核心摘要（≤100词）
+    阿拉巴马大学法学院的约纳坦·阿尔贝尔（Yonathan Arbel）教授认为，尽管克罗利（Croley）教授的《民事司法反思》一书恰当地描述了民事司法在成本和可及性方面的危机，但其关于有充分理由的原告参与不足的诊断缺乏实证支持，且其对胜诉率的依赖具有误导性。阿尔贝尔教授主张，克罗利教授提出的改革措施（如增加案件数量）将使整个体系不堪重负，尤其是在被忽视的债务催收危机方面。他还对克罗利教授的侵权法改革观点和民事“吉迪恩案”（Gideon）原则的提议进行了评析，并提出了如“行政化管理”（Adminization）等替代方案，以期为系统性滥用问题提供更有效、可扩展的解决方案。
+
+2.  ## 各章节摘要（每节≤120词）
+
+    **第一节：克罗利教授《民事司法反思》简介**
+    阿拉巴马大学法学院的约纳坦·阿尔贝尔教授写道，克罗利教授的《民事司法反思》一书令人信服地论证了民事司法系统因成本过高、效率低下和可及性不足而陷入危机，损害了其核心功能。这本由顶尖学者撰写的论文集探讨了诸如“审判消失现象”和当事人自行诉讼（pro se litigation）的挑战等方面，并提出了复杂的解决方案。阿尔贝尔教授指出，克罗利教授的著作通俗易懂，被喻为能适应环境的强壮骆驼，凭借其宏观视角和实践专长，为政策制定者和公民提供了清晰全面的阐述——尽管民事诉讼制度本身并非看似经过深思熟虑的设计。
+
+    **第二节：克罗利教授的核心论点与阿尔贝尔教授的初步保留意见**
+    阿拉巴马大学法学院的约纳坦·阿尔贝尔教授写道，克罗利教授首先驳斥了美国民事诉讼系统被贪婪原告腐蚀的观点，认为几乎没有实证证据表明存在有利于原告的偏见，并认为滥用诉讼的说法言过其实。克罗利教授的第二个主张是，该系统的真正问题在于有充分理由的原告因成本和复杂性望而却步，导致参与不足。他提议通过简化程序实现“更多案件，更少诉讼”。尽管阿尔贝尔教授视克罗利教授的著作为实用改革的可靠指南，但他指出一个保留意见：其双重目标——即论证过度诉讼问题并不严重，而诉讼不足问题却很突出——并非总是协调一致，且其关于参与不足的观点缺乏直接的实证支持。
+
+    **第三节：阿尔贝尔教授对克罗利教授关于参与不足、胜诉率和债务催收论点的评析**
+    阿拉巴马大学法学院的约纳坦·阿尔贝尔教授写道，尽管克罗利教授认为昂贵的诉讼费用意味着参与不足，但他未能严谨地证明具有社会重要性的案件数量确实短缺。克罗利教授使用原告胜诉率来暗示系统是中立的，这种做法存在问题，因为旨在吸纳更多有充分理由的原告的改革，若依据同一标准（胜诉率）来衡量，反而会暗示系统存在偏见。阿尔贝尔教授指出胜诉率可能具有误导性，并以以色列刑事司法系统为例。他批评克罗利教授对债务催收诉讼——数量最为庞大的民事案件类型——关注不足。在这些案件中，令人担忧的证据表明存在一个“失灵的系统”，即仅凭少量证据便作出缺席判决。克罗利教授的边际主义方法很可能会让该系统不堪重负。
+
+    **第四节：阿尔贝尔教授的替代方案及对克罗利教授的进一步评析**
+    阿拉巴马大学法学院的约纳坦·阿尔贝尔教授阐述了他的“行政化管理”（Adminization）提议，即由政府机构审计法院案件并处以罚款，从而建立具有成本效益且可扩展的消费者保护机制。他观察到侵权法改革已经“改头换面”，诸如道歉法之类的策略实际上起到了隐蔽改革的作用。尽管克罗利教授的侵权法改革提议是明智的，但阿尔贝尔教授认为它们未能解决诸如侵权行为人利用策略性道歉等新兴问题。最后，他指出克罗利教授建议的民事“吉迪恩案”权利，即强制为贫困原告提供补贴性律师服务，可能会适得其反。`
+const OnePagerMD = "# Book Review: Civil Justice — one-page summary\n\n**Paper ID:** `ssrn-3272595`\n**Year:** 2018\n**Author(s):** Yonathan Arbel\n**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3272595\n\n## TL;DR\n\nProfessor Yonathan Arbel of the University of Alabama School of Law argues that while Professor Croley's *Civil Justice Reconsidered* aptly describes the civil justice crisis of cost and inaccessibility, its diagnosis of under-participation by meritorious plaintiffs is not empirically proven and its reliance on win rates is misleading. Arbel contends Croley's proposed reforms, like increasing case volume, would overwhelm the system, especially concerning the neglected crisis in debt collection. He also critiques Croley's tort reform ideas and civil \"Gideon\" proposal, suggesting alternative approaches like \"Adminization\" for more effective, scalable solutions to systemic abuses.\n\n## Keywords\n\ncontracts; AI; law\n\n## Files\n\n- Full text: `papers/ssrn-3272595/paper.txt`\n- PDF: `papers/ssrn-3272595/paper.pdf`\n- Summary (EN): `papers/ssrn-3272595/summary.md`\n- Summary (ZH): `papers/ssrn-3272595/summary.zh.md`\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const StudyPackMD = "# Study pack: Book Review: Civil Justice (ssrn-3272595)\n\n- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3272595\n- Full text: `papers/ssrn-3272595/paper.txt`\n- Summary (EN): `papers/ssrn-3272595/summary.md`\n- Summary (ZH): `papers/ssrn-3272595/summary.zh.md`\n\n## Elevator pitch\n\nProfessor Yonathan Arbel of the University of Alabama School of Law argues that while Professor Croley's *Civil Justice Reconsidered* aptly describes the civil justice crisis of cost and inaccessibility, its diagnosis of under-participation by meritorious plaintiffs is not empirically proven and its reliance on win rates is misleading. Arbel contends Croley's proposed reforms, like increasing case volume, would overwhelm the system, especially concerning the neglected crisis in debt collection. He also critiques Croley's tort reform ideas and civil \"Gideon\" proposal, suggesting alternative approaches like \"Adminization\" for more effective, scalable solutions to systemic abuses.\n\n## Keywords / concepts\n\ncontracts; AI; law\n\n## Suggested questions (for RAG / study)\n\n- What is the paper’s main claim and what problem does it solve?\n- What method/data does it use (if any), and what are the main results?\n- What assumptions are doing the most work?\n- What are the limitations or failure modes the author flags?\n- How does this connect to the author’s other papers in this corpus?\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const ArticleText = `Book Review: Civil Justice
 Reconsidered: Toward a Less Costly,
 More Accessible Litigation System
 Yonathan Arbel 37 C.J.Q. 09 (2018)
@@ -295,6 +341,32 @@ About Living Ethically (New Haven, Connecticut: Yale University Press, 2015).
 15 See https://www.nalp.org/salarydistrib [Accessed 31 July 2018]
 Electronic copy available at: https://ssrn.com/abstract=3272595`
 
+func AsMap() map[string]any {
+  return map[string]any{
+    "paper_id": PaperID,
+    "title": Title,
+    "ssrn_url": SSRNURL,
+    "year": Year,
+    "authors": Authors,
+    "keywords": Keywords,
+    "summary_md": SummaryMD,
+    "summary_zh_md": SummaryZHMD,
+    "one_pager_md": OnePagerMD,
+    "study_pack_md": StudyPackMD,
+    "article_text": ArticleText,
+  }
+}
+
+func AsJSON() string {
+  b, err := json.MarshalIndent(AsMap(), "", "  ")
+  if err != nil { return "{}" }
+  return string(b)
+}
+
 func main() {
-    fmt.Println(articleText)
+  if len(os.Args) > 1 && os.Args[1] == "--json" {
+    fmt.Print(AsJSON())
+    return
+  }
+  fmt.Print(ArticleText)
 }

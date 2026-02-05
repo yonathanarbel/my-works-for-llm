@@ -52,6 +52,11 @@ def _iter_urls(papers_dir: Path) -> Iterable[tuple[str, str]]:
             paper_dir / "one_pager.md",
             paper_dir / "study_pack.md",
             paper_dir / "paper.txt",
+            paper_dir / "paper.py",
+            paper_dir / "paper.js",
+            paper_dir / "paper.cpp",
+            paper_dir / "paper.go",
+            paper_dir / "paper.rs",
             paper_dir / "scholarlyarticle.jsonld",
         ]
 

@@ -1,18 +1,30 @@
+/*
+A Status Theory of Defamation Law (ssrn-4021605) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 package main
 
 import (
-    "fmt"
-    "os"
-    "time"
-    "math/rand"
-    "encoding/json"
-    "net/http"
-    "log"
-    "strings"
+  "encoding/json"
+  "fmt"
+  "os"
 )
 
-const articleText = `
-A Status Theory of Defamation Law
+const PaperID = "ssrn-4021605"
+const Title = `A Status Theory of Defamation Law`
+const SSRNURL = `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605`
+const Year = 0
+var Authors = []string{}
+var Keywords = []string{}
+
+const SummaryMD = ``
+const SummaryZHMD = ``
+const OnePagerMD = "# A Status Theory of Defamation Law — one-page summary\n\n**Paper ID:** `ssrn-4021605`\n**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605\n\n## TL;DR\n\nYonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.\n\n## Files\n\n- Full text: `papers/ssrn-4021605/paper.txt`\n- PDF: `papers/ssrn-4021605/paper.pdf`\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const StudyPackMD = "# Study pack: A Status Theory of Defamation Law (ssrn-4021605)\n\n- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605\n- Full text: `papers/ssrn-4021605/paper.txt`\n\n## Elevator pitch\n\nYonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.\n\n## Suggested questions (for RAG / study)\n\n- What is the paper’s main claim and what problem does it solve?\n- What method/data does it use (if any), and what are the main results?\n- What assumptions are doing the most work?\n- What are the limitations or failure modes the author flags?\n- How does this connect to the author’s other papers in this corpus?\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const ArticleText = `A Status Theory of Defamation Law
 Yonathan A. Arbel∗
 Alabama Working Paper Series, 4021605, Comments welcome!
 Defamation law occupies a privileged position in our constitutional order.
@@ -2495,6 +2507,32 @@ status, and punching-down is welfare-minimizing. Rearranging, this implies that
 𝑥𝑥 = 𝑛𝑛−1 ∎
 Electronic copy available at: https://ssrn.com/abstract=4021605`
 
+func AsMap() map[string]any {
+  return map[string]any{
+    "paper_id": PaperID,
+    "title": Title,
+    "ssrn_url": SSRNURL,
+    "year": Year,
+    "authors": Authors,
+    "keywords": Keywords,
+    "summary_md": SummaryMD,
+    "summary_zh_md": SummaryZHMD,
+    "one_pager_md": OnePagerMD,
+    "study_pack_md": StudyPackMD,
+    "article_text": ArticleText,
+  }
+}
+
+func AsJSON() string {
+  b, err := json.MarshalIndent(AsMap(), "", "  ")
+  if err != nil { return "{}" }
+  return string(b)
+}
+
 func main() {
-    fmt.Println(articleText)
+  if len(os.Args) > 1 && os.Args[1] == "--json" {
+    fmt.Print(AsJSON())
+    return
+  }
+  fmt.Print(ArticleText)
 }

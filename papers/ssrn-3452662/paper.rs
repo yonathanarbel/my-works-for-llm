@@ -1,12 +1,97 @@
-use std::collections::HashMap;
-use std::fs::File;
-use std::io::prelude::*;
-use rand::Rng;
-use serde_json::Value;
-use reqwest;
-use tokio;
+/*!
+J,V0N0 1 (ssrn-3452662) — corpus code wrapper
 
-const ARTICLE_TEXT: &str = r#"J,V0N0 1
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
+pub const PAPER_ID: &str = "ssrn-3452662";
+pub const TITLE: &str = r#"J,V0N0 1"#;
+pub const SSRN_URL: &str = r#"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3452662"#;
+pub const YEAR: i32 = 2020;
+
+pub static AUTHORS: &[&str] = &[
+  r#"Yonathan Arbel"#,
+];
+
+pub static KEYWORDS: &[&str] = &[
+  r#"contracts"#,
+  r#"AI"#,
+  r#"law"#,
+];
+
+pub const SUMMARY_MD: &str = r#"Okay, here are the bullet points based on the provided text:
+
+*   **Professor Yonathan Arbel of the University of Alabama School of Law argues that** regulations on information exchange often neglect how audiences adapt their beliefs and actions based on the strictness of laws governing statement veracity. His research addresses this "audience gap" by employing a Bayesian game to model interactions among speakers, targets, and audiences, specifically investigating how legal strictness influences their behavior and the overall information environment.
+
+1.  ## TL;DR ≤100 words
+    Professor Yonathan Arbel of the University of Alabama School of Law argues that information regulation often overlooks how audiences adjust their beliefs and actions based on the strictness of laws governing statement veracity. His research aims to address this "audience gap" by using a Bayesian game to model interactions between speakers, targets, and audiences, particularly examining how legal strictness impacts their behavior and the resulting information landscape.
+
+2.  ## Section Summaries ≤120 words each
+    *   Professor Yonathan Arbel of the University of Alabama School of Law writes that the common approach to regulating information exchange has a significant blind spot: it often fails to account for the dynamic ways in which audiences adapt. Specifically, how audiences adjust their beliefs and subsequent actions is directly influenced by the perceived strictness of the laws that govern the truthfulness of statements. This oversight can lead to miscalibrated regulations.
+    *   Professor Yonathan Arbel of the University of Alabama School of Law writes that his research endeavors to fill this identified "audience gap" in the understanding of information regulation. To do so, he utilizes a Bayesian game framework. This model simulates the interactions between three key parties—speakers, the targets of statements, and the audiences receiving them—with a particular focus on how varying degrees of legal strictness regarding statement veracity shape the strategic behaviors of all involved."#;
+pub const SUMMARY_ZH_MD: &str = r#"好的，这是以上英文法律摘要的正式中文翻译：
+
+以下是根据所提供文本整理的要点：
+
+*   **阿拉巴马大学法学院的约纳坦·阿尔伯（Yonathan Arbel）教授认为，** 关于信息交流的规制往往忽视了受众会如何根据规制陈述真实性法律的严格程度来调整其认知和行为。他的研究通过运用贝叶斯博弈模型，对信息发布者、信息指向对象和信息受众之间的互动进行建模，旨在弥合这一“受众认知鸿沟”，并具体探究法律的严格程度如何影响各方行为及整体信息环境。
+
+1.  ## 内容概要（≤100字）
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，信息规制常忽视受众如何根据陈述真实性法律的严格程度调整其认知与行为。其研究旨在通过贝叶斯博弈模型分析信息发布者、指向对象及受众间的互动，以填补此“受众认知鸿沟”，并探究法律严格性如何影响各方行为及最终的信息格局。
+
+2.  ## 各节摘要（每节≤120字）
+    *   阿拉巴马大学法学院的约纳坦·阿尔伯教授在其研究中指出，当前信息交流规制的普遍方法存在一个显著盲点：即未能充分考虑到受众动态调整其认知与行为的方式。具体而言，受众如何调整其认知及后续行为，直接受到其所感知的、规制陈述真实性的法律严格程度的影响。这种忽视可能导致规制措施的失当。
+    *   阿拉巴马大学法学院的约纳坦·阿尔伯教授在其研究中阐述，其研究致力于填补在信息规制认知领域中已识别出的这一“受众认知鸿沟”。为此，他运用了贝叶斯博弈框架。该模型模拟了信息发布者、信息指向对象及信息受众这三方主体间的互动，并特别关注不同严格程度的陈述真实性法律如何塑造所有参与方的策略行为。"#;
+pub const ONE_PAGER_MD: &str = r#"# J,V0N0 1 — one-page summary
+
+**Paper ID:** `ssrn-3452662`
+**Year:** 2020
+**Author(s):** Yonathan Arbel
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3452662
+
+## TL;DR
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that information regulation often overlooks how audiences adjust their beliefs and actions based on the strictness of laws governing statement veracity. His research aims to address this "audience gap" by using a Bayesian game to model interactions between speakers, targets, and audiences, particularly examining how legal strictness impacts their behavior and the resulting information landscape.
+
+## Keywords
+
+contracts; AI; law
+
+## Files
+
+- Full text: `papers/ssrn-3452662/paper.txt`
+- PDF: `papers/ssrn-3452662/paper.pdf`
+- Summary (EN): `papers/ssrn-3452662/summary.md`
+- Summary (ZH): `papers/ssrn-3452662/summary.zh.md`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+"#;
+pub const STUDY_PACK_MD: &str = r#"# Study pack: J,V0N0 1 (ssrn-3452662)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3452662
+- Full text: `papers/ssrn-3452662/paper.txt`
+- Summary (EN): `papers/ssrn-3452662/summary.md`
+- Summary (ZH): `papers/ssrn-3452662/summary.zh.md`
+
+## Elevator pitch
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that information regulation often overlooks how audiences adjust their beliefs and actions based on the strictness of laws governing statement veracity. His research aims to address this "audience gap" by using a Bayesian game to model interactions between speakers, targets, and audiences, particularly examining how legal strictness impacts their behavior and the resulting information landscape.
+
+## Keywords / concepts
+
+contracts; AI; law
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+"#;
+pub const ARTICLE_TEXT: &str = r#"J,V0N0 1
 Regulating Information With Bayesian Audiences
 YonathanA.Arbel1andMuratMungan2
 1SchoolofLaw,UniversityofAlabama
@@ -1459,6 +1544,37 @@ the age of Financial Globalization, Journal of Accounting Research, 2009,
 v47(2),349-390.
 Electronic copy available at: https://ssrn.com/abstract=3452662"#;
 
+#[derive(Clone, Debug)]
+pub struct Paper<'a> {
+  pub paper_id: &'a str,
+  pub title: &'a str,
+  pub ssrn_url: &'a str,
+  pub year: i32,
+  pub authors: &'a [&'a str],
+  pub keywords: &'a [&'a str],
+  pub summary_md: &'a str,
+  pub summary_zh_md: &'a str,
+  pub one_pager_md: &'a str,
+  pub study_pack_md: &'a str,
+  pub article_text: &'a str,
+}
+
+pub fn as_paper() -> Paper<'static> {
+  Paper {
+    paper_id: PAPER_ID,
+    title: TITLE,
+    ssrn_url: SSRN_URL,
+    year: YEAR,
+    authors: AUTHORS,
+    keywords: KEYWORDS,
+    summary_md: SUMMARY_MD,
+    summary_zh_md: SUMMARY_ZH_MD,
+    one_pager_md: ONE_PAGER_MD,
+    study_pack_md: STUDY_PACK_MD,
+    article_text: ARTICLE_TEXT,
+  }
+}
+
 fn main() {
-    println\!("{}", ARTICLE_TEXT);
+  print!("{}", ARTICLE_TEXT);
 }

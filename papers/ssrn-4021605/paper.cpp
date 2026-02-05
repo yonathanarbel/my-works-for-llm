@@ -1,14 +1,61 @@
+/*
+A Status Theory of Defamation Law (ssrn-4021605) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(A Status Theory of Defamation Law
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-4021605";
+static const std::string TITLE = R"MW4LLM(A Status Theory of Defamation Law)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605)MW4LLM";
+static const int YEAR = 0;
+static const std::vector<std::string> AUTHORS = {};
+static const std::vector<std::string> KEYWORDS = {};
+
+static const std::string SUMMARY_MD = R"MW4LLM()MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM()MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# A Status Theory of Defamation Law — one-page summary
+
+**Paper ID:** `ssrn-4021605`
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605
+
+## TL;DR
+
+Yonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.
+
+## Files
+
+- Full text: `papers/ssrn-4021605/paper.txt`
+- PDF: `papers/ssrn-4021605/paper.pdf`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: A Status Theory of Defamation Law (ssrn-4021605)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4021605
+- Full text: `papers/ssrn-4021605/paper.txt`
+
+## Elevator pitch
+
+Yonathan A. Arbel∗ Alabama Working Paper Series, 4021605, Comments welcome! Defamation law occupies a privileged position in our constitutional order.
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(A Status Theory of Defamation Law
 Yonathan A. Arbel∗
 Alabama Working Paper Series, 4021605, Comments welcome!
 Defamation law occupies a privileged position in our constitutional order.
@@ -2489,9 +2536,33 @@ status, and punching-down is welfare-minimizing. Rearranging, this implies that
 ∗
 𝑛𝑛𝑠𝑠𝑡𝑡−𝑆𝑆
 𝑥𝑥 = 𝑛𝑛−1 ∎
-Electronic copy available at: https://ssrn.com/abstract=4021605)EOF";
+Electronic copy available at: https://ssrn.com/abstract=4021605)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

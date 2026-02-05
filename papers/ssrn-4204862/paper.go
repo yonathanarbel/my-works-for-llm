@@ -1,18 +1,30 @@
+/*
+University of Virginia School of Law (ssrn-4204862) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 package main
 
 import (
-    "fmt"
-    "os"
-    "time"
-    "math/rand"
-    "encoding/json"
-    "net/http"
-    "log"
-    "strings"
+  "encoding/json"
+  "fmt"
+  "os"
 )
 
-const articleText = `
-University of Virginia School of Law
+const PaperID = "ssrn-4204862"
+const Title = `University of Virginia School of Law`
+const SSRNURL = `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862`
+const Year = 0
+var Authors = []string{}
+var Keywords = []string{}
+
+const SummaryMD = ``
+const SummaryZHMD = ``
+const OnePagerMD = "# University of Virginia School of Law — one-page summary\n\n**Paper ID:** `ssrn-4204862`\n**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862\n\n## TL;DR\n\nFalse information poses a threat to individuals, groups, and society. Many people struggle to judge the veracity of the information around them, whether that information travels through newspapers, talk radio, TV, or Twitter. Concerned with the spread of misinformation and harmful falsehoods, much of the policy, popular, and scholarly conversation today revolves around proposals to expand the regulation of individuals, platforms, and the media. While more regulation may seem inevitable, it faces constitutional and political hurdles. Furthermore, regulation can have undesirable side effects and be ripe for abuse by powerful actors, public and private. This Article presents an alternative for fighting misinformation that avoids many pitfalls of regulation: truth bounties. We develop a contractual mechanism that would enable individuals, media, and others to pledge money to support the credibility of their communications. Any person could claim the bounty by presenting evidence of the falsity of the communication before a dedicated body of private arbitrators. Under the system we envision, anyone consuming information on the internet would know immediately if a given communication had a bounty attached, whether the communication had been challenged, and\n\n## Files\n\n- Full text: `papers/ssrn-4204862/paper.txt`\n- PDF: `papers/ssrn-4204862/paper.pdf`\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const StudyPackMD = "# Study pack: University of Virginia School of Law (ssrn-4204862)\n\n- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4204862\n- Full text: `papers/ssrn-4204862/paper.txt`\n\n## Elevator pitch\n\nFalse information poses a threat to individuals, groups, and society. Many people struggle to judge the veracity of the information around them, whether that information travels through newspapers, talk radio, TV, or Twitter. Concerned with the spread of misinformation and harmful falsehoods, much of the policy, popular, and scholarly conversation today revolves around proposals to expand the regulation of individuals, platforms, and the media. While more regulation may seem inevitable, it faces constitutional and political hurdles. Furthermore, regulation can have undesirable side effects and be ripe for abuse by powerful actors, public and private. This Article presents an alternative for fighting misinformation that avoids many pitfalls of regulation: truth bounties. We develop a contractual mechanism that would enable individuals, media, and others to pledge money to support the credibility of their communications. Any person could claim the bounty by presenting evidence of the falsity of the communication before a dedicated body of private arbitrators. Under the system we envision, anyone consuming information on the internet would know immediately if a given communication had a bounty attached, whether the communication had been challenged, and\n\n## Suggested questions (for RAG / study)\n\n- What is the paper’s main claim and what problem does it solve?\n- What method/data does it use (if any), and what are the main results?\n- What assumptions are doing the most work?\n- What are the limitations or failure modes the author flags?\n- How does this connect to the author’s other papers in this corpus?\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const ArticleText = `University of Virginia School of Law
 Public Law and Legal Theory Research Paper Series 2022-61
 Law and Economics Research Paper Series 2022-19
 September 2022
@@ -2541,6 +2553,32 @@ can expand to others, the right kind of virality.
 funding disclosure rules to bans on targeting of election speech. HASEN, supra note 4, at 77-132.
 Electronic copy available at: https://ssrn.com/abstract=4204862`
 
+func AsMap() map[string]any {
+  return map[string]any{
+    "paper_id": PaperID,
+    "title": Title,
+    "ssrn_url": SSRNURL,
+    "year": Year,
+    "authors": Authors,
+    "keywords": Keywords,
+    "summary_md": SummaryMD,
+    "summary_zh_md": SummaryZHMD,
+    "one_pager_md": OnePagerMD,
+    "study_pack_md": StudyPackMD,
+    "article_text": ArticleText,
+  }
+}
+
+func AsJSON() string {
+  b, err := json.MarshalIndent(AsMap(), "", "  ")
+  if err != nil { return "{}" }
+  return string(b)
+}
+
 func main() {
-    fmt.Println(articleText)
+  if len(os.Args) > 1 && os.Args[1] == "--json" {
+    fmt.Print(AsJSON())
+    return
+  }
+  fmt.Print(ArticleText)
 }

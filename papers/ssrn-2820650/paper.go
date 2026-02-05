@@ -1,25 +1,54 @@
+/*
+Shielding of Assets and Lending Contracts (ssrn-2820650) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 package main
 
 import (
-    "fmt"
-    "os"
-    "time"
-    "math/rand"
-    "encoding/json"
-    "net/http"
-    "log"
-    "strings"
+  "encoding/json"
+  "fmt"
+  "os"
 )
 
-const articleText = `Shielding of Assets and Lending Contracts
+const PaperID = "ssrn-2820650"
+const Title = `Shielding of Assets and Lending Contracts`
+const SSRNURL = `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2820650`
+const Year = 2016
+var Authors = []string{"Yonathan Arbel"}
+var Keywords = []string{"contracts", "AI", "law"}
+
+const SummaryMD = `Okay, here's the bullet list based on the provided text:
+
+*   **Professor Yonathan Arbel of the University of Alabama School of Law writes that a debtor's wealth significantly influences their decision to shield assets, as wealthier individuals would need to shield a larger volume of assets at greater cost for it to be effective against creditors. Professor Yonathan Arbel of the University of Alabama School of Law writes that his paper develops a theory of asset shielding to explain this behavior, arguing that richer debtors often find it irrational to shield, while poorer debtors pose a higher shielding risk which impacts credit markets.**
+
+1.  ## TL;DR ≤100 words
+    Professor Yonathan Arbel of the University of Alabama School of Law argues that debtor wealth dictates asset shielding decisions. His theory posits that wealthier debtors often find shielding large asset volumes too costly and thus irrational. Conversely, poorer debtors present a higher shielding risk. This dynamic, where shielding is more rational for poorer debtors, significantly influences credit markets.
+
+2.  ## Section Summaries ≤120 words each
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that a debtor's wealth is a key determinant in their choice to shield assets from creditors. He notes that for wealthier individuals, the sheer volume of assets requiring protection, and the associated costs, can make shielding an ineffective or irrational strategy. Professor Yonathan Arbel of the University of Alabama School of Law writes that his paper introduces a theory of asset shielding to elucidate these behaviors. This theory suggests that while richer debtors may forego shielding, poorer debtors are more likely to engage in it, thereby creating a higher shielding risk that has repercussions for credit markets.`
+const SummaryZHMD = `好的，这是基于您提供的英文文本翻译的正式中文摘要：
+
+*   **阿拉巴马大学法学院的约纳坦·阿尔伯（Yonathan Arbel）教授写道，债务人的财富状况显著影响其隐匿资产的决策，因为较富裕的个人若要有效对抗债权人，需以更高成本隐匿更大规模的资产。阿拉巴马大学法学院的约纳坦·阿尔伯教授在其论文中提出了一种资产隐匿理论来解释此行为，他认为，富裕债务人通常认为隐匿资产不尽合理，而贫困债务人则构成更高的资产隐匿风险，进而对信贷市场产生影响。**
+
+1.  ## 内容摘要（不超过100字）
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授认为，债务人财富状况决定其资产隐匿决策。其理论阐明，富裕债务人常因隐匿大量资产成本过高而认为此举不理性；相反，贫困债务人则构成更高的资产隐匿风险。这种贫困债务人更倾向于选择资产隐匿的动态，对信贷市场具有显著影响。
+
+2.  ## 各节摘要（每节不超过120字）
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，债务人的财富是其决定是否向债权人隐匿资产的关键因素。他提到，对较富裕的个人而言，需要保护的资产规模庞大及相关高昂成本，可能使资产隐匿成为一种无效或不理性的策略。阿拉巴马大学法学院的约纳坦·阿尔伯教授在其论文中引入了一种资产隐匿理论以阐释这些行为模式。该理论认为，富裕债务人可能放弃隐匿资产，而贫困债务人则更倾向于这样做，由此带来更高的资产隐匿风险，并对信贷市场产生深远影响。`
+const OnePagerMD = "# Shielding of Assets and Lending Contracts — one-page summary\n\n**Paper ID:** `ssrn-2820650`\n**Year:** 2016\n**Author(s):** Yonathan Arbel\n**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2820650\n\n## TL;DR\n\nProfessor Yonathan Arbel of the University of Alabama School of Law argues that debtor wealth dictates asset shielding decisions. His theory posits that wealthier debtors often find shielding large asset volumes too costly and thus irrational. Conversely, poorer debtors present a higher shielding risk. This dynamic, where shielding is more rational for poorer debtors, significantly influences credit markets.\n\n## Keywords\n\ncontracts; AI; law\n\n## Files\n\n- Full text: `papers/ssrn-2820650/paper.txt`\n- PDF: `papers/ssrn-2820650/paper.pdf`\n- Summary (EN): `papers/ssrn-2820650/summary.md`\n- Summary (ZH): `papers/ssrn-2820650/summary.zh.md`\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const StudyPackMD = "# Study pack: Shielding of Assets and Lending Contracts (ssrn-2820650)\n\n- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2820650\n- Full text: `papers/ssrn-2820650/paper.txt`\n- Summary (EN): `papers/ssrn-2820650/summary.md`\n- Summary (ZH): `papers/ssrn-2820650/summary.zh.md`\n\n## Elevator pitch\n\nProfessor Yonathan Arbel of the University of Alabama School of Law argues that debtor wealth dictates asset shielding decisions. His theory posits that wealthier debtors often find shielding large asset volumes too costly and thus irrational. Conversely, poorer debtors present a higher shielding risk. This dynamic, where shielding is more rational for poorer debtors, significantly influences credit markets.\n\n## Keywords / concepts\n\ncontracts; AI; law\n\n## Suggested questions (for RAG / study)\n\n- What is the paper’s main claim and what problem does it solve?\n- What method/data does it use (if any), and what are the main results?\n- What assumptions are doing the most work?\n- What are the limitations or failure modes the author flags?\n- How does this connect to the author’s other papers in this corpus?\n\n_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._\n"
+const ArticleText = `Shielding of Assets and Lending Contracts
 (Forthcoming, International Review of Law & Economics)
 Yonathan A. Arbel*
 ABSTRACT
-The primary means of enforcement of legal liabilities is through the seizure of debtors' assets.
+The primary means of enforcement of legal liabilities is through the seizure of debtors’ assets.
 However, debtors can shield their assets in various ways and thereby reduce the power of en-
 forcement. This paper studies the circumstances under which a debtor would choose to shield as-
 sets and the value of assets that would be shielded.
-A key idea is that borrower's wealth mutes shielding incentives. Intuitively, avoiding debts
+A key idea is that borrower’s wealth mutes shielding incentives. Intuitively, avoiding debts
 through shielding requires that enough assets will be shielded, for else the debts can be collected
 from exposed assets. A wealthier debtor would thus need to shield more assets, and at a greater
 cost, than a debtor with limited wealth. Using this basic understanding, I develop a theory of asset
@@ -30,7 +59,7 @@ policy implications.
 Electronic copy available at: https://ssrn.com/abstract=2820650
 1. INTRODUCTION
 The primary means of enforcement of civil legal liabilities, such as debt contracts, taxes, or tort
-judgments, is through the seizure of debtors' assets. However, as Section 2 discusses, debtors are
+judgments, is through the seizure of debtors’ assets. However, as Section 2 discusses, debtors are
 often in a position to circumvent asset seizure by the use of such methods as hiding cash, transfer-
 ring ownership of property to family members, and using shell corporations. After shielding,
 creditors will be dissuaded from collecting their debts and debtors may file for bankruptcy and
@@ -64,11 +93,11 @@ such that the marginal cost of shielding does not exceed the marginal benefit, u
 amount shielded after deducting shielding expenses. But this too is erroneous: It assumes the
 costs are borne by the borrower, but they are in fact taken from what is owed to the lender.
 With this in mind, the first contribution of this paper is in explaining that the choice of value to
-shield depends on debtor's wealth and the size of the debt—but not on shielding costs. More spe-
+shield depends on debtor’s wealth and the size of the debt—but not on shielding costs. More spe-
 cifically, the lowest value that a debtor will find rational to spend on shielding is given by the
 2
 Electronic copy available at: https://ssrn.com/abstract=2820650
-difference between debtor's wealth and debt.1 To illustrate the intuition underlying this result,
+difference between debtor’s wealth and debt.1 To illustrate the intuition underlying this result,
 suppose the borrower owes $10,000 and has $25,000. Spending only $12,000 on shielding, for
 example, would leave more than $10,000 exposed, so the lender would be able to collect in full
 despite shielding effort. It follows that if the borrower spends on shielding any positive amount, it
@@ -84,10 +113,10 @@ Anticipating the ex-post shielding decisions has important effects on project fi
 hand, shielding risk can lead to outright credit denial even for profitable investments. While nor-
 mally the lender can be compensated for default risk by charging a higher interest, this is not nec-
 essarily the case here. This is because charging higher interest would result in greater shielding
-incentives may thus reduce lender's payoff. This will result in credit rationing for certain profita-
+incentives may thus reduce lender’s payoff. This will result in credit rationing for certain profita-
 ble investments even in the absence of the conventional reasons of adverse selection and moral
 hazard in effort (Stiglitz and Weiss, 1981).
-On the other hand, the analysis also implies a strong limit on the incentive to shield. If borrower's
+On the other hand, the analysis also implies a strong limit on the incentive to shield. If borrower’s
 ex-post wealth is high, shielding will be too costly. And if the investment has high expected re-
 turns, the lender need not worry about default due to shielding. As a result, high yield invest-
 ments, even if risky in terms of variability of returns (e.g., start-ups), can enjoy easy access to
@@ -96,7 +125,7 @@ ment to a safer one with the same expected value. This is because the upside in 
 ment is more likely to surpass the wealth threshold.
 Given the problems asset shielding creates, both the lender and the borrower will have an incen-
 tive to limit shielding opportunities and the analysis compares two alternatives. In the one, the
-borrower "ties his hands" and commits not to shield. Such a commitment is of limited credibility,
+borrower “ties his hands” and commits not to shield. Such a commitment is of limited credibility,
 because contractual sanctions are pecuniary and so will not be effective in exactly those circum-
 stances when the borrower breaches the contract. Still, it may be possible for the borrower to limit
 future shielding by permitting the creditor to repossess assets soon after default or by placing fu-
@@ -123,9 +152,9 @@ tem could attack the problem directly—by making it more expensive to shield th
 on shielding and closing shielding loopholes—or it can do so indirectly, by requiring minimal
 asset requirements for actors engaged in potentially dangerous activities or by limiting the fines
 and judgments imposed on asset-constrained individuals. Section 5 concludes.
-There is rich work dating back to Shavell (1986) that studies the effect of insolvency on injurers'
-incentives to take care (the 'judgment proof problem'). For example, Ganuza and Gomez (2008)
-advocate the use of 'soft' liability standards for insolvent injurers. For the most part, work in this
+There is rich work dating back to Shavell (1986) that studies the effect of insolvency on injurers’
+incentives to take care (the ‘judgment proof problem’). For example, Ganuza and Gomez (2008)
+advocate the use of ‘soft’ liability standards for insolvent injurers. For the most part, work in this
 area takes wealth levels as exogenously set (Summers 1983, Dari-Mattiacci and De Geest 2002,
 Ganuza and Gomez, 2008, Dari-Mattiacci and Mangan 2008, Wickelgren 2011) although some
 important work considers the possibility that firm capitalization may be the result of strategic be-
@@ -136,7 +165,7 @@ ing, which is of relevance regardless of ex-ante capitalization.
 Other related work comes from the literature on credit. However, this scholarship too has largely
 abstracted away from shielding decisions and focused instead on the costs and choice of default
 (e.g., Leff 1970, Schwartz 1983, Gross and Souleles 2002, White 2007). In the recent contribu-
-tion of Ellingsen and Kristiansen, they allow borrowers to "divert" assets, but this is different
+tion of Ellingsen and Kristiansen, they allow borrowers to “divert” assets, but this is different
 from shielding as it is assumed to come at no cost besides the risk of enforcement (Ellingsen and
 Kristiansen 2011). In practice, however, shielding is quite costly and generally goes unpunished.4
 The part of the literature that relates most closely to asset shielding is the theory of costly state
@@ -152,7 +181,7 @@ the study of shielding behavior with incomplete contracts becomes important.
 Electronic copy available at: https://ssrn.com/abstract=2820650
 The primary contributions of this paper relative to existing literature stem from the analysis of
 optimal asset shielding decisions and the identification of the relationship between these decisions
-and borrower's wealth. The implications of this analysis on the credit market and on rich and
+and borrower’s wealth. The implications of this analysis on the credit market and on rich and
 poor borrowers are likewise new. Similarly novel are the ideas that shielding is generally an all-
 or-nothing proposition,5 that high wealth mutes the incentive to shield, and the interpretation of
 the incentive to enter into debt relief contracts.
@@ -160,7 +189,7 @@ the incentive to enter into debt relief contracts.
 The term asset shielding (or equivalently, asset protection) is used here expansively, to account
 for any action or omission by an individual that takes place after the creation of a specific debt
 6
-and that is intended to limit the lender's ability to seize assets in case of default. Thus defined,
+and that is intended to limit the lender’s ability to seize assets in case of default. Thus defined,
 some examples are the case of Charles Kallestad, a borrower who was found to be shielding as-
 sets worth hundreds of thousands of dollars through multiple transfers to an accomplice (U.S. v.
 Kallestad 51 F.3d 1044 and trial documents); O.J. Simpson and Paul Bilzerian, who moved to
@@ -180,15 +209,15 @@ This is especially true in loan agreements where the moment of realization of in
 is not precisely known in advance.
 Shielding is costly. Some costs are direct—such as setting a shelter or retaining a lawyer—but
 others are indirect—such as the opportunity cost of shielding and the cost involved in not being
-able to freely use one's assets. Whether the marginal cost of shielding increases or declines with
+able to freely use one’s assets. Whether the marginal cost of shielding increases or declines with
 the amount shielded is hard to tell a-priori, but it will clearly be positive in most cases.
 5 Ellingsen and Kristiansen (2011) reach a similar result but for a different reason.
-6 Hence, I do not consider "preparatory" asset protection that takes place before the borrower has a specific debt.
+6 Hence, I do not consider “preparatory” asset protection that takes place before the borrower has a specific debt.
 7 O.J. Simpson escaped a $33.5 million judgment while residing in a Florida mansion and receiving a $25K monthly
-pension, taking advantage of Florida's generous homestead protection laws and the federal retirement laws (Alper
+pension, taking advantage of Florida’s generous homestead protection laws and the federal retirement laws (Alper
 2007); Bilzerian defaulted on $140 million debts while residing in an 11 bedroom home in Florida taking advantage of
 similar protections (Shenon, 2001); Jimmy Jen hid over $6 million dollars in vaults, shell corporations, and in his
-wife's possession following a sham divorce (Elinson 2010);
+wife’s possession following a sham divorce (Elinson 2010);
 5
 Electronic copy available at: https://ssrn.com/abstract=2820650
 There are also two other types of costs: legality and reputation (Arbel, 2015). As a general matter,
@@ -211,7 +240,7 @@ Overall, shielding is somewhat prevalent and seemingly highly effective. While w
 good data, one indication comes from reports of the EOUST, which is the agency in charge of
 investigating bankruptcy fraud. In a random sample of 102 cases, they found that 17% of the
 12
-debtors "materially misstated" the true extent of their assets. This evidence joins other studies
+debtors “materially misstated” the true extent of their assets. This evidence joins other studies
 that find strategic behavior in bankruptcy and in judgment enforcement (Fay, Hurst and White
 2002 and Ning Zhu 2011, but see Sullivan, Westbrook and Warren 1989; Arbel, 2015), suggest-
 13
@@ -219,7 +248,7 @@ ing that some debtors use bankruptcy to protect assets. The size of the debt col
 is also indicative, as their main service is collection from reluctant debtors. This industry collects
 14
 over 50 billion dollars annually (PWC 2008, EY 2012).
-8 Creditor's right to reverse fraudulent transfers stems, mainly, from either § 9 of the UFTA or §548 of the Bankruptcy
+8 Creditor’s right to reverse fraudulent transfers stems, mainly, from either § 9 of the UFTA or §548 of the Bankruptcy
 Code. Both Westlaw and LexisNexis record only about 450 cases in 2011 that cite to § 548.
 9 In FTC v. Affordable Media, LLC 179 F. 3d 1228 (9th Cir. 1999), the debtors placed their assets in an offshore ac-
 count. When ordered by a US judge to repatriate their assets, they faxed a request to the offshore trustee who refused to
@@ -239,23 +268,23 @@ reported average charge-offs of 5.5% (credit cards) and 0.91% (residential real 
 http://www.federalreserve.gov/releases/chargeoff/chgallnsa.htm) Similarly, in total, corporations write off an average
 6
 Electronic copy available at: https://ssrn.com/abstract=2820650
-In sum, then, from the debtor's perspective, the shielding of assets is a viable strategy with low
+In sum, then, from the debtor’s perspective, the shielding of assets is a viable strategy with low
 chance of criminal sanctions, but with some cost due to limited reputational effects and some risk
 of reversal of the shielding if it is not executed carefully.
 3. MODEL AND ANALYSIS
 The asset shielding model spans four dates (see Figure 1) and involves two risk-neutral parties. At
-Date 1, one of the parties ('borrower') has a positive-expected value investment that requires a
-fixed investment of b. The borrower has no wealth,15 and seeks a loan from the other party ('lend-
-er'), in a competitive lending market with costs of capital normalized to zero. The parties negoti-
+Date 1, one of the parties (‘borrower’) has a positive-expected value investment that requires a
+fixed investment of b. The borrower has no wealth,15 and seeks a loan from the other party (‘lend-
+er’), in a competitive lending market with costs of capital normalized to zero. The parties negoti-
 ate the interest on the loan r, so that the amount due at Date 4 is b + r. 16 If the lender agrees to
 provide the loan at this price, the funds are invested.
 If the investment is made, the earnings, e, are realized at Date 2 and are taken from the probabil-
 ity distribution function f(e), and e is in [e̲, ē], with 0< e̲ <ē.
 At date 3, the borrower decides whether to repay or shield. This is given by the amount t (t≥0)
-the borrower spends on shielding, with t=0 being no-shielding. There is a shielding 'technology',
+the borrower spends on shielding, with t=0 being no-shielding. There is a shielding ‘technology’,
 described by the function s(.), which gives the amount shielded by spending t. It is assumed that s'
 is strictly increasing, continuous, and with s'<1.17
-The borrower's choice at Date 3 of the amount to shield implicitly defines the amount he leaves
+The borrower’s choice at Date 3 of the amount to shield implicitly defines the amount he leaves
 exposed. At Date 4 the lender collects and by the recourse principle, the lender may collect from
 all exposed assets up to the amount owed, i.e., Min(e-t, b+r). After that, the debt is discharged in
 bankruptcy or the creditor gives up on collecting.
@@ -267,7 +296,7 @@ stood as a rough estimate on the upper limit of strategic debt avoidance.
 stract from criminal sanctions, as Section 2 suggests they are rare; civil sanctions that reverse shielding are more com-
 mon and they can be conceptualized as part of the expected cost of shielding.
 17 This assumption captures the idea that there is always some cost to shielding, such as the opportunity cost involved
-in losing interest on one's savings, for otherwise the assets would be shielded in the baseline and the inquiry would be
+in losing interest on one’s savings, for otherwise the assets would be shielded in the baseline and the inquiry would be
 trivial. I further assume here that there are no fixed shielding costs. I relax this assumption below.
 7
 Electronic copy available at: https://ssrn.com/abstract=2820650
@@ -280,13 +309,13 @@ Timing, Information, and Order of Analysis: the game is solved by backwards indu
 assumed that all information is common knowledge, although shielding may not be verifiable to a
 third party. The analysis starts with the shielding and collection stage (Dates 3 & 4), when the
 amount of earning e and the interest r are fixed. The analysis then goes backwards to analyze the
-parties' decisions in the first stage (Date 1) when the investment contract, and more specifically r,
+parties’ decisions in the first stage (Date 1) when the investment contract, and more specifically r,
 is negotiated. The results of the analysis will be compared to both the social optimum and to a
-situation where shielding is limited and costly—either by law, technology, or borrower's com-
+situation where shielding is limited and costly—either by law, technology, or borrower’s com-
 mitment.
 3.1. Stage 2 Analysis: Shielding
-At stage 2, the borrower's objective is to maximize profits by choosing t, the amount to spend on
-shielding. This makes borrower's payoff:
+At stage 2, the borrower’s objective is to maximize profits by choosing t, the amount to spend on
+shielding. This makes borrower’s payoff:
 𝑠(𝑡)+max(0, 𝑒−𝑡−(𝑏+𝑟)) (1)
 The first term here is the value to the borrower of shielded assets. By the recourse principle, all
 exposed assets are potential substitutes for the debt. This means that after shielding, the lender
@@ -315,8 +344,8 @@ posed. The lender will collect these assets which will satisfy only part of the 
 spect to these exposed assets, the borrower reasons that leaving them exposed would mean that
 they will be lost; if, instead, the borrower would shield them as well, he will retain some of their
 value, and however small that is, it is still better than losing them to the lender. Hence, shielding
-these assets too is in the borrower's interests. We conclude that if shielding takes place, it would
-be rational to shield all of the borrower's assets.
+these assets too is in the borrower’s interests. We conclude that if shielding takes place, it would
+be rational to shield all of the borrower’s assets.
 Example 1. The borrower owes $6,000 and the project earned $10,000. For every dollar
 spent on shielding, the borrower retains 20 cents. At first, the borrower contemplates spending
 $3,000 on shielding (securing him a value of 0.20*3,000=$600). But since that would leave ex-
@@ -326,17 +355,17 @@ still leaves $3,000 that will be collected. If the borrower shields these $3,000
 increase his payoff by 0.2*3,000=$600, which is clearly superior to leaving them exposed. As a
 result, if the borrower chooses to shield assets, he will spend the full $10,000 on shielding.
 It is important to note that this conclusion is general. Even if shielding is very costly, it will still
-be the case that if shielding takes place, the borrower's entire wealth would be spent on shielding,
+be the case that if shielding takes place, the borrower’s entire wealth would be spent on shielding,
 i.e., t=e. But of course, this does not mean that shielding will always take place. With this in
 mind we turn to the other part of Proposition 1.
 At the beginning of Stage 2 the borrower may either shield or repay, depending on his payoff
 from each option. Repayment costs b+r while shielding will cost, based on the previous analysis,
 e-s(e). There is some positive marginal cost to shielding due, for example, to the loss of interest
 or asset mobility. This implies that when the amount spent on shielding is large enough, call it e*,
-we will have e*-s*(e)=b+r; i.e., it will cost the same amount to shield one's assets as it would
+we will have e*-s*(e)=b+r; i.e., it will cost the same amount to shield one’s assets as it would
 cost to repay the debt. In other words, e* is a wealth threshold; having more wealth than e* means
 that it would cost more to shield than to repay, so that it will no longer be rational to shield assets.
-We note three implications of the wealth threshold: shielding assets can be irrational if borrower's
+We note three implications of the wealth threshold: shielding assets can be irrational if borrower’s
 wealth is sufficiently high, for then shielding costs may exceed the cost of repayment.18 Addition-
 18 Of course, the project may not produce sufficient earnings to pass this threshold (i.e., e*< ē), which can be very high
 if it easy to shield. In this case, we shall see, the project will not be financed.
@@ -357,25 +386,25 @@ efficient, such that shielding would only leave 10 cents on the dollar (instead 
 the wealth threshold would fall to only $6,666.
 It is of interest to note the relationship between the wealth threshold and the concept of solvency.
 The borrower is technically solvent if e>b+r. However, this is not enough to surpass the wealth
-threshold; that will happen only if e-s(e)>b+r, or e>b+r+s(e). Hence, borrower's wealth must be
+threshold; that will happen only if e-s(e)>b+r, or e>b+r+s(e). Hence, borrower’s wealth must be
 greater than the concept of solvency would imply by s(e) for repayment to take place.19 In other
 words, solvency is a necessary but insufficient condition for debt repayment. The flip side of this
 conclusion is that if the borrower chooses to repay, this will only happen when he can repay in
 full – so that the lender can expect either no payment or full repayment.
 The following figure illustrates these points:
-19 This follows from Proposition 1.1: If borrower's wealth falls below b+r, his entire wealth will be taken by the credi-
+19 This follows from Proposition 1.1: If borrower’s wealth falls below b+r, his entire wealth will be taken by the credi-
 tor, so even if shielding is very wasteful, it is still better to shield and retain some value than lose all value.
 10
 Electronic copy available at: https://ssrn.com/abstract=2820650
-Figure 2: Borrower's Payoff under Shielding or Repayment as a Function of Earnings
+Figure 2: Borrower’s Payoff under Shielding or Repayment as a Function of Earnings
 As the figure shows, as the investment earnings rise, the borrower finds shielding more and more
 costly. When earnings pass the e* threshold, the shielding costs exceed the costs of repaying the
 debt and the borrower finds repayment optimal. As noted, having b+r in earning is insufficient to
 warrant repayment, and the earnings must be greater than b+r by s(e*) for the borrower to repay.
-Lastly, from the creditor's perspective, repayment is binary due to the cliff's edge nature of
+Lastly, from the creditor’s perspective, repayment is binary due to the cliff’s edge nature of
 shielding: For every e≤e*, the lender is not paid at all, and for every e>e* the creditor is repaid in
 full.
-Social Optimum. The social optimum is defined as the sum of the parties' joint wealth:
+Social Optimum. The social optimum is defined as the sum of the parties’ joint wealth:
 𝑒−𝑏−(𝑡−𝑠(𝑡)) (2)
 That is, the returns from the investment less the costs of making the investment and the costs in-
 20
@@ -384,23 +413,23 @@ that no assets will be shielded; the simple reason is that asset protection abso
 creates no value aside from shifting wealth between the parties.
 Private Decisions with Limits on Shielding. In some situations, shielding may be less effective
 and more costly—either because the legal system makes shielding difficult or because the bor-
-rower was able to "tie his hands" and make it more difficult to shield. To capture that, we will
+rower was able to “tie his hands” and make it more difficult to shield. To capture that, we will
 consider a competing shielding technology s (), such that s '(t)<s(t) for all t, with full inability to
 c c
-shield being s '(t)=0 for all t. Under limited shielding, borrower's payoff is given by:
+shield being s '(t)=0 for all t. Under limited shielding, borrower’s payoff is given by:
 c
 𝑠 (𝑡)+max(0, 𝑒−𝑡−(𝑏+𝑟)) (3)
 𝑐
 And since s '(t)<s (t) for all t, it follows that the return on shielding will be lower, thus limiting
 c c
 the desirability of ex-post shielding. This is a reflection of the earlier point that if shielding tech-
-20 The interest r does not factor in the parties' joint wealth since it is a payment made between the parties.
+20 The interest r does not factor in the parties’ joint wealth since it is a payment made between the parties.
 11
 Electronic copy available at: https://ssrn.com/abstract=2820650
 nology is less effective, the wealth threshold decreases. In the extreme, when shielding is una-
 vailable (i.e., s'(t)=0 for all t), the wealth threshold becomes zero, leading the borrower to never
 shield, thus aligning his behavior with what the social optimum.
-From the lender's perspective, limits on shielding lower the wealth threshold implying a higher
+From the lender’s perspective, limits on shielding lower the wealth threshold implying a higher
 probability of repayment. In the extreme, when the wealth threshold is zero, the lender receives a
 payment of min(e, b+r) (compared to b+r only for e>e*).
 Equity Agreement. We compare now the simple debt contract with a simple equity agreement
@@ -428,7 +457,7 @@ payment in all states.
 Electronic copy available at: https://ssrn.com/abstract=2820650
 Figure 3: Repayment and Shielding Costs as a Function of Earnings, Debt versus Equity
 3.2. Stage 1 Analysis: Loan Negotiation
-Let us examine now the parties' decision regarding lending and borrowing in the first stage.
+Let us examine now the parties’ decision regarding lending and borrowing in the first stage.
 Based on the analysis just made, the parties negotiate with the expectation that the borrower
 would repay only if e>e*. The parties negotiate over r and since the analysis implies that e* de-
 pends on r, it will be useful to describe e* as e*(r).
@@ -436,7 +465,7 @@ The lender thus expects full repayment if, and only if, e>e*(r), making his expe
 𝑒
 ∫ (𝑏+𝑟) 𝑓(𝑒)d𝑒 (4)
 𝑒∗(𝑟)
-The following proposition summarizes parties' decisions in this model.
+The following proposition summarizes parties’ decisions in this model.
 Proposition 3.
 If assets can be shielded, then:
 3.1. If the returns on the investment are expected to be sufficiently high –i.e., 𝐹(𝑒∗(𝑟)) < 1−
@@ -461,7 +490,7 @@ expect to recoup her investment b. This will happen when there is sufficient pro
 wealth threshold being met, because then the debt plus interest are paid in full. As is familiar, the
 potential for shielding in the other cases could be compensated through the higher interest rate.
 And if the investment returns are expected to be high in all states of the world, it may be that the
-interest charged would be at the risk-free rate, despite borrower's technical ability to shield assets.
+interest charged would be at the risk-free rate, despite borrower’s technical ability to shield assets.
 This result—that lending is rational even in the presence of effective shielding technology—could
 partially explain credit markets in jurisdictions with poor enforcement and the practice of mostly
 unsecured loans to high-payoff investments, such as start-ups. The following example illustrates:
@@ -474,7 +503,7 @@ a uniform distribution. If the interest is set at $6,000, the wealth threshold b
 the cost of shielding that amount is $12,000, the same as the debt plus interest). Since there is
 50% chance of exceeding the wealth threshold, this secures the lender an expected payment of
 0.5*12,000=$6,000. So the lender should be willing to lend even if shielding is expected to take
-place in some states of the world. Borrower's payoff below the wealth threshold has an expected
+place in some states of the world. Borrower’s payoff below the wealth threshold has an expected
 value of 0.2*7,500, and above the threshold of 22,500-12,000, for a total expected payoff of
 0.5*0.2*7,500+0.5*(22,500-12,000)=$6,000.
 The second part of the Proposition indicates two channels by which asset shielding destroys value
@@ -487,11 +516,11 @@ creasing in r). Increasing r in (4) has the double effect of increasing payment 
 payment, but reducing the overall probability of repayment (by increasing the lower bound of the
 integral). To compensate for the higher incentive to shield, an even higher interest may be
 charged. But this can create a feedback effect, with higher interest increasing shielding incentives,
-requiring higher interest, etc. And so, for various investments, there may not exist any equilibri-
 14
 Electronic copy available at: https://ssrn.com/abstract=2820650
+requiring higher interest, etc. And so, for various investments, there may not exist any equilibri-
 um interest rate for which the lender will be willing to lend and the borrower willing to borrow.
-An implication of this Proposition concerns the lender's preference between safe and risky pro-
+An implication of this Proposition concerns the lender’s preference between safe and risky pro-
 jects of the same expected value. Safer projects are characterized by lower variability of returns,
 which also entails a lower probability of exceeding the wealth threshold. This would mean that a
 lender my have a perverse preference to risky projects in the presence of asset shielding risk.
@@ -508,7 +537,7 @@ becomes 𝐸(𝑒)−𝑏−∫ 𝑡(𝑒) 𝑓(𝑒)𝑑𝑒 , that is, the exp
 𝑒
 ing. Hence, an otherwise socially desirable investment may become undesirable if shielding is
 expected.
-Private Decisions when Shielding is Limited. Lender's payoff in this akin to (4):
+Private Decisions when Shielding is Limited. Lender’s payoff in this akin to (4):
 𝑒
 ∫ (𝑏+𝑟) 𝑓(𝑒)d𝑒 (5)
 𝑒∗(𝑟)
@@ -523,7 +552,7 @@ With this change, if the interest is set at $3,000, the wealth threshold is $10,
 0.9*10,000=6000+3000). There is 2/3 chance of exceeding this threshold, thus securing the lend-
 er an expected return of 2/3*9,000=6,000, so the lender would indeed be willing to lend at this
 rate. This also means that the borrower pays $3,000 less in interest in this case, due to the limited
-ability to shield. Borrower's expected payoff under this example would be 1/3 * 0.1*5,000+ 2/3 *
+ability to shield. Borrower’s expected payoff under this example would be 1/3 * 0.1*5,000+ 2/3 *
 (20,000-9000)=$7,500. This is an improvement of $1,500 over example 3a, all due to the limited
 ability to shield assets.
 The analysis changes when shielding is completely ineffective. In this case, the borrower is indif-
@@ -536,28 +565,28 @@ pected value investment will always take place. This is in contrast to the shiel
 lending to such projects was not guaranteed.
 We see then that a credible commitment not to shield, and likewise effective enforcement tech-
 nology, would lead to lower interest and can solve credit denial problems. This is clearly in the
-borrower's self-interest, ex-ante, to be able to commit to not shielding thus securing finance when
+borrower’s self-interest, ex-ante, to be able to commit to not shielding thus securing finance when
 he otherwise would not and keeping a greater share of the investment surplus. The difficulty is
 that standard contractual mechanisms involve only pecuniary sanctions, and thus provide no teeth
 to a commitment not to shield
 Equity Agreement. We turn now to examine the possibility of an equity agreement instead of a
 debt contract. At Stage 1, the parties set f or r endogenously. Based on Proposition 2, it is an eq-
-uity agreement will dominate ex-ante a debt contract from both the borrower's and lender's per-
+uity agreement will dominate ex-ante a debt contract from both the borrower’s and lender’s per-
 spective.
-Suppose first that there exists f<k that meets the lender's participation constraint (i.e.,
+Suppose first that there exists f<k that meets the lender’s participation constraint (i.e.,
 𝑒̅
 ∫ 𝑓𝑒 𝑓(𝑒)𝑑𝑒 = 𝑏, recalling that for f<k there is no shielding). The lender would then find it ra-
 𝑒
 tional to lend, and the borrower would enjoy from improved access to credit at lower rates.
 If it is impossible to set such f, then it will also be impossible to find r that would permit lending.
-This is because for the debt contract to meet the lender's participation constraint, there must be
+This is because for the debt contract to meet the lender’s participation constraint, there must be
 some e'≥e*(r) for which ke'≥b+r. That is, there must be some of level of wealth for which the
 borrower prefers repayment to shielding. But if this is the case, it is possible to set f=k, and offer
 the lender a return that is at least as large as under debt. Hence, if the lender is willing to lend
 with debt, he should be willing to lend with equity as well.
 This conclusion, that equity stakes dominate debt contracts is strong and so it is important to note
-its limits. The literature on costly-state falsification analyzes the optimality of such "shielding-
-proof" contracts (Lacker and Weinberg 1989). As this literature highlights, the optimality of equi-
+its limits. The literature on costly-state falsification analyzes the optimality of such “shielding-
+proof” contracts (Lacker and Weinberg 1989). As this literature highlights, the optimality of equi-
 ty agreements is limited. While they eliminate waste due to shielding, they force allocations that
 the parties may not find optimal ex-ante.
 4. EXTENSIONS
@@ -566,7 +595,7 @@ vance to the use of collateral, debt relief, imperfect shielding techniques, and
 vestment proceeds.
 4.1. Secured Credit, Collateral, and Equity Cushions
 Parties sometimes often secured credit as means of reducing lending risk. Using this technique,
-the lender receives a security interest in the borrower's assets. How would that affect shielding
+the lender receives a security interest in the borrower’s assets. How would that affect shielding
 behavior?
 Despite their name, security interests do not resolve the problem of asset shielding. While securi-
 ty interests are generally effective in affecting the priorities among creditors in bankruptcy, they
@@ -574,7 +603,7 @@ ty interests are generally effective in affecting the priorities among creditors
 Electronic copy available at: https://ssrn.com/abstract=2820650
 only have a limited effect on shielding behavior. If the borrower owns a consumer good with a
 lien on it, he may still sell it to a third party or hide it. The lien cannot prevent it and, in fact, a
-third party may retain ownership of the assets despite creditor's objection. This is not to say that a
+third party may retain ownership of the assets despite creditor’s objection. This is not to say that a
 lien is of no value: liens may make shielding more complicated and costly. But, as we saw, a
 more expensive shielding technology does not necessarily solve the problem of asset shielding.
 A much more effective mechanism is the use of possessory collateral. Suppose now that the bor-
@@ -587,11 +616,11 @@ there will be no incentive to shield when the collateral is large, as the cost w
 than that of repayment. But possessory collateral is very costly to pledge and involves high and
 sometime debilitating operational costs, making it of limited use.
 Interestingly, even nonpossessory collateral is valuable in mitigating shielding risk – despite bor-
-rower's ability to shield it. The reason it is useful is that shielding the collateral itself is costly,
+rower’s ability to shield it. The reason it is useful is that shielding the collateral itself is costly,
 and this costs is added to the rest of the shielding costs. The wealth threshold is then implicitly
 given by e+w-s(e+w)=b+r which is lower than otherwise (but higher than under possessory col-
 lateral).21 This can be interpreted more broadly, as an advantage of equity cushions. Due to the
-recourse principle, all of borrower's equity cushion acts as implicit nonpossessory collateral, thus
+recourse principle, all of borrower’s equity cushion acts as implicit nonpossessory collateral, thus
 reducing the incentive to shield. This means that collateral need not be pledged explicitly to be
 effective.
 Overall, this implies that high-wealth individuals pose a lesser lending risk, allowing them greater
@@ -601,9 +630,9 @@ lateral, not only in the relationship between creditors but also between the deb
 In situations where the borrower has a credible threat ex-post to shield assets, the parties may
 want to renegotiate the debt. The lender would find such a renegotiation desirable, as with asset
 shielding the lender is not repaid at all. This presents an opportunity for the lender to offer some
-'debt relief' in exchange for partial payment.
-From the borrower's perspective, debt relief is beneficial if the lender is willing to accept an
-amount that is equal or lower than borrower's cost of shielding assets. That is, if the lender is
+‘debt relief’ in exchange for partial payment.
+From the borrower’s perspective, debt relief is beneficial if the lender is willing to accept an
+amount that is equal or lower than borrower’s cost of shielding assets. That is, if the lender is
 willing to forgo the debt claim in exchange for an amount no greater than e-s(e). if the lender is
 21 An indirect effect is due to the somewhat lower marketability of secured assets, which will increase the marginal cost
 of shielding those assets.
@@ -614,13 +643,13 @@ shielding assets. Hence, both parties can be made better off by ex-post debt rel
 Is such an agreement realistic? If the borrower approaches the lender demanding debt relief,
 would not the lender, who knows the debtor can pay, try to enforce the debt at that moment?
 While plausible, we observe in practice many instances of debt relief where some debt is forgiven
-or "settled" (NY City Bar 2012). Such agreements are generally based on the implicit under-
+or “settled” (NY City Bar 2012). Such agreements are generally based on the implicit under-
 standing that the debtor is not giving literally everything he has, and instead, the parties negotiate
 some lesser amount.23 This lends realism to the asset-shielding avoiding motive.
 Ex-ante, the prospect of debt relief will mitigate the problems caused by asset shielding, but will
 not solve them completely. First because of the transaction costs involved in ex-post renegotiation
 and second because the lender will not be able to receive more than the cost of shielding in bad
-states of the world (relative to project's full returns in the case of no shielding), so the return may
+states of the world (relative to project’s full returns in the case of no shielding), so the return may
 still be insufficient to induce lending. Stated more abstractly, debt relief is akin to an equity
 agreement in bad states of the world and a debt contract in good states of the world.
 4.3. Costly Collection, Uncertain Collection, and Collection of Shielded Assets
@@ -643,7 +672,7 @@ made. If the borrower breaches, then he will have to incur the higher costs of s
 23 This is not intended to imply that the primary motivation for debt relief agreement is the avoidance of asset shielding.
 There are other motivations for such agreements, such as saving collection costs. Whichever of these motivations plays
 a more dominant role is an open empirical question.
-24 An option that I do not address here directly is that shielded assets will be "de-shielded" by creditor's efforts. This
+24 An option that I do not address here directly is that shielded assets will be “de-shielded” by creditor’s efforts. This
 option could be simply conceptualized as a higher cost of shielding.
 25 Some fixed collection costs are court and sheriff fees, information requests, time spent on collection, and profession-
 al assistance fees.
@@ -657,9 +686,9 @@ Let us examine now the situation where exposed assets are not always be collecte
 ample, to legal limitations or the difficulty of locating them. Suppose that assets exposed are col-
 lected with a probability p. In this case, the borrower will compare his payoff conditional on
 complete shielding s(e) with the payoff from leaving assets exposed, pe.28 If, for simplicity, mar-
-ginal shielding cost is fixed at k, shielding will only be rational if k<p. From the lender's perspec-
+ginal shielding cost is fixed at k, shielding will only be rational if k<p. From the lender’s perspec-
 tive, not shielding is better than shielding, as expected recovery becomes (1-p)e instead of 0.
-Finally, let us consider the case where assets can be 'de-shielded'. If there is some probability that
+Finally, let us consider the case where assets can be ‘de-shielded’. If there is some probability that
 assets that were shielded can be uncovered, then this risk can be conceptualized as part of the cost
 of shielding, making shielding costs t-s'(t) instead of t-s(t). The implications of this were already
 discussed above.
@@ -697,7 +726,7 @@ the recourse principle limits shielding and so exceptions to this rule (as in no
 should be carefully considered.
 Another possible mechanism is insurance requirements and use of vicarious liability (as in Pitch-
 ford 1995 and Mattiacci and Parisi 2003). Having a third-party involved, such as an insurance
-company, would reduce lender's risk, but will not necessarily solve the problem, as the borrower
+company, would reduce lender’s risk, but will not necessarily solve the problem, as the borrower
 may still be able to shield assets. It is only if third parties have an advantage over creditors in
 monitoring borrowers—which they might have as in the case of multiple lenders—that third party
 involvement may be a solution to this problem. Future work may develop the conditions under
@@ -720,13 +749,13 @@ APPENDIX
 Proof of Proposition 1.
 1.1. I will now show that it is optimal to set t* at either 0 or e (i.e., there are no intermediate values of
 t). To see the first case, suppose that a low t is considered such that t < e - (b + r), i.e., t is less
-than borrower's ex-post wealth less the debt obligation. This means that the second term in (1) is
+than borrower’s ex-post wealth less the debt obligation. This means that the second term in (1) is
 positive (i.e., max(0, e-t-(b+r))>0). We can therefore simplify (1) to s(t) + e - t - b – r. And be-
 cause s(t)-t<0,it would be best to set t=0. If, instead, a higher t is considered, such that t > e - (b
 29 When shielding leads to suboptimal care, the legal system may seek to directly
 20
 Electronic copy available at: https://ssrn.com/abstract=2820650
-+ r), that would make borrower's payoff in (1) =s(t), which is clearly optimal to set at its highest
++ r), that would make borrower’s payoff in (1) =s(t), which is clearly optimal to set at its highest
 30
 value, i.e., e. QED.
 Note: the proof is relatively general and it holds regardless of the marginal cost of shielding (as
@@ -741,7 +770,7 @@ to see from this formulation that for higher r the level of e* also increases.
 paying b+r and retaining e-(b+r) than shielding. QED.
 Proof of Proposition 2.
 2.1. Let us look at the case where, for simplicity, r=0 and e>e*(0). In all states of the world bor-
-rower's wealth exceeds the threshold identified in 1.2., so shielding will not take place, and the
+rower’s wealth exceeds the threshold identified in 1.2., so shielding will not take place, and the
 expected return in (5) becomes simply b+0. Hence, the loan is guaranteed to be repaid in full and
 the interest would be indeed set at zero.
 If, however, e<e*(0), it is still possible that the loan will be provided. This will be the case if
@@ -764,7 +793,7 @@ spends e-s(e) on shielding. This reduces the (joint) value of the investment by 
 𝑠(𝑒)) 𝑓(𝑒)d𝑒; hence, if the net value of the investment, 𝐸(𝑒)−𝑏, is lower than this expected re-
 duction, the investment will have a negative expected value and there will not exist a level of in-
 terest for which the lender would be willing to lend.
-30 The same result of full shielding applies, and for the same reason, when borrower's wealth is low, i.e., e<b+r.
+30 The same result of full shielding applies, and for the same reason, when borrower’s wealth is low, i.e., e<b+r.
 31 For example, suppose c(p) is a constant $0.5 per dollar, b = $10,000, and there is a 20% chance that e̲=$1,000 will
 be realized and a 80% chance that e̅=$40,000 will be realized. If r=$2,500, then e*=$37,500 and there is 80% chance
 that $12,500 will be repaid, meaning an expected payment of 0.8*12,500=$10,000 – enough to induce the lender to
@@ -783,7 +812,7 @@ Now, if under the new schedule the net amount received (the gain from the higher
 loss from the lower probability of repayment) falls below b, r1 would have to be set even higher.
 It is plain to see now that further increasing the interest may repeat this dynamic, so that r would
 need to be further and further increased. At the extreme, r could be set any arbitrarily high level,
-r≥e̅, but then surely no payments will be made, because if the debt is greater than borrower's
+r≥e̅, but then surely no payments will be made, because if the debt is greater than borrower’s
 wealth it always pays to shield (by 1.1.). Hence, it may be that no interest rate would exist such
 that the necessary amount will be repaid, and the loan will be denied (even if, after deducting the
 costs of shielding, it has a positive value).32 QED.
@@ -795,14 +824,14 @@ Center for Law, Economics, and Business at Harvard Law School for financial supp
 REFERENCES
 Alper, Elijah, M. 2007. Opportunistic Informal Bankruptcy: How BAPCPA may Fail to Make
 Wealthy Debtors Pay Up. Columbia Law Review 107(8):1908-1943
-NY City Bar. 2012. "Profiteering from Financial Distress: An Examination of the Debt Settle-
-ment Industry", available at
+NY City Bar. 2012. “Profiteering from Financial Distress: An Examination of the Debt Settle-
+ment Industry”, available at
 http://www2.nycbar.org/pdf/report/uploads/DebtSettlementWhitePaperCivilCtConsumerAffairsR
 eportFINAL5.11.12.pdf
-Che, Yeon Koo, and Kathryn E. Spier. 2008. "Strategic Judgment Proofing." RAND Journal of
+Che, Yeon Koo, and Kathryn E. Spier. 2008. “Strategic Judgment Proofing.” RAND Journal of
 Economics 39 (4): 926–48.
-Dari-Mattiacci, Giuseppe, and Gerrit De Geest. 2005. "Judgment Proofness Under Four Different
-Precaution Technologies." Journal of Institutional and Theoretical Economics 161 (1): 38–56.
+Dari-Mattiacci, Giuseppe, and Gerrit De Geest. 2005. “Judgment Proofness Under Four Different
+Precaution Technologies.” Journal of Institutional and Theoretical Economics 161 (1): 38–56.
 32 For example, suppose shielding cost is a constant $0.5 per dollar, the loan is $10,000 and that there is equal probabil-
 ity of returns being either $10,000 or $30,000—i.e., expected return is $20,000. If r=0, the critical level is $30,000, so
 there is %50 chance of the borrower repaying, implying an expected return to the lender of $5,000. To adjust, the inter-
@@ -810,75 +839,101 @@ est must be set to some positive amount, but this will only increase the critica
 overall returns to the lender.
 22
 Electronic copy available at: https://ssrn.com/abstract=2820650
-Dari-Mattiacci, Giuseppe, and Barbara Mangan. 2008. "Disappearing Defendants Versus Judg-
-ment Proof Injurers." Economica 75 (300): 749–65.
-Dari-Mattiacci, Giuseppe, and Francesco Parisi. 2003. "The Cost of Delegated Control: Vicarious
-Liability, Secondary Liability And Mandatory Insurance." International Review of Law and Eco-
+Dari-Mattiacci, Giuseppe, and Barbara Mangan. 2008. “Disappearing Defendants Versus Judg-
+ment Proof Injurers.” Economica 75 (300): 749–65.
+Dari-Mattiacci, Giuseppe, and Francesco Parisi. 2003. “The Cost of Delegated Control: Vicarious
+Liability, Secondary Liability And Mandatory Insurance.” International Review of Law and Eco-
 nomics 23 (4): 453–75.
-Elinson, Zusha 2010. "City Finds Millions, but Reaps Little in Case," New York Times, Decem-
+Elinson, Zusha 2010. “City Finds Millions, but Reaps Little in Case,” New York Times, Decem-
 ber, 11 2010.
-Arbel, Yonathan A., 2015. "Contract Remedies in Action: Specific Performance", West Virginia
+Arbel, Yonathan A., 2015. “Contract Remedies in Action: Specific Performance”, West Virginia
 Law Review 118:100-141.
-Ellingsen, Tore and Eirik Gaard Kristiansen 2011. "Financial Contracting Under Imperfect En-
-forcement," The Quarterly Journal of Economics 126 (1): 323-371.
-Ernest & Young (EY). 2012. "The Impact of Third Party Debt Collection on the National and
-State Economies".
-Fay, Scott, Eric Hurst, and Michelle White. 2002. "The Household Bankruptcy Decision," Ameri-
+Ellingsen, Tore and Eirik Gaard Kristiansen 2011. “Financial Contracting Under Imperfect En-
+forcement,” The Quarterly Journal of Economics 126 (1): 323-371.
+Ernest & Young (EY). 2012. “The Impact of Third Party Debt Collection on the National and
+State Economies”.
+Fay, Scott, Eric Hurst, and Michelle White. 2002. “The Household Bankruptcy Decision,” Ameri-
 can Economics Review 92:706–718.
-Ganuza, Juan-José, and Fernando Gómez. 2008. "Realistic Standards: Optimal Negligence with
-Limited Liability." The Journal of Legal Studies 37 (2): 577–94.
-Ganuza, Juan José, and Fernando Gomez. 2011. "Soft Negligence Standards and the Strategic
-Choice of Firm Size." Journal of Legal Studies 40 (2): 438–66.
-Gross, David B. and Nicholas S. Souleles. 2002. "Do Liquidity Constraints and Interest Rates
-Matter for Consumer Behavior? Evidence from Credit Card Data," Quarterly Journal of Econom-
+Ganuza, Juan-José, and Fernando Gómez. 2008. “Realistic Standards: Optimal Negligence with
+Limited Liability.” The Journal of Legal Studies 37 (2): 577–94.
+Ganuza, Juan José, and Fernando Gomez. 2011. “Soft Negligence Standards and the Strategic
+Choice of Firm Size.” Journal of Legal Studies 40 (2): 438–66.
+Gross, David B. and Nicholas S. Souleles. 2002. “Do Liquidity Constraints and Interest Rates
+Matter for Consumer Behavior? Evidence from Credit Card Data,” Quarterly Journal of Econom-
 ics 117 (1): 149-185.
 Hart, Oliver and John Moore. 1989. Default and Renegotiation: A Dynamic Model of Debt, Quar-
 terly Journal of Economics 113(1): 1-41.
-Lacker, Jeffery M. 1991. "Why is there Debt? Economic Review," July-Aug:3–19.
-Lacker, Jeffery M. and John A. Weinberg. 1989. "Optimal Contracts under Costly State Falsifica-
-tion," Journal of Political Economy, 97(6):1345-1363.
-Leff, Arthur A. 1970. "Injury, Ignorance and Spite — The Dynamics of Coercive Collection,"
+Lacker, Jeffery M. 1991. “Why is there Debt? Economic Review,” July-Aug:3–19.
+Lacker, Jeffery M. and John A. Weinberg. 1989. “Optimal Contracts under Costly State Falsifica-
+tion,” Journal of Political Economy, 97(6):1345-1363.
+Leff, Arthur A. 1970. “Injury, Ignorance and Spite — The Dynamics of Coercive Collection,”
 Yale Law Journal 80 (1):1-46.
-McCullough, Ralph C. 1997. "Bankruptcy Fraud: Crime without Punishment II," Commercial
+McCullough, Ralph C. 1997. “Bankruptcy Fraud: Crime without Punishment II,” Commercial
 Law Journal 102:1-54.
-Pitchford, Rohan. 1995. "How Liable Should a Lender Be? The Case of Judgment-Proof Firms
-and Environmental Risk." American Economic Review 85 (5): 1171–86.
-Price Waterhouse Coopers (PWC) 2008, "Value of Third-party Debt Collection to the US. Econ-
-omy in 2007: Survey and Analysis."
-Schwartz, Alan. 1983. "The Enforceability of Security Interests in Consumer Goods," Journal of
+Pitchford, Rohan. 1995. “How Liable Should a Lender Be? The Case of Judgment-Proof Firms
+and Environmental Risk.” American Economic Review 85 (5): 1171–86.
+Price Waterhouse Coopers (PWC) 2008, “Value of Third-party Debt Collection to the US. Econ-
+omy in 2007: Survey and Analysis.”
+Schwartz, Alan. 1983. “The Enforceability of Security Interests in Consumer Goods,” Journal of
 Law & Economics 26(1): 117-162.
-Scott, Austin W. 1913. "The Right to Follow Money Wrongfully Mingled with Other Money,"
+Scott, Austin W. 1913. “The Right to Follow Money Wrongfully Mingled with Other Money,”
 Harvard Law Review 27(2): 125-138.
-Stephen, Lea E. G, Avril J. Mewse, and Wendy Wrapson. 2013. "The Psychology of Debt in
-Poor Households in Britain" in A Debtor World (Ralph Brubaker, Robert M. Lawless, and
+Stephen, Lea E. G, Avril J. Mewse, and Wendy Wrapson. 2013. “The Psychology of Debt in
+Poor Households in Britain” in A Debtor World (Ralph Brubaker, Robert M. Lawless, and
 Charles J. Tabb eds.).
 23
 Electronic copy available at: https://ssrn.com/abstract=2820650
-Shavell, Steven. 1986. "The Judgment Proof Problem." International Review of Law and Eco-
+Shavell, Steven. 1986. “The Judgment Proof Problem.” International Review of Law and Eco-
 nomics 6. Springer: 45-68.
-Shavell, Steven. 2005. "Minimum Asset Requirements and Compulsory Liability Insurance as
-Solutions to the Judgment-Proof Problem." The RAND Journal of Economics 36 (1): 63.
-Shenon, Philip. 2001. "Home Exemptions Snag Bankruptcy Bill." New York Times, April 6 2001.
+Shavell, Steven. 2005. “Minimum Asset Requirements and Compulsory Liability Insurance as
+Solutions to the Judgment-Proof Problem.” The RAND Journal of Economics 36 (1): 63.
+Shenon, Philip. 2001. “Home Exemptions Snag Bankruptcy Bill.” New York Times, April 6 2001.
 Sullivan, Teresa A., Jay L. Westbrook, and Elizabeth Warren. 1989. As We Forgive Our Debtors:
 Bankruptcy and Consumer Credit in America. New York, NY: Oxford University Press.
-Summers, John. 1983. "The Case of the Disappearing Defendant: An Economic Analysis." U.
+Summers, John. 1983. “The Case of the Disappearing Defendant: An Economic Analysis.” U.
 Penn. L. Rev 1422 (1979): 145–72.
-Stiglitz, Joseph E. and Andrew Weiss. 1981. "Credit Rationing in Markets with Imperfect Infor-
-mation," The American Economic Review 71 (3):393-410.
+Stiglitz, Joseph E. and Andrew Weiss. 1981. “Credit Rationing in Markets with Imperfect Infor-
+mation,” The American Economic Review 71 (3):393-410.
 US Courts. 2012. Bankruptcy Statistics.
 http://www.uscourts.gov/Statistics/BankruptcyStatistics/12-month-period-ending-march.aspx.
 US DOJ. 2012. Public Report: Borrower Audits by the United States Trustee Program.
-Veld, van't Klaas, and Emma Hutchinson. 2009. "Excessive Spending by Firms to Avoid Acci-
-dents: Is It a Concern in Practice?" International Review of Law and Economics 29 (4): 324–35.
-White, Michelle J. 2007. "Abuse or Protection: The Economics of Bankruptcy Reform under
-BAPCPA." University of Illinois Law Review 2007 (1):275-304.
-Wickelgren, Abraham L. "Settlement and the Strict Liability-Negligence Comparison." U of Tex-
+Veld, van’t Klaas, and Emma Hutchinson. 2009. “Excessive Spending by Firms to Avoid Acci-
+dents: Is It a Concern in Practice?” International Review of Law and Economics 29 (4): 324–35.
+White, Michelle J. 2007. “Abuse or Protection: The Economics of Bankruptcy Reform under
+BAPCPA.” University of Illinois Law Review 2007 (1):275-304.
+Wickelgren, Abraham L. “Settlement and the Strict Liability-Negligence Comparison.” U of Tex-
 as Law, Law and Econ Research Paper No. 213.
-Zhu, Ning. 2011. "Household Consumption and Personal Bankruptcy", Journal of Legal Studies,
+Zhu, Ning. 2011. “Household Consumption and Personal Bankruptcy”, Journal of Legal Studies,
 40 (1): 1-37
 24
 Electronic copy available at: https://ssrn.com/abstract=2820650`
 
+func AsMap() map[string]any {
+  return map[string]any{
+    "paper_id": PaperID,
+    "title": Title,
+    "ssrn_url": SSRNURL,
+    "year": Year,
+    "authors": Authors,
+    "keywords": Keywords,
+    "summary_md": SummaryMD,
+    "summary_zh_md": SummaryZHMD,
+    "one_pager_md": OnePagerMD,
+    "study_pack_md": StudyPackMD,
+    "article_text": ArticleText,
+  }
+}
+
+func AsJSON() string {
+  b, err := json.MarshalIndent(AsMap(), "", "  ")
+  if err != nil { return "{}" }
+  return string(b)
+}
+
 func main() {
-    fmt.Println(articleText)
+  if len(os.Args) > 1 && os.Args[1] == "--json" {
+    fmt.Print(AsJSON())
+    return
+  }
+  fmt.Print(ArticleText)
 }

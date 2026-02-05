@@ -1,14 +1,89 @@
+/*
+VILLANOVA (ssrn-2835482) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(VILLANOVA
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-2835482";
+static const std::string TITLE = R"MW4LLM(VILLANOVA)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2835482)MW4LLM";
+static const int YEAR = 2016;
+static const std::vector<std::string> AUTHORS = {"Yonathan Arbel"};
+static const std::vector<std::string> KEYWORDS = {"contracts", "AI", "law"};
+
+static const std::string SUMMARY_MD = R"MW4LLM(Okay, here's the bullet list based on the provided text:
+
+*   ## TL;DR ≤100 words
+    Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they've effectively garnered widespread support from legislators and even traditional opponents of tort reform, leading to the broad adoption of these laws.
+
+*   ## Section Summaries ≤120 words each
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that commercial interests and tort reformers have successfully promoted apology laws, which prevent apologies from being used as evidence in court. He identifies these laws as a new and powerful platform for these groups to advance their specific agendas. Professor Yonathan Arbel of the University of Alabama School of Law further writes that this strategic approach has been remarkably effective. By framing these laws using the appealing language of apologies, proponents have managed to gain support from lawmakers and, significantly, even from those who typically oppose tort reform, resulting in the widespread enactment of such legislation.)MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM(好的，这是基于您提供文本的正式中文翻译：
+
+*   ## 核心摘要（≤100字）
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，商业利益集团与侵权法改革者正将“道歉法”（即规定道歉陈述不得在法庭上作为证据采纳的法律）作为一种强有力的新工具，以推进其特定议程。通过巧妙运用道歉话语的积极含义，他们成功赢得了立法者乃至传统侵权法改革反对者的广泛支持，导致此类法律被普遍采纳。
+
+*   ## 分节摘要（每节≤120字）
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授撰文指出，商业利益集团和侵权法改革者已成功推行“道歉法”，此类法律旨在阻止道歉陈述在法庭上被用作证据。他认为，这些法律已成为上述群体推行其特定议程的全新且强有力的平台。
+
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授进一步指出，此战略方法卓有成效。通过运用道歉话语的积极表述来包装这些法律，其倡导者成功获得了立法者以及——值得注意的是——甚至是那些通常反对侵权法改革人士的支持，最终促成了此类立法得到广泛实施。)MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# VILLANOVA — one-page summary
+
+**Paper ID:** `ssrn-2835482`
+**Year:** 2016
+**Author(s):** Yonathan Arbel
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2835482
+
+## TL;DR
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they've effectively garnered widespread support from legislators and even traditional opponents of tort reform, leading to the broad adoption of these laws.
+
+## Keywords
+
+contracts; AI; law
+
+## Files
+
+- Full text: `papers/ssrn-2835482/paper.txt`
+- PDF: `papers/ssrn-2835482/paper.pdf`
+- Summary (EN): `papers/ssrn-2835482/summary.md`
+- Summary (ZH): `papers/ssrn-2835482/summary.zh.md`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: VILLANOVA (ssrn-2835482)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2835482
+- Full text: `papers/ssrn-2835482/paper.txt`
+- Summary (EN): `papers/ssrn-2835482/summary.md`
+- Summary (ZH): `papers/ssrn-2835482/summary.zh.md`
+
+## Elevator pitch
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they've effectively garnered widespread support from legislators and even traditional opponents of tort reform, leading to the broad adoption of these laws.
+
+## Keywords / concepts
+
+contracts; AI; law
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(VILLANOVA
 Public Law and Legal Theory Working Paper Series
 Tort Reform through the Backdoor:
 A Critique of Law and Apologies
@@ -2153,9 +2228,33 @@ in the event of an accident. It also has a cost due to the increase in net harm
 from the activity, because of the diluted deterrence. The apology is only
 desirable if its benefits exceed these costs.
 QED
-Electronic copy available at: https://ssrn.com/abstract=2835482)EOF";
+Electronic copy available at: https://ssrn.com/abstract=2835482)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

@@ -1,14 +1,117 @@
+/*
+\\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20 (ssrn-3740356) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(\\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-3740356";
+static const std::string TITLE = R"MW4LLM(\\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3740356)MW4LLM";
+static const int YEAR = 2022;
+static const std::vector<std::string> AUTHORS = {"Yonathan Arbel"};
+static const std::vector<std::string> KEYWORDS = {"contracts", "AI", "law"};
+
+static const std::string SUMMARY_MD = R"MW4LLM(Here is the bullet list summary for 'ssrn-3740356' by Professor Yonathan Arbel:
+
+## TL;DR ≤100 words
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI-powered "smart readers" represent a significant breakthrough in contract analysis, capable of simplifying, personalizing, and benchmarking terms for consumers. While offering profound benefits like increased understanding, improved market competition, and enhanced access to justice, these tools also introduce serious risks such as errors, bias, adversarial exploitation, and discrimination. Arbel calls for a new legal and regulatory framework to navigate these complex implications, as current doctrines are unprepared for this technological shift and its impact on contract law and consumer protection.
+
+## Section Summaries ≤120 words each
+
+1.  **Emergence and Promise of Smart Readers**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that AI-powered "smart readers" are emerging from machine learning breakthroughs, poised to disrupt the "dismal equilibrium" where consumers ignore complex contract terms. Professor Yonathan Arbel of the University of Alabama School of Law writes that these tools can simplify, personalize, interpret, and benchmark contracts, offering a technological solution to information barriers. His work explores their capabilities, potential uptake, and broad implications for contract law, including market competition, errors, access to justice, and discrimination, highlighting the need for new regulatory responses as current legal doctrines are unprepared for these advancements and their associated risks like bias and exploitation.
+
+2.  **Core Capabilities and Consumer Empowerment**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that smart readers, powered by AI like GPT-3, possess core capabilities crucial for consumer empowerment: simplification of complex legal text, personalization to individual user needs (including linguistic and cognitive adaptations), construction of contractual meaning through explanations, and benchmarking contracts against market alternatives. Professor Yonathan Arbel of the University of Alabama School of Law writes that these tools can make obscure clauses understandable, provide scores for privacy policies, and allow interactive questioning, offering advantages in cost, speed, and accessibility over human lawyers, thereby helping consumers comprehend fine print and understand market choices.
+
+3.  **Consumer Uptake, Market Impact, and Behavioral Nudges**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that consumer uptake of smart readers, while potentially limited by reading aversion and cognitive biases, could significantly impact markets even with modest adoption by an "informed minority," fostering term competition. Professor Yonathan Arbel of the University of Alabama School of Law writes that these tools can act as behavioral nudges, countering cognitive overload by summarizing complex information, addressing myopia by highlighting risks like warranties, and helping consumers overcome price manipulations. The success or failure of uptake will offer insights into theories on why consumers don't read contracts, with quality, cost, and user experience being critical factors.
+
+4.  **Risks: Errors, Adversarial Attacks, and Discrimination**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that smart readers carry significant risks, including errors (isolated or correlated), which must be evaluated against human error rates. Professor Yonathan Arbel of the University of Alabama School of Law writes that more pernicious are adversarial attacks, where firms use subtle textual manipulations to mislead AI, and the potential for discrimination, as firms might offer inferior terms to non-users or leverage smart reader data for redlining. There's also a risk of overcompliance if smart readers don't distinguish unenforceable terms, and bias within the AI models themselves, necessitating caution despite their potential.
+
+5.  **Legal Implications and Regulatory Challenges**
+    Professor Yonathan Arbel of the University of Alabama School of Law writes that smart readers challenge existing legal frameworks, particularly consumer protection measures predicated on non-reading, such as those in the Draft Restatement of Consumer Contracts. Professor Yonathan Arbel of the University of Alabama School of Law writes that this necessitates new regulatory and doctrinal responses, including addressing liability for smart reader errors, where recourse against producers or sellers is currently limited. Policymakers must resist prematurely expanding the "duty to read," develop methods for detecting adversarial attacks, and consider how unfair and deceptive practice laws can combat discrimination based on smart reader usage, while also leveraging these tools for improved judicial interpretation and agency oversight.)MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM(好的，这是对您提供的英文法律摘要的正式中文翻译：
+
+**SSRN-3740356号论文摘要，作者：约纳坦·阿尔伯 (Yonathan Arbel) 教授**
+
+## 内容摘要 ≤100词
+阿拉巴马大学法学院的约纳坦·阿尔伯教授认为，人工智能驱动的“智能阅读器”代表了合同分析领域的重大突破，能够为消费者简化合同条款、提供个性化解读并进行条款基准比较。尽管这些工具能带来诸多显著益处，如增进理解、改善市场竞争和提升司法可及性，但它们也引入了严重风险，包括错误、偏见、恶意利用和歧视。阿尔伯教授呼吁建立新的法律和监管框架，以应对这些复杂影响，因为现有理论对这种技术变革及其对合同法和消费者保护的影响准备不足。
+
+## 各章节摘要 ≤120词/节
+
+1.  **智能阅读器的兴起与前景**
+    阿拉巴马大学法学院的约纳たん·阿尔伯教授指出，得益于机器学习的突破，人工智能驱动的“智能阅读器”正崭露头角，有望打破消费者忽视复杂合同条款的“惨淡均衡”局面。该教授认为，这些工具能够简化、个性化解读、解释和基准比较合同，为信息壁垒提供了技术解决方案。他的研究探讨了这些工具的功能、潜在采纳情况及其对合同法（包括市场竞争、错误、司法可及性和歧视问题）的广泛影响，强调了制定新监管对策的必要性，因为现有法律理论对这些进步及其相关风险（如偏见和恶意利用）准备不足。
+
+2.  **核心功能与消费者赋权**
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，由GPT-3等人工智能驱动的智能阅读器具备对消费者赋权至关重要的核心功能：简化复杂法律文本、根据用户个性化需求（包括语言和认知调整）进行定制、通过解释构建合同含义，以及将合同与市场替代方案进行基准比较。该教授认为，这些工具能使晦涩条款变得易懂，为隐私政策评分，并允许交互式提问，在成本、速度和可访问性方面优于人类律师，从而帮助消费者理解细则条款并明了市场选择。
+
+3.  **消费者接受度、市场影响与行为助推**
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管智能阅读器的消费者接受度可能因阅读厌恶和认知偏见而受限，但即便只有“知情少数群体”少量采用，也可能显著影响市场，促进条款竞争。该教授认为，这些工具可作为行为助推器，通过总结复杂信息来对抗认知超载，通过强调保修等风险来解决短视问题，并帮助消费者克服价格操纵。消费者接受度的成败将为解释“为何消费者不阅读合同”的理论提供见解，其中质量、成本和用户体验是关键因素。
+
+4.  **风险：错误、恶意攻击与歧视**
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，智能阅读器存在重大风险，包括错误（孤立或相关性错误），这些错误必须与人类的错误率进行比较评估。该教授认为，更危险的是恶意攻击——公司利用微妙的文本操纵误导人工智能，以及潜在的歧视——公司可能向非用户提供较差条款或利用智能阅读器数据进行“红线歧视”(redlining)。如果智能阅读器不能区分不可执行条款，还存在过度合规的风险；AI模型本身也可能存在偏见，因此尽管其潜力巨大，仍需谨慎对待。
+
+5.  **法律影响与监管挑战**
+    阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，智能阅读器对现有法律框架构成挑战，尤其是那些以消费者不阅读合同为前提的消费者保护措施，例如《消费者合同重述草案》中的规定。该教授认为，这需要新的监管和理论对策，包括解决智能阅读器错误的责任问题，目前对生产商或销售商的追索权有限。政策制定者必须避免过早扩大“阅读义务”，开发检测恶意攻击的方法，并考虑如何运用反不正当和欺骗性行为法来打击基于智能阅读器使用情况的歧视，同时利用这些工具改进司法解释和机构监管。)MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# \\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20 — one-page summary
+
+**Paper ID:** `ssrn-3740356`
+**Year:** 2022
+**Author(s):** Yonathan Arbel
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3740356
+
+## TL;DR
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI-powered "smart readers" represent a significant breakthrough in contract analysis, capable of simplifying, personalizing, and benchmarking terms for consumers. While offering profound benefits like increased understanding, improved market competition, and enhanced access to justice, these tools also introduce serious risks such as errors, bias, adversarial exploitation, and discrimination. Arbel calls for a new legal and regulatory framework to navigate these complex implications, as current doctrines are unprepared for this technological shift and its impact on contract law and consumer protection.
+
+## Keywords
+
+contracts; AI; law
+
+## Files
+
+- Full text: `papers/ssrn-3740356/paper.txt`
+- PDF: `papers/ssrn-3740356/paper.pdf`
+- Summary (EN): `papers/ssrn-3740356/summary.md`
+- Summary (ZH): `papers/ssrn-3740356/summary.zh.md`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: \\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20 (ssrn-3740356)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3740356
+- Full text: `papers/ssrn-3740356/paper.txt`
+- Summary (EN): `papers/ssrn-3740356/summary.md`
+- Summary (ZH): `papers/ssrn-3740356/summary.zh.md`
+
+## Elevator pitch
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI-powered "smart readers" represent a significant breakthrough in contract analysis, capable of simplifying, personalizing, and benchmarking terms for consumers. While offering profound benefits like increased understanding, improved market competition, and enhanced access to justice, these tools also introduce serious risks such as errors, bias, adversarial exploitation, and discrimination. Arbel calls for a new legal and regulatory framework to navigate these complex implications, as current doctrines are unprepared for this technological shift and its impact on contract law and consumer protection.
+
+## Keywords / concepts
+
+contracts; AI; law
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(\\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20
 Contracts in the Age of Smart Readers
 Yonathan A. Arbel* & Shmuel I. Becher**
 ABSTRACT
@@ -2874,9 +2977,33 @@ Electronic copy available at: https://ssrn.com/abstract=3740356
 146 THE GEORGE WASHINGTON LAW REVIEW [Vol. 90:83
 CONCLUSION264
 264 Written by GPT-3. Screenshot [10] (on file with authors).
-Electronic copy available at: https://ssrn.com/abstract=3740356)EOF";
+Electronic copy available at: https://ssrn.com/abstract=3740356)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

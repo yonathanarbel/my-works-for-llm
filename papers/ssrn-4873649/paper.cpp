@@ -1,14 +1,179 @@
+/*
+JUDICIAL ECONOMY IN THE AGE OF AI (ssrn-4873649) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(JUDICIAL ECONOMY IN THE AGE OF AI
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-4873649";
+static const std::string TITLE = R"MW4LLM(JUDICIAL ECONOMY IN THE AGE OF AI)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4873649)MW4LLM";
+static const int YEAR = 2025;
+static const std::vector<std::string> AUTHORS = {"Yonathan Arbel"};
+static const std::vector<std::string> KEYWORDS = {"contracts", "AI", "law"};
+
+static const std::string SUMMARY_MD = R"MW4LLM(Here is the requested information for 'ssrn-4873649' by Professor Yonathan Arbel:
+
+**1. ## TL;DR ≤100 words**
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI's potential to reduce legal costs and increase access to justice paradoxically threatens judicial economy with a litigation boom. Instead of courts historically shrinking rights to cope, he proposes proactively integrating AI tools into the legal system. This would enhance and scale judicial processes, addressing the vast unmet legal needs, leveraging AI's growing capabilities despite current flaws, and preventing regressive responses to increased caseloads. The goal is to improve justice delivery by making the system more efficient and accessible.
+
+**2. ## Section Summaries ≤120 words each**
+
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while AI tools offer hope for increased access to justice by sharply reducing the costs of generating legal materials, this very effectiveness paradoxically threatens judicial economy by increasing the volume and verbosity of caseloads. He further writes that rather than courts responding by shrinking substantive rights to manage this influx, as has happened historically, the legal system should proactively integrate AI tools to enhance and scale up the legal process itself.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that a vast number of legal disputes are never filed, with studies suggesting around 120 million legal problems go unresolved in the U.S. each year. He also writes that this access to justice crisis particularly affects low-income Americans, as 92 percent of their significant civil legal issues receive little to no legal aid.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that significant barriers to justice, primarily the high cost of legal services exemplified by average hourly lawyer rates of $292, prevent many individuals from addressing legal problems affecting their basic human needs. He also writes that the sheer investment required means even doubling legal aid budgets has done little to narrow this justice gap, with sociolegal issues like 'legal consciousness' further illustrated by individuals describing being underpaid as being 'stiffed' rather than having their rights violated.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that Nora and David Freeman Engstrom center the access to justice problem on an asymmetry in legal tech adoption, where firms zealously automate litigation while individuals show "anemic adoption" and rely on "analog tools." He also writes that while this argument about tech asymmetry creating power imbalances, particularly in debt collection litigation, has a kernel of truth, the assertion may be too strong or becoming outdated.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that amusing stories of lawyers misusing AI, which support traditional views of the legal profession, distract from the surprising reality that even small firms are adopting these imperfect tools due to their convenience. He also writes that this widespread adoption is anticipated to democratize legal technology, significantly reduce costs, and potentially lead to a litigation boom by expanding access to justice for those currently underserved.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that as AI erodes access barriers, it can precipitate a litigation boom that threatens to overwhelm an already strained judicial system. He further writes that rather than waiting for this crisis, the legal system should proactively integrate AI, despite its current unreliability, to scale up and improve the delivery of justice while carefully considering judicial needs and system constraints.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that early barriers prevent individuals from pursuing legal claims, a process captured by the naming-blaming-claiming model, and AI could help individuals articulate their misfortunes in legally cognizable terms. He also writes that while AI could help access justice, the erosion of these barriers might also lead to a litigation boom of both meritorious and abusive claims, and the essay will use control theory to consider the implications for judicial economy.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that legal doctrines can function as "legal thermostats," where judges adjust procedural and substantive rights to achieve homeostasis, potentially reshuffling rather than solving access to justice problems. He further writes that a proactive solution involves integrating AI tools into the judicial process itself, allowing the legal system to scale up and meet challenges without compromising litigants' substantive rights.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that current-generation AI systems can perform many legal tasks "adequately," which, combined with a large access to justice gap, suggests an impending AI litigation boom. He also writes that AI is neither omnipotent nor a mere trick, and because the technology is rapidly developing, current assessments of its capabilities are merely tentative floors and its limitations are tentative ceilings, with constant improvements ongoing.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that a recent study found AI models like GPT-4 exhibited accuracy in identifying legal issues in contracts on par with junior lawyers, while using only 8% of the time and costing a single quarter compared to a lawyer's average fee of $74.26. He also notes these models, similar to junior lawyers, showed a preference for precision over recall, and their observed mistakes appeared transient and model-specific rather than fundamental, with newer models resolving illustrative errors.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes about a study he co-authored which evaluated large language models as "smart readers" to assist consumers with legal documents like contracts and privacy policies. He further writes that this study found these smart readers significantly reduced contract length and reading time, and improved text readability to a fifth-grade level, without compromising essential information.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while LLMs show high but inconsistent performance, likely exceeding lay tax preparers, they are poised to substitute for neighborhood representatives like H&R Block or estate planners rather than top-tier lawyers. He also writes that a persistent and "alarmingly prevalent" failure mode is "hallucinations," where LLMs invent non-existent facts, though these can often be checked and advances show promise in reducing this issue.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while GPT-4 initially appeared to pass the Uniform Bar Exam at the 90th percentile, more refined analyses suggest its performance is closer to the median of test-takers and in the bottom 15th percentile for essays. He also writes that despite the need for caution when extrapolating from exam performance, early real-world studies, such as one where 80% of human referees preferred a GPT-4 drafted complaint letter over one by a trained lawyer, indicate AI's potential effectiveness.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while current AI models are fast and cheap, rigorous testing shows they perform below the level of median lawyers, and these tests do not fully account for present or future AI advancements like deep prompt engineering. He also writes that the faults found in LLMs must be measured against the realistic alternatives ordinary people have, such as doing nothing, which is a common response, especially for poor households.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI demonstrates considerable potential for automating legal tasks, with predictions of automating 44 percent of such work within ten years and early adoption seen in firms like Allen & Overy where a tool called Harvey was quickly used by 25 percent of the practice daily. He also notes that while a 2023 survey found 82 percent of lawyers believe AI can be applied to legal work, only 51 percent deemed it appropriate, and various 2023 surveys reported actual usage among lawyers ranging from 11 to 21 percent.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while AI adoption in law firms is currently small-to-moderate for tasks like drafting and summarising, it is expected to consistently increase due to developing tools, new lawyers' familiarity, and client pressure for reduced billing. He also writes that the remarkably rapid recent adoption of AI by knowledge workers suggests law firms will not lag for long, indicating AI's utility, potential productivity gains, and a path for broader integration into legal workflows, potentially extending to courts.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI offers a holistic shock to the access to justice problem, significantly reducing not only the financial costs of legal services but also addressing social and psychological barriers. He further writes that this impact is crucial because barriers to justice are regressive, and AI can also influence the upstream "naming-blaming-claiming" process through which individual grievances are transformed into recognized legal disputes.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that the 'Naming, Blaming, Claiming' (NBC) filter, which requires individuals to perceive an injury, identify a responsible party, and conceptualize a legal assertion, results in most potential legal claims being lost, with a disproportionately regressive effect on poorer individuals. He also notes that generative AI directly addresses this NBC filter by quickly and cheaply guiding users through all three stages, as illustrated by an AI's response to a tenant's mold query, potentially leading to a radical change in legal consciousness.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI models can remove many invisible upstream barriers on the way to justice and assist individuals with legal strategy by making complex information accessible to their specific sociolinguistic needs. He also writes that AI can further aid the litigation journey by drafting required communications and other litigation materials, and help pro se individuals navigate the legal process, thereby giving people more access to justice.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI's capacity to reduce access to justice barriers, by aiding in legal research and diminishing litigation uncertainty, strongly suggests an impending "AI litigation boom." He further states that this potential surge in litigation is supported by AI's ability to effortlessly produce verbose legal filings and by strong economic incentives and convenience, which are likely to outweigh initial concerns about the quality of these AI-generated documents.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI has the potential to remove barriers to justice, aiding litigants and especially low-income individuals, but its use by strategic players like debt collection firms will likely lead to an AI litigation boom. He also notes that some existing barriers to justice, while filtering important cases, also serve a positive function by deterring vexatious or meritless filings, such as access friction preventing debt buyers from pursuing very small claims.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that the current judicial system, already burdened and demonstrating "lightened scrutiny" under increased caseloads, faces further challenges to its economy with an anticipated AI-driven surge in cases, which historically has led to adjustments affecting primary and procedural rights. He also suggests control theory, which uses feedback mechanisms like a thermostat adjusting temperature, offers a useful framework for understanding how dynamic systems such as the judiciary might regulate themselves to maintain desired states despite disturbances like increased litigation.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that judges regulate the flow of litigation similarly to thermostats, adjusting procedural and substantive doctrines as control mechanisms in response to judicial environment demands like case volume and available resources. He further notes that these common administrative adjustments for judicial economy, such as varying court fees, inevitably affect substantive rights, raising concerns about using legal rights as levers for managing judicial resources.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that mechanisms like fees and de minimis rules, intended to filter low-value cases, can also screen out socially important litigation and disproportionately affect the poor. He also points out that heightened pleading standards, such as those established in *Twombly* and *Iqbal* to control discovery costs, have empirically shown to primarily impact pro se plaintiffs rather than significantly reducing overall filing activity.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that courts employ indirect "procedural thermostats" like Lone Pine orders in complex toxic tort cases, compelling plaintiffs to present preliminary evidence on injury and causation to manage litigation and cull meritless claims, despite criticisms of their burden and inconsistency. He also provides another example of such a litigation control mechanism: the doctrine of exhaustion of administrative remedies, particularly in prisoner's rights cases, which requires plaintiffs to complete agency processes before seeking judicial relief.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that analysis of EEOC data and Lex Machina lawsuit data reveals that only a small percentage of discrimination charges ultimately become federal lawsuits. He further writes that his specific analysis indicates the ratio of unresolved EEOC discrimination claims transforming into actual lawsuits is approximately 3.6 percent.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that legal systems utilize "procedural thermostats," like specific standards of proof and statutes of limitations, which function as regulatory frictions intended to control the volume and quality of litigation. He also writes that these mechanisms operate on the (often unverified) hope that added friction deters less meritorious claims, a premise now challenged by AI tools that can help overcome such procedural barriers.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI can ameliorate barriers to justice by assisting people with legal processes, document creation, navigating administrative remedies, and overcoming pleading standards that often filter out cases from less skilled litigants. He also suggests that as AI tools remove such frictions and costs, a commensurate increase in civil litigation, potentially even a doubling in volume due to the large access to justice gap, is not implausible.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that an anticipated AI-driven litigation boom will pressure judicial economy, and while historical responses involved adjusting "legal thermostats," he advocates for proactive integration of AI tools into the judicial process. He also notes that one traditional "legal thermostat" strategy involves increasing fees to reduce filings, but this approach has the significant downside of limiting access to justice for those who cannot afford higher costs.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that despite the rise of litigation financing, fees remain a crude and disproportionately impactful tool for filtering lawsuits, especially for the poor. He also conceptualizes pleading standards as a "proof-of-work" mechanism, akin to blockchain, requiring more upfront effort to filter out weaker claims by leveraging a litigant's own assessment of their case's merits.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that AI writing tools can rapidly transform vague claims into elaborate, well-structured legal arguments, potentially including "hallucinated" facts, making it harder for judges to quickly assess the plausibility of filings, particularly those from pro se litigants. He also explains that this capability undermines "proof-of-work" filtering mechanisms, potentially leading judges to respond by demanding more doctrinally or subtly altering legal standards to conserve judicial resources strained by an increased volume of AI-assisted litigation.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that reactive adjustments to AI's impact, such as increased fees or stricter pleading standards, could paradoxically narrow civil rights and worsen the delivery of justice, as these measures are unstable and not AI-proof. He also notes that alternatively, policymakers might adopt a 'sit and wait' approach, observing AI's development due to technological uncertainty, historical adaptation by the legal system, and unknown AI adoption patterns before making changes.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that despite potential negative uses of AI in law, a passive stance is ill-advised because current trends show increasing AI integration, and its unreliability should serve as a catalyst for careful development and testing. He further argues that this proactive engagement is crucial for refining AI, preparing the judicial system for its benefits, and ensuring it remains at the forefront of technological integration to effectively deliver justice.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while judicial skepticism towards generative AI is understandable, banning it in courtrooms would be wrong long-term as it would hinder the democratization of access to the justice system and perpetuate existing asymmetries. He also argues that disclosure regimes for AI-generated materials are a hopeless enterprise because reliable detection is unavailable and widespread AI integration will render such disclosures uninformative, akin to disclosing computer use.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while massively increasing funding is the most direct way to address the growing demand for justice, the realism of a budget increase sufficient to significantly expand judicial capacity appears tenuous in the current political climate. He further notes that even if AI could fully replace legal aid, redirecting its roughly $2.7 billion budget would only afford about a 30 percent increase to the federal court system's $9.4 billion budget, an insufficient sum for a major expansion.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that to effectively manage the anticipated "AI litigation boom," the legal system should pursue an integration strategy, implementing AI in all aspects of the legal process to amplify the productivity of judges and clerks and stretch existing judicial resources. He also notes this integration is already occurring organically, with judges admitting to using AI for tasks like drafting opinions and even for "generative interpretation," indicating such tools are considered useful and will likely become "irresistibly attractive."
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that despite cautious optimism about AI "robo-judging," significant resistance and ethical concerns exist, leading him to argue that focusing on fully automated judging is a distraction. He also states that AI's more powerful utility lies in mundane but impactful applications, such as compressing the immense and increasing volume of text generated in litigation to aid in meting out justice.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that generative AI excels at document summarization, offering two main types: abstractive summarization, which creates new condensed versions conveying core meaning, and extractive summarization, which identifies and compiles key phrases directly from the text. He further explains that both approaches can significantly aid judges, with abstractive summaries directing attention to critical parts and offering robust overviews, while extractive summaries are invaluable for identifying crucial elements like specific evidence or quotes, thereby reducing the material judges need to personally review.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that implementing extractive summarization technologies into case management systems is straightforward and cost-effective, allowing for automated summaries and extraction of key document parts to aid judicial attention management. He also describes a more advanced application, document Q&A, which enables judges to ask specific questions about ingested filings in ordinary language and receive natural language answers from AI based on the document's content.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that document Q&A offers a radical improvement over traditional search by allowing users to ask direct questions in plain language, though it should be viewed as a diligent but fallible assistant. He also notes that while these LLMs may provide partial, misleading, or even hallucinated answers and struggle with complex queries, their limitations can be managed similarly to how judges oversee legal clerks, retaining ultimate responsibility.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while judges must verify AI-generated facts to ensure judicial efficiency, they can also leverage AI's "generative interpretation" capabilities, which use vast datasets to offer a powerful tool for textualist interpretation surpassing traditional methods. He also notes that confidentiality concerns with cloud-hosted AI models are significant, but evolving solutions like on-premise hosting, data encryption, and the formulation of tailored legal standards are critical for addressing these privacy issues.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that large language models' capacity to discern meaning in context, unlike dictionaries, suggests generative interpretation could be the future of textualist interpretation. He also references Richard Re's analysis which reasonably flags dangers in AI-assisted opinion drafting, such as diminished judicial ownership, deliberation, and authenticity, potentially leading to lifeless boilerplate judgments.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while judges should be aware of AI's dangers, integrating it carefully into the judicial process, short of outsourcing adjudication, can provide necessary support to meet the potential sharp increase in litigation. He also argues that the real decision is not whether to use algorithms but which kind, as failing to integrate AI could lead to regressive "blind algorithms" like increased fees or stricter standards when judicial resources are strained by AI-driven increased access.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that while AI will significantly reduce barriers to justice, this is merely a prelude to delivering actual justice, and a resulting litigation boom could, like past spikes, lead to a reduction in legal rights. He further proposes the proactive integration of AI tools into the legal process, which, despite concerns about bias that can be managed through careful application, offers a better alternative to bluntly suppressing litigation and calls for lawyers to lead in tool-building scholarship.
+*   Professor Yonathan Arbel of the University of Alabama School of Law writes that administrators should spearhead collaboration with technologists to address challenges in the judicial system. He also states that considerations of judicial economy present an urgent choice regarding how much justice society wishes to purchase and whether to extend these resources through automation tools for judges.)MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM(好的，这是您所要求的关于约纳坦·阿尔伯教授（Yonathan Arbel）SSRN-4873649号论文信息的正式中文翻译：
+
+**1. ## 内容摘要（100字以内）**
+
+阿拉巴马大学法学院的约纳坦·阿尔伯教授认为，人工智能（AI）在降低法律成本和增加司法救济途径方面的潜力，反而可能引发诉讼爆炸，从而对司法经济构成威胁。他建议，法律体系应主动整合人工智能工具，而非像历史上那样由法院缩减权利来应对。这将增强并扩展司法程序，解决大量未满足的法律需求，利用人工智能日益增长的能力（尽管目前仍有缺陷），并防止因案件量增加而采取倒退性措施。其目标是通过提高司法系统的效率和可及性来改善司法服务的提供。
+
+**2. ## 各章节摘要（每条120字以内）**
+
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然人工智能工具有望通过大幅降低法律材料的生成成本来提升司法救济的可及性，然而，这种有效性本身却可能因增加案件数量和冗繁程度，而对司法经济构成矛盾的威胁。他进一步指出，法律体系应主动整合人工智能工具以增强和扩展法律程序本身，而不是像历史上那样由法院通过缩减实体权利来应对案件激增。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，大量法律纠纷从未诉诸法庭，研究表明美国每年约有1.2亿个法律问题未得到解决。他还指出，这种司法救济危机尤其影响低收入美国人，他们92%的重大民事法律问题几乎得不到或根本得不到法律援助。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，获得司法救济的主要障碍，特别是以律师平均每小时292美元费率为代表的高昂法律服务成本，使得许多人无法解决影响其基本人权需求的法律问题。他还指出，所需投入巨大，即使将法律援助预算翻倍也未能有效缩小这一司法鸿沟，而诸如“法律意识”等社会法律问题进一步例证了这一点，例如个人将被克扣工资描述为被“坑了”，而非自身权利受到侵犯。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，诺拉（Nora）和戴维·弗里曼·恩斯特罗姆（David Freeman Engstrom）将司法救济问题的核心归结为法律技术采用上的不对称性，即律师事务所积极推动诉讼自动化，而个人则“采用率低下”且依赖“传统工具”。他还指出，尽管这种关于技术不对称导致权力失衡（尤其是在债务催收诉讼中）的论点有一定道理，但该论断可能过于绝对或正在变得过时。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，一些关于律师不当使用人工智能的趣闻轶事（这些趣闻支持了法律行业的传统观点），分散了人们对一个令人惊讶的现实的注意力：即便是小型律师事务所也因其便利性而开始采用这些尚不完善的工具。他还指出，这种广泛采用预计将普及法律技术，显著降低成本，并通过扩大对目前服务不足群体的司法救济途径，可能导致诉讼爆炸。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，随着人工智能逐渐消除司法救济的障碍，它可能引发一场诉讼爆炸，威胁到本已不堪重负的司法系统。他进一步指出，法律体系不应坐等危机发生，而应主动整合人工智能（尽管其目前尚不可靠），以扩展和改进司法服务的提供，同时审慎考虑司法需求和系统限制。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，早期的障碍阻碍了个人寻求法律索赔，这一过程可用“命名-归责-主张”模型来描述，而人工智能可以帮助个人以法律上认可的方式阐述其不幸遭遇。他还指出，虽然人工智能有助于获得司法救济，但这些障碍的消除也可能导致合理及滥用性索赔的诉讼爆炸，本文将运用控制理论来探讨其对司法经济的影响。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，法律原则可以充当“法律调温器”，法官通过调整程序性和实体性权利以达到动态平衡，这可能只是重组而非解决司法救济问题。他进一步指出，一个积极的解决方案是将人工智能工具整合到司法程序本身，使法律体系能够扩展规模并应对挑战，而无需损害诉讼当事人的实体权利。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，当前一代人工智能系统能够“充分地”执行许多法律任务，结合巨大的司法救济缺口，这预示着人工智能引发的诉讼爆炸即将来临。他还指出，人工智能既非万能也非仅是噱头，由于技术发展迅速，目前对其能力的评估仅为初步的底线，其局限性也仅为暂时的上限，并且持续改进正在进行中。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，最近一项研究发现，像GPT-4这样的人工智能模型在识别合同中法律问题的准确性方面与初级律师相当，但仅花费了8%的时间，成本仅为0.25美元，而律师的平均费用为74.26美元。他还指出，这些模型与初级律师类似，表现出对精确率而非召回率的偏好，其观察到的错误似乎是暂时的和特定于模型的，而非根本性的，较新的模型已解决了示例中的错误。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授谈到他参与撰写的一项研究，该研究评估了大型语言模型作为“智能阅读器”协助消费者处理合同和隐私政策等法律文件。他进一步指出，该研究发现这些智能阅读器显著缩短了合同长度和阅读时间，并将文本可读性提高到五年级水平，而未损害基本信息。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然大型语言模型表现出较高但不稳定的性能，可能超过非专业的报税员，但它们更可能取代H&R Block等社区代办机构或遗产规划师，而非顶级律师。他还指出，一个持续存在且“惊人普遍”的故障模式是“幻觉”，即大型语言模型会编造不存在的事实，尽管这些通常可以被核查，且技术进步显示出在减少此问题方面的希望。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管GPT-4最初似乎以第90百分位的成绩通过了统一律师资格考试，但更精细的分析表明其表现更接近应试者的中位数水平，并且在论文写作部分处于倒数15%的水平。他还指出，尽管根据考试表现进行推断时需谨慎，但早期的实际应用研究（例如一项研究中80%的人类评审员更倾向于GPT-4起草的投诉信而非受过训练的律师所写）表明了人工智能的潜在效用。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然当前的人工智能模型快速且廉价，但严格测试表明其性能低于中等水平的律师，且这些测试未充分考虑当前或未来的人工智能进展，如深度提示工程。他还指出，在评估大型语言模型的缺陷时，必须参照普通人所拥有的现实替代方案，例如无所作为——这是一种常见的应对方式，尤其对贫困家庭而言。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能在自动化法律任务方面展现出巨大潜力，预计十年内可自动化44%的此类工作，安理国际律师事务所（Allen & Overy）等公司已早期采用，其一款名为Harvey的工具迅速被该所25%的日常业务所使用。他还指出，尽管2023年一项调查发现82%的律师认为人工智能可应用于法律工作，但仅51%认为其适用，而2023年的多项调查报告称律师的实际使用率在11%至21%之间。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管目前人工智能在律师事务所中用于起草和总结等任务的采用率尚属中低水平，但由于工具的不断发展、新律师的熟悉度以及客户对降低账单的压力，预计其采用率将持续增加。他还指出，知识工作者近期对人工智能的迅速采用表明，律师事务所不会长期滞后，这预示着人工智能的效用、潜在的生产力提升以及其更广泛融入法律工作流程（可能扩展至法院）的路径。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能对司法救济问题带来了整体性冲击，不仅显著降低了法律服务的财务成本，还解决了社会和心理障碍。他进一步指出，这种影响至关重要，因为司法救济的障碍具有累退性，人工智能还可以影响上游的“命名-归责-主张”过程，即个人不满转化为公认法律纠纷的过程。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，“命名、归责、主张”（NBC）过滤机制要求个人感知到损害、确定责任方并构想法律主张，这导致大多数潜在的法律索赔流失，且对较贫困个体产生不成比例的累退效应。他还指出，生成式人工智能通过快速廉价地引导用户完成这三个阶段，直接应对了NBC过滤机制，正如人工智能对租户霉菌问题的回应所示，这可能导致法律意识的根本性变革。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能模型可以消除许多通往司法救济道路上的无形上游障碍，并通过使复杂信息适应个体的特定社会语言需求来协助其制定法律策略。他还指出，人工智能可以通过起草必要的函件和其他诉讼材料进一步辅助诉讼过程，并帮助无律师代理的个人应对法律程序，从而为人们提供更多获得司法救济的途径。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能通过辅助法律研究和减少诉讼不确定性来降低司法救济障碍的能力，强烈预示着一场“人工智能诉讼爆炸”即将来临。他进一步指出，人工智能能够毫不费力地生成冗长的法律文件，加上强大的经济激励和便利性，很可能超越对这些人工智能生成文件质量的初步担忧，从而支持了这种潜在的诉讼激增。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能有潜力消除司法障碍，帮助诉讼当事人，特别是低收入人群，但债务催收公司等策略性参与者对其的使用可能会引发人工智能诉讼爆炸。他还指出，一些现有的司法障碍在过滤重要案件的同时，也通过阻止无理取闹或缺乏依据的诉讼（例如，准入摩擦阻止债务购买人追讨极小额索赔）发挥着积极作用。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，当前司法系统已不堪重负，并在案件量增加时表现出“审查宽松化”，而预期由人工智能驱动的案件激增将对其司法经济构成进一步挑战，这在历史上已导致影响基本权利和程序权利的调整。他还建议，控制理论（如恒温器调节温度的反馈机制）为理解司法等动态系统如何在诉讼增加等干扰下进行自我调节以维持期望状态提供了一个有用的框架。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，法官调节诉讼流量的方式类似于恒温器，他们根据司法环境需求（如案件量和可用资源）调整程序性和实体性原则作为控制机制。他进一步指出，这些为实现司法经济而进行的常见行政调整，如调整法院费用，不可避免地影响实体权利，引发了将法律权利作为管理司法资源的杠杆的担忧。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，旨在过滤低价值案件的费用和“最低标的额规则”等机制，也可能筛选掉具有社会重要性的诉讼，并对穷人产生不成比例的影响。他还指出，旨在控制证据开示成本的更高起诉标准（如*Twombly案*和*Iqbal案*所确立的标准），经验表明主要影响的是无律师代理的原告，而非显著减少整体诉讼活动。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，法院在复杂的有毒侵权案件中采用间接的“程序性调温器”，如“孤松令”（Lone Pine orders），强制原告提供关于损害和因果关系的初步证据，以管理诉讼并剔除无依据的索赔，尽管这种做法因其负担和不一致性而受到批评。他还提供了另一个此类诉讼控制机制的例子：行政补救措施穷尽原则，尤其是在囚犯权利案件中，该原则要求原告在寻求司法救济前完成机构程序。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，对平等就业机会委员会（EEOC）数据和Lex Machina诉讼数据的分析显示，只有一小部分歧视指控最终成为联邦诉讼。他进一步指出，他的具体分析表明，未解决的EEOC歧视索赔转化为实际诉讼的比率约为3.6%。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，法律体系运用“程序性调温器”，如特定的证明标准和诉讼时效，这些机制作为旨在控制诉讼数量和质量的监管性摩擦。他还指出，这些机制运作的基础是（通常未经证实的）希望，即增加的摩擦能阻止那些理由不充分的索赔，而这一前提现在受到人工智能工具的挑战，这些工具可以帮助克服此类程序障碍。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能可以通过协助人们处理法律程序、创建文件、应对行政补救措施以及克服那些常常筛选掉缺乏经验诉讼当事人案件的起诉标准，从而改善司法救济的障碍。他还认为，随着人工智能工具消除此类摩擦和成本，民事诉讼相应增加，甚至由于巨大的司法救济缺口而可能翻倍，这并非不合情理。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，预期由人工智能驱动的诉讼爆炸将给司法经济带来压力，虽然历史上的应对措施涉及调整“法律调温器”，但他主张将人工智能工具主动整合到司法程序中。他还指出，一种传统的“法律调温器”策略是增加费用以减少诉讼量，但这种方法存在显著缺陷，即限制了那些无力承担更高费用者的司法救济途径。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管诉讼融资兴起，但费用仍然是一种粗略且对穷人影响尤为不成比例的诉讼过滤工具。他还将起诉标准概念化为一种“工作量证明”机制，类似于区块链，要求投入更多前期努力，通过利用诉讼人对其案件价值的自我评估来筛选掉较弱的索赔。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，人工智能写作工具能够将模糊的诉求迅速转化为详尽、结构良好的法律论证，其中可能包含“虚构”事实，这使得法官更难快速评估诉状（尤其是来自无律师代理的当事人的诉状）的合理性。他还解释说，这种能力削弱了“工作量证明”过滤机制，可能导致法官通过提高法律原则要求或 subtly 改变法律标准来应对，以节省因人工智能辅助诉讼量增加而紧张的司法资源。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，对人工智能影响的被动调整，如增加费用或更严格的起诉标准，反而可能缩小民事权利并恶化司法服务的提供，因为这些措施不稳定且无法完全防范人工智能的影响。他还指出，政策制定者也可能采取“观望”态度，由于技术不确定性、法律体系的历史适应能力以及未知的人工智能采用模式，在做出改变前观察人工智能的发展。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管人工智能在法律领域可能存在负面应用，但采取消极立场是不明智的，因为当前趋势显示人工智能的整合日益加深，其不可靠性应成为谨慎开发和测试的催化剂。他进一步认为，这种积极参与对于完善人工智能、使司法系统为接纳其益处做好准备，并确保其保持在技术整合前沿以有效提供司法服务至关重要。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管司法界对生成式人工智能持怀疑态度可以理解，但长期来看在法庭上禁止使用它是错误的，因为这将阻碍司法救济途径的普及化并固化现有的不对称性。他还认为，针对人工智能生成材料的披露制度是一项徒劳的尝试，因为目前无法进行可靠检测，且人工智能的广泛整合将使此类披露失去信息价值，类似于披露计算机使用情况。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管大规模增加资金是解决日益增长的司法需求最直接的方法，但在当前政治环境下，足以显著扩大司法能力的预算增长似乎难以实现。他进一步指出，即使人工智能能够完全取代法律援助，将其约27亿美元的预算转用于联邦法院系统94亿美元的预算，也仅能带来约30%的增长，不足以支持大规模扩张。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，为有效管理预期的“人工智能诉讼爆炸”，法律体系应推行整合策略，在法律程序的各个方面实施人工智能，以提高法官和书记员的工作效率，并充分利用现有司法资源。他还指出，这种整合已在自发地发生，有法官承认使用人工智能执行起草判决书甚至“生成式解释”等任务，表明此类工具被认为是有用的，并可能变得“极具吸引力”。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，尽管对人工智能“机器人裁判”持谨慎乐观态度，但存在显著的抵制和伦理担忧，这使他认为专注于全自动裁判会分散注意力。他还指出，人工智能更强大的效用在于平凡但影响深远的应用，例如压缩诉讼中产生的大量且不断增加的文本，以协助司法公正的实现。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，生成式人工智能擅长文档摘要，主要提供两种类型：生成式摘要，即创建新的浓缩版本以传达核心含义；以及抽取式摘要，即直接从文本中识别并汇编关键短语。他进一步解释说，这两种方法都能极大地帮助法官，生成式摘要能将注意力引向关键部分并提供全面的概述，而抽取式摘要在识别特定证据或引文等关键要素方面价值非凡，从而减少法官需要亲自审阅的材料。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，将抽取式摘要技术集成到案件管理系统中是直接且成本效益高的方法，可以实现自动化摘要和关键文档部分的提取，以辅助司法注意力管理。他还描述了一种更高级的应用——文档问答（document Q&A），使法官能够用日常语言就已录入的案卷材料提出具体问题，并从人工智能处获得基于文档内容的自然语言回答。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，文档问答（document Q&A）通过允许用户以通俗语言直接提问，提供了对传统搜索的根本性改进，尽管应将其视为一个勤勉但可能出错的助手。他还指出，虽然这些大型语言模型可能提供部分、误导性甚至虚构的答案，并且难以处理复杂查询，但其局限性可以像法官监督法律助理那样进行管理，最终责任仍由法官承担。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然法官必须核实人工智能生成的事实以确保司法效率，但他们也可以利用人工智能的“生成式解释”能力，该能力利用海量数据集为文本主义解释提供超越传统方法的强大工具。他还指出，云托管人工智能模型的保密性问题十分重要，但不断发展的解决方案，如本地部署、数据加密以及制定专门的法律标准，对于解决这些隐私问题至关重要。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，大型语言模型能够辨别语境中的含义，这与词典不同，表明生成式解释可能成为文本主义解释的未来。他还提及理查德·雷（Richard Re）的分析，该分析合理地指出了人工智能辅助撰写判决意见的危险，例如可能削弱司法所有权、审议过程和真实性，从而导致产生缺乏生气的 шаблон式判决。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然法官应警惕人工智能的危险，但在不将裁决外包的前提下，谨慎地将其整合到司法程序中，可以为应对潜在的诉讼急剧增加提供必要的支持。他还认为，真正的决策并非是否使用算法，而是使用哪种算法，因为若未能整合人工智能，当司法资源因人工智能驱动的司法救济途径增加而紧张时，可能导致采取增加费用或更严标准等倒退性的“盲目算法”。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，虽然人工智能将显著减少司法救济的障碍，但这仅仅是实现实际正义的前奏，由此产生的诉讼爆炸可能会像过去的案件激增一样，导致法律权利的缩减。他进一步建议将人工智能工具主动整合到法律程序中，尽管存在偏见问题（可通过谨慎应用加以管理），但这比粗暴地压制诉讼是更好的选择，并呼吁律师在工具构建学术研究方面发挥领导作用。
+*   阿拉巴马大学法学院的约纳坦·阿尔伯教授指出，行政管理者应带头与技术专家合作，以应对司法系统中的挑战。他还指出，对司法经济的考量提出了一个紧迫的选择：社会希望购买多少正义，以及是否通过为法官配备自动化工具来扩展这些资源。)MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# JUDICIAL ECONOMY IN THE AGE OF AI — one-page summary
+
+**Paper ID:** `ssrn-4873649`
+**Year:** 2025
+**Author(s):** Yonathan Arbel
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4873649
+
+## TL;DR
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI's potential to reduce legal costs and increase access to justice paradoxically threatens judicial economy with a litigation boom. Instead of courts historically shrinking rights to cope, he proposes proactively integrating AI tools into the legal system. This would enhance and scale judicial processes, addressing the vast unmet legal needs, leveraging AI's growing capabilities despite current flaws, and preventing regressive responses to increased caseloads. The goal is to improve justice delivery by making the system more efficient and accessible.
+
+## Keywords
+
+contracts; AI; law
+
+## Files
+
+- Full text: `papers/ssrn-4873649/paper.txt`
+- PDF: `papers/ssrn-4873649/paper.pdf`
+- Summary (EN): `papers/ssrn-4873649/summary.md`
+- Summary (ZH): `papers/ssrn-4873649/summary.zh.md`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: JUDICIAL ECONOMY IN THE AGE OF AI (ssrn-4873649)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4873649
+- Full text: `papers/ssrn-4873649/paper.txt`
+- Summary (EN): `papers/ssrn-4873649/summary.md`
+- Summary (ZH): `papers/ssrn-4873649/summary.zh.md`
+
+## Elevator pitch
+
+Professor Yonathan Arbel of the University of Alabama School of Law argues that AI's potential to reduce legal costs and increase access to justice paradoxically threatens judicial economy with a litigation boom. Instead of courts historically shrinking rights to cope, he proposes proactively integrating AI tools into the legal system. This would enhance and scale judicial processes, addressing the vast unmet legal needs, leveraging AI's growing capabilities despite current flaws, and preventing regressive responses to increased caseloads. The goal is to improve justice delivery by making the system more efficient and accessible.
+
+## Keywords / concepts
+
+contracts; AI; law
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(JUDICIAL ECONOMY IN THE AGE OF AI
 YONATHAN A. ARBEL ∗
 Individuals do not vindicate the majority of their legal claims
 because of access to justice barriers. This entrenched state of
@@ -2091,9 +2256,33 @@ technologists.
 Ultimately, judicial economy considerations pose a hard,
 but urgent, choice: We must decide how much justice we want to
 purchase and whether we want to stretch these dollars further
-by providing automation tools to judges.)EOF";
+by providing automation tools to judges.)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

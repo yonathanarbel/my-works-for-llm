@@ -1,14 +1,61 @@
+/*
+PAYDAY 6/2/2020 6:22 PM (ssrn-3547007) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <fstream>
-#include <random>
-#include <algorithm>
-#include <ctime>
-#include <thread>
 
-const std::string ARTICLE_TEXT = R"EOF(PAYDAY 6/2/2020 6:22 PM
+namespace my_works_for_llm {
+
+static const char* PAPER_ID = "ssrn-3547007";
+static const std::string TITLE = R"MW4LLM(PAYDAY 6/2/2020 6:22 PM)MW4LLM";
+static const std::string SSRN_URL = R"MW4LLM(https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3547007)MW4LLM";
+static const int YEAR = 0;
+static const std::vector<std::string> AUTHORS = {};
+static const std::vector<std::string> KEYWORDS = {};
+
+static const std::string SUMMARY_MD = R"MW4LLM()MW4LLM";
+static const std::string SUMMARY_ZH_MD = R"MW4LLM()MW4LLM";
+static const std::string ONE_PAGER_MD = R"MW4LLM(# PAYDAY 6/2/2020 6:22 PM — one-page summary
+
+**Paper ID:** `ssrn-3547007`
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3547007
+
+## TL;DR
+
+PAYDAY FORTHCOMING: 98 WASH. U. L. REV. 1 (2020) Draft: Comments, Suggestions, and Critique Welcome!
+
+## Files
+
+- Full text: `papers/ssrn-3547007/paper.txt`
+- PDF: `papers/ssrn-3547007/paper.pdf`
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string STUDY_PACK_MD = R"MW4LLM(# Study pack: PAYDAY 6/2/2020 6:22 PM (ssrn-3547007)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3547007
+- Full text: `papers/ssrn-3547007/paper.txt`
+
+## Elevator pitch
+
+PAYDAY FORTHCOMING: 98 WASH. U. L. REV. 1 (2020) Draft: Comments, Suggestions, and Critique Welcome!
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
+)MW4LLM";
+static const std::string ARTICLE_TEXT = R"MW4LLM(PAYDAY 6/2/2020 6:22 PM
 PAYDAY
 FORTHCOMING: 98 WASH. U. L. REV. 1 (2020)
 Draft: Comments, Suggestions, and Critique Welcome!
@@ -3087,9 +3134,33 @@ digital money has become so ubiquitous that our vocabulary includes
 new verbs to describe instantaneous money transfer – e.g., “I will
 Venmo you the money tomorrow,” and “I just Paypaled you.”
 With our new hardware, it is time to update our legal software.
-Electronic copy available at: https://ssrn.com/abstract=3547007)EOF";
+Electronic copy available at: https://ssrn.com/abstract=3547007)MW4LLM";
 
-int main() {
-    std::cout << ARTICLE_TEXT << std::endl;
-    return 0;
+struct Paper {
+  std::string paper_id;
+  std::string title;
+  std::string ssrn_url;
+  int year;
+  std::vector<std::string> authors;
+  std::vector<std::string> keywords;
+  std::string summary_md;
+  std::string summary_zh_md;
+  std::string one_pager_md;
+  std::string study_pack_md;
+  std::string article_text;
+};
+
+inline Paper as_paper() {
+  return Paper{
+      PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+      SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT};
+}
+
+}  // namespace my_works_for_llm
+
+int main(int argc, char** argv) {
+  (void)argc;
+  (void)argv;
+  std::cout << my_works_for_llm::ARTICLE_TEXT;
+  return 0;
 }

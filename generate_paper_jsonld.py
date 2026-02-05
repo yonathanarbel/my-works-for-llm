@@ -201,6 +201,11 @@ def _build_media_objects(raw_base: str, paper_dir: Path, papers_dir: Path) -> li
         ("study_pack.md", "text/markdown"),
         ("paper.txt", "text/plain"),
         ("paper.pdf", "application/pdf"),
+        ("paper.py", "text/x-python"),
+        ("paper.js", "application/javascript"),
+        ("paper.cpp", "text/x-c++src"),
+        ("paper.go", "text/x-go"),
+        ("paper.rs", "text/x-rust"),
     ]:
         path = paper_dir / filename
         if not path.exists():

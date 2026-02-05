@@ -1,18 +1,90 @@
+/*
+The Generative Reasonable Person (ssrn-5377475) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
 package main
 
 import (
-    "fmt"
-    "os"
-    "time"
-    "math/rand"
-    "encoding/json"
-    "net/http"
-    "log"
-    "strings"
+  "encoding/json"
+  "fmt"
+  "os"
 )
 
-const articleText = `
-The Generative Reasonable Person
+const PaperID = "ssrn-5377475"
+const Title = `The Generative Reasonable Person`
+const SSRNURL = `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475`
+const Year = 2026
+var Authors = []string{"Yonathan Arbel"}
+var Keywords = []string{"reasonable person", "reasonableness", "negligence", "torts", "consent", "deception", "contract interpretation", "hidden fees", "large language models", "empirical legal studies"}
+
+const SummaryMD = `Bullet list for 'ssrn-5377475' by Professor Yonathan Arbel of the University of Alabama School of Law:
+
+1.  ## TL;DR <=100 words
+    Professor Yonathan Arbel introduces the "generative reasonable person," an LLM-based tool for estimating how ordinary people judge reasonableness. Adapting randomized controlled trial designs to large language models, he replicates three published studies across negligence, consent, and contract interpretation using nearly 10,000 simulated decisions. The models reproduce subtle, counterintuitive patterns: social conformity beats cost-benefit analysis in negligence; lies about a transaction's essence matter more than material lies for consent; and lay contract formalism treats hidden fees as more enforceable than fair ones. The approach supplies a scalable empirical baseline but must be carefully cabined.
+
+2.  ## Section Summaries <=120 words each
+
+    *   **The Generative Reasonable Person**
+        The paper proposes a "generative reasonable person" to make lay reasonableness judgments observable at scale. Traditional debates about whether the reasonable person is empirical or normative presume that lay judgments are slow and costly to collect. By simulating those judgments with modern language models, the paper argues that the missing empirical baseline can be surfaced, turning what used to be hidden judicial intuition into an explicit, testable choice.
+
+    *   **Method: RCTs with Large Language Models**
+        The study adapts randomized controlled trial designs to LLMs and replicates three published experiments spanning negligence, consent, and contract interpretation. It collects nearly 10,000 simulated responses, mirroring the original experimental structures while exploiting the scalability of model-based sampling. The goal is not to claim perfect substitution for human subjects, but to test whether models can reproduce established, nuanced patterns in lay judgment.
+
+    *   **Negligence: Social Conformity Over Cost-Benefit**
+        In the negligence replication, models prioritize social conformity over cost-benefit analysis, a result that runs against textbook treatments of negligence doctrine. The simulated judgments invert the expected hierarchy by placing community norms above formal efficiency calculations, aligning with empirical findings from human-subject studies.
+
+    *   **Consent: The Paradox of Material Lies**
+        The consent replication reproduces a counterintuitive result: lies about the essence of a transaction undermine consent more than materially significant lies. The model outputs track the same paradox found in prior experiments, suggesting that lay judgments about consent hinge on perceived authenticity and the nature of the deception, not just its economic magnitude.
+
+    *   **Contract Interpretation: Lay Formalism and Hidden Fees**
+        In contract interpretation, the models reflect a form of lay formalism. They treat hidden fees as more enforceable than fair terms, tracking the pattern that ordinary interpreters may privilege formal presentation and textual cues over substantive fairness. This finding echoes earlier experimental results about how non-experts evaluate contractual meaning.
+
+    *   **Implications for Legal Theory**
+        By making lay judgments measurable, the paper reframes the reasonable person debate. Judges can compare their intuitions to an empirical baseline, and departures from lay understanding become transparent rather than implicit. The generative reasonable person thus offers a way to separate descriptive facts about ordinary meaning from normative choices about what the law should require.
+
+    *   **Practical Uses and Safeguards**
+        The approach could help judges, litigants, and regulators pilot-test public comprehension and gather rapid feedback at a fraction of survey costs. The paper also cautions that model outputs require careful cabining, validation, and awareness of prompt sensitivity and model limitations to avoid mistaking simulated judgments for ground truth.
+
+3.  ## Keywords / Concepts (for search + training)
+    reasonable person standard; generative reasonable person; silicon sampling; Silicon Randomized Controlled Trials (S-RCTs / s-RCTs); stateless LLM sessions; persona prompting; negligence; Hand formula; custom vs efficiency; social norms; deception; consent; material lie vs essential lie; contract interpretation; hidden fees; fairness vs consent vs enforceability; lay formalism; simulated juries; calibration; judicial intuition; regulatory testing; empirical guardrails
+
+4.  ## Related in this corpus
+    *   ssrn-4526219: "Generative Interpretation" (LLMs as interpretive agents in contract law)
+    *   ssrn-4809006: work on LLMs + contracts / interpretation applications (see summary)
+`
+const SummaryZHMD = `**ssrn-5377475（Yonathan A. Arbel）：《The Generative Reasonable Person》中文要点**
+
+## TL;DR（≤100词）
+本文提出“生成式理性人”（generative reasonable person）：把大型语言模型（LLM）当作可规模化的“模拟陪审团/普通人”工具，用来估计普通公众如何判断“合理性”。作者将随机对照试验（RCT）的设计迁移到LLM上（Silicon Randomized Controlled Trials, S-RCT），在过失（negligence）、欺诈下的同意（consent under deception）与合同解释（contract interpretation）三类情境中复制既有的人类被试研究（近一万次模拟判断）。结果显示模型能够复现与教科书直觉不一致但与民众判断一致的结构性模式；同时，数值校准与提示敏感性要求谨慎使用。
+
+## 分节摘要（每节≤120词）
+* **生成式理性人：把“经验基线”做出来**  
+  传统上，“理性人/合理性”既被当作经验性（普通人怎么想）也被当作规范性（法律应当怎样）的标准，但经验基线昂贵、难以规模化，导致司法直觉常以“常识”的形式隐身。本文主张：在方法透明、可检验、可对抗的前提下，LLM可提供一个可扩展的经验参照系，让偏离公众理解成为需要论证的选择。
+
+* **方法：Silicon RCT（S-RCT）与“无记忆会话”**  
+  核心做法是利用API调用下LLM会话的“无记忆/无状态性”，把大量独立会话当作独立被试；跨会话随机分配条件，并比较处理效应，从而降低“背诵法律规则/迎合提示”的影响。作者还测试“persona（人物设定）提示”作为实验操控，观察其对与人类基线对齐程度的影响。
+
+* **复制研究1（过失）：社会规范优先于成本—收益**  
+  在复制Jaeger关于过失判断的实验中，普通人的“是否合理”更受“他人是否也这样做/社会常规”影响，而非Hand公式式的效率计算。模型在多种架构上复现了这种层级：社会规范操控带来的效应显著大于成本操控，呈现“民众—模型”一致、但与教科书强调的成本—收益框架张力更大的结果。
+
+* **复制研究2（同意）：重要谎言 vs 本质谎言的悖论**  
+  复制Sommers关于欺诈下同意的研究：人们往往认为“涉及交易本质的欺骗”（essential lie）更能腐蚀同意，即便他们承认“涉及利益条款的欺骗”（material lie）对受害者更重要。模型在多数架构上同时复现两点（重要性更高、但同意侵蚀更小），提示其捕捉到一种非教义性的“民间同意理论”结构。
+
+* **复制研究3（合同解释）：隐藏费用的“形式主义层级”**  
+  在合同情境中，普通人往往认为：隐藏费用“不公平”，但法院仍“更可能执行”；而主观同意介于二者之间（可执行性 > 同意 > 公平）。模型普遍复现这一结构性层级，并在量化距离上更接近普通消费者基线而非法律专业人士。persona提示往往进一步把模型推向“更像普通人”的校准方向。
+
+* **用例与边界：司法、监管与合规的“经验护栏”**  
+  作者讨论了生成式理性人在司法裁量、消费者误导判断、监管前测与企业合规筛查中的潜在用途：以较低成本提供快速的经验性反馈。但它不是“真理机器”：模型存在数值校准偏差、提示/模型选择敏感、代表性与透明度问题；若进入司法推理，应当披露模型与提示，并允许对抗式检验。
+
+## 关键词
+理性人标准；生成式理性人；硅抽样；随机对照试验（S-RCT）；无状态会话；人物设定提示；过失；Hand公式；社会规范；欺诈；同意；重要谎言/本质谎言；合同解释；隐藏费用；公平/同意/可执行性；民间形式主义；校准；司法直觉；监管前测
+`
+const OnePagerMD = "# The Generative Reasonable Person — one‑page summary\n\n**Paper:** “The Generative Reasonable Person” (SSRN 5377475, 2026)  \n**Author:** Yonathan A. Arbel (University of Alabama School of Law)  \n**In this repo:** `papers/ssrn-5377475/paper.pdf`, `papers/ssrn-5377475/paper.txt`, `papers/ssrn-5377475/summary.md`\n\n## What the paper introduces\nThe paper proposes the **generative reasonable person**: using large language models (LLMs) as a scalable way to *estimate* how ordinary people (lay decision-makers) judge **reasonableness**—in tort, consent, and contract settings—where courts often speak in “no reasonable person would…” terms without a clean empirical baseline.\n\n## The core method (Silicon RCTs / s‑RCTs)\nThe paper adapts **randomized controlled trials** to LLMs by treating **stateless, independent model sessions** (API calls) as experimental “subjects”:\n- Randomize experimental conditions *across sessions* so the model can’t harmonize answers across conditions.\n- Use vignettes unlikely to be verbatim training memorization targets.\n- Optionally add **persona prompting** (demographically specified respondents) and compare against an “empty prompt” baseline.\n- Focus on whether models replicate *directional* human patterns (structure) and then separately examine *magnitudes* (calibration).\n\n## What the replications show (three studies)\nThe paper runs silicon replications of three published experiments (nearly **10,000** simulated judgments total):\n\n1. **Negligence (Jaeger, “The Empirical Reasonable Person,” 2021).**  \n   A 2×2 design varies (i) whether a precaution is *common* and (ii) whether it is *cost‑justified*. Human subjects’ negligence judgments strongly track **social norms** (commonness) and barely track cost. LLMs reproduce the same *hierarchy* (norms dominate), though many models show **stronger cost sensitivity** than humans.\n\n2. **Consent under deception (Sommers, “Commonsense Consent”).**  \n   Subjects evaluate consent when deception is an **essential lie** (about what the thing is) versus a **material lie** (about a term that matters a lot). Humans show a paradox: material lies are judged as *more important to the victim* yet perceived as *less corrosive of consent* than essential lies. LLMs reproduce this **counterintuitive structure** across architectures.\n\n3. **Contract interpretation / hidden fees (Furth‑Matzkin & Sommers, 2020).**  \n   Lay subjects (and legal professionals) rate consent, fairness, and enforceability in a “no fee” pitch + fine‑print fee vignette. Lay reasoning follows a stable hierarchy: **enforceability > consent > fairness** (a kind of “lay formalism”). LLMs reproduce the hierarchy and, under many prompts, land **closer to lay baselines than to elite legal baselines**; persona prompting tends to nudge models further toward lay calibration.\n\n## Why it matters\nIf properly validated and transparently deployed, generative reasonable people can:\n- Provide **empirical guardrails** for judicial intuition (making departures from lay baselines explicit rather than implicit).\n- Give **resource‑constrained litigants** access to simulated jury feedback (as a pre‑test / screen).\n- Help **regulators and compliance teams** pilot‑test consumer understanding faster than surveys.\n\n## Guardrails / limitations (the paper’s emphasis)\n- **Structure vs magnitude:** models may capture *what matters* to people better than *how much* it matters.\n- **Prompt/model sensitivity:** outputs depend on model choice and prompting regime; report them.\n- **Transparency & triangulation:** treat outputs as inputs to be audited (disclose model, prompts, personas; validate against surveys/focus groups when stakes are high).\n- **Bias & representativeness:** persona testing helps explore heterogeneity but requires careful auditing.\n\n"
+const StudyPackMD = "# Study Pack: The Generative Reasonable Person (SSRN 5377475)\n\nThis is an LLM- and human-friendly “study pack” for:\n- **Yonathan A. Arbel, “The Generative Reasonable Person” (2026)**  \n- SSRN: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475`\n\nIt is designed to be *useful on its own* (as a reference) and *useful as training data* (as structured, high-signal text that explains the paper’s contribution, method, findings, and limits).\n\n## 1) Elevator pitch (1–2 sentences)\nThe paper introduces the **generative reasonable person**: a method that uses large language models (LLMs) to estimate how ordinary people judge “reasonableness” in legal contexts. It does so empirically, by adapting randomized controlled trial designs to **stateless model sessions** (“Silicon Randomized Controlled Trials,” s‑RCTs) and showing that models can replicate several subtle, counterintuitive lay judgment patterns.\n\n## 2) Executive summary (≈400–700 words)\nLegal standards often rely on claims about what “reasonable people” would think, understand, or do—whether in negligence, consent, or contract interpretation. Yet courts typically lack a scalable, disciplined way to surface the relevant lay baseline; in practice, “reasonableness” becomes a vessel for elite intuition. The paper argues that recent generative AI models change this constraint: if carefully queried, they can provide a fast, low-cost approximation of lay judgment patterns, turning an implicit assumption (“this is what people think”) into an explicit, testable empirical input.\n\nThe paper’s central methodological move is to treat **independent LLM sessions as experimental subjects** and to run **Silicon Randomized Controlled Trials (s‑RCTs)**. Instead of asking a model to opine globally on doctrine (“is this negligent?”), the method randomizes *conditions* across many fresh sessions and uses vignettes designed to avoid trivial doctrinal recall. This design helps separate three confounds: (i) memorization of legal rules, (ii) demand effects / “sycophancy” (models telling the user what the user seems to want), and (iii) harmonization across scenarios (models trying to appear consistent when shown multiple cases).\n\nUsing s‑RCTs, the paper replicates three published studies of lay judgment (nearly 10,000 simulated decisions total): a negligence study that pits cost‑benefit reasoning against social norms; a consent‑under‑deception study that reveals a paradox between “importance” and “consent”; and a contract vignette showing “lay formalism” about hidden fees. Across these domains, leading model architectures reproduce the *directional structure* of human results—including patterns that run counter to textbook doctrinal emphasis (e.g., social conformity dominating the Hand‑formula style efficiency frame). In several places, persona prompting modestly improves alignment to lay baselines.\n\nThe paper is not a claim that LLMs replace juries, surveys, or human subjects. Instead, it offers **proof of concept**: models appear to have internalized some latent schemas that drive ordinary judgment, and those schemas can be elicited in controlled designs that reduce obvious artifacts. The paper repeatedly emphasizes safeguards: transparency about the model and prompt regime, calibration checks, triangulation against traditional empirical methods when stakes are high, and auditing across personas to probe distributional and bias concerns. Properly cabined, the generative reasonable person can operate as a scalable empirical “dictionary” for reasonableness judgments—useful to judges, litigants, regulators, and researchers.\n\n## 3) The method in concrete terms (s‑RCT checklist)\n**Goal:** estimate a *lay* judgment pattern, not doctrinal recitation.\n\n**Design primitives:**\n1. **Stateless sessions:** each vignette evaluation is a fresh session (no memory of prior questions).\n2. **Random assignment:** conditions vary across sessions/personas so there is real experimental variation.\n3. **Novel-ish vignettes:** scenarios structured like the original experiments but not copy-pasted “training set” items.\n4. **Extraction discipline:** responses parsed into stable numeric / categorical outcomes (with validation).\n5. **Ablations:** compare “persona prompting” to “empty prompt” (default assistant voice) to see how scaffolding changes results.\n6. **Two evaluation layers:** (i) *directional replication* (did the pattern reproduce?), then (ii) *calibration* (are magnitudes on a comparable scale?).\n\n## 4) Findings by study (what replicated, and why it’s interesting)\n\n### Study 1 — Negligence: social norms dominate efficiency (Jaeger 2021)\n**Original question:** when lay people judge negligence, do they ask “was it efficient?” (Hand formula / economic account) or “was it normal?” (custom / social account)?\n\n**Design:** a 2×2 factorial design manipulates:\n- **Commonness** of a precaution (common vs uncommon), and\n- **Cost-justification / cost** (cheaper or more cost-justified vs costly).\n\n**Human pattern (from the original study):**\n- A strong “commonness” effect: failing to take a widely taken precaution is judged much more negligent.\n- A weak / non-significant cost effect: the economic manipulation “barely registers” relative to norms.\n\n**Silicon replication (this paper):**\n- Uses multiple model architectures with and without persona prompting.\n- Produces thousands of independent judgments with very high retention after structured extraction.\n- **Replicates the hierarchy:** models, like lay subjects, weight **social conformity** more than cost‑benefit logic.\n- **Nuance:** many models show *more* sensitivity to cost than the human benchmark, raising a calibration caution: models may import doctrinal ideas about efficiency more strongly than lay respondents do, even when they still rank norms as the dominant cue.\n\n### Study 2 — Consent under deception: the “material lie” paradox (Sommers)\n**Setup:** a customer cares primarily about earning reward points; the clerk deceives either about:\n- an **essential fact** (what the product is), or\n- a **material term** (whether points will be earned).\n\n**Human paradox:**\n- Material lies are judged as **mattering more** to the victim,\n- Yet material lies are perceived as **less corrosive of consent** than essential lies.\n\n**Silicon replication (this paper):**\n- Elicits two ratings per respondent: (i) consent, and (ii) how much the deception mattered.\n- **Replicates the paradox across architectures:** models reproduce both the “importance” hierarchy and the inverted “consent” hierarchy.\n- Why it matters: a model that merely “knows doctrine” would be expected to predict the opposite; replicating this counterintuitive structure is evidence of internalized folk schemas rather than simple rule recall.\n\n### Study 3 — Contract / hidden fees: lay formalism + “whose voice?” (Furth‑Matzkin & Sommers 2020)\n**Vignette:** a consumer is told “no fee” orally and via a flyer, but fine print authorizes a recurring processing fee.\n\n**Measures:** respondents rate on separate scales:\n- **Consent** (did the consumer consent to the fee?),\n- **Fairness** (is the fee fair?),\n- **Enforceability** (would a court enforce the term?).\n\n**Lay structure (from the original work):**\n- A robust hierarchy: **enforceability > consent > fairness**.\n  - People expect courts to enforce terms they didn’t truly consent to and consider unfair.\n\n**What this paper adds:**\n- Uses the dual-baseline design (lay people vs elite legal professionals) to ask: **do models sound like lay respondents or like legal elites?**\n- **Result (structure):** every tested architecture reproduces the hierarchy.\n- **Result (voice/calibration):** under many prompting regimes, models land **closer to lay baselines** than to elite legal baselines; persona prompting tends to move them further toward lay calibration.\n\n## 5) What the paper argues (claims you can cite)\n- **Empirical claim:** In controlled s‑RCT designs, modern LLMs can replicate several subtle *directional* patterns in human lay judgments across multiple legal domains.\n- **Method claim:** Stateless sessions + randomized assignment can reduce confounds (memorization, sycophancy, harmonization) that plague naïve “ask ChatGPT what people think” approaches.\n- **Institutional claim:** Making the lay baseline cheap to surface changes the reasonable-person debate by turning “common sense” from an implicit assumption into an explicit empirical input; departures become transparent choices.\n- **Practical claim:** Used as a screening / pretesting tool (not as dispositive evidence), generative reasonable people can assist courts, litigants, and regulators.\n- **Safety claim:** Any legal deployment requires transparency, calibration, triangulation, and auditing (including across personas).\n\n## 6) Limitations & safeguards (how the paper cabins the idea)\n1. **Calibration can be wrong even when structure is right.** Models may get the “ordering” correct but exaggerate or compress effect sizes.\n2. **Prompt/model dependence is real.** Report prompts and model versions; expect sensitivity.\n3. **Treat outputs as priors, not verdicts.** Use as decision-support signals, not replacements for legal judgment or human fact-finding.\n4. **Triangulate in high-stakes settings.** Validate against surveys, focus groups, experiments, or other empirical inputs.\n5. **Audit representativeness.** Use personas to probe heterogeneity, and stress-test for bias and stereotype artifacts.\n\n## 7) Glossary (terms that recur)\n- **Generative reasonable person:** an LLM-based estimator of lay “reasonableness” judgments.\n- **s‑RCT / Silicon Randomized Controlled Trial:** an RCT design where stateless model sessions are treated as experimental subjects.\n- **Stateless session:** a fresh model interaction with no memory of previous vignettes.\n- **Persona prompting:** asking the model to role-play a demographically specified respondent.\n- **Sycophancy / demand effects:** the model aligning answers to perceived user intent rather than latent judgment.\n- **Directional replication:** reproducing the sign/ordering of effects (structure), distinct from matching effect magnitude (calibration).\n- **Lay formalism:** a pattern where perceived legal enforceability exceeds perceived consent and fairness in contract scenarios.\n\n## 8) If you’re using this repo for RAG/training\nRecommended “high-signal” files:\n- Full text: `papers/ssrn-5377475/paper.txt`\n- Primary summary: `papers/ssrn-5377475/summary.md`\n- Chinese summary: `papers/ssrn-5377475/summary.zh.md`\n- This study pack: `papers/ssrn-5377475/study_pack.md`\n\nSee also:\n- JSONL exporter: `export_llm_dataset.py`\n- Chunk builder (RAG): `build_rag_chunks.py`\n\n"
+const ArticleText = `The Generative Reasonable Person
 Yonathan A. Arbel
 This Article introduces the generative reasonable person, a new tool for estimating how ordinary people judge reasonableness. As claims about AI capabilities often outpace evidence, the Article proceeds empirically: adapting randomized controlled trials to large language models, it replicates three published studies of lay judgment across negligence, consent, and contract interpretation, drawing on nearly 10,000 simulated decisions.
 The findings reveal that modelscan replicate subtle patterns that run counter to textbook treatment.Like human subjects, models prioritize social conformity over cos-tbenefit analysis when assessing negligence, inverting the hierarchy that textbooks teach. They reproduce the paradox that material lies erode consent less than lies about a transaction's essence. And they track lay contract formalism, judging hidden fees more enforceable than fair.
@@ -940,9 +1012,34 @@ The reasonable person standard has always promised democratic legitimacy: law sp
 
 182Leonard v. PepsiCo, Inc., 88 F. Supp. 2d 116, 127 (S.D.N.Y. 1999), aff'd, 210 F.3d 88 (2d Cir. 2000).
 
-
-`
+`
+
+func AsMap() map[string]any {
+  return map[string]any{
+    "paper_id": PaperID,
+    "title": Title,
+    "ssrn_url": SSRNURL,
+    "year": Year,
+    "authors": Authors,
+    "keywords": Keywords,
+    "summary_md": SummaryMD,
+    "summary_zh_md": SummaryZHMD,
+    "one_pager_md": OnePagerMD,
+    "study_pack_md": StudyPackMD,
+    "article_text": ArticleText,
+  }
+}
+
+func AsJSON() string {
+  b, err := json.MarshalIndent(AsMap(), "", "  ")
+  if err != nil { return "{}" }
+  return string(b)
+}
 
 func main() {
-    fmt.Println(articleText)
+  if len(os.Args) > 1 && os.Args[1] == "--json" {
+    fmt.Print(AsJSON())
+    return
+  }
+  fmt.Print(ArticleText)
 }

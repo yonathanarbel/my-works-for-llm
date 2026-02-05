@@ -27,6 +27,18 @@
   "encoding": [
     {
       "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4204862/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-4204862/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
       "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.txt",
       "encodingFormat": "text/plain",
       "name": "papers/ssrn-4204862/paper.txt"
@@ -36,6 +48,36 @@
       "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.pdf",
       "encodingFormat": "application/pdf",
       "name": "papers/ssrn-4204862/paper.pdf"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.py",
+      "encodingFormat": "text/x-python",
+      "name": "papers/ssrn-4204862/paper.py"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.js",
+      "encodingFormat": "application/javascript",
+      "name": "papers/ssrn-4204862/paper.js"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.cpp",
+      "encodingFormat": "text/x-c++src",
+      "name": "papers/ssrn-4204862/paper.cpp"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.go",
+      "encodingFormat": "text/x-go",
+      "name": "papers/ssrn-4204862/paper.go"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-4204862/paper.rs",
+      "encodingFormat": "text/x-rust",
+      "name": "papers/ssrn-4204862/paper.rs"
     }
   ],
   "mainEntityOfPage": {

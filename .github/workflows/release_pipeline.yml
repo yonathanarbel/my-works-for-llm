@@ -39,6 +39,7 @@ jobs:
 
       - name: Regenerate derived outputs
         run: |
+          python generate_paper_assets.py
           python generate_paper_jsonld.py
           python generate_docs_site.py
           python generate_sitemap.py
@@ -64,4 +65,3 @@ jobs:
             exit 0
           fi
           python publish_hf_dataset.py --repo-id yonathanarbel/my-works-for-llm --token "${HF_TOKEN}"
-
