@@ -28,6 +28,35 @@ def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _normalize_doi(value: str) -> str:
+    value = value.strip()
+    value = re.sub(r"^https?://(dx\.)?doi\.org/", "", value, flags=re.IGNORECASE)
+    return value
+
+
+def _infer_dataset_doi(repo_root: Path) -> str | None:
+    # Prefer CITATION.cff if it has a DOI.
+    citation = repo_root / "CITATION.cff"
+    if citation.exists():
+        m = re.search(r'(?m)^doi:\s*"?([^"\s]+)"?\s*$', _read_text(citation))
+        if m:
+            return _normalize_doi(m.group(1))
+
+    dataset_jsonld = repo_root / "dataset.jsonld"
+    if dataset_jsonld.exists():
+        try:
+            data = _read_json(dataset_jsonld)
+        except Exception:
+            data = {}
+        if isinstance(data, dict):
+            ident = data.get("identifier")
+            if isinstance(ident, dict):
+                v = ident.get("value")
+                if isinstance(v, str) and v.strip():
+                    return _normalize_doi(v)
+    return None
+
+
 def _license_to_url(license_value: str | None) -> str | None:
     if not license_value:
         return None
@@ -197,6 +226,7 @@ def generate_for_paper(
     pages_base: str | None,
     dataset_name: str,
     dataset_url: str,
+    dataset_doi: str | None,
 ) -> dict[str, Any]:
     paper_id = paper_dir.name
 
@@ -219,6 +249,12 @@ def generate_for_paper(
     if pages_base:
         canonical_url = pages_base.rstrip("/") + f"/papers/{paper_id}/"
 
+    dataset_obj: dict[str, Any] = {"@type": "Dataset", "name": dataset_name, "url": dataset_url}
+    if isinstance(dataset_doi, str) and dataset_doi.strip():
+        dataset_doi = _normalize_doi(dataset_doi)
+        dataset_obj["identifier"] = {"@type": "PropertyValue", "propertyID": "DOI", "value": dataset_doi}
+        dataset_obj["sameAs"] = [f"https://doi.org/{dataset_doi}"]
+
     schema: dict[str, Any] = {
         "@context": "https://schema.org",
         "@type": "ScholarlyArticle",
@@ -228,7 +264,7 @@ def generate_for_paper(
             {"@type": "PropertyValue", "propertyID": "SSRN", "value": str(ssrn_id)} if ssrn_id else None,
         ],
         "url": canonical_url,
-        "isPartOf": {"@type": "Dataset", "name": dataset_name, "url": dataset_url},
+        "isPartOf": dataset_obj,
     }
 
     schema["identifier"] = [x for x in schema["identifier"] if x is not None]
@@ -275,7 +311,16 @@ def main() -> int:
     parser.add_argument("--pages-base", default=PAGES_DEFAULT, help="GitHub Pages base URL (set empty to disable).")
     parser.add_argument("--dataset-name", default="my-works-for-llm", help="Dataset name for isPartOf.")
     parser.add_argument("--dataset-url", default=REPO_DEFAULT, help="Dataset URL for isPartOf.")
+    parser.add_argument(
+        "--dataset-doi",
+        default="",
+        help="Optional dataset DOI to include in isPartOf (falls back to CITATION.cff/dataset.jsonld if present).",
+    )
     args = parser.parse_args()
+
+    dataset_doi = args.dataset_doi.strip() if isinstance(args.dataset_doi, str) else ""
+    if not dataset_doi:
+        dataset_doi = _infer_dataset_doi(Path("."))
 
     papers_dir = Path(args.papers_dir)
     if not papers_dir.exists():
@@ -295,6 +340,7 @@ def main() -> int:
             pages_base=pages_base,
             dataset_name=args.dataset_name,
             dataset_url=args.dataset_url,
+            dataset_doi=dataset_doi,
         )
         out_path = paper_dir / "scholarlyarticle.jsonld"
         out_path.write_text(json.dumps(schema, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")

@@ -2,6 +2,8 @@
 
 This repository includes a `.zenodo.json` file so Zenodo can mint a DOI for each tagged release.
 
+This repo treats the **Zenodo concept DOI** (the DOI that points to “all versions”) as the canonical dataset DOI to embed in metadata.
+
 ## One-time setup
 
 1. Sign in to Zenodo and connect your GitHub account.
@@ -14,6 +16,5 @@ This repository includes a `.zenodo.json` file so Zenodo can mint a DOI for each
 
 ## After a DOI exists
 
-- Update `CITATION.cff` with the Zenodo DOI (recommended field: `identifiers`).
-- Optionally update `dataset.jsonld` to include the DOI in `identifier`.
-
+- Run `python sync_zenodo_doi.py` (or trigger the **Sync Zenodo DOI** GitHub Action).
+  - This updates `CITATION.cff`, `dataset.jsonld`, `.zenodo.json`, the Hugging Face dataset card, and regenerates JSON-LD + sitemaps + `docs/`.

@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import subprocess
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -33,6 +34,27 @@ def _read_text(path: Path) -> str:
 
 def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _git_last_modified(path: Path) -> datetime | None:
+    # Uses committer date (%cI) for stability in CI (filesystem mtimes vary on checkout).
+    try:
+        proc = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", path.as_posix()],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return None
+    stamp = (proc.stdout or "").strip()
+    if proc.returncode != 0 or not stamp:
+        return None
+    # "2026-02-05T00:00:00Z" -> "+00:00"
+    try:
+        return datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def _utc_iso(dt: datetime) -> str:
@@ -189,14 +211,17 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     scholarly_path = paper_dir / "scholarlyarticle.jsonld"
     scholarly_jsonld = _read_json(scholarly_path) if scholarly_path.exists() else None
 
-    # Updated timestamp: prefer summary, else paper.txt, else metadata.
+    # Updated timestamp: prefer VCS times for stability in CI (checkout mtimes are noisy).
     candidates = [summary_path, one_pager_path, study_pack_path, paper_dir / "paper.txt", metadata_path]
-    mtime = None
+    stamps: list[datetime] = []
     for path in candidates:
-        if path.exists():
-            mtime = path.stat().st_mtime
-            break
-    updated = datetime.fromtimestamp(mtime or paper_dir.stat().st_mtime, tz=timezone.utc)
+        if not path.exists():
+            continue
+        dt = _git_last_modified(path)
+        if dt is None:
+            dt = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+        stamps.append(dt)
+    updated = max(stamps) if stamps else datetime.fromtimestamp(paper_dir.stat().st_mtime, tz=timezone.utc)
 
     return PaperInfo(
         paper_id=paper_id,

@@ -12,10 +12,32 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
+import subprocess
 from typing import Iterable
 
 
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+
+
+def _git_lastmod_date(path: Path) -> str | None:
+    # Use VCS timestamps for stability in CI (filesystem mtimes vary on checkout).
+    try:
+        proc = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", path.as_posix()],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return None
+    stamp = (proc.stdout or "").strip()
+    if proc.returncode != 0 or not stamp:
+        return None
+    try:
+        dt = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return dt.astimezone(timezone.utc).strftime("%Y-%m-%d")
 
 
 def _iter_urls(papers_dir: Path) -> Iterable[tuple[str, str]]:
@@ -36,7 +58,9 @@ def _iter_urls(papers_dir: Path) -> Iterable[tuple[str, str]]:
         for path in candidates:
             if not path.exists():
                 continue
-            lastmod = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
+            lastmod = _git_lastmod_date(path) or datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).strftime(
+                "%Y-%m-%d"
+            )
             rel = str(path.relative_to(papers_dir.parent)).replace("\\", "/")
             yield rel, lastmod
 
