@@ -43,3 +43,6 @@
 - [ssrn-4962098 中文](papers/ssrn-4962098/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
 - [ssrn-5181207](papers/ssrn-5181207/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
 - [ssrn-5181207 中文](papers/ssrn-5181207/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-5377475](papers/ssrn-5377475/summary.md): The Generative Reasonable Person (LLM-based method for estimating lay reasonableness).
+- [ssrn-5377475 中文](papers/ssrn-5377475/summary.zh.md)：《The Generative Reasonable Person》中文要点（生成式理性人；S-RCT；过失/同意/合同解释）。
+- [ssrn-5377475 full text](papers/ssrn-5377475/paper.txt): Full paper text (UTF-8).

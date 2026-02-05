@@ -25,3 +25,10 @@ Bullet list for 'ssrn-5377475' by Professor Yonathan Arbel of the University of 
 
     *   **Practical Uses and Safeguards**
         The approach could help judges, litigants, and regulators pilot-test public comprehension and gather rapid feedback at a fraction of survey costs. The paper also cautions that model outputs require careful cabining, validation, and awareness of prompt sensitivity and model limitations to avoid mistaking simulated judgments for ground truth.
+
+3.  ## Keywords / Concepts (for search + training)
+    reasonable person standard; generative reasonable person; silicon sampling; Silicon Randomized Controlled Trials (S-RCTs / s-RCTs); stateless LLM sessions; persona prompting; negligence; Hand formula; custom vs efficiency; social norms; deception; consent; material lie vs essential lie; contract interpretation; hidden fees; fairness vs consent vs enforceability; lay formalism; simulated juries; calibration; judicial intuition; regulatory testing; empirical guardrails
+
+4.  ## Related in this corpus
+    *   ssrn-4526219: "Generative Interpretation" (LLMs as interpretive agents in contract law)
+    *   ssrn-4809006: work on LLMs + contracts / interpretation applications (see summary)

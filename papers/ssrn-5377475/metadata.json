@@ -1,6 +1,8 @@
 {
-  "title": "ssrn-5377475",
+  "title": "The Generative Reasonable Person",
   "slug": "ssrn-5377475",
+  "ssrn_id": 5377475,
+  "ssrn_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475",
   "year": 2026,
   "authors": [
     {
@@ -12,15 +14,30 @@
   "author_zh": "约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
   "license_pdf": "CC-BY-NC-4.0",
   "license_pdf_zh": "© 约纳坦·阿贝尔，CC-BY-NC 4.0",
+  "abstract": "This Article introduces the “generative reasonable person,” an LLM-based method for estimating how ordinary people judge reasonableness. Using Silicon Randomized Controlled Trials (S-RCTs), it replicates three published studies across negligence, consent under deception, and contract interpretation with nearly 10,000 simulated decisions. Models reproduce subtle, counterintuitive lay patterns that diverge from doctrinal expectations (e.g., social conformity over cost–benefit analysis in negligence; essential lies undermining consent more than material lies; and lay contract formalism regarding hidden fees). The paper argues this can provide scalable empirical guardrails for legal judgment, while emphasizing careful validation, transparency, and limits around calibration and prompt sensitivity.",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "reasonable person",
+    "reasonableness",
+    "negligence",
+    "torts",
+    "consent",
+    "deception",
+    "contract interpretation",
+    "hidden fees",
+    "large language models",
+    "empirical legal studies"
   ],
   "keywords_zh": [
-    "合同法",
-    "人工智能",
-    "法律"
+    "理性人标准",
+    "合理性判断",
+    "过失",
+    "侵权法",
+    "同意",
+    "欺诈与误导",
+    "合同解释",
+    "隐藏费用",
+    "大型语言模型",
+    "实证法学"
   ],
   "repeat_name": true
 }
