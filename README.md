@@ -1,9 +1,13 @@
 # my-works-for-llm
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18781458.svg)](https://doi.org/10.5281/zenodo.18781458)
+
 Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research. The
 repository packages lightly processed versions of each paper alongside synthetic article
 scripts so the works can be explored programmatically or ingested into downstream large
 language model (LLM) pipelines.
+
+Canonical dataset DOI: https://doi.org/10.5281/zenodo.18781458
 
 **📚 New to this repository?** Start with the [Quick Start Guide](QUICK_START.md) | [Usage Examples](USAGE_EXAMPLES.md) | [Jupyter Notebook](examples/explore_corpus.ipynb)
 

@@ -17,6 +17,10 @@ pretty_name: my-works-for-llm
 
 Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research.
 
+DOI: 10.5281/zenodo.18781458
+
+Link: https://doi.org/10.5281/zenodo.18781458
+
 ## What’s inside
 
 Each record contains:
@@ -41,4 +45,17 @@ See the repository license and per-paper metadata (papers are dedicated under `C
 
 ## Citation
 
-See `CITATION.cff` in the GitHub repo.
+See `CITATION.cff` in the GitHub repo, or cite the Zenodo record directly:
+
+```bibtex
+@misc{https://doi.org/10.5281/zenodo.18781458,
+  doi = {10.5281/ZENODO.18781458},
+  url = {https://zenodo.org/doi/10.5281/zenodo.18781458},
+  author = {Arbel, Yonathan A.},
+  keywords = {contracts, artificial intelligence, legal scholarship, empirical legal studies, consumer protection},
+  title = {my-works-for-llm: Machine-readable corpus of Yonathan Arbel's scholarship},
+  publisher = {Zenodo},
+  year = {2026},
+  copyright = {Creative Commons Zero v1.0 Universal}
+}
+```

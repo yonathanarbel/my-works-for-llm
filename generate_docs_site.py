@@ -26,6 +26,9 @@ from urllib.parse import urlparse
 DEFAULT_BASE_URL = "https://yonathanarbel.github.io/my-works-for-llm/"
 RAW_BASE = "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/"
 REPO_BASE = "https://github.com/yonathanarbel/my-works-for-llm"
+DATASET_DOI = "10.5281/zenodo.18781458"
+DATASET_DOI_URL = f"https://doi.org/{DATASET_DOI}"
+DATASET_DOI_BADGE = f"https://zenodo.org/badge/DOI/{DATASET_DOI}.svg"
 
 
 def _read_text(path: Path) -> str:
@@ -306,6 +309,8 @@ def _render_layout(
     <footer class="site-footer">
       <div class="container">
         <div>Machine-readable corpus of Professor Yonathan Arbel’s scholarship for LLM research.</div>
+        <div>Dataset DOI: <a href="{html.escape(DATASET_DOI_URL)}">{html.escape(DATASET_DOI_URL)}</a></div>
+        <div><a href="{html.escape(DATASET_DOI_URL)}"><img src="{html.escape(DATASET_DOI_BADGE)}" alt="DOI badge" /></a></div>
       </div>
     </footer>
   </body>

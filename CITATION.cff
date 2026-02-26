@@ -1,13 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this corpus in research, please cite it."
+message: "If you use this corpus, please cite the Zenodo record."
 title: "my-works-for-llm"
 type: dataset
+doi: 10.5281/zenodo.18781458
+url: https://doi.org/10.5281/zenodo.18781458
 authors:
-  - family-names: "Arbel"
-    given-names: "Yonathan A."
-    affiliation: "University of Alabama School of Law"
-repository-code: "https://github.com/yonathanarbel/my-works-for-llm"
-url: "https://github.com/yonathanarbel/my-works-for-llm"
+  - family-names: Arbel
+    given-names: Yonathan A.
+    affiliation: University of Alabama School of Law
+repository-code: https://github.com/yonathanarbel/my-works-for-llm
 abstract: "Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research."
 keywords:
   - contracts
@@ -16,6 +17,5 @@ keywords:
   - empirical legal studies
   - consumer protection
   - reasonable person
-license: "CC0-1.0"
+license: CC0-1.0
 date-released: 2026-02-05
-
