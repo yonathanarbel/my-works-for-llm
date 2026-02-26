@@ -503,6 +503,48 @@ def _write_llm_descriptors(out_dir: Path, repo_root: Path) -> None:
     _write(out_dir / "llm.txt", content)
 
 
+def _write_full_corpus_dump(path: Path, papers: list[PaperInfo], papers_dir: Path) -> None:
+    lines: list[str] = []
+    lines.append("# my-works-for-llm: Full Corpus Dump")
+    lines.append("")
+    lines.append(f"Dataset DOI: {DATASET_DOI_URL}")
+    lines.append("License: CC0-1.0")
+    lines.append(f"Generated (UTC): {_utc_iso(datetime.now(timezone.utc))}")
+    lines.append("")
+    lines.append("This file concatenates corpus content into a single ingestible artifact.")
+    lines.append("")
+
+    for paper in papers:
+        paper_dir = papers_dir / paper.paper_id
+        selected_path: Path | None = None
+        for name in ("paper.txt", "summary.md", "summary.zh.md"):
+            candidate = paper_dir / name
+            if candidate.exists():
+                selected_path = candidate
+                break
+        if selected_path is None:
+            continue
+
+        text = _read_text(selected_path).strip()
+        if not text:
+            continue
+
+        source_rel = selected_path.relative_to(papers_dir.parent).as_posix()
+        lines.append("---")
+        lines.append("")
+        lines.append(f"## {paper.paper_id}: {paper.title}")
+        if paper.year:
+            lines.append(f"Year: {paper.year}")
+        if paper.authors:
+            lines.append(f"Authors: {', '.join(paper.authors)}")
+        lines.append(f"Source: {source_rel}")
+        lines.append("")
+        lines.append(text)
+        lines.append("")
+
+    _write(path, "\n".join(lines).rstrip() + "\n")
+
+
 def _write_style(path: Path) -> None:
     css = """
 :root {
@@ -655,7 +697,7 @@ def _write_pages_sitemap(path: Path, base_url: str, papers: list[PaperInfo]) -> 
     lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
     lines.append("  </url>")
     # Crawl helpers
-    for rel in ("robots.txt", "llms.txt", "llm.txt"):
+    for rel in ("robots.txt", "llms.txt", "llm.txt", "llms-full.txt"):
         lines.append("  <url>")
         lines.append(f"    <loc>{html.escape(base_url + rel)}</loc>")
         lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
@@ -715,6 +757,7 @@ def main() -> int:
     _write_style(out_dir / "assets" / "style.css")
     _write(out_dir / ".nojekyll", "")
     _write_llm_descriptors(out_dir, Path("."))
+    _write_full_corpus_dump(out_dir / "llms-full.txt", papers, papers_dir)
 
     # Pages
     _write(out_dir / "index.html", _render_index(base_url, papers))
