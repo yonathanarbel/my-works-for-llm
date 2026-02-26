@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import subprocess
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -37,6 +38,42 @@ def _read_text(path: Path) -> str:
 
 def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _normalize_doi(value: str | None) -> str | None:
+    if not value or not isinstance(value, str):
+        return None
+    s = value.strip()
+    s = re.sub(r"^(https?://(dx\.)?doi\.org/|doi:\s*)", "", s, flags=re.IGNORECASE)
+    m = re.search(r"10\.\d{4,9}/\S+", s)
+    if not m:
+        return None
+    return m.group(0).rstrip(".,);")
+
+
+def _extract_doi_from_identifier(identifier: Any) -> str | None:
+    if isinstance(identifier, dict):
+        return _normalize_doi(str(identifier.get("value", "")))
+    if isinstance(identifier, list):
+        for item in identifier:
+            if isinstance(item, dict):
+                property_id = str(item.get("propertyID", "")).lower()
+                value = item.get("value")
+                if property_id == "doi" and isinstance(value, str):
+                    doi = _normalize_doi(value)
+                    if doi:
+                        return doi
+                if isinstance(value, str):
+                    doi = _normalize_doi(value)
+                    if doi:
+                        return doi
+            elif isinstance(item, str):
+                doi = _normalize_doi(item)
+                if doi:
+                    return doi
+    if isinstance(identifier, str):
+        return _normalize_doi(identifier)
+    return None
 
 
 def _git_last_modified(path: Path) -> datetime | None:
@@ -145,6 +182,7 @@ class PaperInfo:
     year: int | None
     authors: list[str]
     keywords: list[str]
+    doi: str | None
     ssrn_url: str | None
     abstract: str | None
     summary_md: str | None
@@ -200,6 +238,8 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     keywords = metadata.get("keywords") if isinstance(metadata.get("keywords"), list) else []
     keywords = [k for k in keywords if isinstance(k, str)]
 
+    doi = _normalize_doi(metadata.get("doi") if isinstance(metadata.get("doi"), str) else None)
+
     ssrn_url = metadata.get("ssrn_url")
     if not isinstance(ssrn_url, str):
         if paper_id.startswith("ssrn-") and paper_id.split("-", 1)[1].isdigit():
@@ -229,6 +269,13 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
 
     scholarly_path = paper_dir / "scholarlyarticle.jsonld"
     scholarly_jsonld = _read_json(scholarly_path) if scholarly_path.exists() else None
+    if not doi and scholarly_jsonld:
+        doi = _extract_doi_from_identifier(scholarly_jsonld.get("identifier"))
+        if not doi and isinstance(scholarly_jsonld.get("sameAs"), list):
+            for item in scholarly_jsonld["sameAs"]:
+                doi = _normalize_doi(item if isinstance(item, str) else None)
+                if doi:
+                    break
 
     # Updated timestamp: prefer VCS times for stability in CI (checkout mtimes are noisy).
     candidates = [summary_path, one_pager_path, study_pack_path, paper_dir / "paper.txt", metadata_path]
@@ -248,6 +295,7 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
         year=year,
         authors=authors,
         keywords=keywords,
+        doi=doi,
         ssrn_url=ssrn_url,
         abstract=abstract,
         summary_md=summary_md,
@@ -366,16 +414,53 @@ def _render_index(base_url: str, papers: list[PaperInfo]) -> str:
     )
 
 
+def _render_papers_index(base_url: str, papers: list[PaperInfo]) -> str:
+    site_path = _site_path(base_url)
+    items: list[str] = []
+    for p in papers:
+        urls = _paper_urls(base_url, p.paper_id)
+        items.append(
+            f'<li><a href="{html.escape(urls["page"])}">{html.escape(p.title)} ({html.escape(p.paper_id)})</a></li>'
+        )
+
+    body = f"""
+<section class="hero">
+  <h1>Paper Index</h1>
+  <p>Direct links to all paper pages in the corpus.</p>
+</section>
+
+<section>
+  <ul>
+    {''.join(items)}
+  </ul>
+</section>
+"""
+
+    canonical = base_url.rstrip("/") + "/papers/"
+    return _render_layout(
+        title="my-works-for-llm — papers",
+        description="Index of all paper pages in the my-works-for-llm corpus.",
+        canonical_url=canonical,
+        site_path=site_path,
+        body_html=body,
+        extra_head="",
+    )
+
+
 def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
     site_path = _site_path(base_url)
     urls = _paper_urls(base_url, paper.paper_id)
 
-    description_source = paper.abstract
-    if not description_source and paper.summary_md:
-        description_source = _tldr_from_summary(paper.summary_md) or _first_nonempty_line(paper.summary_md)
-    if not description_source:
-        description_source = f"{paper.paper_id} — {paper.title}"
-    description = _safe_meta_description(description_source)
+    abstract_text = paper.abstract
+    if not abstract_text and paper.summary_md:
+        abstract_text = _tldr_from_summary(paper.summary_md) or _first_nonempty_line(paper.summary_md)
+    if not abstract_text and paper.one_pager_md:
+        abstract_text = _first_nonempty_line(paper.one_pager_md)
+    if not abstract_text and paper.study_pack_md:
+        abstract_text = _first_nonempty_line(paper.study_pack_md)
+    if not abstract_text:
+        abstract_text = f"Read the full text at {urls['raw_text']}."
+    description = _safe_meta_description(abstract_text)
 
     meta_lines: list[str] = []
     if paper.year:
@@ -388,8 +473,8 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
     links: list[str] = []
     if paper.ssrn_url:
         links.append(f"<a class=\"btn\" href=\"{html.escape(paper.ssrn_url)}\">SSRN</a>")
-    links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_pdf'])}\">PDF</a>")
-    links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_text'])}\">Full text</a>")
+    links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_pdf'])}\">Download PDF</a>")
+    links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_text'])}\">Download text</a>")
     links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_summary'])}\">Summary (MD)</a>")
     if paper.summary_zh_md:
         links.append(f"<a class=\"btn\" href=\"{html.escape(urls['raw_summary_zh'])}\">中文摘要 (MD)</a>")
@@ -414,12 +499,30 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
         scholarly_json = json.dumps(paper.scholarly_jsonld, ensure_ascii=False, indent=2)
         scholarly_json = f'\n    <script type="application/ld+json">\n{scholarly_json}\n    </script>\n'
 
-    abstract_html = ""
-    if paper.abstract:
-        abstract_html = f"""
+    abstract_html = f"""
 <section>
   <h2>Abstract</h2>
-  <p>{html.escape(paper.abstract)}</p>
+  <p>{html.escape(abstract_text)}</p>
+</section>
+"""
+
+    doi_url = f"https://doi.org/{paper.doi}" if paper.doi else ""
+    citation_url = doi_url or paper.ssrn_url or urls["page"]
+    authors_text = ", ".join(paper.authors) if paper.authors else "Yonathan A. Arbel"
+    year_text = str(paper.year) if paper.year else "n.d."
+    apa_citation = f"{authors_text}. ({year_text}). {paper.title}. {citation_url}"
+    bluebook_citation = f"{authors_text}, {paper.title}, {year_text}, {citation_url}."
+    doi_html = (
+        f'<p><strong>DOI:</strong> <a href="{html.escape(doi_url)}">{html.escape(doi_url)}</a></p>'
+        if doi_url
+        else ""
+    )
+    citation_html = f"""
+<section>
+  <h2>Citation</h2>
+  <p><strong>APA:</strong> {html.escape(apa_citation)}</p>
+  <p><strong>Bluebook:</strong> {html.escape(bluebook_citation)}</p>
+  {doi_html}
 </section>
 """
 
@@ -465,6 +568,7 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
   <div class="meta">{''.join(meta_lines)}</div>
   <div class="actions">{''.join(links)}</div>
   {abstract_html}
+  {citation_html}
   {summary_html}
   {one_pager_html}
   {study_pack_html}
@@ -488,16 +592,29 @@ def _write(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8", newline="\n")
 
 
-def _write_llm_descriptors(out_dir: Path, repo_root: Path) -> None:
-    src = repo_root / "llms.txt"
-    if src.exists():
-        content = _read_text(src).strip() + "\n"
-    else:
-        content = (
-            "# my-works-for-llm\n\n"
-            "Machine-readable corpus index for LLM and search crawlers.\n"
-        )
+def _write_llm_descriptors(out_dir: Path, base_url: str, papers: list[PaperInfo]) -> None:
+    base = base_url.rstrip("/") + "/"
+    lines: list[str] = []
+    lines.append("# Yonathan Arbel Scholarly Corpus")
+    lines.append("")
+    lines.append("> Machine-readable corpus of legal scholarship.")
+    lines.append("")
+    lines.append("## Start Here")
+    lines.append(f"- {base}")
+    lines.append(f"- {base}papers/")
+    lines.append("")
+    lines.append("## Key Papers")
+    for paper in papers:
+        lines.append(f"- {base}papers/{paper.paper_id}/")
+    lines.append("")
+    lines.append("## Machine Endpoints")
+    lines.append(f"- {base}sitemap.xml")
+    lines.append(f"- {base}atom.xml")
+    lines.append(f"- {base}llms.txt")
+    lines.append(f"- {base}llms-full.txt")
+    lines.append("")
 
+    content = "\n".join(lines)
     _write(out_dir / "llms.txt", content)
     # Compatibility alias for crawlers expecting singular filename.
     _write(out_dir / "llm.txt", content)
@@ -684,6 +801,11 @@ def _write_pages_sitemap(path: Path, base_url: str, papers: list[PaperInfo]) -> 
     lines.append(f"    <loc>{html.escape(base_url)}</loc>")
     lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
     lines.append("  </url>")
+    # Papers index
+    lines.append("  <url>")
+    lines.append(f"    <loc>{html.escape(base_url + 'papers/')}</loc>")
+    lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
+    lines.append("  </url>")
     # Paper pages
     for p in papers:
         urls = _paper_urls(base_url, p.paper_id)
@@ -756,11 +878,12 @@ def main() -> int:
     # Static assets
     _write_style(out_dir / "assets" / "style.css")
     _write(out_dir / ".nojekyll", "")
-    _write_llm_descriptors(out_dir, Path("."))
+    _write_llm_descriptors(out_dir, base_url, papers)
     _write_full_corpus_dump(out_dir / "llms-full.txt", papers, papers_dir)
 
     # Pages
     _write(out_dir / "index.html", _render_index(base_url, papers))
+    _write(out_dir / "papers" / "index.html", _render_papers_index(base_url, papers))
     for paper in papers:
         _write(out_dir / "papers" / paper.paper_id / "index.html", _render_paper_page(base_url, paper))
 
