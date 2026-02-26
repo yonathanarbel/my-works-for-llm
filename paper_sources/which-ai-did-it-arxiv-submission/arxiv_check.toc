@@ -1,0 +1,30 @@
+\contentsline {section}{Introduction}{3}{section*.2}%
+\contentsline {section}{I. The Problem of AI Identity}{7}{section*.3}%
+\contentsline {subsection}{A. Thin Identity: Connecting AI Actions to Human Principals}{8}{section*.4}%
+\contentsline {subsection}{B. Thick Identity: Identifying AI Agents \emph {qua} Agents}{9}{section*.5}%
+\contentsline {subsubsection}{i. Thin accountability is not enough}{9}{section*.6}%
+\contentsline {subsubsection}{ii. AI agents can be incentivized}{12}{section*.7}%
+\contentsline {subsubsection}{iii. Incentivization Requires Thick Identity}{13}{section*.8}%
+\contentsline {subsection}{C. Thick Identity and Technical AI Alignment}{15}{section*.9}%
+\contentsline {subsection}{D. Why Identifying AI Agents Is Hard}{16}{section*.10}%
+\contentsline {section}{II. The A-Corp: A Legal Solution to AI Identity}{18}{section*.11}%
+\contentsline {subsection}{A. How A-corps Work}{18}{section*.12}%
+\contentsline {subsubsection}{i. Legal-fictional personhood}{19}{section*.13}%
+\contentsline {subsubsection}{ii. Secure Governance Infrastructure}{21}{section*.14}%
+\contentsline {subsection}{B. A-Corps Solve Thin Identity}{23}{section*.15}%
+\contentsline {subsection}{C. A-Corps Solve Thick Identity}{24}{section*.16}%
+\contentsline {subsubsection}{i. The resource constraint thesis}{24}{section*.17}%
+\contentsline {subsubsection}{ii. Emergent identity via incentives}{25}{section*.18}%
+\contentsline {subsubsection}{iii. Emergent identity via selection}{27}{section*.19}%
+\contentsline {subsubsection}{iv. Thick identity for technical AI alignment}{27}{section*.20}%
+\contentsline {section}{III. Implementation Pathways}{30}{section*.21}%
+\contentsline {subsection}{A. The Registry}{30}{section*.22}%
+\contentsline {subsection}{B. Fine-Grained Public Permissions}{31}{section*.23}%
+\contentsline {subsection}{C. Voluntary Adoption Will Be Insufficient}{31}{section*.24}%
+\contentsline {subsection}{D. Legal Mandates}{32}{section*.25}%
+\contentsline {subsection}{E. Implementing the A-corp Package}{33}{section*.26}%
+\contentsline {section}{IV. Objections and Responses}{34}{section*.27}%
+\contentsline {subsection}{A. Anthropomorphization}{34}{section*.28}%
+\contentsline {subsection}{B. Treacherous Turns}{34}{section*.29}%
+\contentsline {subsection}{C. AI Oligarchy and Gradual Disempowerment}{35}{section*.30}%
+\contentsline {section}{Conclusion}{36}{section*.31}%
