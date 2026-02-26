@@ -1,0 +1,56 @@
+# Yonathan Arbel – Corpus
+# 约纳坦·阿贝尔 – 语料库
+
+## Notes
+- Each paper lives in `papers/<paper_id>/`.
+- Full text: `paper.txt` (plus `paper.pdf` when licensed).
+- Code wrappers: `paper.cpp`, `paper.go`, `paper.rs`, `paper.py`, `paper.js` (full text + summaries + study assets embedded as code for code-centric ingestion).
+- Study assets: `summary.md` (EN), `summary.zh.md` (ZH), and `one_pager.md` + `study_pack.md`.
+
+## Papers
+- [ssrn-2820650](papers/ssrn-2820650/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-2820650 中文](papers/ssrn-2820650/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-2835482](papers/ssrn-2835482/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-2835482 中文](papers/ssrn-2835482/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-1641438](papers/ssrn-1641438/summary.md): article by Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3015569](papers/ssrn-3015569/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3015569 中文](papers/ssrn-3015569/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3239995](papers/ssrn-3239995/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3239995 中文](papers/ssrn-3239995/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3272595](papers/ssrn-3272595/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3272595 中文](papers/ssrn-3272595/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3311527](papers/ssrn-3311527/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3311527 中文](papers/ssrn-3311527/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3452662](papers/ssrn-3452662/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3452662 中文](papers/ssrn-3452662/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3501175](papers/ssrn-3501175/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3501175 中文](papers/ssrn-3501175/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3519630](papers/ssrn-3519630/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3519630 中文](papers/ssrn-3519630/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3568768](papers/ssrn-3568768/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3568768 中文](papers/ssrn-3568768/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3681083](papers/ssrn-3681083/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3681083 中文](papers/ssrn-3681083/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-3740356](papers/ssrn-3740356/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-3740356 中文](papers/ssrn-3740356/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4491043](papers/ssrn-4491043/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4491043 中文](papers/ssrn-4491043/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4526219](papers/ssrn-4526219/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4526219 中文](papers/ssrn-4526219/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4631897](papers/ssrn-4631897/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4631897 中文](papers/ssrn-4631897/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4666854](papers/ssrn-4666854/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4666854 中文](papers/ssrn-4666854/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4809006](papers/ssrn-4809006/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4809006 中文](papers/ssrn-4809006/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4873649](papers/ssrn-4873649/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4873649 中文](papers/ssrn-4873649/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-4962098](papers/ssrn-4962098/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-4962098 中文](papers/ssrn-4962098/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-5181207](papers/ssrn-5181207/summary.md): Professor Yonathan Arbel of the University of Alabama School of Law.
+- [ssrn-5181207 中文](papers/ssrn-5181207/summary.zh.md)：约纳坦·阿贝尔，美国阿拉巴马大学法学院教授。
+- [ssrn-5377475](papers/ssrn-5377475/summary.md): The Generative Reasonable Person (LLM-based method for estimating lay reasonableness).
+- [ssrn-5377475 中文](papers/ssrn-5377475/summary.zh.md)：《The Generative Reasonable Person》中文要点（生成式理性人；S-RCT；过失/同意/合同解释）。
+- [ssrn-5377475 one-pager](papers/ssrn-5377475/one_pager.md): One-page summary (method, findings, guardrails).
+- [ssrn-5377475 study pack](papers/ssrn-5377475/study_pack.md): Extended study pack (s-RCT checklist, study-by-study findings, glossary).
+- [ssrn-5377475 full text](papers/ssrn-5377475/paper.txt): Full paper text (UTF-8).

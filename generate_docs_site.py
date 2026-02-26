@@ -284,6 +284,7 @@ def _render_layout(
     <meta name="twitter:description" content="{html.escape(description)}" />
 
     <link rel="alternate" type="application/atom+xml" href="{html.escape(site_path)}atom.xml" title="my-works-for-llm updates" />
+    <link rel="alternate" type="text/plain" href="{html.escape(site_path)}llms.txt" title="LLM descriptor" />
     <link rel="stylesheet" href="{html.escape(site_path)}assets/style.css" />
 {extra_head}
   </head>
@@ -295,6 +296,7 @@ def _render_layout(
           <a href="{html.escape(REPO_BASE)}">GitHub</a>
           <a href="{html.escape(site_path)}atom.xml">Atom</a>
           <a href="{html.escape(site_path)}sitemap.xml">Sitemap</a>
+          <a href="{html.escape(site_path)}llms.txt">LLMs.txt</a>
         </nav>
       </div>
     </header>
@@ -339,6 +341,7 @@ def _render_index(base_url: str, papers: list[PaperInfo]) -> str:
   <div class="hero-links">
     <a class="btn" href="{html.escape(REPO_BASE)}">View on GitHub</a>
     <a class="btn" href="/my-works-for-llm/atom.xml">Atom feed</a>
+    <a class="btn" href="/my-works-for-llm/llms.txt">LLMs.txt</a>
   </div>
 </section>
 
@@ -478,6 +481,21 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
 def _write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8", newline="\n")
+
+
+def _write_llm_descriptors(out_dir: Path, repo_root: Path) -> None:
+    src = repo_root / "llms.txt"
+    if src.exists():
+        content = _read_text(src).strip() + "\n"
+    else:
+        content = (
+            "# my-works-for-llm\n\n"
+            "Machine-readable corpus index for LLM and search crawlers.\n"
+        )
+
+    _write(out_dir / "llms.txt", content)
+    # Compatibility alias for crawlers expecting singular filename.
+    _write(out_dir / "llm.txt", content)
 
 
 def _write_style(path: Path) -> None:
@@ -631,6 +649,12 @@ def _write_pages_sitemap(path: Path, base_url: str, papers: list[PaperInfo]) -> 
     lines.append(f"    <loc>{html.escape(base_url + 'atom.xml')}</loc>")
     lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
     lines.append("  </url>")
+    # Crawl helpers
+    for rel in ("robots.txt", "llms.txt", "llm.txt"):
+        lines.append("  <url>")
+        lines.append(f"    <loc>{html.escape(base_url + rel)}</loc>")
+        lines.append(f"    <lastmod>{_utc_date(datetime.now(timezone.utc))}</lastmod>")
+        lines.append("  </url>")
     lines.append("</urlset>")
     _write(path, "\n".join(lines) + "\n")
 
@@ -638,6 +662,24 @@ def _write_pages_sitemap(path: Path, base_url: str, papers: list[PaperInfo]) -> 
 def _write_robots(path: Path, base_url: str) -> None:
     base_url = base_url.rstrip("/") + "/"
     content = f"""User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: {base_url}sitemap.xml
@@ -667,6 +709,7 @@ def main() -> int:
     # Static assets
     _write_style(out_dir / "assets" / "style.css")
     _write(out_dir / ".nojekyll", "")
+    _write_llm_descriptors(out_dir, Path("."))
 
     # Pages
     _write(out_dir / "index.html", _render_index(base_url, papers))
