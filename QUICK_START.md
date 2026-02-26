@@ -224,6 +224,6 @@ arbel-corpus show --help
 - ✅ **Validation tools** for data integrity
 - ✅ **LLM-ready** formats and scripts
 - ✅ **Rich metadata** in Schema.org format
-- ✅ **Open source** under CC BY-NC 4.0 license
+- ✅ **Open source** under CC0 1.0 license
 
 Happy exploring! 📚

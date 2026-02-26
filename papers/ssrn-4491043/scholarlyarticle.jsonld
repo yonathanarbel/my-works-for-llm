@@ -35,7 +35,7 @@
     }
   ],
   "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that Large Language Models (LLMs) as 'smart readers' can significantly simplify complex contracts, reducing length and improving readability to empower consumers against the 'no-reading problem.' While not flawless—sometimes misinterpreting legal terms or omitting information, thus not replacing lawyers—they offer a scalable solution for daily transactions. Arbel concludes these tools mark a significant improvement, potentially revolutionizing consumer contracting and necessitating a paradigm shift in law and policy, despite needing to address accuracy and bias concerns.",
-  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "keywords": [
     "contracts",
     "AI",

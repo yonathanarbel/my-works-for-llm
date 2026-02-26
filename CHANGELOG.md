@@ -143,4 +143,4 @@ Potential areas for future development:
 These enhancements were developed to improve the utility of the repository for researchers, developers, and anyone interested in Professor Arbel's scholarship.
 
 ### License
-All additions maintain the CC BY-NC 4.0 license of the original repository.
+All additions follow the repository's CC0 1.0 dedication.

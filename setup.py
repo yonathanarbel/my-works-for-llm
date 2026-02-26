@@ -15,7 +15,7 @@ setup(
     author='Yonathan A. Arbel',
     author_email='',
     url='https://github.com/yonathanarbel/my-works-for-llm',
-    license='CC BY-NC 4.0',
+    license='CC0-1.0',
     py_modules=['generate_article_scripts', 'corpus_cli', 'corpus_api'],
     install_requires=[
         'rich>=10.0.0',
@@ -30,7 +30,7 @@ setup(
         'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',
         'Intended Audience :: Developers',
-        'License :: Other/Proprietary License',
+        'License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',

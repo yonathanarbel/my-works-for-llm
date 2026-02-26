@@ -2,7 +2,7 @@
 language:
 - en
 - zh
-license: cc-by-nc-4.0
+license: cc0-1.0
 tags:
 - legal
 - law
@@ -37,7 +37,7 @@ python export_llm_dataset.py --out-jsonl dist/arbel-corpus.jsonl
 
 ## License
 
-See the repository license and per-paper metadata (many papers specify `CC-BY-NC-4.0` for PDFs).
+See the repository license and per-paper metadata (papers are dedicated under `CC0-1.0`).
 
 ## Citation
 

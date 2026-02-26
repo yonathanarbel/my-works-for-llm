@@ -61,8 +61,8 @@ def _license_to_url(license_value: str | None) -> str | None:
     if not license_value:
         return None
     mapping = {
-        "CC-BY-NC-4.0": "https://creativecommons.org/licenses/by-nc/4.0/",
         "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
     }
     return mapping.get(license_value, license_value)
 

@@ -3,7 +3,7 @@
   "@type": "Dataset",
   "name": "my-works-for-llm",
   "description": "Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research.",
-  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "creator": {
     "@type": "Person",
     "name": "Yonathan A. Arbel",
