@@ -45,6 +45,58 @@ def _copy_tracked_files(repo_root: Path, mirror_dir: Path) -> int:
     return count
 
 
+def _strip_markdown_front_matter(text: str) -> str:
+    if not text.startswith("---\n"):
+        return text
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return text
+    return text[end + len("\n---\n") :]
+
+
+def _write_hf_readme(mirror_dir: Path, repo_id: str, source_repo_url: str, head_sha: str) -> None:
+    readme_path = mirror_dir / "README.md"
+    existing = ""
+    if readme_path.exists():
+        existing = readme_path.read_text(encoding="utf-8", errors="replace")
+    existing = _strip_markdown_front_matter(existing).lstrip()
+
+    pretty_name = repo_id.split("/", 1)[-1]
+    front_matter = "\n".join(
+        [
+            "---",
+            "language:",
+            "- en",
+            "- zh",
+            "license: cc0-1.0",
+            "tags:",
+            "- legal",
+            "- law",
+            "- llm",
+            "- dataset",
+            "- github-mirror",
+            f"pretty_name: {pretty_name}",
+            "---",
+            "",
+        ]
+    )
+
+    lead = "\n".join(
+        [
+            f"# {pretty_name}",
+            "",
+            f"Automated mirror of `{source_repo_url}`.",
+            f"Source commit: `{head_sha}`.",
+            "",
+        ]
+    )
+
+    out = front_matter + lead
+    if existing:
+        out += "## Source README\n\n" + existing.rstrip() + "\n"
+    readme_path.write_text(out, encoding="utf-8", newline="\n")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Mirror tracked Git files from this repo to a Hugging Face dataset repo."
@@ -101,6 +153,7 @@ def main(argv: list[str] | None = None) -> int:
 
     file_count = _copy_tracked_files(repo_root, mirror_dir)
     head_sha = _run_git(repo_root, "rev-parse", "--short", "HEAD")
+    source_repo_url = _run_git(repo_root, "config", "--get", "remote.origin.url") or "unknown-source-repo"
 
     api = HfApi(token=args.token)
     repo_id = args.repo_id
@@ -108,6 +161,8 @@ def main(argv: list[str] | None = None) -> int:
         who = api.whoami(token=args.token)
         username = who["name"] if isinstance(who, dict) and "name" in who else str(who)
         repo_id = f"{username}/{repo_root.name}-github-mirror"
+
+    _write_hf_readme(mirror_dir, repo_id, source_repo_url, head_sha)
 
     api.create_repo(repo_id=repo_id, repo_type="dataset", private=args.private, exist_ok=True)
     upload_folder(
@@ -125,4 +180,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

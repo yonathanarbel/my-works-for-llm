@@ -268,6 +268,8 @@ Optional explicit target:
 python sync_hf_mirror.py --repo-id yonathanarbel/my-works-for-llm-github-mirror
 ```
 
+The mirror command also writes Hugging Face dataset card metadata (`license: cc0-1.0`) into the mirrored `README.md`.
+
 ## Contributing improvements
 
 1. Add or update a paper inside `papers/<ssrn-id>/`.
