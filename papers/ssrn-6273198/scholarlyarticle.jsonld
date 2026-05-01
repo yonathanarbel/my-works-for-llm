@@ -1,0 +1,137 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "How to Count AIs: Individuation and Liability for AI Agents",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ssrn-6273198"
+    },
+    {
+      "@type": "PropertyValue",
+      "propertyID": "SSRN",
+      "value": "6273198"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-6273198/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781458"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781458"
+    ]
+  },
+  "sameAs": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6273198"
+  ],
+  "datePublished": "2026",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Simon Goldstein",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Hong Kong"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Peter N. Salib",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Houston Law Center"
+      }
+    }
+  ],
+  "abstract": "The Article diagnoses the legal problem of identifying AI agents. It distinguishes thin identification, which ties every AI action to a human principal for accountability, from thick identification, which treats AI agents as persistent units with coherent goals. It proposes the Algorithmic Corporation, or A-corp, as a legal-fictional entity that can own property, contract, and litigate while being run by AIs and owned by humans.",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "keywords": [
+    "AI agents",
+    "individuation",
+    "liability",
+    "algorithmic corporation",
+    "agency law",
+    "artificial intelligence governance"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-6273198/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-6273198/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/ssrn-6273198/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/ssrn-6273198/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/ssrn-6273198/paper.pdf"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.py",
+      "encodingFormat": "text/x-python",
+      "name": "papers/ssrn-6273198/paper.py"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.js",
+      "encodingFormat": "application/javascript",
+      "name": "papers/ssrn-6273198/paper.js"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.cpp",
+      "encodingFormat": "text/x-c++src",
+      "name": "papers/ssrn-6273198/paper.cpp"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.go",
+      "encodingFormat": "text/x-go",
+      "name": "papers/ssrn-6273198/paper.go"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-6273198/paper.rs",
+      "encodingFormat": "text/x-rust",
+      "name": "papers/ssrn-6273198/paper.rs"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-6273198"
+  }
+}

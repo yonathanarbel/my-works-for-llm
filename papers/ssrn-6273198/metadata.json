@@ -1,0 +1,35 @@
+{
+  "title": "How to Count AIs: Individuation and Liability for AI Agents",
+  "slug": "ssrn-6273198",
+  "ssrn_id": 6273198,
+  "ssrn_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6273198",
+  "year": 2026,
+  "authors": [
+    {
+      "given": "Yonathan",
+      "family": "Arbel",
+      "affiliation": "University of Alabama School of Law"
+    },
+    {
+      "given": "Simon",
+      "family": "Goldstein",
+      "affiliation": "University of Hong Kong"
+    },
+    {
+      "given": "Peter N.",
+      "family": "Salib",
+      "affiliation": "University of Houston Law Center"
+    }
+  ],
+  "license_pdf": "CC0-1.0",
+  "abstract": "The Article diagnoses the legal problem of identifying AI agents. It distinguishes thin identification, which ties every AI action to a human principal for accountability, from thick identification, which treats AI agents as persistent units with coherent goals. It proposes the Algorithmic Corporation, or A-corp, as a legal-fictional entity that can own property, contract, and litigate while being run by AIs and owned by humans.",
+  "keywords": [
+    "AI agents",
+    "individuation",
+    "liability",
+    "algorithmic corporation",
+    "agency law",
+    "artificial intelligence governance"
+  ],
+  "repeat_name": true
+}

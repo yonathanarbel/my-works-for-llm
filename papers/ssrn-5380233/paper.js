@@ -1,0 +1,2227 @@
+/*
+Governing Generative AI Beyond the Grave (ssrn-5380233) — corpus code wrapper
+
+This file intentionally embeds the paper text and study assets in code form.
+It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
+*/
+
+const PAPER_ID = "ssrn-5380233";
+const TITLE = "Governing Generative AI Beyond the Grave";
+const SSRN_URL = "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5380233";
+const YEAR = 2026;
+const AUTHORS = ["Alberto B. Lopez", "Yonathan Arbel"];
+const KEYWORDS = ["generative AI", "post-mortem digital remains", "deadbots", "right of publicity", "estate planning", "probate", "digital dignity"];
+
+const SUMMARY_MD = `
+# Governing Generative AI Beyond the Grave
+
+## TL;DR
+
+Abstract Post-mortem generative emulation (GenEm) has vaulted from science fiction to commercial reality. AI companies now reanimate deceased loved ones as “deadbots,” while studios digitally resurrect long-dead actors in first-run movies. Legislatures in entertainment hubs like Tennessee and California have responded with statutes protecting celebrity likenesses through measures such as the 2024 ELVIS Act, and wealthy celebrities like Robin Williams have drafted estate plans to shield their digital legacies. Yet these solutions ignore—if not reify—a stark divide. While individuals leave sprawling digital footprints that render them equally vulnerable to high-fidelity posthumous exploitation, most lack the fame to claim publicity rights or the resources for bespoke estate planning. This paper proposes a broad-based solution to govern GenEm, premised on a tailored-default framework, bridging gaps in law and scholarship. Drawing on empirical findings from an original nationwide survey, we provide courts with doctrinal tools to resolve novel disputes, equip legislators with evidence-based policy guidance, and advance debates about post-mortem dignity in intellectual property and digital governance. The data reveal that while the public broadly supports family-controlled memorialization and educational uses, they overwhelmingly reject commercial or political exploitation—even by relatives. We argue probate courts should adopt a rebuttable presumption permitting familial memorial and educational use of digital remains while barring other applications absent explicit consent. Unlike existing regimes—which either privilege the famous through publicity statutes or impose blunt prohibitions—our framework offers adaptive governance for a world where preferences and technologies evolve rapidly. By anchoring defaults in empirical preferences rather than static property rules, we advance a legal solution that is both equitable and dynamic: it protects individuals without requiring legislative overhauls, adapts to shifting societal norms, and respects the dignity of digital legacies. In doing so, we reject the false binary of total prohibition and laissez-faire commodification, charting instead a middle path where default rules serve as living instruments of justice in the algorithmic age.
+
+## Core Contributions
+
+* **Regulatory gap:** celebrity publicity statutes and bespoke estate planning leave ordinary people underprotected.
+* **Empirical defaults:** survey evidence supports family memorial and educational uses but rejects commercial and political exploitation without consent.
+* **Probate governance:** rebuttable presumptions can guide courts without waiting for comprehensive legislation.
+`;
+
+const SUMMARY_ZH_MD = `
+
+`;
+
+const ONE_PAGER_MD = `
+# Governing Generative AI Beyond the Grave — one-page summary
+
+**Paper ID:** \`ssrn-5380233\`
+**Year:** 2026
+**Author(s):** Alberto B. Lopez, Yonathan Arbel
+**SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5380233
+
+## TL;DR
+
+Abstract Post-mortem generative emulation (GenEm) has vaulted from science fiction to commercial reality. AI companies now reanimate deceased loved ones as “deadbots,” while studios digitally resurrect long-dead actors in first-run movies. Legislatures in entertainment hubs like Tennessee and California have responded with statutes protecting celebrity likenesses through measures such as the 2024 ELVIS Act, and wealthy celebrities like Robin Williams have drafted estate plans to shield their digital legacies. Yet these solutions ignore—if not reify—a stark divide. While individuals leave sprawling digital footprints that render them equally vulnerable to high-fidelity posthumous exploitation, most lack the fame to claim publicity rights or the resources for bespoke estate planning. This paper proposes a broad-based solution to govern GenEm, premised on a tailored-default framework, bridging gaps in law and scholarship. Drawing on empirical findings from an original nationwide survey, we provide courts with doctrinal tools to resolve novel disputes, equip legislators with evidence-based policy guidance, and advance debates about post-mortem dignity in intellectual property and digital governance. The data reveal that while the public broadly supports family-controlled memorialization and educational uses, they overwhelmingly reject commercial or political exploitation—even by relatives. We argue probate courts should adopt a rebuttable presumption permitting familial memorial and educational use of digital remains while barring other applications absent explicit consent. Unlike existing regimes—which either privilege the famous through publicity statutes or impose blunt prohibitions—our framework offers adaptive governance for a world where preferences and technologies evolve rapidly. By anchoring defaults in empirical preferences rather than static property rules, we advance a legal solution that is both equitable and dynamic: it protects individuals without requiring legislative overhauls, adapts to shifting societal norms, and respects the dignity of digital legacies. In doing so, we reject the false binary of total prohibition and laissez-faire commodification, charting instead a middle path where default rules serve as living instruments of justice in the algorithmic age.
+
+## Keywords
+
+generative AI; post-mortem digital remains; deadbots; right of publicity; estate planning; probate; digital dignity
+
+## Files
+
+- Full text: \`papers/ssrn-5380233/paper.txt\`
+- PDF: \`papers/ssrn-5380233/paper.pdf\`
+- Summary (EN): \`papers/ssrn-5380233/summary.md\`
+
+_Auto-generated study aid. For canonical content, rely on \`paper.txt\`/\`paper.pdf\`._
+`;
+
+const STUDY_PACK_MD = `
+# Study pack: Governing Generative AI Beyond the Grave (ssrn-5380233)
+
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5380233
+- Full text: \`papers/ssrn-5380233/paper.txt\`
+- Summary (EN): \`papers/ssrn-5380233/summary.md\`
+
+## Elevator pitch
+
+Abstract Post-mortem generative emulation (GenEm) has vaulted from science fiction to commercial reality. AI companies now reanimate deceased loved ones as “deadbots,” while studios digitally resurrect long-dead actors in first-run movies. Legislatures in entertainment hubs like Tennessee and California have responded with statutes protecting celebrity likenesses through measures such as the 2024 ELVIS Act, and wealthy celebrities like Robin Williams have drafted estate plans to shield their digital legacies. Yet these solutions ignore—if not reify—a stark divide. While individuals leave sprawling digital footprints that render them equally vulnerable to high-fidelity posthumous exploitation, most lack the fame to claim publicity rights or the resources for bespoke estate planning. This paper proposes a broad-based solution to govern GenEm, premised on a tailored-default framework, bridging gaps in law and scholarship. Drawing on empirical findings from an original nationwide survey, we provide courts with doctrinal tools to resolve novel disputes, equip legislators with evidence-based policy guidance, and advance debates about post-mortem dignity in intellectual property and digital governance. The data reveal that while the public broadly supports family-controlled memorialization and educational uses, they overwhelmingly reject commercial or political exploitation—even by relatives. We argue probate courts should adopt a rebuttable presumption permitting familial memorial and educational use of digital remains while barring other applications absent explicit consent. Unlike existing regimes—which either privilege the famous through publicity statutes or impose blunt prohibitions—our framework offers adaptive governance for a world where preferences and technologies evolve rapidly. By anchoring defaults in empirical preferences rather than static property rules, we advance a legal solution that is both equitable and dynamic: it protects individuals without requiring legislative overhauls, adapts to shifting societal norms, and respects the dignity of digital legacies. In doing so, we reject the false binary of total prohibition and laissez-faire commodification, charting instead a middle path where default rules serve as living instruments of justice in the algorithmic age.
+
+## Keywords / concepts
+
+generative AI; post-mortem digital remains; deadbots; right of publicity; estate planning; probate; digital dignity
+
+## Suggested questions (for RAG / study)
+
+- What is the paper’s main claim and what problem does it solve?
+- What method/data does it use (if any), and what are the main results?
+- What assumptions are doing the most work?
+- What are the limitations or failure modes the author flags?
+- How does this connect to the author’s other papers in this corpus?
+
+_Auto-generated study aid. For canonical content, rely on \`paper.txt\`/\`paper.pdf\`._
+`;
+
+const ARTICLE_TEXT = `
+--- Page 1 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 1 GOVERNING GENERA TIVE AI BEYOND THE GRA VE Alberto B.
+
+Lopezѳ & Yonathan Arbelƴ Post-mortem generative emulation (GenEm) has vaulted from science fiction to commercial reality.
+
+AI companies now reanimate deceased loved ones as “deadbots,” while studios digitally resurrect long -dead actors in first -run movies.
+
+Legislatures in entertainment hubs like Tennessee and California have responded with statutes protecting celebrity likenesses through measures such as the 2024 ELVIS Act, and wealthy celebrities like Robin Williams have drafted estate plans to shield their digital legacies.
+
+Yet th ese solutions ignore —if not reify—a stark divide.
+
+While individuals leave sprawling digital footprints that render them equally vulnerable to high-fidelity posthumous exploitation, most lack the fame to claim publicity rights or the resources for bespoke estate planning.
+
+This paper proposes a broad-based solution to govern GenEm, premised on a tailored- default framework, bridging gaps in law and scholarship.
+
+Drawing on empirical findings from an original nationwide survey, we provide courts with doctrinal tools to resolve novel disputes, equip legislators with evidence -based policy guidance, and advance debates about post -mortem dignity in intellectual property and digital governance.
+
+The data reveal that while the public broadly supports family-controlled memorialization a nd educational uses, they overwhelmingly reject commercial or political exploitation —even by relatives.
+
+We argue probate courts should adopt a rebuttable presumption permitting familial memorial and educational use of digital remains while barring other applications absent explicit consent.
+
+Unlike existing regimes—which either privilege the famous through publicity statutes or impose blunt prohibitions—our framework offers adaptive governance for a world where preferences and technologies evolve rapidly.
+
+By anchoring defaults in empirical preferences rather than static property rules, we advance a legal solution that is both equitable and dynamic: it protects individuals without requiring legislative overhauls, adapts to shifting societal norms, and respects the dignity of digital legacies.
+
+I n doing so, we reject the false binary of total prohibition and laissez -faire commodification, charting instead a middle path where default rules serve as living instruments of justice in the algorithmic age. ѳ Professor of Law, The University of Alabama School of Law. ƴ William Alfred Rose Professor of Law, Irving Silver and Frances Grodsky Silver Faculty Scholar, Director, AI & Law Studies, The University of Alabama School of Law.
+
+We are thankful to the contributions of many colleagues, among them Shahar Dillbary, Peter Salib, Matthew Tokson, Fred Vars, Benjamin McMichael and especially to participants at the Privacy Roundtable on AI.
+
+
+--- Page 2 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 2 Introduction.................................................................................................................................... 3 I.
+
+Technology, e-Mortality, and Novelty.................................................................................. 9 A.
+
+The Structure and Operation Modern AI Systems......................................................... 10 B.
+
+Assessing Roleplaying Capabilities.................................................................................. 12 1.
+
+General Capabilities..................................................................................................... 12 2.
+
+Bias and Ethical Considerations.................................................................................. 12 3.
+
+Specific Persona Emulation......................................................................................... 13 II.
+
+Evolutionary Default Rules and Wills Doctrine................................................................. 16 A.
+
+A Default Rule Theory Primer........................................................................................ 16 B.
+
+Default Rules in Wills and Trusts................................................................................... 21 C.
+
+Two Majoritarian Defaults in Wills Law........................................................................ 23 III.
+
+Survey Data...................................................................................................................... 27 A.
+
+Prior Empirical Data........................................................................................................ 27 B.
+
+Survey Methods................................................................................................................ 28 1.
+
+Study 1: Third Person Preferences.............................................................................. 29 2.
+
+Study 2: First Person Preferences................................................................................. 32 IV.
+
+Tailored Default Rules for GenEm................................................................................. 36 A.
+
+The Proposed Framework............................................................................................... 37 B.
+
+Enforcing the GenEm Default......................................................................................... 43 C.
+
+Legal Safeguards for GenEm Default.............................................................................. 45 Conclusion.................................................................................................................................... 48
+
+
+--- Page 3 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 3 Introduction Generative artificial intelligence offers a vision deeply ingrained in the human psyche – immortality, or rather, e -mortality.1 Through post -mortem generative emulation (GenEm), long - dead movie stars reappear on screen, the Beatles “reunite” to release new music, and conversational avatars let users debate physics—or hairstyles—with Albert Einstein.2 Outside the rarefied world of the famous, companies deploy “deadbots” to simulate departed loved ones, offering mourners fleeting communion with digital replicas. 3 While these emulations are not, of course, true necromantic resurrections of the deceased, the increasingly visual, auditory, and stylistic fidelity of these emulations permits disbelief to be suspended, especially for those who hope to grasp another fleeting moment with a loved one or hear a late parent’s voice assuring them that yes, everything will be alright.4 Despite its technical promise, GenEm creates a thicket of novel legal and ethical dilemmas.
+
+Where some see a tool for remembrance, others spy opportunity for commercial exploitation, and where some see digni ty rights others see property interests.5 Recognizing the financial and reputational threats, s ome legislatures provide statutory protection for “delebs” – deceased celebrities who remain big earners, like Marilyn Monroe or Michael Jackson.6 For instance, Tennessee’s aptly named Ensuring Likeness, Voice, and Image Security Act (ELVIS) of 2024 creates a property right in an individual’s “name, photograph, voice, or likeness in any medium in any manner” that transfers to an individual’s estate. 7 As expected, t hese laws feature in entertainment hubs like Tennessee (Nashville), California (Hollywood), and New York (Broadway), where GenEm poses the greatest threat to concentrated celebrity capital.8 1 E-mortality refers to technology driven immortality, see, e.g., Sarah Kuszynski, The problem with e-mortality, THE CRITIC, March 27, 2024, https://thecritic.co.uk/the-problem-with-e-mortality/. 2 Albert Einstein, https://beta.character.ai/chat?char=pQus24wbEGuwjRkJSWJGiYT4jA79HsrU5BMbekJB_lc; 3 S.J.
+
+Velasquez, How AI is bringing film stars back from the dead, BBC, July 18, 2023, https://www.bbc.com/future/article/20230718-how-ai-is-bringing-film-stars-back-from-the-dead; Samantha Murphy Kelly, When Grief and AI Collide: These People are Communicating with the Dead, CNN Business, May 6, 2024, https://www.cnn.com/2024/05/06/tech/ai-communicating-with-dead/index.html (detailing examples of individuals using AI to interact with deceased loved ones). 4 A central theme in the right of publicity jurisprudence is that 5 See Jennifer E.
+
+Rothman, The Inalienable Right to Be Left Alone, 20 HARV.
+
+L.
+
+REV. 53 (2018) (surfacing the tension in the right of publicity between alienable, commercial rights and inalienable dignitary rights). 6 Erik W.
+
+Kahn and Pou -I “Bonnie” Lee, “Delebs” and Postmortem Right of Publicity, 8 LANDSLIDE 2016, https://www.americanbar.org/groups/intellectual_property_law/publications/landslide/2015-16/january- february/delebs_and_postmortem_right_publicity/; Cal.
+
+Civ.
+
+Code § 3344.1(h)(2024); Tex.
+
+Prop.
+
+Code Ann. § 26.003(2)(2024); Nature’s Way Prods., Inc. v.
+
+Nature-Pharma, Inc., 736 F.
+
+Supp. 245, 252 (D.
+
+Utah 1990); 7 Tenn.
+
+Code §47-25-1101 et seq. (2024). 8 N.Y.
+
+Civ.
+
+Rights Law §50 -f(2)(b)(2022), Cal.
+
+AB 1836, https://fastdemocracy.com/bill-search/ca/2023- 2024/bills/CAB00030909/.
+
+Beyond them, a recent report by the US Copyright Office found that 27 states offer postmortem pubilicity rights, 19 by statute and 8 by common law.
+
+U.S.
+
+COPYRIGHT OFF., COPYRIGHT AND ARTIFICIAL INTELLIGENCE, PART 1: DIGITAL REPLICAS, 12-13 (2024).
+
+
+--- Page 4 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 4 In addition to public law protection in some jurisdictions, sophisticated individuals have utilized private law measures to protect their digital remains.
+
+Whoopi Goldberg revealed that her will contains a provision banning post -mortem creation of a hologram using her image. 9 Mrs.
+
+Doubtfire’s Robin Williams transferred the rights to his “name, signature, photograph, likeness and right of publicity” to a trust that embargoes his likeness until 2039.10 For the famous, the law offers an array of options to protect their digital afterlives.
+
+But what about everyone else?
+
+The answer is that extant law, because of its focus on lifetime rights, offers little to no protection for everyone else.
+
+The right of publicity, a derivative of the right of privacy, might be a first option to protect against unauthorized GenEm.11 But, a statutory or common law right of publicity is not recognized nationwide and requires an individual’s likeness to have been commercialized during life.12 Most people, of course, have not commercialized their images during; therefore, they do not have an enforceable right of publicity after death.13 Similarly, trademark law’s Lanham Act provides civil remedies for the use of “any word, term, name, symbol, or device” used in commerce that is likely to cause consumer confusion. 14 Like the right of publicity, then, trademark law offers little recourse because of its focus on commercial use during one’s lifetime.
+
+Finally, extending copyright law to redress unauthorized GenEm is uncertain at best.15 If an individual’s image or likeness did not have property-based protection during life, then there is nothing to descend into an estate for 9 Tommy McArdle, Whoopi Goldberg Says Her Will Forbids Anyone from Making a ‘Hologram” of Her After Death, People, July 12, 2023, https://people.com/whoopi-goldberg-will-forbids-anyone-from-making-a-hologram-after-death-7560272 (claiming that the provision had been in her will for 15 years in mid-2023).
+
+See also, e.g., Amanda Harding, Grammy Award-Winning Singer Adds A.I.
+
+Clause Into Her Will: “You Can’t Use My Voice,” THE DAILY WIRE, April 19, 2024, https://www.dailywire.com/news/grammy- award-winning-singer-adds-a-i-clause-into-her-will-you-cant-use-my-voice. 10 In re Robin Williams Trust, No. [Docket Number] (Cal.
+
+Super.
+
+Ct. filed Jan. 31, 2012), excerpted in Eriq Gardner, Robin Williams’ Estate Plan Bans Use of His Image for 25 Years, Hollywood Reporter (Mar. 30, 2015), https://www.hollywoodreporter.com/business/business-news/robin-williams-estate-plan-bans-784419/. 11 See, e.g., Midler v.
+
+Ford Motor Co., 849 F.2d 460 (9th Circ. 1988) (considering whether Ford can use an impersonation of Midler’s voice to sell vehicles). 12 Right of Publicity Committee, Int’l Trademark Assoc., Right of Publicity State of the Law Survey (2019), https://www.inta.org/wp-content/uploads/public-files/advocacy/committee-reports/INTA_2019_rop_survey.pdf (finding that a statutory or common law right of publicity exists in 36 states).
+
+For recent attempts to create a federal right in light of generative AI, see Artificial Intelligence and Intellectual Property – Part II: Copyright and Artificial Intelligence Before the Subcomm.
+
+On Intellectual Property of the S.
+
+Committee on the Judiciary, 118th Cong. 1–2 (2023).
+
+The US copyright office recently recommended against creation of a “federal digital replica right”.
+
+U.S.
+
+COPYRIGHT OFF., COPYRIGHT AND ARTIFICIAL INTELLIGENCE, PART 1: DIGITAL REPLICAS, 31 (2024).
+
+See also House Judiciary Hearing: "Artificial Intelligence and Intellectual Property: Part II – Identity in the Age of AI", (Feb. 2, 2024). 13 Jennifer L.
+
+Carpenter, Internet Publication: The Case for an Expanded Right of Publicity for Non-Celebrities, 6 VA.
+
+J.
+
+L. & TECH. 1, 5-6 (2001). 14 15 U.S.C. §1125(a)(1)(A).
+
+See also, Daniel A.
+
+Rozansky et al., Protecting Image and Likeness Though Trademark Law, NAT’L L.
+
+REV., https://natlawreview.com/article/protecting-image-and-likeness-through-trademark-law; 15 S Samantha Cole, The Kim Kardashian Deepfake Shows Copyright Claims Are Not the Answer, VICE (June 19, 2019), For more on copyright law and digital assets, 2 J.
+
+THOMAS MCCARTHY, THE RIGHTS OF PUBLICITY AND PRIVACY, 403-405 (2d ed. 2011).
+
+
+--- Page 5 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 5 post-mortem protection. 16 Thus, while we are otherwise in agreement, we part ways with Mark Barthelomow’s recent prescription that “lawmakers should require the decedent to have commercially exploited their persona during their lifetime” as the basis to the right to be left dead.17 While individuals could plan for GenEm like Robin Williams did, bespoke estate planning is too limited to solve the problem. 18 At minimum, it requires time, money, and access to expensive drafting solutions,19 yet studies show that most individuals fail to execute a will at all.20 Even among individuals with wills, provisions to govern GenEm are quite rare.
+
+A recent poll found that nearly 75% of people have no plan for their digital remains after death. 21 And while practitioners increasingly account for digital assets while planning estates, 22 such measures are still uncommon and rarely include specific GenEm provisions.
+
+In short, recent public and private lawmaking may be adequate to serve the needs of a “digital aristocracy,” but provides limited protection for the interests of everyone else.
+
+The creation of a “digital aristocracy” run s counter to the legal system’s foundational commitment to posthumous dignity —a principle powerfully articulated in Ela Leshem’s reconceptualization of dead bodies as quasi-persons.23 Leshem’s work demonstrates that American law treats physical human remains not as inert property but as entities with a liminal moral status, 16 See, e.g., Shaw Family Archives Ltd.
+
+V.
+
+CMG Worldwide, Inc., 486 F.
+
+Supp. 2d 309 (S.
+
+D.
+
+N.Y. 2007) (holding that Marilyn Monroe’s estate did not have a right of publicity to enforce against a photographer whose image appeared on a t-shirt after Monroe’s death because Monroe did not have a right of publicity during life that could transfer to her estate for post- mortem enforcement). 17 Mark Bartholomew, A Right to be Left Dead, 113 CAL.
+
+L.
+
+REV 1591 (2024), at 1638. 18 While some testators use “digital asset” clauses to govern online accounts, such provisions often conflict with platform prot ocols (e.g., Facebook’s legacy contacts) and residuary distributions.
+
+See Natalie M.
+
+Banta, Inherit the Cloud: The Role of Private Contracts in Distributing or Deleting Digital Assets at Death, 83 FORDHAM L.
+
+REV. 799, 802 (2014).
+
+Cryptocurrencies like Bitcoin—classified by the IRS as taxable “property,” not currency—exemplify these ambiguities: absent explicit directives, they may default to personal property clauses, creating probate conflicts.
+
+I.R.S., Digital Assets, https://www.irs.gov/businesses/small-businesses-self- employed/digital-assets (last updated Jan. 25, 2024).
+
+The Revised Uniform Fiduciary Access to Digital Assets Act (RUFADAA) exacerbates inequities by requiring testamentary intent, leaving intestate estates unprotected.
+
+Revised Unif.
+
+Fiduciary Acces s to Digital Assets Act §§ 4(a) –(b) (Unif.
+
+L.
+
+Comm’n 2015); cf.
+
+Natalie M.
+
+Banta, Electronic Wills and Digital Assets: Reassessing Formality in the Digital Age, 71 BAYLOR L.
+
+REV. 547, 573 (2019) (“For digital assets… silence means [they] are not descendible under state intestacy law.”).
+
+With 60–70% of Americans dying intestate, see Naomi Cahn et al., Intestacy in the 21st Century 3 (GWU Legal Stud.
+
+Rsch.
+
+Paper No. 2023-34, 2023), digital legacies risk permanent erasure, see Andrew Gilden, The Social Afterlife, 33 HARV.
+
+J.L. & TECH. 329, 340–41 (2020). 19 Cal.
+
+Civ.
+
+Code § 3344.1(h)(2024); Tex.
+
+Prop.
+
+Code Ann. § 26.003(2)(2024); Nature’s Way Prods., Inc. v.
+
+Nature-Pharma, Inc., 736 F.
+
+Supp. 245, 252 (D.
+
+Utah 1990).
+
+One exception to the requirement of lifetime commercialization is Tennessee’s ELVIS Act, which protects individuals “whether or not such rights were commercially exploited during the individual’s lifetime” and transfers to a decedent’s estate for enforcement.
+
+Tenn.
+
+Code §47-25-1101 et seq. (2024). 20 For a review of the empirical literature on testatcy rates, see infra note 113. 21 Millie Turner, AI You Real?
+
+AI Clones of My Dead Dad Going Viral Online ‘Stopped Me in My Tracks’ as Experts Warn Brits to Prep for ‘Digital Death’, THE SUN (Sept. 23, 2024), https://www.thesun.co.uk/tech/30601500/ai-clone-deepfake-image-dead- relative-social-media/. 22 For more on digital assets, see, Andrew Gilden, The Social Afterlife, 33 HARV.
+
+J.
+
+L. & TECH. 329 (2020). 22 Stacy E.
+
+Singer & Suzanne Brown Walsh, Digital Asset Management in Life and Death, ACTEC (n.d.), https://www.actec.org/resource-center/video/digital-asset-management-in-life-and-death/. 23 See Ela Leshem, Dead Bodies as Quasi-Persons, 77 VAND.
+
+L.
+
+REV. 999 (2024).
+
+
+--- Page 6 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 6 which “hold interests, benefit from dignity protections, and suffer from dignity violations.” 24 Just as physical remains retain dignitary interests, digital legacies —as extensions of identity —demand analogous protections against commodification.
+
+Perhaps special reputational rules were justified in a world where post -mortem emulation was expensive and data was sparse, but today private individuals leave sprawling digital legacies, 25 while plummeting GenEm costs make emulation feasible on consumer-grade hardware.26 Just as feudal entitlements once calcified social hierarchies, today's publicity statutes risk projecting status differences long into the future.
+
+A recent example illustrates how everyone, regardless of fame or power, are exposed to GenEm’s risk in a data rich world with decreasing technology costs.
+
+In late 2024, the daughter of a WWII veteran discovered a “deepfake doppelganger” of her deceased father in an online image of five elderly American veterans with the caption “[t]he real heroes in America are not in Hollywood.” 27 In reality, her father was not an American veteran but instead a Canadian civilian who worked as an engineer and whose AI -altered image had been scrubbed from the daughter’s online wedding photos.28 The discovery of the GenEm image of her father, who had died fourteen years earlier, “stopped her in her tracks.” 29 Adding to the shock, the daughter later realized that her father’s GenEm image was “circulating all over the place” in the form of “social media memes, fundraisers, and even puzzles.”30 In an interview, she lamented that “our memories are digital debris to be sucked in, digested, and reanimated by machine learners,” which should make “all of us queasy or, if we think about it a little longer, angry.”31 Recent scholarship, such as Victoria Haneman ’s work on digital resurrection or Mark Bartholomew work on the right to be left dead, has begun to grapple with the legal consequences of the availability of everyone’s digital detritus for machine learn ers.32 GenEm attracts scholarly 24 Id at 1049-50. 25 The digital legacies are increasingly the subject of commercial interest.
+
+See, e.g., Tomasz Hollanek and Katarzyna Nowaczyk - Basinska, Griefbots, Deadbots, Postmortem Avatars: on Responsible Applications of Generative AI in the Digital Afterlife Industry, PHILOSOPHY AND TECHNOLOGY, May 9, 2024; Samantha Murphy Kelly, When Grief and AI Collide: These People are Communicating with the Dead, CNN, May 6, 2024, https://www.cnn.com/2024/05/06/tech/ai-communicating-with- dead/index.html. 26 Eight in ten adults in the United States report using YouTube, nearly seven in ten use Facebook, nearly half use Instagram, and one- third of the adults in the nation use the recently unbanned TikTok.
+
+Jeffrey Gottfried, Americans' Social Media Use, PEW RESEARCH CENTER (Jan. 31, 2024), https://www.pewresearch.org/internet/2024/01/31/americans-social-media-use/.
+
+Or, in Hanemann’s words, “social media platforms such as Facebook and Twitter... have become accidental digital memory platforms that are cu rated by the living but store the personalities of the deceased.” Victoria Haneman, The Law of Digital Resurrection, B.C.
+
+L.
+
+REV. at 6 note 22 (Forthcoming 2025).
+
+For one example of many of open -source consumer grade voice cloning, see RVC -Project, https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI. 27 See Turner, supra note 21. 28 Id. 29 Id. 30 Id. 31 Id. 32 See Haneman, supra note 22 (arguing for a solution based on data control paradigm: “The proposed paradigm focuses upon a right of deletion for the deceased over source material (data), rather than testamentary control over the outcome (digital resurrec tion)”,
+
+
+--- Page 7 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 7 interest because it is transformative; AI uses a decedent’s source material to create something entirely new that never existed during the decedent’s lifetime. 33 The transformative nature of GenEm presents unique challenges for the transfer of property at death because the GenEm product cannot be neatly categorized as “property” subject to transfer at death.
+
+Source material may have been publicly available, left behind on a website like abandoned property, or used in a model training run before an individual’s death, which erodes the link between the decedent and the GenEm output.
+
+As a result, GenEm raises complex questions about entitlement —does an estate's claim to source material supersede a GenEm user's claim to AI -generated content? 34 Any answer to that question should account for an allocation of entitlements as well as the traditional dignity interests connecting a deceased’s personhood to the GenEm product; the identity of the actual decedent to the digital “quasi-person.” Designating who gets to decide questions about GenEm usage, however, is only one-half of any regulatory scheme for GenEm.
+
+Any GenEm regulation must not only identify who makes decisions, but also how heterogenous populations would want GenEm to be used.
+
+Some people may experience no identification of the self with their emulations while others may see it as an intimate part of their legacies, just as they might feel about their names or gravestones.
+
+As a result, some may not want to be emulated – period – while others may be receptive to emulation depending upon its use.
+
+One survivor of Pearl Harbor, for example, may consent to GenEm for educational purposes at the U.S.S.
+
+Arizona while another may not want to discuss the harrowing ordeal even via GenEm. 35 And even if an individual is amenable to GenEm, the probability that an individual will sanction GenEm for any use under the sun seems low; most are likely to condition GenEm by use – just like people making conditional transfers in wills or trusts.
+
+In this Article we examine these issues in detail and offer a framework based on tailored default rules, informed by the results of an original survey of American adults.
+
+Part I of the paper describes with the suggestion that will-based solutions are unlikely to offer a broad-based solution); Bartholomew, supra note 17 (arguing that a new right to be left dead should be recognized as independent of existing rights associated with privacy, consumer protecti on, and property law).
+
+See also Olivia Wall, A Privacy Torts Solution to Postmortem Deepfakes, Note, 100 WASH.
+
+U.
+
+L.
+
+REV. 885 (2023); Rebecca J.
+
+Roberts, You’re Only Mostly Dead: Protecting Your Digital Ghost from Unauthorized Resurrection, Note, 75 FED.
+
+COMM.
+
+L.
+
+J. 273 (2023) (suggesting that an expansion of RUFADAA could offer protection against unauthorized post-mortem use of digital information). 33 For more on the technical aspects of GenEm, see infra Part I. 34 The standard approach to that question is to turn to property law’s doctrine of accessions, which assigns property rights bet ween first possessors and subsequent users when subsequent users alter the property to produce something new and different.
+
+An ow ner of an unfinished slab of marble, for example, might assert an ownership claim against a sculptor who creates a new David.
+
+Under that circumstance, a court may seek to determine which party provided the more valuable input – the owner of the source material or the party who converted that source material into something new.
+
+Regardless of the result, the party who comes out on the short end of the proverbial stick may seek compensation for the contributing input – the price of the slab of marble or the sculping costs.
+
+Neither party, arguably, will be made whole, but neither will either party suffer a total loss.
+
+See, Thomas W.
+
+Merrill, Accession and Original Ownership, 1 J.
+
+LEGAL ANALYSIs 459 (2009) (falling under the category of “commingled goods”); Harold C.
+
+Rector, Accession, 5 SMU L.
+
+REV. 80 (1951) (observing that “accession is unusual in that it permits a trespasser to acquire title to converted property on which he has done work or added materials). 35 See, e.g., Chloe Melas, My Grandfather Hid the Emotional Toll of World War II from His Family for Decades, CNN (May 2, 2023), https://www.cnn.com/2023/05/02/health/veterans-ptsd-psychedelics-wwii-wellness/index.html.
+
+
+--- Page 8 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 8 the technological advances that simultaneously permit post-mortem mimesis of decedents and create regulatory challenges because of the speed and complexity of those advances.
+
+The next part of this paper, Part II, canvasses the theory of default rules as derived from contract law and imported to traditional wills doctrine using intestacy as an example.
+
+Part III presents the results of a novel survey to gauge prevailing perceptions regarding post-mortem AI users and uses.
+
+A key innovation of this approach is the differentiation between a general aversion to AI and specific objections to posthumous use of digital remains – an “AI-Ick” factor.
+
+Surprisingly, the findings reveal that resistance to GenEm stems from concern about impermissible uses of a decedent’s information rather than from AI technology itself.
+
+Lastly, the survey captures preferences for users and uses such as memorialization, education, research, commercial, and political support.
+
+Part IV of this article couples the default theory with the survey results to construct a novel default rule to govern post -mortem generative AI manipulation.
+
+The paper outlines a tailored default that presumptively permits family members to use a deceden t’s digital remains for memorialization and education while presumptively prohibiting others from using the decedent’s data for any use.
+
+The proposal positions probate courts as a neglected but effective first responders to GenEm regulation, emphasizing t hat probate mechanisms have long enabled individuals to control post-mortem property use through devices like conditional fee simples and specialized trusts.
+
+Beyond the immediate question of who controls our digital legacies, this Article speaks to core principles that animate wills and trusts law: human dignity, autonomy, and distributive fairness.
+
+The rise of generative AI sets up a high‐stakes clash between our centuries‐old commitment to respecting a decedent’s intent and a rapidly evolving technological landscape that can reanimate personal data in new and unsettling ways.
+
+Regulating GenEm implicates not just individual privacy interests but also the broade r moral question of how society commemorates —and at times commodifies—the dead.
+
+By clarifying how default rules can both empower the living and protect the dignity of the departed, we illuminate deeper normative concerns about equality of access, digital governance, and the role of private ordering in a world where life, death, and technology increasingly overlap.
+
+
+--- Page 9 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 9 I.
+
+Technology, e-Mortality, and Novelty At the heart of recent advances in GenEm lies a deceptively simple question: what distinguishes modern AI -driven imitation from humanity's long history of posthumous representation?
+
+Throughout history, societies have developed various methods to preserve a nd recreate the essence of the departed. 36 Roman libation rituals involved pouring a drink over the grave to interact with the deceased, 37 Ancient Egyptians crafted detailed death masks, 38 Renaissance artists painted posthumous portraits,39 and to this day tombstones serve as sites of connection with the departed.
+
+Even in everyday life, people frequently engage in informal imitation —a grandchild might mimic a deceased grandparent's mannerisms or a eulogist might adopt the cadence of the departed ’s speech.
+
+A cursory inspection, then, might suggest that GenEm is little more than a contemporary iteration of historical mimicry, albeit with the aid of magic-like technology.
+
+Modern AI-driven mimesis, however, is qualitatively different from historical mimicry like death masks or holograms of departed artists like Tupac at Coachella or Prince during a Super Bowl halftime.40 Holographic performances are technologically impressive, but they are exercises in clever reproduction limited by the availability and content of source material; they can only show us what was already filmed, captured, or staged.41 By contrast, modern AI generates novel material and that new substantive content is not limited by source material content.
+
+For example, “if a performance of Elvis was originally shot from the front, [AI] will be able to show you a camera angle from behind that was never actually shot.”42 Novel generative mimesis - creating authentic-seeming new material that never existed - fundamentally transforms the nature of posthumous representation from preservation to resurrection.
+
+A contemporary AI system does not merely replay Elvis; it learns Elvis 36 See e.g., Sarah Baitzel, Learning About Death and Burial: Mortuary Ritual, Emotion and Communities of Practice in the Ancient Andes, 33 CAMBRIDGE ARCHAEOLOGICAL J. 309, 312 (2023) (studying mortuary practice and noting, for instance, that in ancient Andean society “the dead wer e a vital and tangible presence” and the community would interact with them through “the manipulation of human remains, re-opening and accessing tombs and depositing offerings even long after death.”). 37 See Liana Brent, Drinking with the Dead: Libation Conduits from Rome’s Columbaria to the Cortile at the American Academy in Rome, 69 MEMOIRS OF THE AM.
+
+ACAD.
+
+IN ROME 207, 209-10 (2024). 38 Salima Ikram, The Mummy in Ancient Egypt: Equipping the Dead for Eternity 123–25 (Cornell Univ.
+
+Press 1998), available at https://www.cornellpress.cornell.edu/book/9781501706460/the-mummy-in-ancient-egypt/ 39 Rosemary Isabel Keep, Facing the Family: Group Portraits and the Construction of Identity within Early Modern Families, 5 (Ph.D. dissertation, University of Birmingham 2017) (“Like sculpted tomb monuments in churches, portraits acted as exemplars for the benefit of living and future generations, to act as a locus for grief and keep the memory of the deceased alive.”); Egyptian Funerary Mask s, The Metropolitan Museum of Art, https://www.metmuseum.org/toah/hd/egfu/hd_egfu.htm 40 Chenda Ngak, Tupac Coachella Hologram: Behind the Technology, CBS (Nov. 9, 2012), https://www.cbsnews.com/news/tupac-coachella-hologram-behind-the-technology/ 41 Chloe Veltman, Just Because Your Favorite Singer Is Dead Doesn't Mean You Can't See Them 'Live', NPR (Mar. 15, 2024), https://www.npr.org/2024/03/15/1238448991/elvis-evolution-ai-hologram. 42 Mia Dawkins, With AI, Dead Celebrities Are Working Again —And Making Millions, BLOOMBERG (Sept. 19, 2024), https://www.bloomberg.com/news/articles/2024-09-19/with-ai-dead-celebrities-are-working-again-and-making-millions.
+
+
+--- Page 10 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 10 himself and creates new moments that seem to emerge from the same generative process that produced the original performances.
+
+This technological leap creates a novel form of uncanny authenticity.
+
+Traditional impersonation, no matter how skilled, remains clearly marked as interpretation.
+
+Even the most talented Elvis impersonator's performance is understood as tributary rather tha n constitutive.
+
+But AI mimesis achieves a sort of "computational verisimilitude" - a level of imitation so precise that the distinction between reproduction and generation becomes practically impossible.
+
+Collapsing the perceptual boundary between origina l and simulation poses unprecedented challenges for legal frameworks built around clear distinctions between identity and impersonation.
+
+When AI can generate new performances that are indistinguishable from historical recordings, the question is no longer simply about protecting a static identity, but about regulating the ongoing generation of new authentic - seeming content—a form of posthumous agency that existing law never contemplated.
+
+This Part of the paper offers a deeper investigation of GenEm technology along two critical axes.
+
+First, the source and nature of these mimetic capabilities must be recognized as fundamental properties emerging from the architecture of modern AI systems and not as ancillary features of AI.
+
+As noted in a recent Nature Perspectives essay, “the concept of roleplaying is central to understanding the behavior of dialogue agents.” 43 This observation is not merely academic; it reveals how deeply mimesis is woven into the fabric of advanced AI systems.
+
+Second, technological reality presents profound regulatory challenges: if mimetic abilities are not simply add-on features that can be cleanly excised or controlled, but rather emerge naturally from the pursuit of more capable AI systems, then traditional regulatory frameworks miss their regulatory targets.
+
+Understanding both aspects is crucial for any meaningful attempt to govern the usa ge of these technologies because we cannot effectively regulate what we do not understand, and we cannot craft workable oversight mechanisms without grappling with the fundamental nature of what we seek to control.
+
+A.
+
+The Structure and Operation Modern AI Systems The current state of the art in artificial intelligence is dominated by large language models, denominated as LLMs, that employ transformer architecture and autoregressive generation to generate output.
+
+Prominent examples include the GPT family, Claude, Gemini, Llama, Mistral, and Qwen.
+
+These models yield sequential results by creating an iterative “token,” which refers to common word subparts like a 'th' in English, conditioned on those previously generated. 44 The 43 Michal Kosinski, Large Language Models May Enable Deception That Is Targeted, Adaptable, and Difficult to Detect, 121 PROC.
+
+NAT'L ACAD.
+
+SCI. e2317967121 (2024), https://www.pnas.org/doi/10.1073/pnas.2317967121. 44 A helpful list of all the 100,00 tokens used by GPT -4 can be found here: s-macke, All 100k GPT -4 Tokens, GitHub Gist (Feb. 23, 2024), https://gist.github.com/s- macke/ae83f6afb89794350f8d9a1ad8a09193.
+
+
+--- Page 11 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 11 iterative LLM training process involves exposure to vast corpora of text, which far exceeds the human reading capacity, wherein the model is tasked with predicting subsequent tokens in word sequences.
+
+During training, the model's performance is evaluated b ased on its predictive accuracy, after which it computes the gradient of the loss function with respect to its parameters and adjusts them to minimize this loss.
+
+Through iterative refinement, the model progressively enhances its predictive capabilities; the AI learns from its past mistakes.
+
+While this process may appear straightforward on the surface, it is crucial to recognize that even the current paradigm of next -token prediction involves deeper world models that transcend superficial correlation analysis.
+
+Unlike rudimentary algorithms relying on crude statistical patterns, LLMs must account for broader contextual nuances.
+
+For instance, to predict the completion of the statement 'The temperature today will be twenty-fi___,' the model must understand if it's discussing weather in Celsius or Fahrenheit to correctly predict 've' versus 'fty.' A simple pattern -matching algorithm might default to the more common English completion 'fifty,' but in a conversation about European weather, 'five' would be the correct completion.
+
+This demonstrates how LLMs must integrate broader contextual knowledge - in this case, understanding global temperature scales and their typical ranges - rather than simply selecting the most statistically common completion.
+
+The transformer architecture implements the contextual adjustment through a mechanism known as attention.
+
+This process involves adjusting the values assigned to the vector representation of each token based on its contextual relationships.
+
+In practical te rms, the model weighs tokens differently when presented in various contexts, shifting their interpretation according to the semantic and syntactic relationships within the input text.
+
+Perhaps most intriguing is the emergence of roleplaying capabilities as a natural corollary of this system.
+
+These capabilities arise organically from the next -token prediction and attention mechanisms without explicit programming or training data specifically focused on roleplaying.
+
+The same underlying processes that allow the model to predict 'sheqel' in the context of Israeli currency also enable it to mimic specific speakers or characters.
+
+The intuitive reason for that is that effective prediction requires, or at least benefits from, a deeper understanding of the subject.
+
+For instance, recognizing “Alex Trebek” as the speaker increases the probability of generating “Is that your final answer?” while “Homer Simpson” as a contextual cue might prompt a “D’oh!” The innate capability for roleplaying has significant legal implications.
+
+The ability of AI systems to convincingly mimic specific individuals could potentially intersect with legal concepts of identity, fraud, and impersonation.
+
+Moreover, the vast data c ollection necessary for training these models may implicate privacy laws and data protection regulations.
+
+However, the ability itself is inextricably linked to the way the model operates: the ability to “turn it off,” at least using today’s technology, is likely limited by the pace of technological advance; the dam has been irreversibly breached.
+
+
+--- Page 12 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 12 B.
+
+Assessing Roleplaying Capabilities Having established roleplaying as an innate capability of LLMs, we now turn to evaluating their mimetic effectiveness.
+
+Two common measures of LLM efficacy examine technical capabilities and psychological effects.
+
+Both lines of inquiry indicate a trend towards high-fidelity emulations, though the ultimate test remains experiential. 1.
+
+General Capabilities When measuring roleplaying capabilities, researchers confront a fundamental challenge of metrics.
+
+Mimesis or character fidelity is inherently ill -defined and subject to varied interpretations.
+
+Nonetheless, researchers are developing various measures to quantify roleplaying techniques, which is critical to investigating the capabilities of contemporary LLMs.
+
+The first wave of studies yielded promising results regarding LLMs’ ability to mimic general persona judgments.
+
+Studies have found that LLMs can generate moral judgments that closely track common moral intuitions (r=0.95), 45 and produce responses to sociological questions that align closely with those of the general population.46 Additionally, LLMs have demonstrated the ability to replicate some psychological studies and persuasively mimic personality traits. 47 Studies show that LLMs can persuasively replicate big five personality traits such as extroversion or agreeableness.48 These findings raise important legal questions regarding the potential use of AI in contexts traditionally reserved for human judgment, such as jury selection or witness credibility assessment.
+
+Recent work on this topic has shown that LLMs can replicate la y perceptions of reasonableness in context, replicating results from human studies.49 2.
+
+Bias and Ethical Considerations The issue of bias presents a complex challenge for any assessment of roleplaying capability because ethical considerations demand minimization of stereotypes and biases, but perfect mimesis would necessarily include replication of human biases.
+
+Studies hav e shown that AI models often 45 Danica Dillion, Niket Tandon, Yuling Gu & Kurt Gray, Can AI Language Models Replace Human Participants? 28 TRENDS COGN.
+
+SCI. 597 (2023).
+
+In hindsight, it is not entirely surprising because these methods are trained to mimic human moral judgments using RLHF and similar techniques. 46 James Bisbee et al., Synthetic Replacements for Human Survey Data?
+
+The Perils of Large Language Models, in Political Analysis (Published online 2024:1 -16.) doi:10.1017/pan.2024.5 The researchers find low accuracy regarding the distribution of synthetic opinions, a point we revisit later. 47 Peter S.
+
+Park, Philipp Schoenegger & Chongyang Zhu, Diminished Diversity-of-Thought in a Standard Large Language Model, 56 BEHAV.
+
+RES.
+
+METHODS 2051 (2024), https://doi.org/10.3758/s13428-023-02307-x. 48 James Bisbee et al., Synthetic Replacements for Human Survey Data?
+
+The Perils of Large Language Models, 32 POL.
+
+ANALYSIS 401 (2024), https://doi.org/10.1017/pan.2024.5. 49 Yonathan A.
+
+Arbel, Silicone Reasonable People (manuscript) (2025) (on file with authors).
+
+
+--- Page 13 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 13 replicate human cognitive biases, paradoxically bringing them closer to authentic human judgment.50 In terms of ethical bias, some research suggests that models may exhibit greater fairness than humans in certain contexts, such as attitudes towards other ethnicities. 51 In another study, researchers tried to understand what drives models’ choices in an interactive experiment environment.
+
+They found that models’ behavior is most consistent with an attempt to increase the average of both their and their partner’s payoff.
+
+Researchers note that “[h]uman behavior also is optimized with some weight on the other player, but the weight depends on the preference specification and humans are more heterogeneous and less well predicted.” 52 Less euphemistically, and more soberingly, the model was less selfish than humans. 3.
+
+Specific Persona Emulation Roleplaying capabilities, however, are far more specific and depend on the particularities of individual personas.
+
+One study approached this task using methods akin to psychological assessments, conducting interview -based evaluations. 53 The researchers interviewed 32 LLM - generated characters and evaluated their responses across 14 psychological scales, including the Big Five Inventory (BFI), 16 Personalities (16P), and the Dark Triad Dirty Dozen (DTDD).
+
+The authors found that models "suc cessfully portray many personality traits," achieving an average 78.9% accuracy on a central metric. 54 A larger study corroborated these findings, concluding that "ChatGPT-4 exhibits behavioral and personality traits that are statistically indistinguishable from a random human from tens of thousands of human subjects from more than 50 countries." 55 This suggests a level of sophistication in AI roleplaying that approaches human-like variability in personality expression.
+
+Another study employed both automated metrics, such as language model perplexity and response consistency, and human judgment, where annotators rated the fidelity of LLMs' responses 50 Andrew K.
+
+Lampinen et al., Language Models Show Human-Like Content Effects on Reasoning Tasks, arXiv:2207.07051 (2022), https://doi.org/10.48550/arXiv.2207.0705 (showing that the framing of questions misleads humans and LLMs in similar ways), see also Peter S.
+
+Park et al., supra note 54. (showing false consensus bias). 51 Jen-tse Huang, Wenxuan Wang, Eric John Li, Man Ho LAM, Shujie Ren, Youliang Yuan, Wenxiang Jiao, Zhaopeng Tu & Michael Lyu, On the Humanity of Conversational AI: Evaluating the Psychological Portrayal of LLMs (ICLR 2024 Paper No. 2500, Jan. 16, 2024) (Finding that “LLMs demonstrate reduced ICB scores compared to the general hu- man population.” The ICB scale is a measure of an “individual’s belief in whether their ethnic culture predominantly shapes a person’s identity.”) 52 Id. 53 Xintao Wang et al., InCharacter: Evaluating Personality Fidelity in Role -Playing Agents through Psychological Interviews, in Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics 1840 (2024), https://aclanthology.org/2024.acl-long.102.pdf. 54 Xintao Wang et al., InCharacter: Evaluating Personality Fidelity in Role -Playing Agents through Psychological Interviews 62ND ANN.
+
+MEETING OF THE ASS'N FOR COMPUTATIONAL LINGUISTICS, 2024, https://aclanthology.org/2024.acl-long.102.pdf. 55 Qiaozhu Mei, Yutong Xie, Walter Yuan, & Matthew O.
+
+Jackson, A Turing Test of Whether AI Chatbots Are Behaviorally Similar to Humans, PROC.
+
+NAT'L ACAD.
+
+SCI.
+
+U.S.A., Feb. 22, 2024, at e2313925121, https://doi.org/10.1073/pnas.2313925121.
+
+
+--- Page 14 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 14 in alignment with character traits.
+
+This multi -faceted approach found that LLMs achieved an 85% accuracy in persona fidelity, indicating a high level of success in roleplaying accuracy across various scenarios and character types.56 Of particular interest is a study examining the role -playing abilities of LLMs in simulating the cognitive and linguistic development of young children. 57 The authors conducted 1,296 trials where GPT-3.5-turbo and GPT -4 were prompted to emulate children aged one to six years.
+
+The results demonstrated that both models could successfully mimic the gradual increase in cognitive and linguistic abilities typica lly observed in real children.
+
+Notably, the linguistic complexity of the models' responses, measured by response length and Kolmogorov complexity, increased in alignment with the simulated child's age.
+
+This study provides compelling evidence that LLMs can effectively modulate their cognitive abilities to simulate personas with varying developmental levels, offering a credible approach to understanding and replicating human-like behavior in artificial intelligence.58 For purposes of e-mortality, the most crucial metric is the "Personal Turing Test," a variation of the standard Turing test that asks whether an LLM can deceive an acquaintance or intimate into believing they are interacting with a specific individual.
+
+A r ecent study implemented this concept with revealing results. 59 Ten participants provided background information about themselves, answered a set of questions posed by researchers, and AI models then generated responses imitating these participants.
+
+Thereafter, acquaintances of the respondents were presented with two responses to each question—one from the real person and one from the AI—and asked to distinguish between them.
+
+In 48.3% of the trials, the acquaintances mistakenly identified the AI -generated response as coming from the real person.
+
+So, nearly one -half of the acquaintances could not discern whether a response was generated by a real person known to the acquaintance or by AI that generated a response via predictive iteration.
+
+This finding is particularly significant because it suggests that AI models have reached a level of sophistication in roleplaying that approaches a threshold of indistinguishability from human communication in certain contexts.
+
+The effectiveness of AI rol eplaying, of course, is heavily dependent on the quality and quantity of information available associated with the individual being emulated.
+
+But as our lives become increasingly digital, the wealth of digital information associated 56 Quan Tu et al., CharacterEval: A Chinese Benchmark for Role -Playing Conversational Agent Evaluation, arXiv:2401.01275 [cs.CL] (2024), https://doi.org/10.48550/arXiv.2401.01275. 57 Jiří Milička et al., Large Language Models Are Able to Downplay Their Cognitive Abilities to Fit the Persona They Simulate, 19 PLOS ONE e0298522 (2024), https://doi.org/10.1371/journal.pone.0298522. 58 However, limitations persist, particularly in the representation of marginalized groups.
+
+LLMs tend to homogenize and flatten groups, linking members to similar response patterns despite internal group diversity.
+
+See Messi H.J.
+
+Lee, Jacob M.
+
+Montgomery & Calvin K.
+
+Lai, Large Language Models Portray Socially Subordinate Groups as More Homogeneous, Consistent with a Bias Observed in Humans, PROC. 2024 ACM CONF.
+
+FAIRNESS, ACCOUNTABILITY & TRANSPARENCY 1321 (2024), https://doi.org/10.1145/3630106.3658975; and Angelina Wang, Jamie Morgenstern & John P.
+
+Dickerson, Large Language Models Cannot Replace Human Participants Because They Cannot Portray Identity Groups, arXiv:2402.01908v4 (Feb. 2, 2024), https://arxiv.org/abs/2402.01908. 59 Michal Kosinski, ChatGPT Passes the Turing Test of Personality, 119 PROC.
+
+NAT'L ACAD.
+
+SCI e2218788120 (2022).
+
+
+--- Page 15 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 15 with each of us not only includes explicit communications like emails and social media posts, but also implicit data from health trackers, surveillance systems, and online interactions.
+
+To that end, the sheer volume of digital data about individuals availa ble on servers may soon exceed the information available to the real people closest to us thereby enabling even more accurate AI emulations in the future.
+
+
+--- Page 16 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 16 II.
+
+Evolutionary Default Rules and Wills Doctrine Imagine trying to regulate photography in 1839 just as Daguerre unveiled his revolutionary process.60 Should photography be banned?
+
+Should it flourish unrestricted?
+
+Should the law create detailed rules about who owns rights to photographed materials?
+
+The parallels to the GenEm dilemma are striking – both technologies fundamentally alter how we capture and reproduce human likenesses.
+
+But while photography's challenges developed gradually over decades, 61 GenEm’s roleplaying capabilities are expanding with such rapidity that regulators will inevitably confront what scientists call an “exploration -exploitation dilemma” – regulation is needed immediately but experience over time will yield better information and lead to improved regulation.62 The evolutionary tailored default proposed in this Article confronts the exploration-exploitation tradeoff through two mechanisms.
+
+First, it provides immediate, broad -based protection without requiring pre -existing rights or sophisticated estate planning.
+
+Second, and perhaps more importantly, it generates precis ely the kind of preference information that regulators and courts need to refine the rules over time.
+
+This information -generating function channels Holmes admonition that “the life of the law has n ot been logic, but experience,” 63 and distinguishes this paper’s approach from traditional default rules.
+
+Most defaults either reflect existing preferences (majoritarian defaults) or force preference revelation between parties (penalty defaults). 64 The default framework proposed in this paper instead creates what we might call an “evolutionary default,” one that helps legal institutions learn and adapt as social norms around digital afterlife crystallize.
+
+A.
+
+A Default Rule Theory Primer Default rules dictate the norms that apply in the absence of stipulation to the contrary.65 While such rules serve as backstops throughout law, they play an especially crucial role where individual 60 Malcolm Daniel, Daguerre (1787–1851) and the Invention of Photography, Heilbrunn Timeline of Art History, The Metropolitan Museum of Art (Oct. 2004), https://www.metmuseum.org/toah/hd/dagu/hd_dagu.htm. 61 Mark Bartholomew links the eventual birth of privacy rights to the invention of photography and mass media.
+
+Bartholomew, supra note 17, at 1593. 62 Oded Berger-Tal et al., The Exploration-Exploitation Dilemma: A Multidisciplinary Framework, 9(4) PLOS ONE e95693 (2014), 63 OLIVER WENDELL HOLMES JR., THE COMMON LAW 1 (1881). 64 Ian Ayres & Robert Gertner, Filling Gaps in Incomplete Contracts: An Economic Theory of Default Rules, 97 YALE L.J. 1325 (1988). 65 Oren Bar-Gill & Omri Ben-Shahar, Rethinking Nudge: An Information-Costs Theory of Default Rules, 88 U.
+
+CHI.
+
+L.
+
+REV. 531, 533 (2021) (“default rules—provisions that govern unless actively negated”)
+
+
+--- Page 17 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 17 intent reigns supreme. 66 Unsurprisingly, the scholarly analysis of the basis for default rules has been most robust in contract law, although it is by no means restricted to it.67 While individuals can contract around defaults, well -crafted defaults remain vital because contractual gaps are not just common —they are inevitable. 68 It is neither possible nor desirable to have individuals explicitly draft provisions to cover all future contingencies. 69 Parties cannot anticipate every future contingency, and no one – not even sophisticated AI – can unerringly forecast changes that the future may bring. 70 Even for those contingencies that can be anticipated, drafting costs quickly become prohibitive. 71 Thus, whether constrained by cognitive limitations, computational costs, our time on this earth, or economic efficiency, parties must rely on legal defaults.
+
+Because the content of a default rule matters, a central ground for scholarly debate is how to design effective defaults.72 The dominant approach emerging from these debates posits that default rules should reflect what individuals would have wanted had they considered the specific 66 See, e.g., UCC 2-314(1)(2023)(“[u]nless excluded or modified, a warranty that the goods are merchantable is implied in a contract for their sale if the seller is a merchant with respect to goods of that kind.”); For discussion of a default rule in torts, see, e.g.,.
+
+For the implementation of a default rule in Civil Procedure, see, Gross v.
+
+FBL Financial Services, Inc., 557 U.S. 167, 177 (stating that “[w]here the statutory text is ‘silent on the allocation of the burden of persuasion,’ we ‘begin with the ordinary default rule that plaintiffs bear the risk of failing to prove their claims.” (quoting Schaffer v.
+
+Weast, 546 U.S. 49, 56 (2005)). 67 Daniel Alejandro Monroy Cely, Las reglas predeterminadas de decisión en el derecho.
+
+Bases para una reflexión teórica, 40 REV.
+
+DERECHO PRIVADO 87, 88 (2021) (noting that most discussions of default rules arise in the context of the law of contracts) 68 See Oliver Hart & John Moore, Incomplete Contracts and Renegotiation, 56 ECONOMETRICA 755 (1988); Randy E.
+
+Barnett, The Sound of Silence: Default Rules and Contractual Consent, 78 VA.
+
+L.
+
+REV. 821 (1992). 69 Economists, for whom the incompleteness of contracts has been a bedrock theoretical principle, put the point thus: “incompleteness arises because states of the world, quality and actions are observable (to the contractual parties) but not verifiable (to o utsiders ).” Oliver Hart, Incomplete Contracts, in Allocation, Information and Markets 163, 167 (John Eatwell et al. eds., 1989). 70 In 1904, parties entering a long -term contract for the supply of horses for urban transportation might foresee fluctuations in hay prices relative to horse costs yet fail to anticipate that rising hay prices could accompany a sharp decline in demand for h orses. https://farmdocdaily.illinois.edu/2018/09/us-hay-market-over-the-last-100-years.html.
+
+While the inability to predict the future as it affects contracts or wills remains true, generative AI has supposedly developed to the point of predicting an individual’s death, see, Vishwam Sankaran, New AI can predict people’s time of death with high degree of accuracy, study finds, THE INDEPENDENT (Dec. 20, 2023), https://www.independent.co.uk/tech/deathbot-ai-predict-life-death-b2466988.html. 71 Adam J.
+
+Hirsch, Default Rules in Inheritance Law: A Problem in Search of Its Context, 73 FORDHAM L.
+
+REV. 1031, 1037 (2004) (musing that “[i]f Adam and Eve had bargaining in a Coasian Eden where transacting was costless, they would have provided ex ante in their contracts for every eventuality.”) (hereinafter, Hirsch, Default Rules in Inheritance Law).
+
+As the main text clarifies, drafting costs are only one part of the cost; there are computational and cognitive limitations in addition.
+
+An underappreciated insig ht of Oliver Hart is that, in some sense, the task of writing a complete contract is an easy on e.
+
+The parties can simply set a payoff function that applies to all future states of the world, or in colloquial terms, ‘the buyer must pay no matter what.’ Oliver Hart, Incomplete Contracts, in ALLOCATION, INFORMATION AND MARKETS 163, 166 (John Eatwell et al. eds., 1989).
+
+The trouble is that these are bad complete contracts, as they fail to express anything meaningful about the will of the parties or the utility of the transaction.
+
+They are nominally complete, but substantively incomplete. 72 See Bar-Gill & Ben -Shahar, supra note 65, at 533 (“the question of how to design optimal default rules has been the subject of enormous commentary” ).
+
+The questions of mandatory versus default rules are highly politically charged, as evidenced by ideological debates about minimum wage laws, workplace safety, and no competes.
+
+But as Eyal Zamir forcefully argues, the lines between default and mandatory rul es are murkier than most realize.
+
+Eyal Zamir, Disclosures, Defaults, and Mandatory Rules: Conceptions and Misconceptions, in THE OXFORD HANDBOOK OF REGULATORY CONTRACT LAW (Alexander Hellgardt & Yeşim Atamer eds., forthcoming),
+
+
+--- Page 18 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 18 contingency at issue.73 This has become a staple among scholars in a variety of legal fields and goes by the shorthand of the majoritarian approach.74 In fact, “courts almost always think of themselves as choosing the (default) rule that a majority would want.” 75 Similarly, the Supreme Court of Delaware, a court with deep experience in contract and corporate law, opined that default rules governing contracts “should generally reflect the contract term that most parties would have bargained for at the time of the agreement.”76 The futility of non -majoritarian approaches becomes apparent when we consider how defaults act not just as gap fillers but rather shape behavior from the outset. 77 When drafting agreements, parties consider existing defaults as their baseline.
+
+A well -designed default acts as a ready -made solution; they can graft it into their contract, without any effort.
+
+Poorly designed defaults, however, quickly become dead letter as parties routinely contract around it —but only after incurring unnecessary costs.78 They may still be effective in a sense, but only because poor defaults entrap the unwary and those without the means to contract around them.
+
+When policymakers impose defaults based on their own preferences rather than majoritarian desires, they impose large costs for little actual gain.
+
+Thus, scholars have concluded that the law should provide a default rule that “economize[s] on transaction costs by supplying standard contract terms that the parties would otherwise have to adopt by express agreement.”79 Several critiques have been launched at majoritarian defaults, but two of those arguments are particularly important.
+
+A well -known alternative proposes that the normative goal should sometimes be inverted in favor of “penalty default rules.” These are defa ult rules which “are purposefully set at what the parties would not want.”80 Their goal is to encourage parties to contract around the undesirable default rule and in the process “reveal information to each other or third parties (especially the courts).” 81 To provide an illustrative example,82 suppose that by default people who use shipping services are automatically entitled to full compensation for goods damaged in delivery.
+
+People who ship expensive but fragile items would have little incentive to tell the shipper 73 See, e.g., Ian Ayres & Robert Gertner, Majoritarian vs.
+
+Minoritarian Defaults, 51 STAN.
+
+L.
+
+REV. 1591 (1999); RICHARD A.
+
+POSNER, ECONOMIC ANALYSIS OF LAW 82 (3d ed. 1986) (“[t]he task for a court asked to apply a contract to a contingency that the parties did not foresee is to imagine how the parties would have provided for the contingency if it had occurred to the to do so.”). 74 Ayres & Gertner, supra note 73, at 1592. 75 Eric A.
+
+Posner, There Are No Penalty Defaults in Contract Law, 33 FLA.
+
+ST.
+
+UNIV.
+
+L.
+
+REV. 563, 585 (2006).
+
+The Restatement (Second) Contracts §204(d) is more equivocal (“But where there is in fact no agreement, the court should supply a term which comports with community standards of fairness and policy rather than analyze a hypothetical model of the bargaining process.”) 76 Duncan v.
+
+Theratx, 775 A.2d 1019, 1021 (Del. 2001). 77 Alan Schwartz and Robert E.
+
+Scott, The Common Law of Contract and the Default Rule Project, VA.
+
+L.
+
+REV. 1523, 1537 (2 016) (observing that courts “ask whether future parties, like the parties at bar would accept the courts’ default solution when those parties consider the issue.”). 78 Charles J.
+
+Goetz & Robert E.
+
+Scott, The Limits of Expanded Choice: An Analysis of the Interactions Between Express and Implied Contract Terms, 73 CALIF.
+
+L.
+
+REV. 261 (1985). 79 RICHARD POSNER, ECONOMIC ANALYSIS OF LAW 372 (3d ed. 1986). 80 See Ayres & Gertner, supra note 64, at 91. 81 Id. 82 This is a streamlined version of the example provided by Ayres & Gertner, supra note 64, at 101-104.
+
+
+--- Page 19 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 19 the value of their goods, lest the shipper asks for extra payment.
+
+Without such information, however, the shipper will not know which boxes require extra care in transit.
+
+The shipper would then have to choose between treating all sealed boxes with extra care or treating all with the normal degree of care.
+
+The first is expensive, the second liable to break some fragile items.
+
+In both cases, shipping costs would increase for all.
+
+But in a world where the default would mandate a damages cap, people with expensive and fragile items would often want to alert the shipper, because they would worry that if something breaks they will not be compensated, and therefore would appreciate the extra care, even if it would cost more – or so the argument goes. 83 Thus, information incentives may recommend a deviation from the majoritarian default.
+
+Another line of critique concerns the challenges associated with crafting the content of default rules.
+
+Even if one is committed to a majoritarian perspective, it is not quite clear how courts ascertain the preference of the majority.84 Scott and Schwartz express the concern that the UCC project fails because it could not effectively identify general, acontextual default rules and its attempts to the contrary were unsuccessful.85 Eyal Zamir considers the possibility of studying the content of actual agreements, but concludes that “this would be very costly and complex exercise.”86 The difficulty is that we cannot be quite sure that the terms of contracts reflect the true preferences of the parties, given information constraints and behavioral biases.87 As a result, creating an efficient default “can entail an extraordinarily complex analysis – which depends on subtle pieces of information that 83 The problem is that in such situations, people with cheap items would share that information with the shipper in exchange for a discount.
+
+They will not do so if the discount is trivial, as may be the case when very few people ship expensive items, altho ugh at this point, the value of the information is also muted.
+
+Ayres has retreated from the Hadley example, after critical scrutiny by Eric Posner.
+
+Ian Ayres, Ya-Huh: There Are and Should Be Penalty Defaults, 33 F LA.
+
+ST.
+
+U.
+
+L.
+
+REV. 589, 613 (Spring 2006) (“In retrospect, the Hadley example is not the cleanest example of a penalty default”).
+
+Eric A.
+
+Posner, There Are No Penalty Default Rules in Contract Law, 33 FLA.
+
+ST.
+
+U.
+
+L.
+
+REV. 563 (2006).
+
+Eric Maskin, On the Rationale for Penalty Default Rules, 33 FLA.
+
+ST.
+
+U.
+
+L.
+
+REV. 557 (2006) 84 See Hirsch, Default Rules in Inheritance Law, supra note 71, at 1038 (observing that “[o]ne difficulty with the modern literature is how to go about determining in a realistic way what parties to a contract would have agreed to, given surplus value and mu tual desire to maximize profit.”).
+
+See also, Jules L.
+
+Colema n et al., A Bargaining Theory Approach to Default Provisions and Disclosure Rules in Contract Law, 12 HARV.
+
+J.
+
+L. & PUB.
+
+POL’Y 639, 707 (1989) (stating that “any number of distributions of rights and responsibilities between the parties would be jointly profit maximizing.
+
+These distributions differ from one another in how the divide the gains from contracting.
+
+Thus, to impose any jointly maximizing allocation of rights and responsibilities is incompatible with the lessons of the rational bargaining model....”).
+
+For a more robust critique of majoritarian defaults, see Ayres & Gertner, supra note 64, at 93 (“First, the majoritarian approach fails to account for the possibly disparate costs of contracting and of failing to c ontract around different defaults.
+
+For example, if the majority is more likely to contact around the minority’s preferred default rule (than the minority is to contact around the majority’s rule) then choosing the minority’s default may lead to a larger set of efficient contracts.
+
+Second, the received wisdom provides little guidance about how tailored or particularized the “would h ave wanted” analysis should be.
+
+Finally, the very costs of ex ante bargaining may encourage parties to inefficiently shift the process of gap filling to ex post court determination.”). 85 Alan Schwartz & Robert E.
+
+Scott, The Common Law of Contract and the Default Rule Project, 102 VA.
+
+L.
+
+REV. 1523 (2016). 86 Zamir, supra note 72, at 7. 87 Cass R.
+
+Sunstein, Switching the Default Rule, 77 N.Y.U.
+
+L.
+
+REV. 106, 106 (2002) (noting that a default rule can “create an endowment effect,” whereby individuals value and stick with the default provision simply because it’s the default, as seen with default rules for benefits and savings plans)
+
+
+--- Page 20 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 20 lawmakers are unlikely to know.” 88 In such cases, the majoritarian default devolves into a post hoc third-party gap filler for an ex-ante problem with unknown variables.
+
+Notably, the content-based critique of a majoritarian rules also applies to penalty default rules.
+
+To create an efficient penalty default rule, a court or legislature designating the default would have to know how the better -informed party might react und er the circumstances at the time of bargaining.89 And here again, “[i]t is difficult for drafters to access requisite information regarding the range of solutions, the best responses of informed parties, and the relevant contracting costs in order to choose efficient penalty defaults.” 90 As a result, the informational void inevitably encountered during any post hoc examination of initial conditions serves as a substantial barrier to identifying an information-triggering default.
+
+In addition to scholarly concern about the information divide when creating default rules, policymakers have degrees of freedom not only in deciding the content of default rules, but also in deciding the “altering rules” that govern defaults.
+
+Default rules can be “sticky” when the process necessary to alter them is more costly or complex.91 When defaults are sticky, it is easier to ascertain that parties opt out intentionally, but it also means that some parties will not be able to avoid the default’s sticky grip. 92 On the other end of the adhesive scale, other defaults are denominated as “slippery.”93 Those slippery defaults allow parties to opt out easily, but as Ben -Shahar and Bar-Gill warn, some of these opt-outs may be unintentional or imprudent.94 In sum, default rules offer a compelling mechanism for legal design that both respects party autonomy and provides flexible governance tools.
+
+The adaptability of defaults presents policymakers with multiple design choices: between majoritarian and penalty approaches, between varying degrees 88 Ian Ayres and Robert Gertner, Strategic Contractual Inefficiency and the Optimal Choice of Legal Rules, 101 YALE L.
+
+J. 729, 765 (1992).
+
+See also, e.g., Jules L.
+
+Coleman et al., A Bargaining Approach to Default Provisions and Disclosure Rules in Contract Law, 12 HARV.
+
+J.
+
+L. & PUB.
+
+POL’Y 639, 707 (1989).
+
+But see, Steven J.
+
+Burton, Default Principles, Legitimacy, and the Authority of a Contract, 3 S.
+
+CAL.
+
+INTERDISC.
+
+L.
+
+J. 115, 136 (1993) (commenting that “if they are to find it easy to contract out, parties should be able to know the applicable default rule with ease.”). 89 Id. at 1561. 90 Id. (continuing that “there is a theoretical difficulty with penalty defaults: contracting parties may sometimes be able conveniently to motivate the revelation of private information on their own which then contradicts the rationale for having a penalty default.”). 91 Ayres & Gertner, supra note 73, at 1598-99. 92 Id. at 1598 (commenting that “[t]his is the iron law of default inertia.”).
+
+The label “sticky” default is used in various wa ys in the default literature.
+
+See, e.g., Omri Ben-Shahar and John A.
+
+E.
+
+Pottow, On the Stickiness of Default Rules, 33 FLA.
+
+ST.
+
+U.
+
+L.
+
+REV. 651, 651 (2006) (noting that “[i]n settings where costs are high, parties might find themselves “stuck” in a default, unable to re ach an outcome that they prefer.”).
+
+For slightly varying versions of “sticky” to describe defaults.
+
+Parties may affirmatively choose the default in each cost environment while rule makers might make the default difficult to avoid.
+
+See, e.g., mri Ben-Shahar and John A.
+
+E.
+
+Pottow, On the Stickiness of Default Rul es, 33 FLA.
+
+ST.
+
+U.
+
+L.
+
+REV. 651, 651 (2006) (“[i]t is by now recognized that factors beyond drafting costs might also cause parties to stick with an undesirable default rule; that is, parties might choose not to opt of out a l egal default even when a better provision can easily be identified and ar ticulated at a negligible drafting cost.”); Brett H.
+
+McDonnell, Sticky Defaults and Altering Rules in Corporate Law, 60 SMU L.
+
+REV. 383, 385 (2007) (“[a]ltering rules can be more or less sticky, meaning they can make it more or less hard to opt out of the prevailing default rules.”). 93 See Ben-Shahar & Pottow, supra note 92. 94 See Bar-Gill & Ben-Shahar, supra note 65.
+
+
+--- Page 21 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 21 of “stickiness,” and between different information -gathering objectives.
+
+While these choices create opportunities for tailored solutions, they also highlight a persistent challenge: the difficulty of discerning parties' true preferences, whether actual or hypothetical.
+
+The approach posited in this paper responds to this challenge by embracing epistemic humility.
+
+Rather than presuming to know how preferences will evolve in this rapidly evolving field, we propose a majoritarian framework that can adapt as societal understandings evolve.
+
+This orientation differentiates this proposal from mandatory approaches advocated elsewhere in the literature.
+
+Crucially, this framework harnesses the information-generating potential of default rules in a novel way - not to inform counterpa rties as in traditional penalty defaults, but to provide legislators and courts with the empirical basis for future refinements.
+
+Designing a default that adapts with time and experience is especially valuable in contexts of technological disruption, where both preferences and possibilities remain in flux; courts and legislators can adjust the content of the default based upon learned experience just like AI.
+
+B.
+
+Default Rules in Wills and Trusts Default rule theory has flourished in contract and corporate law while largely bypassing wills and estates, which is curious given that default rules frequently govern property distribution at death.95 Testators execute wills based upon circumstances at the time of drafting, but the passage of time between will execution and death inevitably means circumstances will differ between those two end points. 96 A testator’s intent may change over time or the estate’s assets may have diminished to the point that the gifts under the will cannot be satisfied. 97 But unlike a contract that can be modified through mutual agreement, a will becomes operative precisely when its author can no longer clarify or adjust its terms.
+
+Regardless of an estate planner’s diligence or the precision of a will’s language,98 future circumstances will find ways to slip through the cracks of the most carefully 95 Reid Kress Weisbord & David Horton, Boilerplate and Default Rules in Wills Law: An Empirical Analysis, 103 IOWA L.
+
+REV. 663, 671(2018) (“scholarship in wills law has generally overlooked default rule theory.”), A Hirsch, Default Rules in Inheritance Law, supra note 71, at 1033 ("[S] cholarship on inheritance law has largely neglected to explore, or even to notice, the potential relevance of general default rule theory”).
+
+See also John H.
+
+Langbein, Mandatory Rules in the Law of Trusts, 98 NW.
+
+U.
+
+L.
+
+REV. 1105, 1105 (2004) (explaining that “[t]he law of trusts consists overwhelmingly of default rules”) 96 One common example of the problem of an unchanged will arises when a testator fails to update a will following a marriage tha t occurs after the execution of a will.
+
+Statutes might, for example, provide an intestate share to a spouse omitted from a premarital will.
+
+Such statutes generally are structured as default rules that allocate an intestate share to a pretermitted spouse unless the spouse was intentionally omitted.
+
+See, e.g., Unif.
+
+Prob.
+
+Code §2-301(2019).
+
+For a case involving a pretermitted spou se issue, see, In re Estate of Prestie, 138 P.3d 520 (Nev. 2006).
+
+Furthermore, children may also be unintentionally disinherited and receive a share of a t estator’s estate if they qualify as omitted children.
+
+See, Unif.
+
+Prob.
+
+Code §2-302(2019); Gray v.
+
+Gray, 947 So. 2d 1045 (Ala. 2006). 97 An individual’s property holdings may diminish as one ages to account for healthcare costs.
+
+See generally Mariacristina De Nardi, Eric French, John Bailey Jones & Jeremy McCauley, Medical Spending of the US Elderly, 37 FISC STUD. 717 (2016). 98 A will’s language might be ambiguous even if a testator thought it precise, see, e.g., Mahoney v.
+
+Grainger, 186 N.E. 86 (Mass. 1933)(testator identified her “nearest relations” as her first cousins and devised her residuary to her “heirs at law” butt h er nearest relation was an aunt under the state’s intestate statute and the aunt took the residuary to the exclusion of the cousins.”).
+
+
+--- Page 22 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 22 crafted will.
+
+After all, testamentary language must be precise and unambiguous – provisions in a will are not Nostradamus's quatrains amenable to creative reinterpretation.99 The distinctive nature of wills presents three structural, and interrelated, challenges for default rules that do not impact default rules in contract law.
+
+First, the law of wills must address the dead hand problem precisely because wills are only operable at death.100 Unlike contracts where parties can renegotiate if provisions prove unsuitable, testamentary defaults operate when modification is impossible.
+
+Second, defaults in wills law have a unilateral impact while those in contracts have a bilateral effect. 101 Contracts emerge from mutual negotiation while wills represent unilateral dispositions based upon individual preferences without any give -and-take with third parties. 102 Third, and perhaps most tellingly, estate planners harbor a deep -seated distrust of legal defaults. 103 The reasons for this distrust stem from a mismatch between outcomes under default rules and the needs of most parties as well as a residual concern that future legislators may further tinker with the defaults.104 As a consequence, the planning process includes systematic opt-outs, sometimes without sufficient reflection and to clients' detriment.105 These structural features push wills doctrine inexorably toward majoritarian defaults. 106 The impossibility of post -mortem modification means courts must try to approximate what most testators would have wanted; default rules in wills doctrine represent the law’s best guess as to what an individual would have wanted under the circumstances.107 Similarly, the unilateral nature of wills undermines the utility of information -forcing rules because there is no negotiation during which parties might reveal information to each other. 108 As Hirsch notes, this reality leads courts to treat testator's intent as the “pole -star by which they must steer.” 109 While exceptions exist, such as trust law's treatment of fiduciary profits as a rare example of a penalty default, they remain under - examined curiosities rather than core features of the system.110 99 Stuart Jeffries, War in Ukraine, death of the Queen, Elon Musk... why are Nostradamus’s ‘predictions” still winning converts?, THE GUARDIAN, Oct. 10, 2022, https://www.theguardian.com/books/2022/oct/10/why -nostradamus-predictions-are-still- winning-converts. 100 See, e.g., Epperson v.
+
+White, 299 S.W. 812, 815 (Tenn. 1927)(“a will must take effect at death of the testator, if at all”). 101 See, e.g., Keiths v.
+
+Lulofs, 724 S.E. 2d 695 (Va. 2012)(stating that “wills, unlike contracts, generally are unilaterally rev ocable and modifiable.”). 102 Id. 103 Hirsch, Default Rules in Inheritance Law, supra note 71, at 1039 (“a credo of estate planning that a well -drafted will should anticipate contingencies and never rely on default rules."). 104 Id. 105 Reid Kress Weisbord & David Horton, Boilerplate and Default Rules in Wills Law: An Empirical Analysis, 103 IOWA L.
+
+REV. 663 (2018) 106 Id. 107 See infra notes116-119 and accompanying text. 108 Shelly Kreiczer -Levy, Deliberative Accountability Rules in Inheritance Law: Promoting Accountable Estate Plannin g,4 5 U.
+
+MICH.J.L REFORM 937, 938 (2012) (noting that there is some useful information revealed to the family in certain cases of opt-outs) 109 See Hirsch, Default Rules in Inheritance Law, supra note 71, at 1042 110 Robert H.
+
+Sitkoff, Trusts and Estates: Implementing Freedom of Disposition, 58 ST.
+
+LOUIS U.
+
+L.J. 643, 660 (2014)
+
+
+--- Page 23 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 23 C.
+
+Two Majoritarian Defaults in Wills Law The primary, and most basic, default rule in wills doctrine, ironically, functions in the absence of will.
+
+If a person dies without executing a will, each state has a statute that identifies the individuals who receive a decedent’s property if that decede nt passed. 111 As a result, estate planning can be understood as the process of opting out of the rules that apply to those who die intestate. 112 And because empirical studies repeatedly find that most people die intestate, 113 most decedents’ estate plans are default distributions directed by statute.
+
+Will substitutes like life insurance, pay-on-death accounts, or revocable inter vivos trusts may be used to distribute non-probate property,114 but most probate estates distribute property to survivors by default as dictated by the terms of a state’s statute governing intestate succession.115 Unlike the varied justifications for default rules in contract law, courts speak with remarkable uniformity about the fundamental purpose of intestacy statutes.
+
+Regardless of jurisdiction, courts recite that the goal of intestate law “is to make such a will for an intestate as he would have been most likely to make for himself.” 116 In other words, the goal of intestate succession is to effectuate the probable intent of the average decedent, which makes intestate succession a majoritarian default.
+
+This majoritarian bent manifests in a near -universal order of distribution - spouses, c hildren, parents, and collaterals. 117 Because intestacy prioritization has been relatively stable, 118 the default 111 See, e.g., Ohio Rev.
+
+Code, §2105.06 (2024); 2022 N.C.
+
+Stat. ch. 29; 2023 Colo.
+
+Rev.
+
+Stat. tit. 15, art. 11. 112 See, e.g., Reid Kress Reisbrod, Wills For Everyone: Helping Individuals Opt-Out of Intestacy, 53 B.
+
+C.
+
+L.
+
+REV. 877 (2012). 113 Polling data suggests high degree of intestacy.
+
+Lorie Konish, 67% of Americans Have No Estate Plan, Survey Finds.
+
+Here’s How to Get Started on One, CNBC (Apr. 11, 2022), https://www.cnbc.com/2022/04/11/67percent-of-americans-have-no-estate-plan-heres- how-to-get-started-on-one.html; Rachel Lustbader, Caring.com's 2024 Wills Survey Finds That 40% of Americans Don’t Think They Have Enough Assets to Create a Will, Caring.com (Jan. 30, 2025), https://www.caring.com/caregivers/estate-planning/wills-survey/.
+
+In a review of the empirical literature, Emily Poppe finds wildly differing testacy rates, ranging from 31% to 86%, but using her own broad survey of almost 2,000 individuals she finds that only 43% of them have a will.
+
+Emily S.
+
+Taylor Poppe, Surprised by the Inevitable: A National Survey of Estate Planning Utilization, 53 U.C.
+
+DAVIS L.
+
+REV. 2511 (2020). 114 John H.
+
+Langbein, The Nonprobate Revolution and the Future of the Law of Succession, 91 HARV.
+
+L.
+
+REV. 1108, 1110-113 (1984). 115 This is due to the high testacy rates, s ee supra note 113.
+
+To be sure, if one measures value of property transferred, it is likely that most value is transferred through will (or other living arrangements) as wealthier individuals tend to have better estate planning. 116 Barron v.
+
+Janney, 170 A.2d 176, 180 (Ct.
+
+App.
+
+Md. 1961); Estate of Ford, 82 P.2d 747, 753 (Cal. 2004)( “the law of intestate succession is intended to carry out the intent a decedent without a will is most likely to have had.”) (citing Estate of Griswold, 24 P.3d 1191, 1195 (Cal. 2001)). 117 Compare, e.g., Ohio Rev.
+
+Code §2105.06 (2024)(defining the order of distribution as spouse, children, parent, collaterals) an d Ariz.
+
+Rev.
+
+Stat.
+
+Ann. §14 -2102-2103 (2024) (distributing an intestate share to a surviving spouse, descendants, parents, and then descendants of the parents). 118 The relative stability does not mean that there have been no historical changes in inheritance law.
+
+To the contrary, primogeniture is no longer the rule, and the status of married women has markedly changed over time.
+
+Indeed, one substantial change that occurred long ago was the recognition that married women could inherit property that they could transfer at their deaths pursuant to t heir wishes.
+
+Before that change in the 19 th century, property inherited by married women became the property of their husbands; therefore, the husbands, and not the wives, had the power to transfer the property at death.
+
+And if the husband did not have a will, the property would transfer to his in testate heirs and not the heirs of the wife.
+
+See, generally, John V.
+
+Orth, After the Revolution: “Reform” of the Law of Inheritance, 10 Law and Hist.
+
+Rev. 33 (1992)(discussing primogeniture); Carole Shammas, Marylynn Salmon, and Michel Dahlin, Inheritanc e in America from Colonial Times to the Present (1987) (describing changes in women’s inheritance rights).
+
+
+--- Page 24 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 24 order simultaneously reflects the past, legitimizes the present, and propagates norms regarding what constitutes a family into the future.119 To confirm that intestate statutes remain majoritarian, empirical research largely validates the statutory order of intestate distribution. 120 One recent study, for example, found that “the majority of American families (78%) have family structures that are well matched to the intestacy's kin-based definition of intestate heirs and the default prioritization of spouses, then children, then othe r extended family members.”121 By prioritizing surviving spouses and blood-related kin relationships, the default provides a measure of economic security for surviving family members,122 which is likely what a majority of decedents would do if they had made wills.
+
+The family structures reflected in intestate statutes can be outdated because social norms change over time; static default rules governing intestacy may not coincide with contemporary norms.
+
+Indeed, the form of the family has changed – even in the last thirty years.
+
+For those who choose to marry, Obergefell v.
+
+Hodges obviously expanded inheritance rights by broadening the umbrella of individuals who qualify as spouses. 123 But despite that change, other similar relationships remain outside intestacy schemes.
+
+According to the Pew Research Center, the percentage of adults who are married has declined while the number of cohabiting couples has increased since 1995. 124 When most intestacy statutes were crafted, only 0.1% of young adults lived with unmarried partners, but this figure approaches 9% today and is rising. 125 One might guess that many unmarried partners would prefer to transfer property to a surviving partner instead of statutory takers, 126 but failing to opt-out of intestacy leaves a distributive void to be filled by statute. 119 Mary L.
+
+Fellows et al., Committed Partners and Inheritance: An Empirical Study, 16 LAW & INEQ. 1, 8 (1998). 120 Mary Louise Fellows, Rita J.
+
+Simon, and William Rau, Public Attitudes About Property Distribution at Death and Intestate Succession Laws in the United States, 1978 AM.
+
+B.
+
+FOUND.
+
+RES.
+
+J. 319; Allison Dunham, The Method, Process and Frequency of Wealth Transmission at Death, 30 U.
+
+CHI.
+
+L.
+
+REV. 241 (1963). 121 Megan Doherty Bea and Emily S.
+
+Taylor Poppe, Marginalized Legal Categories: Social Inequality, Family Structure, and the Laws of Intestacy, 55 L & SOC.REv. 252 (2021), Jan. 1, 2024, https://www.cambridge.org/core/journals/law-and-society- review/article/marginalized-legal-categories-social-inequality-family-structure-and-the-laws-of-intestacy. 122 Katheleen R.
+
+Guzman, Property, Progeny, Body Part: Assisted Reproduction and the Transfer of Wealth, 31 U.C.
+
+DAVIS L.
+
+REV. 193, 222 (“Because most decedents wish to provide for their closest relatives, intestacy goals concomitantly embrace the societal goal of providing economic security for family members, who are usually the most affected by death.”). 123 576 U.S. 644 (2015). 124 Juliana Menasce Horowitz, Nikki Graf & Gretchen Livingston, The Landscape of Marriage and Cohabitation in the U.S. (Nov. 6, 2019), Pew Research Center, https://www.pewresearch.org/social-trends/2019/11/06/the-landscape-of-marriage-and-cohabitation- in-the-u-s/#:~:text=As%20the%20share%20of%20people,from%203%25%20to%207%25. 125 Benjamin Gurrentz, Living with an Unmarried Partner Now Common for Young Adults, U.S.
+
+CENSUS BUREAU (Nov. 15, 2018), https://www.census.gov/library/stories/2018/11/cohabitation-is-up-marriage-is-down-for-young-adults.html. 126 Another example of a divergence between intent and statutory distribution might be the shares awarded to half-blood relatives.
+
+In a small number of states, relatives of the half -blood receive a half share.
+
+See, Fla.
+
+Stat.
+
+Ann. §732.105 (2020); Tex.
+
+Est.
+
+Code Ann. §201.057 (2020); Va.
+
+Code Ann. §64.2-202.B (2020).
+
+
+--- Page 25 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 25 Unmarried partners are not the only group excluded from intestate succession because most intestate statutes also do not allocate property to non -blood related children in a blended family. 127 Studies report that 16% of children live in blended families, but step relatives are “virtually excluded from intestate succession.” 128 And to the extent step relatives are included in intestate succession, they are often at the end of the line. 129 Ohio, for example, only allocates property to step -children “if there are no next of kin.”130 Again, one might guess that a step-parent would want a step-child to inherit a share of an intestate estate, but that is unlikely to happen in most states.
+
+Changes in the form of the family over time do not necessarily mean that intestate statutes no lo nger reflect majoritarian intent, but demographic changes suggest that the majority is smaller than it has been in the past.131 While the relative durability of intestate schemes suggests a continuing match with majoritarian intent, the design of majoritarian defaults in wills law has not always been successful.
+
+The common law's treatment of lapsed gifts —where a beneficiary prede ceases the testator —exemplifies how judicial solutions may better accommodate the complex realities of testamentary intent than legislative attempts at majoritarian defaults. 132 While courts traditionally redirected lapsed gifts to the residuary estate, 133 legislatures intervened with anti -lapse statutes that purported to better effectuate testator intent by redirecting gifts to the predeceased beneficiary's descendants. 134 In a vivid example of the back-and-forth of law making, courts had been utilizing a rule, but legislatures modified that rule to impose what they considered to be an improved rule.
+
+If a legislature does not like a judicial rule or outcome of a case, it can erase the undesirable rule or decision with legislation. 127 See, generally, e.g., Kim A.
+
+Feigenbaum, The Changing Family Structure: Challenging Stepchildren’s Lack of Inheritance Rights, 88 BROOK.
+
+L.
+
+REV. 167 (2000). 128 Terin Barbas Cremer, Reforming Intestate Inheritance for Stepchildren and Stepparents, 18 CARDOZO J.
+
+L. & GENDER 89, 89 (2011)(stating that step relatives are “virtually excluded from intestate succession” (citing RALPH C.
+
+BRASHIER, INHERITANCE LAW AND THE EVOLVING FAMILY 158 (2004)); Pew Research Center, The American Family Today, December 17, 2015, https://www.pewresearch.org/social-trends/2015/12/17/1-the-american-family- today/#:~:text=According%20to%20the%20most%20recent,reliable%20data%20first%20became%20available. 129 Conn.
+
+Gen.
+
+Stat.
+
+Ann. §45a-439(a)(4)(2014)(providing that “[i]f there is no next of kin, the residue of the estate shall be distributed equally to the stepchildren and those who legally represent them.”); Md.
+
+Code Estates and Trusts §3 -104(c)(2024)(permitted a stepchild to inherit by intestate succession “[i]f there is no surviving blood relative entitled to inherit....”); UPC §2 - 103(j)(distributing property “by representation to the surviving descendants of the deceased spouse or spouses”). 130 Ohio Rev.
+
+Code §2105.06 (J)(2024)(providing that “[i]f there are no next of kin, to stepchildren or their lineal descendants, per stirpes”). 131 One example of an intestacy change over time is the inheritance rights of nonmarital children.
+
+Originally, nonmarital childr en were not permitted to inherit from either parent.
+
+Today, intestacy law recognizes the right of the child to inherit from a mother and also from a father if paternity is proven.
+
+See, e.g., Camille M.
+
+Davidson, Mother’s Baby, Father’s Maybe? – Intestate Succession – When Should a Child Born Out of Wedlock Have a Right to Inherit From or Through His or Her Biological Father, 22 COLUM.
+
+J.
+
+GENDER & L. 531 (2011). 132 For more on lapse generally, see, Richard F.
+
+Storrow, Wills and Survival, 34 QUINNIPIAC L.
+
+REV. 447 (2016). 133 The lapse doctrine originated as a "judicial creation" in England that directed lapsed gifts into a will's residuary clause.
+
+See Hirsch, Default Rules in Inheritance Law, supra note 71, at 1039 (discussing the common law origins of lapse). 134 Anti-lapse statutes reflect an attempt to divine what an "average," "reasonable," or confusingly, "average reasonable" testator would want under the circumstances.
+
+See Mark L.
+
+Ascher, The 1990 Uniform Probate Code: Older and Better, or More like the Internal Revenue Code?, 77 MINN L.
+
+REV. 639, 645-46 (1993) (noting that anti -lapse statutes are "premised on a legislative determination of probable intent").
+
+
+--- Page 26 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 26 The legislative “solution” for lapse, however, has seemingly veered from its majoritarian underpinnings.
+
+Empirical evidence reveals a striking disconnect between the presumptions embedded in anti -lapse statutes and actual testator preferences. 135 Studies consistently show that most testators prefer property to pass to surviving children rather than to the descendants of predeceased children—precisely the opposite of what anti -lapse statutes typically mandate. 136 This suggests that anti-lapse statutes, despite their majoritarian aspirations, function more like accidental penalty defaults that produce systematically unwanted outcomes while failing to generate the information-forcing benefits provided by intentional penalty defaults.137 Empirical studies associated with intestacy and lapse are not only valuable to assess their continuing majoritarian, fit but also serve as models for similar empirical efforts to establish a GenEm default from scratch.
+
+Any empirical study to identify GenE m preferences, however, is complicated by the constellation of a decedent’s dignity, reputational, and financial interests in a digital afterlife that exhibit dynamism over time.
+
+Given the pace of technological advance, empirical evidence is needed to est ablish a baseline for GenEm protection in the present that can be assessed and modified in the future. 135 Recent surveys demonstrate that anti-lapse statutes are both "over- and under-inclusive" in their protection.
+
+Mary Louise Fellows & Gregory S.
+
+Alexander, Forty Years of Codification of Estates and Trusts Law: Lessons for the Next Generation, 40 GA.
+
+L.
+
+REV. 1049, 1052 (2006).
+
+One study found that respondents strongly preferred protecting gifts to spouses (typically excluded from anti -lapse coverage) while excluding gifts to collaterals (typically protected)—revealing a "chasm yawning between lawmakers' assumptions and empirical reality." See Mary Louise Fellows, An Empirical Study of the Illinois Statutory Estate Plan, 1976 U.
+
+ILL.
+
+L.F. 717, 720-22. 136 See Adam J.
+
+Hirsch & William K.S.
+
+Wang, A Qualitative Theory of the Dead Hand, 68 IND.
+
+L.J. 1, 30 (1992) ("One survey reported that individuals favor living children over the issue of predeceased children, which contradicts the standard anti -lapse result that redirects the gift to the issue of predeceased children instead of redistributing the gift to a testator's surviving children."). 137 The unwanted character of the rule is further bolstered by its “stickiness”.
+
+See, e.g., ALASKA STAT. § 13.12.603(b) (2023) (requiring "additional evidence" beyond mere words of survivorship to overcome the application of anti-lapse provisions)
+
+
+--- Page 27 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 27 III.
+
+Survey Data The first step in the creation of a default to govern property distribution in wills and trusts doctrine is to answer a basic question – what would the dead want?
+
+In the contexts of intestate succession and lapse, the basic question asks who the decedent would want to inherit property. 138 But as it relates to GenEm, the basic question can be bifurcated into who most decedents would want to control their GenEm digital remains and how most decedents want GenEm to be used by those in control.
+
+The answers to those two inquiries serve as a foundation upon which to construct a default rule for GenEm – and one that is majoritarian.
+
+A.
+
+Prior Empirical Data Given probate law’s unwavering commitment to testamentary intent and the centrality of majoritarian defaults, one might expect a wealth of empirical investigation into posthumous preferences regarding digital remains.
+
+Yet remarkably, only a single 2023 study in the Asian Journal of Law and Economics has ventured into this territory. 139 Through a series of vignettes testing attitudes toward GenEm, the researchers uncovered a striking pattern: consent is decisive.
+
+When GenEm violated the deceased's express wishes, 89% of respondents deemed it unacceptable.140 When it aligned with those wishes, only 25% objected (with 58% actively approving). 141 Perhaps most intriguingly, respondents displayed what we might call posthumous libertarianism —while 59% rejected the notion of their own digital resurrection, 142 they largely thought the social acceptability depended on the wishes of others for themselves.143 These findings suggest a strong preference for individual autonomy in digital afterlife decisions.
+
+The study’s most provocative finding involved cases where there was no explicit instructions delineating the individual’s wishes regarding GenEm. 144 Under that circumstance, respondents overwhelmingly rejected GenEm use. 145 Given the strong rejection without explicit GenEm instructions, investigators advocated for a prohibitory default rule —essentially treating digital 138 See supra Part II.B and II.C. 139 Masaki Iwasaki, Digital Cloning of the Dead: Exploring the Optimal Default Rule, 15 ASIAN J.
+
+LAW ECON. 1 (2024). 140 Id, at 21. 141 Id. 142 Id at 22. 143 Id, 21. 144 Id at 22. 145 Id (“only 11.3% of participants responded that digital resurrection was acceptable when the deceased's consent was unknown”)
+
+
+--- Page 28 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 28 remains as opt-in rather than opt -out. 146 But this conclusion, while intuitively appealing, rests on somewhat fragile empirical foundations.
+
+The study's methodology relied on informal text messages as proxies for consent, which is not the equivalent in form or substance of testamentary intent memorialized in a written instrument.
+
+More problematically, the study artificially constrained the universe of potential GenEm users to friends.
+
+In all likelihood, the most probable GenEm users are family members, commercial entities, and public interests that might utilize GenEm for a variety of purposes.
+
+Finally, the study is subject to “preference formation problem” - many respondents have yet to engage with GenEm on any level; therefore, their stated preferences may prove unstable as the technology evolves.
+
+These limitations do not invalidate the study’s contributions but rather highlight the urgent need for more nuanced empirical investigation.
+
+As millions die intestate or with wills that are silent about GenEm, courts and policymakers require deeper insight into how different classes of users might legitimately employ GenEm and under what circumstances GenEm might be utilized by those varying classes of users.
+
+The stakes of this inquiry extend beyond individual preference satisfaction— they touch fundamental questions about how we preserve and transmit memory in an age of digital persistence.
+
+B.
+
+Survey Methods We conducted a survey with two parts, each described in detail below.
+
+To collect participants, we used Positly, an enhanced version of MTurk with additional quality filters, for data gathering.
+
+Despite being somewhat more expensive, this choice was crucial to ensure we received genuine human responses rather than AI -generated ones, especially important in the current context.
+
+To further validate human participation, we included a notice about our verification mechanisms.
+
+We collected 156 responses, aiming to replicate nationally representative demographics.
+
+In our sample, the average age was 41.6 years, slightly higher than the national median of 38.9 years.
+
+Gender distribution showed 46.15% female respondents, compared to the national figure of 50.5%, indicating a slight underrepresentation of females.
+
+Racial demographics included 61.54% White or Caucasian (nationally: 59.7%), 14.10% Black or African American (nationally: 12.6%), and 8.97% Asian (nationally: 6.3%).
+
+Educati onal attainment varied, with 38.46% holding bachelor's degrees, closely aligning with the national figure of 36.6% for adults 25 and older.
+
+Our sample reflected diverse employment statuses, with 64.10% working full -time, comparable to the national employment -population ratio of 60.4% for adults 16 and over.
+
+Geographically, 146 Id at 24. (“These findings suggest that the optimal default rule might be to prohibit digital resurrection, with exceptions allowing it only when there is explicit consent from the deceased.”).
+
+
+--- Page 29 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 29 Florida (10.90%) and California (9.62%) were slightly overrepresented compared to their national population proportions, despite being the third and most populous states respectively.
+
+Overall, our sample demonstrates strong alignment with national demographics in several key areas, particularly in educational attainment and employment status.
+
+Nevertheless, slight variations that should be noted.
+
+The sample shows a minor overrepresentation of older adults, White and Asian populations, and residents from Florida and California.
+
+Conversely, there is a small underrepresentation of females.
+
+These deviations, while not significantly compromising the overall representativeness of the sample, s hould be considered when interpreting results.
+
+Despite these limitations, the sample is largely representative of the U.S. population thereby making it a robust resource for social science research and demographic analysis within the context of legal studies. 1.
+
+Study 1: Third Person Preferences From Victorian death photography to holograms of deceased performers, the public imagination has long wrestled with technological preservation of the dead.
+
+Whatever the public reaction to representations of the dead in the past, those reactions cannot be precisely correlated to the public reaction to GenEm because GenEm brings a new mimetic realty.
+
+Unlike any prior posthumous representations of the deceased, GenEm possesses the power to create something that, in fact, never existed in the past.
+
+This raises a novel question: does unease with digital resurrection stem from the unprecedented nature of the technology itself, or merely reflect our ancient discomfort with posthumous representation?
+
+In other words, the thought that the dead could do things that they did not do during life with the aid of GenEm could prompt something like an “Ick” from respondents.
+
+As a result, this study investigated the presence of an “AI-Ick” factor to distinguish between animus toward GenEm as a technology or a fundamental apprehension about post-mortem representation.
+
+To isolate this “AI-Ick” factor, the study compared matched pairs of scenarios describing similar or identical underlying activities.
+
+One version of the scenario utilized AI and the other employed more traditional methods.
+
+Respondents encountered these questions in random order, which allowed us to group and analyze them to measure the differential AI effect.
+
+The questions covered a broad spectrum of potential posthumous uses that ranged from personal to commercial applications.
+
+The paired questions included scenarios such as creating or viewing explicit imagery, developing conversational avatars versus publishing private journals, creating humorous content about the deceased, using the deceased's likeness for commercial purposes, recreating the deceased's voice for artistic projects, inserting the deceased's likeness into films, and using the deceased's likeness or personality for grief counseling.
+
+One of the paired questions asked those surveyed to consider two scenarios involving a friend’s discovery of intimate photos of a deceased friend.
+
+In the first scenario of the pair, John discovers
+
+
+--- Page 30 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 30 intimate photos Emily took during life.
+
+In the companion scenario, John uses AI to generate new intimate photos of Emily that were not taken during Emily’s life.
+
+While both scenarios involve posthumous violation, respondents viewed AI generation as categor ically more offensive (13.56 vs 23.39, p = 0.003), which suggests that GenEm crosses a moral line that mere discovery does not.
+
+Notably, this result mirrors the legal distinction between finding versus forging evidence - the act of creation itself carries additional moral weight.
+
+All scenarios were prefaced with the statement that Emily had passed away without leaving a will or instructions about the use of her likeness or belongings.
+
+This framing ensured that respondents considered these actions in the absence of explicit consent, which further highlights the ethical complexities surrounding GenEm and traditional methods of representation.
+
+The use of the third person frame has some limitations, but it also allowed consideration of more explicit scenarios that may be offensive to re spondents if centered around them.
+
+In the end, this approach allowed for a more nuanced understanding of public sentiment, potentially informing future policy and ethical guidelines in the rapidly evolving intersection of AI technology and posthumous rights.
+
+Figure 1 describes the findings of this study.
+
+The analysis reveals a nuanced picture of the “AI - Ick” factor.
+
+Contrary to our initial hypothesis, AI methods were not universally less acceptable than traditional methods.
+
+In fact, in some scenarios, AI was viewed more favorably, suggesting that the acceptability of posthumous AI use is highly context dependent.
+
+Figure 1 The striking preference for AI avatars (36.81) over published journals (17.50) challenges conventional wisdom about technological alienation.
+
+Perhaps, like the preference many patients show for disclosing sensitive information to AI therapists rather than human counselors, AI offers a
+
+
+--- Page 31 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 31 form of emotional distance that paradoxically makes intimate interactions more comfortable.
+
+Similarly, in the context of Grief Counseling, AI methods (54.37) were significantly more acceptable than traditional methods (45.05), with a t -statistic of 2.444 (p = 0.015).
+
+This surprising result suggests that people might perceive AI as providing a less invasive or more consistent form of posthumous presence for grief counseling.
+
+The preference for AI, however, is not universal across all scenarios.
+
+In the case of Explicit Images, traditional methods (23.39) were significantly more acceptable than AI methods (13.56), with a t -statistic of -3.008 (p = 0.003).
+
+This suggests a stronge r aversion to AI -generated explicit content compared to the discovery of existing content.
+
+Perhaps the concern here is that the generative images could depict sexual scenarios which the person would find especially repugnant.
+
+Similarly, for Film Appearance, traditional methods involving a lookalike actor (44.29) were significantly more acceptable than AI methods (28.27), with a t -statistic of -4.299 (p < 0.001).
+
+In short, the results indicate a preference for human representation over AI in visual media contexts.
+
+Perhaps most revealing are the domains where AI's intrusion provoked no special horror.
+
+Respondents viewed AI -generated memorial songs with essentially identical mild disapproval (31.10) as traditional posthumous covers (32.23), while AI -generated jokes ea rned the same deep censure (15.84) as conventional posthumous mockery (15.78).
+
+These striking null results (p = 0.755 and p = 0.984 respectively) suggest something profound about the nature of posthumous dignity: our revulsion stems not from the means of a ppropriation but from the act itself.
+
+Just as the law has long recognized that a trespass is a trespass whether accomplished by lockpick or skeleton key, respondents seem to view certain posthumous violations as inherently transgressive regardless of their technological sophistication.
+
+Two stark findings emerge from our investigation of the “AI -Ick” factor.
+
+First, AI is not universally feared.
+
+To the contrary, respondents preferred AI to human intermediaries for some of our most intimate posthumous interactions, particularly grief counseling.
+
+Second, objections to posthumous AI use are based up on disapproval of the underlying act rather than the technology itself.
+
+Just as family members recoiled equally from AI-generated and human-performed mockery of the dead, the moral violation appea rs to stem from the act itself rather than its technological sophistication.
+
+Although illuminating and instructive, these headline findings mask crucial distinctions.
+
+While AI sometimes offers an acceptable mediator between the living and the dead, acceptance hinges sharply on both who wields the technology and to what end.
+
+Much as property law distinguishes between a surviving spouse living in the family home and a distant relative selling it for profit, posthumous AI rights cannot be reduced to a simple yes/no toggle.
+
+The technology's power to preserve as well as to generate new e xpressions of the dead demands a more nuanced framework - one that recognizes both the special claims of intimate relations and the unique risks of generative manipulation.
+
+
+--- Page 32 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 32 This reality poses a fundamental challenge to traditional privacy law, which typically treats posthumous rights as binary switches: either information is protected or it is unprotected.
+
+But just as copyright law has evolved to distinguish between reproduction and transformation, between fair use and exploitation, posthumous privacy rights must develop more sophisticated doctrinal tools.
+
+The law must recognize that creating new digital performances of the dead represents a categorically different intervention than merely preserving their existing traces.
+
+The findings of this study point not toward blanket permissions or prohibitions, but rather toward a graduated system of rights and restrictions that mirrors the complexity of human relationships with the dead.
+
+The challenge for future research - and for the law - is to translate these intuitive moral distinctions into workable legal frameworks.
+
+As AI technology continues to evolve, governance mechanisms must be employed that are sufficiently sophisticated to distinguish between uses that honor the dead and those that exploit them as well as between preservation that comforts the living instead of offending survivors. 2.
+
+Study 2: First Person Preferences Building on Study 1’s findings regarding context -dependent acceptance of posthumous AI, we designed a second study to examine how user identity and use affect attitudes toward digital resurrection.
+
+While Study 1 explored third -party scenarios, Study 2 emp loyed a first -person framework, asking respondents about preferred uses of their own digital remains - a framing that more closely parallels the testamentary intent central to wills doctrine.
+
+The first variable of interest is the overall attitude towards post-mortem AI usage.
+
+The aggregate data shows mild skepticism toward posthumous AI use overall (mean acceptance 40.98, with 50 being indifference).
+
+This slight unease may reflect a transitiona l moment in our relationship with the technology, though it could also indicate deeper reservations about posthumous representation itself.
+
+Drilling down, we hypothesized that the identity of the user would matter to respondents.
+
+We divided the use -cases into family and public use.
+
+This analysis revealed one of the study ’s most consistent patterns: a significant difference in attitudes toward family versus public use of AI avatars.
+
+Across all categories, family use received higher acceptance scores (M = 47.7) compared to public use (M = 34.33, p <.0001).
+
+Figure 2
+
+
+--- Page 33 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 33 We next examined how attitudes might vary based on the specific use of an AI avatar.
+
+We hypothesized that commercial usage would be less appealing than memorialization, and our data strongly supported this prediction.
+
+Figure 3: Purpose of AI Avatar Usage Significantly Affects Attitudes The analysis revealed significant differences among various purposes (p <.0001).
+
+Memorialization received the highest acceptance scores (M = 55.7), followed closely by educational use (M = 54.4, no significant difference at p =.9973).
+
+Commercial use garn ered substantially lower acceptance (M = 30.6).
+
+Perhaps most notably, political use received the lowest scores (M = 25.1), falling even below commercial exploitation.
+
+Interestingly, educational use emerged as statistically indistinguishable from memorialization (M = 54.4 vs M = 55.7, Tukey HSD p = 0.9973), suggesting respondents view knowledge preservation as fundamentally similar to memory preservation.
+
+This equivalenc e points to a broader
+
+
+--- Page 34 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 34 understanding of posthumous legacy - one that encompasses not just remembrance but the transmission of accumulated wisdom and experience.
+
+The strongest negative reaction came, unexpectedly, from political use cases (M = 25.1), which placed political uses below commercial exploitation (M = 30.6).
+
+This finding is counterintuitive: while commercial use clearly involves appropriation for another ’s' gain, political views often reflect deeply held personal values that one might wish to perpetuate.
+
+Nonetheless, respondents seemed to view posthumous political speech as particularly transgressive, perhaps reflecting concerns about the manipulation of the dead for contemporary political battles.
+
+Recreational use occupied a middle ground (M = 44.2), garnering neither strong opposition nor clear acceptance.
+
+This relative neutrality suggests a more nuanced view of posthumous AI than simple categories of “serious” and “frivolous” use might suggest - respondents appear to recognize potential value in more informal interactions with digital remains.
+
+To better understand these purpose -based differences, we examined their interaction with user identity.
+
+Figure 4 shows how acceptance varies across both dimensions and reveals patterns that challenge simple frameworks of posthumous rights.
+
+Figure 4: Influence of User Type and Purpose on Attitudes toward Posthumous AI Avatar Usage The interaction analysis reveals a critical pattern: memorialization achieves broad acceptance (M = 66.82) when controlled by family members, marking the highest score across all scenarios.
+
+Yet this same activity provokes mild rejection when conducted by t he public (M = 44.66, t = 5.31, p <
+
+
+--- Page 35 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 35 0.0001).147 This 22-point gap suggests that respondents view family memorialization as qualitatively different from public remembrance - not simply the same activity performed by different actors.
+
+Educational use follows a parallel trajectory, with family -controlled preservation of knowledge receiving strong support (M = 62.72) while public educational use faces skepticism (M = 46.05, t = 3.94, p = 0.0001).148 The similarity between these patterns suggests a broader principle: respondents appear to view both memory and knowledge as forms of intimate legacy that belong primarily within family networks.
+
+Just as we pass down family recipes and oral histories, respondents seem to envision AI as a tool for preserving personal wisdom within familial bounds.
+
+This family/public divide persists across nearly every category: recreational use (52.64 vs 35.75, t = 3.93, p = 0.0001),[3] research (40.71 vs 31.43, t = 2.26, p = 0.0246), and commercial exploitation (35.16 vs 26.14, t = 2.30, p = 0.0224).
+
+The consisten cy of this pattern - a roughly 15 -20 point advantage for family use across diverse purposes - points to a systematic preference for family control over digital remains.
+
+Only political use breaks this pattern, with both family (M = 28.17) and public (M = 21.96) versions facing strong rejection (t = 1.69, p = 0.0930). 149 This convergence in negative attitudes suggests respondents view political appropriation as uniquely transgressive - a form of posthumous exploitation that remains objectionable regardless of who attempts it.
+
+Apparently, the dead should rest beyond political manipulation, whether by stranger or kin.
+
+In summary, the empirical data presented here serves as more than a snapshot of current public attitudes; it provides a functional blueprint for courts, legislators, and practitioners to guide decision‐making involving GenEm disputes.
+
+While conventional scholarship often focuses on doctrinal or theoretical arguments alone, our findings help refine the core of wills and trusts principles—testamentary intent, default rules, and estate planning practices —considering the emergence digital technologies.
+
+By mappi ng where societal comfort levels intersect with legal doctrines, we demonstrate how these empirical insights can inform judicial construction of default rules and legislative reform, thus bridging the persistent gap between abstract legal theory and real‐ world behavioral evidence. 147 t = 5.31. 148 t = 3.94. 149 t = 1.69.
+
+
+--- Page 36 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 36 IV.
+
+Tailored Default Rules for GenEm As a practical matter, probate courts will stand in the frontline on GenEm disputes.
+
+As disputes emerge, probate judges will have to find ways to draw lines between acceptable and unacceptable uses of GenEm.
+
+Legislatures, of course, could craft a response in the form of positive law, but if history serves as any guide, legislation on matters of wills and estates is full of friction and usually results in a prolonged procedural slog. 150 Multiple readings of bills, committee hearings, and floor debates help to ensure accountability, accommodate diverse interests, and catch errors, but the cost of all that process is time. 151 And time is of the essence as it relates to GenEm; everyone’s digital remains are up for grabs with little legal recourse for those who are “stopped in their tracks” upon finding a loved one’s GenEm image online.152 Instead of waiting for a legislative resolution, probate courts could serve as first responders by implementing a default rule to address who has the authority to construct a digital afterlife for a decedent and what that afterlife entails.
+
+Indeed, probate courts have created default rules in the past when confronted by issues that lacked positive law guidance.153 By creating and employing a GenEm default, probate courts would not only address an immediate concern that impacts decedents’ estates, but also serve as stimuli for legislation if legislatures are dissatisfied with the default promulgated by courts.
+
+The Newtonian action and reaction of rulemaking must begin somewhere,154 and probate courts are best situated to take a first pass at constructing a default rule to govern who may authorize the use decedent’s digital eternity as well as any limitations on usage.
+
+Importantly, the fit between GenEm regulation and probate is natural because probate and non- probate mechanisms have long permitted individuals to delimit post -mortem use of property at death.155 An heir might receive title to real property in the form of a fee simple determinable or fee simple subject to condition subsequent, each of which conditions retention of title to the real property upon the use of that property. 156 For non-probate transfers, the law recognizes support 150 Center on Representative Government, Indiana University, Why Does Even Popular Legislation Get Hung Up in Congress? (Oct. 4, 2023), https://corg.iu.edu/programs/hamilton-views/comments-on-congress/Why Does Even Popular Legislation Get Hung Up in Congress.html 151 Pritzker Legal Research Center, The Legislative Process, Northwestern University School of Law (n.d.), https://library.law.northwestern.edu/fed-leg-hist/leg-process. 152 See Turner, supra note 21. 153 The lapse doctrine originated as a "judicial creation" in England that directed lapsed gifts into a will's residuary clause.
+
+See Hirsch, Default Rules in Inheritance Law, supra note 71, at1039 (discussing the common law origins of lapse).
+
+For more on the lapse default, see infra notes x-y and accompanying text. 154 If a court creates a disfavored default, the legislature can react by creating positive law that replaces the judicially-created default. 155 While post-mortem disposition and trusts allow dead hand control, its interests decay over time.
+
+See e.g., Fred O.
+
+Smith, Jr., On Time, (In)equality, and Death, 120 M ICH.
+
+L.
+
+REV. 195, 202 (2021) (“In...
+
+American law, any specific individual’s memory and dignitary interests tend to diminish over time”). 156 See, e.g., RESTATEMENT (FIRST) OF THE LAW OF PROPERTY §44 (1936)(stating that a fee simple determinable shall “automatically expire upon the occurrence of a stated event”); R ESTATEMENT (FIRST) OF THE LAW OF PROPERTY §45 (1936)(defining a fee simple subject to a condition subsequent as an estate “that upon the occurrence of a stated event the conveyor or his successor in i nterest shall have the power to terminate the estate so created.”).
+
+
+--- Page 37 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 37 trusts that distribute property “as is necessary for the education or support of the beneficiary” as well as spendthrift trusts that prohibit a beneficiary from using trust property to pay debts.157 None of these post-mortem control mechanisms are linked to status or lifetime commercial exploitation, but instead have been and will continue to be used by anyone wishing to regulate the use of property after death.
+
+The ability of an individual to be “ six feet under and overbearing” is old sport; 158 dead hand control has a long history and will continue for as long as people pass property at death.159 A.
+
+The Proposed Framework From the impact of the railroad on tort law in the 19th century to the challenges presented to copyright law by the phonograph during the early 20 th century,160 history consistently shows that technology outpaces the law.
+
+Today, the growth of generative AI pushes legal boundaries in areas ranging from privacy law, where there are “way too many cases to count,” to patent law’s protection for AI outputs even thoug h they are not “physical gizmos.” 161 The development of AI, like many other technologies, is an entrepreneurial endeavor where the winner takes the spoils while the law is reactive as the repercussions of that entrepreneurism reach courtrooms.
+
+And within courtrooms, lawyers and judges struggle to adapt existing, and possibly old, legal doctrines to novel legal questions spurred by technology.162 Much of the law of wills has been change -resistant, but even it is starting to experience technological disruption.
+
+The age-old requirements to execute a valid will, which have been largely immunized against change,163 modernized with the aid of remote conferencing software, like Zoom, during the COVID-19 pandemic.
+
+Kentucky’s will execution statute, for example, requires witnesses to “subscribe the will with their names in the present of the testator, and in the presen ce of each other.”164 The distancing requirements during the COVID -19 pandemic, however, substantially reduced, if not eliminated, the possibility that testators and witnesses could be in the “presence” of one anothe r.
+
+In response to the impediment that COVID -19 presented to the “presence” 157 Austin Wakeman Scott, Abridgement of the Law of Trust §154 (1960); GEORGE GLEASON BOGERT & GEORGE TAYLOR BOGERT, THE LAW OF TRUSTS AND TRUSTEES §229 (2d ed. 1993)(a support trust is created “if a trustee is directed to pay or apply trust income for the benefit of a named person, but only to the extent necessary to support him, and only when the disbursements will accomplish support.”); Restatement (Third) of Trusts §58(a)(2024)(defining a spendthrift trust as “a trust that restrains voluntary and involuntary alienation of all or any of the beneficiaries’ interests.”). 158 J.
+
+Peder Zane, Ideas and Trusts: The Rise of Incentive Trusts; Six Feet Under and Overbearing, NY TIMES, March 12, 1995, https://www.nytimes.com/1995/03/12/weekinreview/ideas-trends-the-rise-of-incentive-trusts-six-feet-under-and- overbearing.html. 159 See supra note 155. 160 See, e.g., Sidney A.
+
+Diamond, Copyright Problems of the Phonograph Industry, 15 VAND.
+
+L.
+
+REV. 419 (1962); A&M Records, Inc. v.
+
+Napster, Inc., 239 F.3d 1004 (9th Cir. 2001). 161 Dylan Walsh, The Legal Issues Presented by Generative AI, MIT SLOAN SCHOOL OF MANAGEMENT (Aug. 28, 2023), https://mitsloan.mit.edu/ideas-made-to-matter/legal-issues-presented-generative-ai. 162 Id. (describing the issue as “fitting old frameworks to new challenges”). 163 Alberto B.
+
+Lopez, Posthumous Privacy, Decedent Intent, and Fiduciary Access to Digital Assets, 24 GEO.
+
+MASON L.
+
+REV. 183, 184 (2016). 164 Ky.
+
+Rev.
+
+Stat.
+
+Ann. §394.040 (2024).
+
+
+--- Page 38 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 38 requirement, Kentucky amended its statute to permit the “presence” element to be satisfied “if the individuals can communicate via a video teleconference in real time to the same extent as if they were physically present in the same location.” 165 Without Zoom, Microsoft Teams, or other video conferencing software, the “presence” requirement would have barred numerous individuals from becoming testators; new technology permitted the law to respond to an unforeseen challenge for public benefit.166 The challenge of adaptation is significant, but the common law system is premised on dynamic adaptation of rules to changing social, economic, and technological environments.
+
+At their best, “[c]ommon law courts develop rules that are efficient when they a re created” and amended as conditions change in the future 167 For example, courts developed default rules to fill gaps in contracts and those “judicial creations... constitute the common law of contract.” 168 And within the contract-adjacent context of international relations, courts have developed default rules to aid in treaty interpretation that allow parties “to order their relationships” based upon those defaults. 169 In short, courts have filled gaps in a variety of contexts that reduce transaction costs when parties fail to account for every detail that might arise in the future.
+
+Like courts of general jurisdiction, probate courts have also been the progenitors of default rules that govern when testators fail to plan for specific contingencies.
+
+A prime example of a judicially created default rule is the rule of lapse, which began as a “judicial creation” in England that swept lapsed gifts into a will’s residuary clause. 170 Following suit in the United States, courts adopted the common law rule of lapse as a default doctrine that transferred lapsed gifts to the residuary for distribution.171 Over time, however, the lapse doctrine legislatively transformed into an intent - 165 Ky.
+
+Rev.
+
+Stat.
+
+Ann. tit XXXVIII, Ch. 421 (2020).
+
+In addition to statutory changes, executive orders issued by governors in s ome states offered relief from the strict requirement of the “presence” requirement.
+
+See, e.g., N.Y.
+
+Exe.
+
+Order No., 202.14 (Mar. 7, 2020)(allowing “witnessing... to be performed utilizing audio -video technology” that provides “for direction interaction between” a testator and witnesses). 166 For additional jurisdictions that modified will execution requirements in response to COVID -19, see, e.g., N.Y.
+
+Exec.
+
+Order No. 202.14 (Apr. 7, 2020), https://www.governor.ny.gov/sites/default/files/atoms/files/EO_202.14_final.pdf; Emergency Remote Notarization and Witnessing Orders, Am.
+
+Coll.
+
+Tr. & Est.
+
+Couns. (May 8, 2020), https://www.actec.org/press-releases/the-american- college-of-trust-and-estate-counsel-develops-essential-planning-resources-for-individuals-families-and-professionals-during-covid- 19-pandemic/. 167 Alan Schwartz and Robert E.
+
+Scott, Obsolescence: The Intractable Production Problem in Contract Law, 121 COLUM.
+
+L.
+
+REV. 1659, 1661(2021).
+
+See also, e.g., Tracy Lewis and Alan Schwartz, U nenforceable Securitization Contracts, 37 YALE J.
+
+REG. 164, 204 (2020)(asserting that “[c]ourts develop default rules in the context of common-law adjudication”). 168 Alan Schwarz and Robert E.
+
+Scott, The Common Law of Contract and the Default Rule Project, 102 VA.
+
+L.
+
+REV. 1523, 1525 (2016) (stating that “[i]n the United States, default rules and standards originate in two ways.
+
+Courts necessarily create them while deciding cases“ and noting that “[j]udicial creations that many courts accept and that last for decades (or more) constitute the common law of contract.”). 169 Curtis J.
+
+Mahoney, Treaties as Contracts: Textualism, Contract Theory, and the Interpretation of Treaties, 116 YALE L.
+
+J. 824, 854- 55 (2007). 170 Adam J.
+
+Hirsch, Inheritance and Inconsistency, 57 OHIO ST.
+
+L.
+
+J. 1057, 1128 (1996). 171 Richard F.
+
+Storrow, Wills and Survival, 34 QUINNIPIAC L.
+
+REV. 447, 492 (concluding that “[a]lthough the common law doctrine of lapse seems a harsh way to address cases in which a will beneficiary predeceases a testator, it remains a foundational principle of the law of wills.”).
+
+
+--- Page 39 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 39 effectuating doctrine that redirected lapsed gifts to a taker’s descendants, and not to the residuary, by virtue of anti -lapse statutes. 172 Anti-lapse statutes, then, represent legislative responses to the judicial doctrine of lapse as legislators sought to pair distributional outcomes more closely to the what they deemed to be the probable intent of decedents.
+
+While the system works, statutory change may take a long time to appear on the books; therefore, “jumpstarting” the process may be warranted under some circumstances.
+
+As a general matter, probate codes are rather stagnant, yet they have been modified in t he recent past in the face of technological change.
+
+Many people have much of their financial lives online, but account passwords and terms of service agreements impeded an estate administrator’s ability to access online accounts to pay a decedent’s bills during the probate process.
+
+Arm -wrestling with third party providers for access while those providers sought to interpret their legal positions under the Stored Communications Act slowed the already sluggish pace of probate. 173 Recognizing the problem, forty-seven state legislatures adopted the Revised Uniform Fiduciary Access to Digital Assets Act (RUFADAA) between 2016 and 2024 to provide fiduciaries with access to online accounts. 174 Notably, thirty -seven states passed statutes in 2016 and 2017 alone. 175 In comparison to other statutes that govern probate, then, states reacted with lightening velocity to combat a challenge to the orderly administration of estates.
+
+Legislatures may have proceeded with dispatch in 2016 and 2017, but the fast response developed slowly.
+
+As early as 2005, the issue of survivors’ access to decedents’ digital assets appeared in headlines as survivors sought access to decedents’ email acco unts or Facebook pages. 176 Predictably, some of those individual requests for access shifted from the private to public sphere as survivors filed lawsuits to gain access to a decedent’s online accounts. 177 Amidst headlines and litigation, the Uniform Law Commission promulgated the Uniform Fiduciary Access to Digital Assets Act (UFADAA) in 2014 to provide fiduciaries with access to a decedent’s online accounts. 178 But, anti-UFADAA backlash from online service providers sent the Commissioners scrambling back 172 See Hirsch, Default Rules in Inheritance Law, supra note 71. 173 Alberto B.
+
+Lopez, Posthumous Privacy, Decedent Intent, and Post -Mortem Access to Digital Asset s, 24 GEO.
+
+MASON L.
+
+REV. 183, 186-88 (2016). 174 Uniform Law Commission, Fiduciary Access to Digital Assets Act, Revised, https://www.uniformlaws.org/committees/community-home?CommunityKey=f7237fc4-74c2-4728-81c6-b39a91ecdf22 (Delaware and Louisiana are the holdouts while a bill was recently introduced in Massachusetts). 175 For a state -by-state table detailing the adoption of RUFADAA, see, https://www.uniformlaws.org/committees/community - home?CommunityKey=f7237fc4-74c2-4728-81c6-b39a91ecdf22. 176 Yahoo to Preserve E-Mail of Marine Killed in Iraq, USA Today (Mar. 1, 2005), http://usatoday30.usatoday.com/tech/news/2005- 03-01-yahoo-email-save_x.htm; Karen Williams' Facebook Saga Raises Questions of Whether User's Profiles are Part of 'Digital Estates', HuffPost (Mar. 15, 2012), http://www.huffingtonpost.com/2012/03/15/karen-williams-facebook_n_1349128.html. 177 See, e.g., Ajemian v.
+
+Yahoo!, Inc., 987 N.E.2d 604 (Mass.
+
+Ct.
+
+App. 2013). 178 Uniform Fiduciary Access to Digital Assets Act (Unif.
+
+Law Comm’n 2014), http://www.uniformlaws.org/shared/docs/Fiduciary%20to%20Digital%20Assets/2014_UFADAA_Final_pdf.
+
+
+--- Page 40 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 40 to the drawing board for revisions that yielded another unwieldy acronym, 2016’s RUFADAA. 179 In total, then, the elapsed time from early signs of a technology-driven problem in probate to widely adopted legislation exceeded a decade.
+
+Given the head -spinning pace of AI advances, a decade -long wait for legislative direction governing GenEm is too long; the intent of countless decedents will be at risk while courts await a legislative response.
+
+Rather than sit on the sidelines and wait, courts could be proactive as they have been in the past when a regulatory void poses risks to people – whether those people are alive or deceased.
+
+Courts developed a lapse default to deal with property distributions when a gift recipient predeceases a tes tator, but they also developed defaults in nuisance doctrine to handle novel externalities of industrialization. 180 Thus, courts have created defaults to answer open questions under positive law when the issues have immediate effects that will only multiply in the future, which is precisely the situation presented by GenEm.
+
+For a court considering GenEm and its impact on decedents, the starting point for a judicially constructed default rule to govern GenEm is the existing default paradigm.
+
+As a general matter, most default rules in wills and trusts are binary; one is either in or out.181 An individual, for example, either executes a will for property distribution at death or a statute will dictate who succeeds to the decedent’s property.182 Similarly, a testator may opt out of the default rule for lapse by providing a substitute gift or expressly stating that the default rule should not apply to some or all of the gifts in the will.
+
+But lapse’s default rule is, again, and all or nothing pr oposition for a court construing the distribution of a lapsed gift.183 Although caveats exist, the two primary majoritarian default rules in wills doctrine are either in the on or off position.184 179 The Revised Uniform Fiduciary Access to Digital Assets Act (Unif.
+
+Law Comm'n 2015), https://www.uniformlaws.org/viewdocument/final-act-with-comments-40?CommunityKey=f7237fc4-74c2-4728-81c6- b39a91ecdf22&tab=librarydocuments. 180 For lapse, see supra note 134-137. 181 See supra Part II.B. 182 Indeed, as noted, most individuals seem to pass away intestate, and thus are subject to the entire suite of default intestate rules.
+
+See supra note 113. 183 Another all-in or out default rule involves the doctrine of ademption.
+
+Ademption occurs when the gift given to a taker is not present in the testator’s estate at the time of distribution.
+
+For example, a testator might give a car to a designated taker but might sell that car before death.
+
+If the testator did not identify what, if anything, should be given to the taker under that circumstance, the gift of the car is adeemed under the default rule of ademption.
+
+This traditional rule governing ademption wa s the identity rule, which only examined whether the specific gift was in the testator’s estate at the time for distribution without regard to testator’s intent.
+
+See, e.g., In re Estate of Anton, 731 N.W. 2d 19 (Iowa 2007).
+
+As an alternative to the results under the identity rule, the Uniform Probate Code adopted the intent theory of ademption that examines what the testator might have intended.
+
+See, Unif.
+
+Probate Code §2-606 (1997). 184 Two caveats – there are situations of partial intestacy where an individual executes a valid will, but the will lacks a residuary clause.
+
+An individual might, for example, save money by downloading and using an online will but that downloaded will does n ot have a residuary clause.
+
+As a result, some of the property will be distributed under the will while any property not identified in the will transfers by intestate succession.
+
+The will lacks a catch-all residuary; therefore, some property will be distributed by statute.
+
+Although data is not readily available, instances of partial intestacy are likely to be rare – one hopes – if the will is drafted by an attorney.
+
+Similarly, a gift may partially lapse if, for example, a member of a class gift predeceas es a testator.
+
+Under that circumstance, an anti - lapse statute might apply to the predeceased class member’s gift or the predeceased taker’s share could be redistributed to s urviving members of the class.
+
+
+--- Page 41 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 41 Unlike the binary construct of default rules, the results of our study show that survivors’ reactions to AI are not monolithic but instead dynamic and contextualized.
+
+If the survey results indicated an overwhelming positive or adverse response to any gene rative AI manipulation of a decedent’s digital remains, then the results of our survey would support a binary in or out default setting in the absence of an explicit directive in a testamentary instrument.
+
+Our survey’s respondents, however, eschewed broa d acceptance or rejection of generative AI use and instead calibrated their reactions based upon who was using a decedent’s digital information and how that information was used.
+
+Figures 1, 2, and 3 show that family usage of generative AI on a decedent’s digital footprint is generally preferable to public usage and that memorialization and education are the most accepted usages by surviving family members.
+
+As a result, the results of this survey reveal nuances in the permissibility of post -mortem generati ve AI manipulation of a decedent’s digital information that cannot be captured by a binary default that applies when a will omits an AI use provision or an individual fails to plan at all.
+
+Instead of a blanket in or out default that permits or prohibits all uses, the results of this survey suggest that a GenEm default to fill gaps in wills or in cases of intestacy is one that should be tailored by user and use.
+
+While a broad default might r eflect majoritarian intent in the absence of other information, the Restatement (Second) of Contracts recognizes tailored defaults that are both individualized and “reasonable in the circumstances.” 185 Compared to an all-in or out default to be applied to all similarly situated parties, a tailored default provides a more granular determination of what parties would have intended under the circumstances because the default is based upon “the specific characteristics and circumstances of those parties.”186 For example, “the UCC’s default price term – a ‘reasonable price’ – is a tailored default because it requires a judge to consider the circumstances of the parties and the transaction before determining the unspecified price, instead of a uniform rule to all parties.”187 With its focus on individual characteristics, tailored defaults increase costs during litigation as courts grapple with finding the appropriate result for the litigating parties, but avoid sweeping all parties into the default position; tailored defaults cannot be over or underinclusive because they are pinned to the litigating parties.
+
+As compared to binary defaults, tailored defaults provide a more precise evaluation of what the parties intended under circumstances that were not considered by the bargaining parties.
+
+The tailored default prescribed by this paper first identifies the permissible users of a decedent’s digital remains.
+
+Figures 1 and 3 show a strong societal preference for family control of a decedent’s digital information vis-a-vis the public.
+
+As a resu lt, the default rule for post -mortem generative AI application to a decedent’s digital information should presumptively permit family members to 185 RESTATEMENT (SECOND) OF CONTRACTS §204 (1981). 186 Russell Korobkin, The Status Quo Bias and Contract Default Rules, 88 CORNELL L.
+
+REV. 608, 670 (1998).
+
+See also, Ian Ayres, Preliminary Thoughts on Optimal Tailoring of Contractual Rules, 3 S.
+
+CAL.
+
+INTERDISC.
+
+L.J. 1, at 4 (1993) (“[t]ailored defaults condition legal treatment on particular attributes or conduct of the contracting parties.”). 187 Id.
+
+
+--- Page 42 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 42 manipulate a decedent’s digital legacy.
+
+Conversely, members of the public should be presumptively prohibited from manipulating a decedent’s information.
+
+The preference for family control of decedents’ digital legacies may be expected given that testators likely transfer most of their property to family members rather than to friends or charities; the results of this study confirm that expectation.
+
+The second prong of the tailored default based upon the empirical results of this paper addresses the permissible uses of a decedent’s digital legacy.
+
+Among the spectrum of uses addressed in the survey, Figure 3 shows that family members should be presump tively permitted to use a decedent’s digital remains for memorialization or educational purposes.
+
+On the other hand, commercial uses by family members are presumptively prohibited.
+
+So, for example, a decedent’s digital information could be used to educat e persons about military service but should not be used in a military recruiting advertisement.
+
+Similarly, a family member should not use a decedent’s digital information to generate an AI avatar for political purposes.
+
+And under the first prong of the t ailored default, members of the public should be presumptively barred for making any use of a decedent’s digital information with the aid of generative AI.
+
+Because the proposed default is not a blanket in/out rule like most defaults in wills doctrine, some individuals may assent to users and uses that are presumptively prohibited by our proposed default structure.
+
+The WWII veteran, for example, may have refr ained from discussing the experience at Pearl Harbor but may wish to contribute to educational presentations after death.
+
+Under our proposal, educational usage of a decedent’s digital information is presumptively barred.
+
+The WWII veteran could, however, expressly permit educational usage in a will thereby overriding the default.
+
+In that sense, the tailored default resembles the information -triggering associated with penalty default theory.
+
+An individual must consider the permitted users and uses under the tailored default and record preferences that are contrary to the default for probate courts to enforce during estate administration.
+
+While it might be more individualized by user and use, a traditional tailored default threatens to increase in transaction costs when compared to an expansive in or out default to govern post-mortem generative AI usage of a decedent’s digital remains.
+
+After all, blanket defaults identify permission or prohibition ex ante whereas a tailored default injects uncertainty by creating a default based upon the situations of the individual parties post hoc.188 This proposal, however, is unlike a traditional tailored default where the relevant default is unknown until litigation.
+
+To the contrary, this paper’s proposed default is a blend of majoritarian and penalty default theory that is tailored by the classification of the user and the use.
+
+Once implemented, the hybrid default will establish what is and is not permitted ex ante much like a blanket default for the varied presumptions that are absent under typical majoritarian defaults. 188 Korobkin, supra note 186, at 672-74 (“[t]he most important shortcoming of tailored defaults is that, like other standards, they impose high costs on courts forced to determine highly individuating terms.”).
+
+
+--- Page 43 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 43 The default rule as outlined in this paper not only represents a blend of majoritarian and penalty defaults, but also tailored to individual parties by designating each permissible user and use as a presumptive preference.
+
+If an individual family member wishes to make a use that is presumptively prohibited, then that family member may seek judicial permission to use the decedent’s information by rebutting the presumption in court.
+
+A decedent may have, for example, consented to commercial use of the deced ent’s digital information but such consent is not memorialized in a will or the decedent died intestate.
+
+Under those circumstances, the family member has an opportunity to present sufficient evidence to overcome the presumptive prohibition on commercial use.
+
+Or, an individual may not have wanted anything to do with education at any point during life; therefore, the presumptive permission under the proposed default scheme could be rebutted by a family if a dispute arises about using the decedent’s post -mortem digital information for educational purposes.
+
+In short, the proposed default is not a comprehensive in or out like other defaults but is instead tailored to individual decedents with their unique circumstances.
+
+At its foundation, the results of this survey and the proposed default scheme correspond to the fundamental tenet of wills and trusts doctrine – effectuating a decedent’s intent.
+
+If there are gaps in wills or an individual dies intestate, a decedent’s in tent is best described as presumptive because the decedent failed to leave a blueprint for who should receive the decedent’s property.
+
+Defaults in the form of statutory intestate succession and lapse are the law’s best guess at what a decedent would have wanted under those circumstances.
+
+This proposal parallels the best guess approach in wills and trusts by establishing a default to govern intestacy or a testator’s failure to specify the parameters, if any, under which the testator’s digital remains could be subject to GenEm.
+
+B.
+
+Enforcing the GenEm Default Designing a default rule that metamorphosizes over time represents an initial step toward providing broader protection for everyone’s digital remains than exists at present.
+
+The next step is to consider the mechanism by which the GenEm default can be enforced in both preventative and remedial senses.
+
+One foundational step in preventing misuse of GenEm lies in controlling the models through technology.
+
+Beyond technological protections, tradition al remedies associated with wills doctrine could be employed if GenEm is utilized in violation of the proposed tailored default.
+
+These twin approaches to policing the default offer robust protection because one operates at the front end of GenEm to prevent misuse while the other represents the back end of protect ion by remedying a violation of the default.
+
+A.
+
+Patrolling the GenEm Default with Technology Generative AI systems cannot emulate an individual without access to personal data that informs the model’s construction of one’s likeness, speech, or personality.
+
+Thus, ensuring individuals —or their estates—retain control over the inclusion of their private information in training datasets is
+
+
+--- Page 44 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 44 critical.
+
+This control can be established through expanded property and privacy rights over digital and physical materials post-mortem.
+
+Under current privacy frameworks, including the General Data Protection Regulation (GDPR) in the European Union and state -level laws like the California Consumer Privacy Act (CCPA), individuals have certain rights to control their data during life.
+
+However, these frameworks generally lack explicit post-mortem protections.
+
+Courts and legislatures could address this gap by recognizing the digital estate as a protected entity, akin to physical and intellectual property.
+
+Part of the data necessary for personalization will be found in material that the decedent kept private during life.
+
+Private materials that might be essential for creating high -fidelity emulations— e.g., diary entries, or intimate recordings —should be categ orically excluded from datasets unless express, documented consent is provided.
+
+This material passes to the estate under current law and therefore no legal amendment is necessary.
+
+Courts have long recognized limited posthumous privacy interests, such as pr ohibitions against desecrating remains or exploiting intimate details for commercial purposes. 189 Extending these protections to digital remains would ensure that unauthorized GenEm usage does not undermine these well-established dignitary rights.190 As noted, however, much of our digital remains are exposed to third parties, such as platform providers.191 Here, black letter law that permitted individuals to bury their digital remains or limit its use for future training purposes might best protect digital remains.
+
+As a result, a decedent’s photograph might have been shared with a third party, but that third party would not be allowed to use that photo as part of the training process of a new model, as the third party is not a permissible user under the proposed default.
+
+Note that this would not preclude a family member from using AI to fine tune a model or otherwise use this information in a limited manner for memorialization purposes.
+
+In addition to limiting access to source material, another avenue for limiting GenEm lies in the design of AI systems themselves.
+
+Current AI labs implement basic guardrails to avoid reproducing copyrighted material or generating overtly harmful outputs.
+
+Th ese guardrails, while rudimentary, demonstrate the feasibility of embedding ethical and legal constraints within the model architecture.
+
+For GenEm, this approach could evolve into sophisticated internal guardrails tailored to post - mortem use.
+
+AI systems co uld, for example, consult dynamically updated registries containing individuals’ post -mortem preferences regarding digital emulation.
+
+This registry, maintained by a trusted, possibly government, third party, would operate akin to copyright registries but f ocus on 189 In general, many dignity and privacy rights extinguish at death, see Bartholomew, supra note 17, at 1603. 190 Admittedly, enforcing strict control over private data in the digital age presents challenges.
+
+Leaks and breaches are rampant, and public interactions may still expose individuals to partial emulation.
+
+However, as private materials represent the "soul" of high-fidelity emulation, limiting their dissemination could render unauthorized GenEm lifeless and generic, reducing their exploitative potential. 191 See supra note 26.
+
+
+--- Page 45 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 45 an individual's "emulation rights." Such a system could include fields indicating permitted uses (e.g., memorialization but not commercial purposes) or a complete prohibition against emulation.
+
+The design of these registries could draw inspiration from existing intellectual property databases, where nuanced information about rights and restrictions is recorded.
+
+For example, the registry might encode public domain equivalencies, licenses for limit ed use, and revocable permissions from estates.
+
+AI models would cross -reference this registry during operations, flagging prohibited uses and requiring explicit override authorizations from recognized estate executors or courts.
+
+Furthermore, AI labs could enhance accountability by embedding metadata into outputs, linking generated content back to training data and permissions registries.
+
+Such transparency would assist in audits and enforcement actions, ensuring that any unauthorized use could be traced and addressed swiftly.
+
+In combination, creating a registry with improved accountability would operationalize the tailored default rules proposed in this paper thereby ensuring that user permissions and prohibited uses are hard-wired into model governance.
+
+C.
+
+Legal Safeguards for GenEm Default Traditional legal remedies, particularly injunctive relief, remain indispensable for controlling unauthorized uses of GenEm.
+
+When estates detect violations of an individual’s post -mortem preferences, they should seek an immediate court order to halt misuse and prevent further violations of the default.
+
+For example, a court could issue an injunction against an entity deploying a GenEm avatar for commercial purposes that contravenes either the tailored default rule or the decedent’s expressed wishes.
+
+Such ac tions would fall under well -established legal doctrines protecting dignity and privacy, particularly in equity, where injunctive relief is commonly used to prevent irreparable harm.192 The court -ordered remedy that best maps onto a protective scheme for GenEm is the constructive trust.
+
+A constructive trust is an equitable remedy imposed by a court to prevent unjust enrichment.193 If ordered by a court, the party subject to the constructive trust is required to convey property to another party because retention of the property would unjustly enrich the individual or entity.194 In the words of equity, a constructive trust arises “[w]hen property has been acquired in such circumstances that the holder of the legal title may not in good conscience retain the beneficial interest, equity converts him to a trustee.” 195 Or to use Justice Cardozo’s pithy, yet flowery, 192 See, e.g., Vest v.
+
+Easley, 549 S.E. 2d 568, 574 (N.C.
+
+App. 2001)(“A plaintiff is entitled to injunctive relief when there is no adequate remedy at law and irreparable harm will result if the injunction is not granted.”). 193 Restatement (Third) of Restitution and Unjust Enrichment §55 (1)(2011)(stating that “[i]f a defendant is unjustly enriched by the acquisition of title to identifiable property at the expense of the claimant or in violation of the claimant’s rights, the de fendant may be declared a constructive trustee, for the benefit of the claimant, of the property in question and its traceable product.”). 194 Restatement (Second) of Trusts §1(e)(1959); In re Estate of Figliuzzi, 979 N.W. 2d 225 (Minn. 2022)(“a constructive trust directs one party to affirmatively act by conveying property to another”). 195 Beatty v.
+
+Guggenheim Exploration Co., 122 N.E. 378, 380 (1919).
+
+
+--- Page 46 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 46 description, “[a] constructive trust is the formula through which the conscience of equity finds expression.”196 Petitioning a court for a constructive trust is a well -known avenue for relief under traditional wills doctrine.197 As a general matter, a court might establish a constructive trust in cases where a party has impaired a testator’s intended plan for distribution and benefited from that interference.
+
+If an individual fraudulently receives a gift under will or unduly in fluences a testator to make a testamentary gift that benefits the influencer, a court -ordered constructive trust is a standard remedy.198 Furthermore, courts routinely remedy wrongful appropriation of estate property by third parties by imposing constructive trusts on those in possession of the property.
+
+Constructive trusts have remedied, for example, a personal representative’s wrongful conversion of estate property to personal use or a trustee’s misappropriation of trust funds for personal benefit. 199 Within wills and trusts doctrine, then, interfering with a testator’s intent or wrongful possession of estate property is commonly redressed with a constructive trust to prevent the third party from benefitting from the wrongful act.
+
+Given its routinized usage within wills and trusts, a constructive trust could readily be imposed by courts to remedy violations of a GenEm default.
+
+If either a member of the public, a decedent’s heir, or an estate’s personal representative uses a deceden t’s digital remains in violation of the proposed default, a personal representative or an heir could ask a court to impose a constructive trust upon the offending party.
+
+A third party could, for example, use a decedent’s digital information for political purposes without the consent of the decedent’s heirs. 200 Because political uses are presumptively prohibited by the proposed default, the personal representative of the decedent’s 196 Id. 197 Constructive trusts are imposed in a variety of wills contexts, see, e.g., Ronald R.
+
+Volkmer, Constructive Trust Relief in Probate Proceedings, 31 EST.
+
+PL. 151 (Mar. 2004). 198 See, e.g., In re Estate of Lakatosh, 656 A.2d 1378 (Pa.
+
+Super. 1995)(constructive trust imposed to prevent unjust enrichment associated with undue influence); Caldwell v.
+
+Taylor, 23 P.2d 758 (Cal. 1933)(constructive trust to remedy a fraud that cause d a testator to make a gift that he might not have made had be known the truth). 199 See, e.g., In re Bender, 844 N.E.2d 170, 180-82 (Ind.
+
+Ct.
+
+App. 2006); Estate of Schultz, 2022 WL 4099404 (a constructive trust is an available remedy for breach for fiduciary duty involving wrongful conversion of estate property to personal use); Higgins V.
+
+Higgins, 217 Cal.
+
+Rptr. 3d 691 (2d Dist. 2017); Simonds v.
+
+Simonds, 380 N.E. 2d 189 (1978)(wrongful appropriation of insuranc e proceeds). 200 To provide one foundational example of using a decedent’s likeness in a manner that is likely contrary to the decedent’s intent before the recent surge in GenEm, 20-year-old Mollie Tibbetts was murdered by an undocumented immigrant in Iowa in 2018.
+
+One year after the crime, anti -immigration posters appeared in Iowa City with Ms.
+
+Tibbetts’ image on them.
+
+Hillary Ojeda, Anti - immigrant posters with Mollie Tibbetts’ face found, removed in downtown IC, Iowa City Press -Citizen, Sept. 9, 2019, https://www.press-citizen.com/story/news/2019/09/09/anti-immigrant-posters-mollie-tibbetts-face-found-removed-downtown- ic/2263855001/.
+
+In response to the tendency of the media and politicians to use Ms.
+
+Tibbetts in anti -immigration debates, Ms.
+
+Tibbetts’ father asked others not to “appropriate Mollie’s soul in advancing views she believed were profoundly racist.” Dak in And one, Mollie Tibbetts’ father”.
+
+Don’t use her death to promote racist views, CNN, Sept. 2, 2018, https://www.cnn.com/2018/09/02/us/mollie-tibbetts-father-op-ed/index.html.
+
+Regrettably, one need not strain credulity to imagine an emulated Laken Riley being featured in an anti-immigration campaign following her horrific murder and the trial of her murderer.
+
+Sam Gringlas, How the Death of Georgia nursing student Laken Riley led to a debate about immigration, NPR, March 9, 2024, https://www.npr.org/2024/03/09/1237179284/how-the-death-of-georgia-nursing-student-laken-riley-led-to-a-debate- about-immig.
+
+
+--- Page 47 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 47 estate could file suit against a third party and request that a constructive trust be imposed upon the user.
+
+Similarly, an heir might not only seek a remedy against a third party, but also claim that a personal representative breached a fiduciary duty if the personal representative impermissibly authorized the offending use.201 A third party or a personal representative may be able to rebut the presumption in some instances, but the bar is likely to be high – as it should be to protect a decedent’s digital afterlife.
+
+In the end, combining technical and legal mechanisms to protect a decedent’s digital legacy aligns with the principle that an individual’s likeness and legacy should not be utilized or commodified without consent.
+
+Courts have recognized analogous rights in publicity law, where the commercial exploitation of an individual’s name or image without authorization constitutes a tort.202 Extending these protections to GenEm outputs ensures that estates retain control over the deceased’s digital persona.203 201 For example, a personal representative might license the use of a decedent’s digital information for political purposes and r etain the proceeds of the transaction without obtaining the permission of a decedent’s heirs.
+
+Under those circumstances, the pers onal representative has breached the duty of loyalty by self-dealing and would be required to make the estate whole.
+
+See. e.g., Hartman v.
+
+Hartle, 122 A.2d 615 (N.J.
+
+Ch. 1923); In re Gleeson’s Will, 124 N.E. 2d 624 (Ill.
+
+App. 1955). 202 Bartholomew, supra note 17, at 1614-17. 203 Concerns about First Amendment challenges to such restrictions are mitigated by recent scholarship, such as Peter Salib’s forceful argument that AI-generated outputs lack the expressive content traditionally protected by free speech jurisprudence.
+
+Peter Salib, AI Outputs Are Not Protected Speech, WASH.
+
+U.
+
+L.
+
+REV. (forthcoming, 2025)
+
+
+--- Page 48 ---
+
+Governing Generative Ai Beyond the Grave.
+
+Lopez & Arbel 48 Conclusion The tailored evolutionary default in this paper is best viewed as a starting point to grapple with a foreseeable legal issue that can be fine-tuned as technology changes.204 Like a living algorithm, the default rules iteratively update, not through code, but through probate courts who work to debug and patch users and uses over time.
+
+As an initial default, the results of this empirical effort demonstrate that use by family members is preferred to the public and memorialization is the most favored use.
+
+And by sculpting the default to include a presumption in favor of family use and memorialization, the default aligns with the fundamental tenet of wills and trusts law – effectuating a decedent’s intent.
+
+More broadly, constructing a foundation for a default rule catalyzes the process of legal adaptation in a world where the lines between life, death, and digital persistence increasingly blur.
+
+While no single measure will perfectly patrol limitations on GenEm, the combination of data controls, model guardrails, and legal remedies creates a framework of enforcement.
+
+This multi - layered system balances technological feasibility with preventative an d reactive protections for everyone’s digital afterlife.
+
+And as technology evolves, a layered approach can be refined to keep pace with the changing world.
+
+Enhanced data rights, improved model interpretability, and global standardization of registries wo uld collectively maintain meaningful boundaries around post - mortem digital identities.
+
+By integrating these technical and legal measures, society can better safeguard dignity, autonomy, and legacy in the age of GenEm.
+
+As AI capabilities rapidly expand —whether through hyper‐personalized virtual assistants or deepfake co‐presence—courts and policymakers will grapple with even more intricate questions of identity, autonomy, and legacy.
+
+This Article’s framework can guide fu ture disputes over AI‐ generated wills, algorithmically managed trusts, and the broader challenges of digital personhood.
+
+Over the next decade, evolving social norms and technological breakthroughs are poised to reshape everything from personal property rights to the very definition of what it means to remain “alive” in a digital sense.
+
+By embedding adaptable default rules in our legal infrastructure now, we prepare for these uncertain horizons while preserving the core values that animate estate planning an d inheritance law. 204 See Ryan Hagemann, New Rules for New Frontiers: Regulating Emerging Technologies in an Era of Soft Law, 57 WASHBURN L.J. 235, 240 (2018) (describing the regulatory challenge caused by emerging technologies and the role of “soft law”).
+`;
+
+function asObject() {
+  return {
+    paper_id: PAPER_ID,
+    title: TITLE,
+    ssrn_url: SSRN_URL,
+    year: YEAR,
+    authors: AUTHORS,
+    keywords: KEYWORDS,
+    summary_md: SUMMARY_MD,
+    summary_zh_md: SUMMARY_ZH_MD,
+    one_pager_md: ONE_PAGER_MD,
+    study_pack_md: STUDY_PACK_MD,
+    article_text: ARTICLE_TEXT,
+  };
+}
+
+module.exports = {
+  PAPER_ID, TITLE, SSRN_URL, YEAR, AUTHORS, KEYWORDS,
+  SUMMARY_MD, SUMMARY_ZH_MD, ONE_PAGER_MD, STUDY_PACK_MD, ARTICLE_TEXT,
+  asObject,
+};
+
+if (require.main === module) {
+  process.stdout.write(ARTICLE_TEXT);
+}

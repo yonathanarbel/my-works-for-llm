@@ -33,6 +33,8 @@
 - https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4962098/
 - https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5181207/
 - https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5377475/
+- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5380233/
+- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-6273198/
 
 ## Machine Endpoints
 - https://yonathanarbel.github.io/my-works-for-llm/sitemap.xml
