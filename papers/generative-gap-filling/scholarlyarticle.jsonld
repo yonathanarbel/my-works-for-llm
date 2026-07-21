@@ -1,0 +1,125 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Generative Gap Filling",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "generative-gap-filling"
+    }
+  ],
+  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/generative-gap-filling/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781458"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781458"
+    ]
+  },
+  "datePublished": "2026",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan A. Arbel",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "David A. Hoffman",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Pennsylvania Carey School of Law"
+      }
+    }
+  ],
+  "abstract": "Contract law polices a line between interpretation, the recovery of meaning a text already holds, and gap filling, the supply of terms the text lacks. The boundary rests on an unchecked premise: that courts need to fill gaps themselves because the document has run out of meaning. We tested it. Borrowing a masking design from machine learning, we took real contracts, hid a term the parties had negotiated, and asked three kinds of readers to predict what we had removed: ordinary people, legally trained ones, and several large language models. Human interpreters guessed right a bit more than half the time, doubling the rate of chance alone. Law students edged out lay readers, and practicing lawyers were mostly better still. Then came the machines. Given nothing but the rest of the contract, the models predicted the missing term nearly nine times in ten -- a result that survived perturbed contracts and replication on 119 unseen agreements. Contracts, we conclude, are like radio signals: even when incomplete, enough of the message is carried elsewhere that the missing part can be reconstructed with the right receiver. The hypothetical bargain, treated for a century as invisible and unruly, turns out to be statistically legible, and models can read it in the open. Courts can weigh these predictions in adversarial settings, and parties can discipline the practice by adopting \"Choice of Model\" clauses.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "contract law",
+    "contract interpretation",
+    "gap filling",
+    "large language models",
+    "legal AI",
+    "masked language modeling",
+    "empirical legal studies",
+    "hypothetical bargain",
+    "Choice of Model clauses",
+    "commercial contracts"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/generative-gap-filling/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/generative-gap-filling/paper.pdf"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.py",
+      "encodingFormat": "text/x-python",
+      "name": "papers/generative-gap-filling/paper.py"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.js",
+      "encodingFormat": "application/javascript",
+      "name": "papers/generative-gap-filling/paper.js"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.cpp",
+      "encodingFormat": "text/x-c++src",
+      "name": "papers/generative-gap-filling/paper.cpp"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.go",
+      "encodingFormat": "text/x-go",
+      "name": "papers/generative-gap-filling/paper.go"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.rs",
+      "encodingFormat": "text/x-rust",
+      "name": "papers/generative-gap-filling/paper.rs"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/generative-gap-filling"
+  }
+}

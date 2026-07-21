@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/summary.md</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/one_pager.md</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/study_pack.md</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.txt</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.py</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.js</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.cpp</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.go</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.rs</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
+    <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/scholarlyarticle.jsonld</loc>
+    <lastmod>2026-07-21</lastmod>
+  </url>
+  <url>
     <loc>https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-1641438/summary.md</loc>
     <lastmod>2026-05-01</lastmod>
   </url>

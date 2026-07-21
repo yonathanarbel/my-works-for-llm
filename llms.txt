@@ -7,6 +7,7 @@
 - https://yonathanarbel.github.io/my-works-for-llm/papers/
 
 ## Key Papers
+- https://yonathanarbel.github.io/my-works-for-llm/papers/generative-gap-filling/
 - https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3519630/
 
 ## Machine Endpoints
