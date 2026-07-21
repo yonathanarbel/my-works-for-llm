@@ -94,7 +94,7 @@ def _write_hf_readme(mirror_dir: Path, repo_id: str, source_repo_url: str, head_
     out = front_matter + lead
     if existing:
         out += "## Source README\n\n" + existing.rstrip() + "\n"
-    readme_path.write_text(out, encoding="utf-8", newline="\n")
+    readme_path.write_text(out, encoding="utf-8")
 
 
 def main(argv: list[str] | None = None) -> int:

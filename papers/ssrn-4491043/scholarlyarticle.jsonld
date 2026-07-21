@@ -14,11 +14,19 @@
       "value": "4491043"
     }
   ],
-  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4491043/",
+  "url": "https://works.battleoftheforms.com/papers/ssrn-4491043/",
   "isPartOf": {
     "@type": "Dataset",
     "name": "my-works-for-llm",
-    "url": "https://github.com/yonathanarbel/my-works-for-llm"
+    "url": "https://works.battleoftheforms.com/",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781458"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781458"
+    ]
   },
   "sameAs": [
     "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4491043"

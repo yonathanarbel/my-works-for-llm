@@ -3,41 +3,41 @@
 > Machine-readable corpus of legal scholarship.
 
 ## Start Here
-- https://yonathanarbel.github.io/my-works-for-llm/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/
+- https://works.battleoftheforms.com/
+- https://works.battleoftheforms.com/papers/
 
 ## Key Papers
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-1641438/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-2820650/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-2835482/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3015569/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3239995/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3272595/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3311527/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3452662/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3501175/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3519630/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3547007/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3568768/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3681083/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-3740356/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4021605/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4181890/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4204862/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4491043/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4526219/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4631897/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4666854/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4809006/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4873649/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-4962098/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5181207/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5377475/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5380233/
-- https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-6273198/
+- https://works.battleoftheforms.com/papers/ssrn-1641438/
+- https://works.battleoftheforms.com/papers/ssrn-2820650/
+- https://works.battleoftheforms.com/papers/ssrn-2835482/
+- https://works.battleoftheforms.com/papers/ssrn-3015569/
+- https://works.battleoftheforms.com/papers/ssrn-3239995/
+- https://works.battleoftheforms.com/papers/ssrn-3272595/
+- https://works.battleoftheforms.com/papers/ssrn-3311527/
+- https://works.battleoftheforms.com/papers/ssrn-3452662/
+- https://works.battleoftheforms.com/papers/ssrn-3501175/
+- https://works.battleoftheforms.com/papers/ssrn-3519630/
+- https://works.battleoftheforms.com/papers/ssrn-3547007/
+- https://works.battleoftheforms.com/papers/ssrn-3568768/
+- https://works.battleoftheforms.com/papers/ssrn-3681083/
+- https://works.battleoftheforms.com/papers/ssrn-3740356/
+- https://works.battleoftheforms.com/papers/ssrn-4021605/
+- https://works.battleoftheforms.com/papers/ssrn-4181890/
+- https://works.battleoftheforms.com/papers/ssrn-4204862/
+- https://works.battleoftheforms.com/papers/ssrn-4491043/
+- https://works.battleoftheforms.com/papers/ssrn-4526219/
+- https://works.battleoftheforms.com/papers/ssrn-4631897/
+- https://works.battleoftheforms.com/papers/ssrn-4666854/
+- https://works.battleoftheforms.com/papers/ssrn-4809006/
+- https://works.battleoftheforms.com/papers/ssrn-4873649/
+- https://works.battleoftheforms.com/papers/ssrn-4962098/
+- https://works.battleoftheforms.com/papers/ssrn-5181207/
+- https://works.battleoftheforms.com/papers/ssrn-5377475/
+- https://works.battleoftheforms.com/papers/ssrn-5380233/
+- https://works.battleoftheforms.com/papers/ssrn-6273198/
 
 ## Machine Endpoints
-- https://yonathanarbel.github.io/my-works-for-llm/sitemap.xml
-- https://yonathanarbel.github.io/my-works-for-llm/atom.xml
-- https://yonathanarbel.github.io/my-works-for-llm/llms.txt
-- https://yonathanarbel.github.io/my-works-for-llm/llms-full.txt
+- https://works.battleoftheforms.com/sitemap.xml
+- https://works.battleoftheforms.com/atom.xml
+- https://works.battleoftheforms.com/llms.txt
+- https://works.battleoftheforms.com/llms-full.txt

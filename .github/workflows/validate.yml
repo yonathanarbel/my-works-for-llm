@@ -32,6 +32,10 @@ jobs:
     - name: Validate corpus integrity
       run: |
         python corpus_cli.py validate
+
+    - name: Validate discovery metadata
+      run: |
+        python validate_discovery.py
     
     - name: Display corpus statistics
       run: |

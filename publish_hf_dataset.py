@@ -63,7 +63,7 @@ def main() -> int:
     # Dataset card (template)
     card_src = repo_root / "huggingface" / "DATASET_CARD.md"
     if card_src.exists():
-        (workdir / "README.md").write_text(card_src.read_text(encoding="utf-8"), encoding="utf-8", newline="\n")
+        (workdir / "README.md").write_text(card_src.read_text(encoding="utf-8"), encoding="utf-8")
 
     api = HfApi(token=args.token)
     api.create_repo(repo_id=args.repo_id, repo_type="dataset", private=args.private, exist_ok=True)

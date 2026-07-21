@@ -43,6 +43,7 @@ jobs:
           python generate_paper_jsonld.py
           python generate_docs_site.py
           python generate_sitemap.py
+          python validate_discovery.py
 
       - name: Commit regenerated files (if needed)
         run: |

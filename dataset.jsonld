@@ -3,11 +3,26 @@
   "@type": "Dataset",
   "name": "my-works-for-llm",
   "description": "Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research.",
+  "url": "https://works.battleoftheforms.com/",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": "10.5281/zenodo.18781458"
+  },
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "creator": {
     "@type": "Person",
     "name": "Yonathan A. Arbel",
-    "affiliation": "University of Alabama School of Law"
+    "url": "https://yonathanarbel.com/",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "University of Alabama School of Law"
+    },
+    "sameAs": [
+      "https://github.com/yonathanarbel",
+      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
+      "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+    ]
   },
   "keywords": [
     "contracts",
@@ -16,5 +31,31 @@
     "empirical legal studies",
     "consumer protection",
     "specific performance"
+  ],
+  "sameAs": [
+    "https://doi.org/10.5281/zenodo.18781458",
+    "https://github.com/yonathanarbel/my-works-for-llm",
+    "https://huggingface.co/datasets/yonathanarbel/my-works-for-llm",
+    "https://yonathanarbel.github.io/my-works-for-llm/"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Corpus records (JSONL)",
+      "encodingFormat": "application/jsonl",
+      "contentUrl": "https://works.battleoftheforms.com/corpus.jsonl"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Full LLM context",
+      "encodingFormat": "text/plain",
+      "contentUrl": "https://works.battleoftheforms.com/llms-full.txt"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "MLCommons Croissant metadata",
+      "encodingFormat": "application/ld+json",
+      "contentUrl": "https://works.battleoftheforms.com/croissant.json"
+    }
   ]
 }
