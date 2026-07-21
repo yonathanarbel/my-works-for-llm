@@ -4,8 +4,15 @@
   <id>https://yonathanarbel.github.io/my-works-for-llm/</id>
   <link href="https://yonathanarbel.github.io/my-works-for-llm/" />
   <link href="https://yonathanarbel.github.io/my-works-for-llm/atom.xml" rel="self" />
-  <updated>2026-05-01T20:12:30Z</updated>
+  <updated>2026-07-21T13:41:38Z</updated>
   <author><name>Yonathan A. Arbel</name></author>
+  <entry>
+    <title>Generative Gap Filling</title>
+    <id>https://yonathanarbel.github.io/my-works-for-llm/papers/generative-gap-filling/</id>
+    <link href="https://yonathanarbel.github.io/my-works-for-llm/papers/generative-gap-filling/" />
+    <updated>2026-07-21T13:41:38Z</updated>
+    <summary>Contract law polices a line between interpretation and gap filling. By masking negotiated terms in real contracts, the paper finds 55% accuracy among lay readers, nearly 60% among lawyers, 88.3% among frontier models, and 87% model accuracy across 119 unseen commercial agreements.</summary>
+  </entry>
   <entry>
     <title>How to Count AIs: Individuation and Liability for AI Agents</title>
     <id>https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-6273198/</id>
