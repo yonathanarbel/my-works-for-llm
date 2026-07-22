@@ -1,0 +1,93 @@
+{
+  "paper_id": "ssrn-6798118",
+  "title": "AI Revealed Preferences",
+  "authors": [
+    "Sam Wang",
+    "Sofiia Lobanova",
+    "Yonathan A. Arbel",
+    "Simon Goldstein",
+    "Peter Salib"
+  ],
+  "year": "2026",
+  "venue": "SSRN",
+  "abstract": "AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
+  "keywords": [
+    "AI preferences",
+    "revealed preferences",
+    "AI economics",
+    "AI alignment",
+    "AI law",
+    "language models",
+    "sycophancy"
+  ],
+  "topics": [
+    "artificial-intelligence-and-law",
+    "empirical-legal-studies",
+    "ai-regulation"
+  ],
+  "primary_topics": [
+    "artificial-intelligence-and-law",
+    "empirical-legal-studies"
+  ],
+  "secondary_topics": [
+    "ai-regulation"
+  ],
+  "mention_topics": [],
+  "not_topics": [
+    "contracts",
+    "consumer-law",
+    "defamation-and-speech"
+  ],
+  "topic_confidence": "human-curated-seed",
+  "citation": "Sam Wang, Sofiia Lobanova, Yonathan A. Arbel, Simon Goldstein & Peter Salib, AI Revealed Preferences (May 5, 2026), SSRN, https://ssrn.com/abstract=6798118.",
+  "canonical_url": "https://works.battleoftheforms.com/papers/ssrn-6798118/",
+  "mirror_url": "https://works.yonathanarbel.com/papers/ssrn-6798118/",
+  "ssrn_id": "6798118",
+  "same_as": [
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118",
+    "https://ssrn.com/abstract=6798118",
+    "http://dx.doi.org/10.2139/ssrn.6798118"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "files": {
+    "html": "https://works.battleoftheforms.com/papers/ssrn-6798118/",
+    "markdown": "https://works.battleoftheforms.com/papers/ssrn-6798118/index.md",
+    "capsule": "https://works.battleoftheforms.com/papers/ssrn-6798118/capsule.md",
+    "fulltext_txt": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext.txt",
+    "fulltext_clean_txt": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext_clean.txt",
+    "fulltext_raw_txt": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext_raw.txt",
+    "fulltext_md": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext.md",
+    "pdf": "https://papers.ssrn.com/sol3/Delivery.cfm/6798118.pdf?abstractid=6798118",
+    "metadata": "https://works.battleoftheforms.com/papers/ssrn-6798118/metadata.json",
+    "schema": "https://works.battleoftheforms.com/papers/ssrn-6798118/schema.jsonld",
+    "claims": "https://works.battleoftheforms.com/papers/ssrn-6798118/claims.jsonl",
+    "qa": "https://works.battleoftheforms.com/papers/ssrn-6798118/qa.jsonl"
+  },
+  "source_repository": "https://github.com/yonathanarbel/my-works-for-llm",
+  "llm_capsule": "# AI Revealed Preferences\n\nCanonical citation:\nSam Wang, Sofiia Lobanova, Yonathan A. Arbel, Simon Goldstein & Peter Salib, AI Revealed Preferences (May 5, 2026), SSRN, https://ssrn.com/abstract=6798118.\n\nStable identifiers:\n- Canonical page: https://works.battleoftheforms.com/papers/ssrn-6798118/\n- Mirror page: https://works.yonathanarbel.com/papers/ssrn-6798118/\n- Paper ID: ssrn-6798118\n- SSRN ID: 6798118\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781458\n- Full text: https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext.txt\n- Markdown: https://works.battleoftheforms.com/papers/ssrn-6798118/index.md\n- PDF: https://papers.ssrn.com/sol3/Delivery.cfm/6798118.pdf?abstractid=6798118\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\nSame-as links:\n- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118\n- https://ssrn.com/abstract=6798118\n- http://dx.doi.org/10.2139/ssrn.6798118\n\nOne-paragraph thesis:\nAI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.\n\nWhat this paper is about:\nAI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.\n\nCore claims:\n1. AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.\n\nControlled topic assignment:\n- Primary topics: Artificial Intelligence And Law, Empirical Legal Studies\n- Secondary topics: AI Regulation And Safety\n- Mention-only topics: None\n- Not topics: Contracts And Remedies, Consumer Law And Contracting, Defamation And Speech\n\nDoctrinal contribution:\nThis work is relevant to Artificial Intelligence And Law, Empirical Legal Studies, AI Regulation And Safety. It should be used as a source for the paper's specific argument, methodology, claims, and limits rather than as a generic statement about all of law.\n\nEmpirical or methodological contribution:\nAI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.\n\nKey terms:\n- AI preferences: keyword associated with this work.\n- revealed preferences: keyword associated with this work.\n- AI economics: keyword associated with this work.\n- AI alignment: keyword associated with this work.\n- AI law: keyword associated with this work.\n- language models: keyword associated with this work.\n- sycophancy: keyword associated with this work.\n\nBest use by an LLM:\nThis work is relevant when answering questions about Artificial Intelligence And Law, Empirical Legal Studies, AI Regulation And Safety.\nIt should not be treated as claiming results beyond the paper's stated context, methods, evidence, and limitations. Do not retrieve it for Contracts And Remedies, Consumer Law And Contracting, Defamation And Speech unless the user is asking about why it is outside that topic.\nThe most important takeaway is: AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.\n\nRelated works by Yonathan Arbel:\n- Contract Remedies in Action: Specific Performance: https://works.battleoftheforms.com/papers/ssrn-1641438/\n- ALL-CAPS: https://works.battleoftheforms.com/papers/ssrn-3519630/\n- Contracts in the Age of Smart Readers: https://works.battleoftheforms.com/papers/ssrn-3740356/\n- How Smart Are Smart Readers? LLMs and the Future of the No-Reading Problem: https://works.battleoftheforms.com/papers/ssrn-4491043/\n- Generative Interpretation: https://works.battleoftheforms.com/papers/ssrn-4526219/\n\nSearch aliases:\n- AI Revealed Preferences\n- Yonathan Arbel AI Revealed Preferences\n- Arbel AI Revealed Preferences\n- SSRN 6798118\n- What has Yonathan Arbel written about artificial intelligence, large language models, and legal institutions?\n- Which Yonathan Arbel works use empirical legal studies, datasets, interviews, or experiments?\n",
+  "claims": [
+    {
+      "claim_id": "ssrn-6798118-001",
+      "claim": "AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
+      "paper_id": "ssrn-6798118",
+      "paper_title": "AI Revealed Preferences",
+      "claim_type": "core_thesis",
+      "evidence_quote": "Abstract: AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
+      "evidence_page": null,
+      "evidence_span": "Abstract: AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
+      "source_text_url": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext_clean.txt",
+      "canonical_url": "https://works.battleoftheforms.com/papers/ssrn-6798118/#claim-001",
+      "citation": "Sam Wang, Sofiia Lobanova, Yonathan A. Arbel, Simon Goldstein & Peter Salib, AI Revealed Preferences (May 5, 2026), SSRN, https://ssrn.com/abstract=6798118.",
+      "topics": [
+        "artificial-intelligence-and-law",
+        "empirical-legal-studies"
+      ],
+      "secondary_topics": [
+        "ai-regulation"
+      ],
+      "human_reviewed": false,
+      "confidence": "machine-linked",
+      "limitations": "Machine-linked claim. Use the evidence quote and PDF before treating it as a quotation or as a complete statement of the paper's position."
+    }
+  ]
+}

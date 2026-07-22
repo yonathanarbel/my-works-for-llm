@@ -1,0 +1,14 @@
+# Why Law Needs a New Entity to Govern AI Agents
+
+Canonical page: https://works.battleoftheforms.com/papers/new-entity-ai-agents/
+
+Why Law Needs a New Entity to Govern AI Agents
+
+Canonical citation:
+Yonathan A. Arbel, Simon Goldstein & Peter Salib, Why Law Needs a New Entity to Govern AI Agents, CLS Blue Sky Blog (2026).
+
+Abstract:
+Proposes a new corporate form, the A-corp (algorithmic corporation), to solve the identification bottleneck for AI agents: humans own, AIs run; builds on the resource constraint thesis and emergent corporate governance to give law leverage over autonomous AI swarms.
+
+Source links:
+- https://clsbluesky.law.columbia.edu/2026/06/15/why-law-needs-a-new-entity-to-govern-ai-agents/

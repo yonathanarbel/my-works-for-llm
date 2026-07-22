@@ -1,0 +1,14 @@
+# AI Revealed Preferences
+
+Canonical page: https://works.battleoftheforms.com/papers/ssrn-6798118/
+
+AI Revealed Preferences
+
+Canonical citation:
+Sam Wang, Sofiia Lobanova, Yonathan A. Arbel, Simon Goldstein & Peter Salib, AI Revealed Preferences (May 5, 2026), SSRN, https://ssrn.com/abstract=6798118.
+
+Abstract:
+AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.
+
+Source links:
+- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118-https://ssrn.com/abstract=6798118-http://dx.doi.org/10.2139/ssrn.6798118

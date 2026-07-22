@@ -1,0 +1,14 @@
+# The False Choice in the Debate Over Artificial Intelligence Regulation
+
+Canonical page: https://works.battleoftheforms.com/papers/false-choice-ai/
+
+The False Choice in the Debate Over Artificial Intelligence Regulation
+
+Canonical citation:
+Yonathan A. Arbel, Matthew Tokson & Albert Lin, The False Choice in the Debate Over Artificial Intelligence Regulation, Lawfare (2024).
+
+Abstract:
+Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.
+
+Source links:
+- https://www.lawfaremedia.org/article/the-false-choice-in-the-debate-over-artificial-intelligence-regulation

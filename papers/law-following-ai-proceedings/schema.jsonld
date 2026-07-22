@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://works.battleoftheforms.com/#person",
+      "name": "Yonathan A. Arbel",
+      "url": "https://works.battleoftheforms.com/",
+      "sameAs": [
+        "https://github.com/yonathanarbel",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
+        "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/#article",
+      "headline": "Proceedings of the 2025 Workshop on Law-Following AI",
+      "name": "Proceedings of the 2025 Workshop on Law-Following AI",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Yonathan A. Arbel"
+        },
+        {
+          "@type": "Person",
+          "name": "multiple authors"
+        }
+      ],
+      "datePublished": "2026",
+      "description": "A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
+      "keywords": [
+        "ai",
+        "regulation"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "url": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/",
+      "sameAs": [
+        "https://www.lawfaremedia.org/article/proceedings-of-the-2025-workshop-on-law-following-ai",
+        "https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf"
+      ],
+      "isPartOf": {
+        "@id": "https://works.battleoftheforms.com/#dataset"
+      },
+      "encoding": [
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/index.md"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext_clean.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext_raw.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/metadata.json"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/ld+json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/schema.jsonld"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/claims.jsonl"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/qa.jsonl"
+        }
+      ],
+      "citation": "Cullen O'Keefe et al., Proceedings of the 2025 Workshop on Law-Following AI, Lawfare Research Report 26-8 (2026)."
+    }
+  ]
+}

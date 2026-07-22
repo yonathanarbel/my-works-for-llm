@@ -234,7 +234,13 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     if not isinstance(title, str) or not title.strip():
         title = paper_id
 
-    year = metadata.get("year") if isinstance(metadata.get("year"), int) else None
+    year_value = metadata.get("year")
+    if isinstance(year_value, int):
+        year = year_value
+    elif isinstance(year_value, str) and year_value.strip().isdigit():
+        year = int(year_value.strip())
+    else:
+        year = None
     authors = _authors_to_strings(metadata.get("authors"))
     keywords = metadata.get("keywords") if isinstance(metadata.get("keywords"), list) else []
     keywords = [k for k in keywords if isinstance(k, str)]
@@ -592,7 +598,8 @@ def _render_paper_page(base_url: str, canonical_base_url: str, paper: PaperInfo)
 
 def _write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8")
+    normalized = "\n".join(line.rstrip() for line in content.splitlines()) + "\n"
+    path.write_text(normalized, encoding="utf-8")
 
 
 def _write_llm_descriptors(out_dir: Path, base_url: str, papers: list[PaperInfo]) -> None:

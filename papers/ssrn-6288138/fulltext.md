@@ -1,0 +1,14 @@
+# Artificial Intelligence and Existential Risk
+
+Canonical page: https://works.battleoftheforms.com/papers/ssrn-6288138/
+
+Artificial Intelligence and Existential Risk
+
+Canonical citation:
+Matthew J. Tokson & Yonathan A. Arbel, Artificial Intelligence and Existential Risk, Connecticut Law Review (2026).
+
+Abstract:
+Artificial Intelligence and Existential Risk brings existential AI risk into mainstream legal scholarship. It classifies existential AI risks into human-directed risks, accident risks, and loss-of-control risks, argues that legal institutions should make these risks legible under uncertainty, critiques the AI arms-race metaphor, and proposes adaptive regulation that preserves policy optionality while responding to non-trivial catastrophic risk.
+
+Source links:
+- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6288138-https://ssrn.com/abstract=6288138-http://dx.doi.org/10.2139/ssrn.6288138

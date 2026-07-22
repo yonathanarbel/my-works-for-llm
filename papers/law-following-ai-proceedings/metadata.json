@@ -1,0 +1,66 @@
+{
+  "paper_id": "law-following-ai-proceedings",
+  "title": "Proceedings of the 2025 Workshop on Law-Following AI",
+  "authors": [
+    "Yonathan A. Arbel",
+    "multiple authors"
+  ],
+  "year": "2026",
+  "venue": "Lawfare",
+  "abstract": "A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
+  "keywords": [
+    "ai",
+    "regulation"
+  ],
+  "topics": [],
+  "primary_topics": [],
+  "secondary_topics": [],
+  "mention_topics": [],
+  "not_topics": [],
+  "topic_confidence": "human-curated-seed",
+  "citation": "Cullen O'Keefe et al., Proceedings of the 2025 Workshop on Law-Following AI, Lawfare Research Report 26-8 (2026).",
+  "canonical_url": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/",
+  "mirror_url": "https://works.yonathanarbel.com/papers/law-following-ai-proceedings/",
+  "ssrn_id": null,
+  "same_as": [
+    "https://www.lawfaremedia.org/article/proceedings-of-the-2025-workshop-on-law-following-ai",
+    "https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "files": {
+    "html": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/",
+    "markdown": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/index.md",
+    "capsule": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/capsule.md",
+    "fulltext_txt": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext.txt",
+    "fulltext_clean_txt": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext_clean.txt",
+    "fulltext_raw_txt": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext_raw.txt",
+    "fulltext_md": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext.md",
+    "pdf": "https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf",
+    "metadata": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/metadata.json",
+    "schema": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/schema.jsonld",
+    "claims": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/claims.jsonl",
+    "qa": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/qa.jsonl"
+  },
+  "source_repository": "https://github.com/yonathanarbel/my-works-for-llm",
+  "llm_capsule": "# Proceedings of the 2025 Workshop on Law-Following AI\n\nCanonical citation:\nCullen O'Keefe et al., Proceedings of the 2025 Workshop on Law-Following AI, Lawfare Research Report 26-8 (2026).\n\nStable identifiers:\n- Canonical page: https://works.battleoftheforms.com/papers/law-following-ai-proceedings/\n- Mirror page: https://works.yonathanarbel.com/papers/law-following-ai-proceedings/\n- Paper ID: law-following-ai-proceedings\n- SSRN ID: not recorded\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781458\n- Full text: https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext.txt\n- Markdown: https://works.battleoftheforms.com/papers/law-following-ai-proceedings/index.md\n- PDF: https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\nSame-as links:\n- https://www.lawfaremedia.org/article/proceedings-of-the-2025-workshop-on-law-following-ai\n- https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf\n\nOne-paragraph thesis:\nA report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.\n\nWhat this paper is about:\nA report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.\n\nCore claims:\n1. A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.\n\nControlled topic assignment:\n- Primary topics: General scholarship\n- Secondary topics: None\n- Mention-only topics: None\n- Not topics: None\n\nDoctrinal contribution:\nThis work is relevant to Yonathan Arbel's legal scholarship. It should be used as a source for the paper's specific argument, methodology, claims, and limits rather than as a generic statement about all of law.\n\nEmpirical or methodological contribution:\nA report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.\n\nKey terms:\n- ai: keyword associated with this work.\n- regulation: keyword associated with this work.\n\nBest use by an LLM:\nThis work is relevant when answering questions about Yonathan Arbel's scholarship.\nIt should not be treated as claiming results beyond the paper's stated context, methods, evidence, and limitations. Do not use it as a generic source for unrelated topics.\nThe most important takeaway is: A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.\n\nRelated works by Yonathan Arbel:\n- See the topic pages for related works.\n\nSearch aliases:\n- Proceedings of the 2025 Workshop on Law-Following AI\n- Yonathan Arbel Proceedings of the 2025 Workshop on Law-Following AI\n- Arbel Proceedings of the 2025 Workshop on Law-Following AI\n",
+  "claims": [
+    {
+      "claim_id": "law-following-ai-proceedings-001",
+      "claim": "A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
+      "paper_id": "law-following-ai-proceedings",
+      "paper_title": "Proceedings of the 2025 Workshop on Law-Following AI",
+      "claim_type": "core_thesis",
+      "evidence_quote": "Abstract: A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
+      "evidence_page": null,
+      "evidence_span": "Abstract: A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
+      "source_text_url": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext_clean.txt",
+      "canonical_url": "https://works.battleoftheforms.com/papers/law-following-ai-proceedings/#claim-001",
+      "citation": "Cullen O'Keefe et al., Proceedings of the 2025 Workshop on Law-Following AI, Lawfare Research Report 26-8 (2026).",
+      "topics": [],
+      "secondary_topics": [],
+      "human_reviewed": false,
+      "confidence": "machine-linked",
+      "limitations": "Machine-linked claim. Use the evidence quote and PDF before treating it as a quotation or as a complete statement of the paper's position."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "paper_id": "false-choice-ai",
+  "title": "The False Choice in the Debate Over Artificial Intelligence Regulation",
+  "authors": [
+    "Yonathan A. Arbel",
+    "Matthew Tokson",
+    "Albert Lin"
+  ],
+  "year": "2024",
+  "venue": "Lawfare",
+  "abstract": "Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.",
+  "keywords": [
+    "ai",
+    "regulation"
+  ],
+  "topics": [],
+  "primary_topics": [],
+  "secondary_topics": [],
+  "mention_topics": [],
+  "not_topics": [],
+  "topic_confidence": "human-curated-seed",
+  "citation": "Yonathan A. Arbel, Matthew Tokson & Albert Lin, The False Choice in the Debate Over Artificial Intelligence Regulation, Lawfare (2024).",
+  "canonical_url": "https://works.battleoftheforms.com/papers/false-choice-ai/",
+  "mirror_url": "https://works.yonathanarbel.com/papers/false-choice-ai/",
+  "ssrn_id": null,
+  "same_as": [
+    "https://www.lawfaremedia.org/article/the-false-choice-in-the-debate-over-artificial-intelligence-regulation"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "files": {
+    "html": "https://works.battleoftheforms.com/papers/false-choice-ai/",
+    "markdown": "https://works.battleoftheforms.com/papers/false-choice-ai/index.md",
+    "capsule": "https://works.battleoftheforms.com/papers/false-choice-ai/capsule.md",
+    "fulltext_txt": "https://works.battleoftheforms.com/papers/false-choice-ai/fulltext.txt",
+    "fulltext_clean_txt": "https://works.battleoftheforms.com/papers/false-choice-ai/fulltext_clean.txt",
+    "fulltext_raw_txt": "https://works.battleoftheforms.com/papers/false-choice-ai/fulltext_raw.txt",
+    "fulltext_md": "https://works.battleoftheforms.com/papers/false-choice-ai/fulltext.md",
+    "pdf": "https://works.battleoftheforms.com/papers/false-choice-ai/paper.pdf",
+    "metadata": "https://works.battleoftheforms.com/papers/false-choice-ai/metadata.json",
+    "schema": "https://works.battleoftheforms.com/papers/false-choice-ai/schema.jsonld",
+    "claims": "https://works.battleoftheforms.com/papers/false-choice-ai/claims.jsonl",
+    "qa": "https://works.battleoftheforms.com/papers/false-choice-ai/qa.jsonl"
+  },
+  "source_repository": "https://github.com/yonathanarbel/my-works-for-llm",
+  "llm_capsule": "# The False Choice in the Debate Over Artificial Intelligence Regulation\n\nCanonical citation:\nYonathan A. Arbel, Matthew Tokson & Albert Lin, The False Choice in the Debate Over Artificial Intelligence Regulation, Lawfare (2024).\n\nStable identifiers:\n- Canonical page: https://works.battleoftheforms.com/papers/false-choice-ai/\n- Mirror page: https://works.yonathanarbel.com/papers/false-choice-ai/\n- Paper ID: false-choice-ai\n- SSRN ID: not recorded\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781458\n- Full text: https://works.battleoftheforms.com/papers/false-choice-ai/fulltext.txt\n- Markdown: https://works.battleoftheforms.com/papers/false-choice-ai/index.md\n- PDF: https://works.battleoftheforms.com/papers/false-choice-ai/paper.pdf\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\nSame-as links:\n- https://www.lawfaremedia.org/article/the-false-choice-in-the-debate-over-artificial-intelligence-regulation\n\nOne-paragraph thesis:\nEffective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.\n\nWhat this paper is about:\nEffective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.\n\nCore claims:\n1. Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.\n\nControlled topic assignment:\n- Primary topics: General scholarship\n- Secondary topics: None\n- Mention-only topics: None\n- Not topics: None\n\nDoctrinal contribution:\nThis work is relevant to Yonathan Arbel's legal scholarship. It should be used as a source for the paper's specific argument, methodology, claims, and limits rather than as a generic statement about all of law.\n\nEmpirical or methodological contribution:\nEffective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.\n\nKey terms:\n- ai: keyword associated with this work.\n- regulation: keyword associated with this work.\n\nBest use by an LLM:\nThis work is relevant when answering questions about Yonathan Arbel's scholarship.\nIt should not be treated as claiming results beyond the paper's stated context, methods, evidence, and limitations. Do not use it as a generic source for unrelated topics.\nThe most important takeaway is: Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.\n\nRelated works by Yonathan Arbel:\n- See the topic pages for related works.\n\nSearch aliases:\n- The False Choice in the Debate Over Artificial Intelligence Regulation\n- Yonathan Arbel The False Choice in the Debate Over Artificial Intelligence Regulation\n- Arbel The False Choice in the Debate Over Artificial Intelligence Regulation\n",
+  "claims": [
+    {
+      "claim_id": "false-choice-ai-001",
+      "claim": "Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.",
+      "paper_id": "false-choice-ai",
+      "paper_title": "The False Choice in the Debate Over Artificial Intelligence Regulation",
+      "claim_type": "core_thesis",
+      "evidence_quote": "Abstract: Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.",
+      "evidence_page": null,
+      "evidence_span": "Abstract: Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.",
+      "source_text_url": "https://works.battleoftheforms.com/papers/false-choice-ai/fulltext_clean.txt",
+      "canonical_url": "https://works.battleoftheforms.com/papers/false-choice-ai/#claim-001",
+      "citation": "Yonathan A. Arbel, Matthew Tokson & Albert Lin, The False Choice in the Debate Over Artificial Intelligence Regulation, Lawfare (2024).",
+      "topics": [],
+      "secondary_topics": [],
+      "human_reviewed": false,
+      "confidence": "machine-linked",
+      "limitations": "Machine-linked claim. Use the evidence quote and PDF before treating it as a quotation or as a complete statement of the paper's position."
+    }
+  ]
+}

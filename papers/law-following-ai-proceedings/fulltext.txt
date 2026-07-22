@@ -1,0 +1,10 @@
+Proceedings of the 2025 Workshop on Law-Following AI
+
+Canonical citation:
+Cullen O'Keefe et al., Proceedings of the 2025 Workshop on Law-Following AI, Lawfare Research Report 26-8 (2026).
+
+Abstract:
+A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.
+
+Source links:
+- https://www.lawfaremedia.org/article/proceedings-of-the-2025-workshop-on-law-following-ai-https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf
