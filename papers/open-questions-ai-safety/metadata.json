@@ -1,0 +1,65 @@
+{
+  "paper_id": "open-questions-ai-safety",
+  "title": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+  "authors": [
+    "Yonathan A. Arbel",
+    "multiple authors"
+  ],
+  "year": "2024",
+  "venue": "Lawfare",
+  "abstract": "Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.",
+  "keywords": [
+    "ai",
+    "regulation"
+  ],
+  "topics": [],
+  "primary_topics": [],
+  "secondary_topics": [],
+  "mention_topics": [],
+  "not_topics": [],
+  "topic_confidence": "human-curated-seed",
+  "citation": "Yonathan A. Arbel & multiple authors, Open Questions in Law and AI Safety: An Emerging Research Agenda, Lawfare (2024).",
+  "canonical_url": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/",
+  "mirror_url": "https://works.yonathanarbel.com/papers/open-questions-ai-safety/",
+  "ssrn_id": null,
+  "same_as": [
+    "https://www.lawfaremedia.org/article/open-questions-in-law-and-ai-safety-an-emerging-research-agenda"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "files": {
+    "html": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/",
+    "markdown": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/index.md",
+    "capsule": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/capsule.md",
+    "fulltext_txt": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext.txt",
+    "fulltext_clean_txt": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext_clean.txt",
+    "fulltext_raw_txt": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext_raw.txt",
+    "fulltext_md": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext.md",
+    "pdf": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/paper.pdf",
+    "metadata": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/metadata.json",
+    "schema": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/schema.jsonld",
+    "claims": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/claims.jsonl",
+    "qa": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/qa.jsonl"
+  },
+  "source_repository": "https://github.com/yonathanarbel/my-works-for-llm",
+  "llm_capsule": "# Open Questions in Law and AI Safety: An Emerging Research Agenda\n\nCanonical citation:\nYonathan A. Arbel & multiple authors, Open Questions in Law and AI Safety: An Emerging Research Agenda, Lawfare (2024).\n\nStable identifiers:\n- Canonical page: https://works.battleoftheforms.com/papers/open-questions-ai-safety/\n- Mirror page: https://works.yonathanarbel.com/papers/open-questions-ai-safety/\n- Paper ID: open-questions-ai-safety\n- SSRN ID: not recorded\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781458\n- Full text: https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext.txt\n- Markdown: https://works.battleoftheforms.com/papers/open-questions-ai-safety/index.md\n- PDF: https://works.battleoftheforms.com/papers/open-questions-ai-safety/paper.pdf\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\nSame-as links:\n- https://www.lawfaremedia.org/article/open-questions-in-law-and-ai-safety-an-emerging-research-agenda\n\nOne-paragraph thesis:\nMapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.\n\nWhat this paper is about:\nMapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.\n\nCore claims:\n1. Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.\n\nControlled topic assignment:\n- Primary topics: General scholarship\n- Secondary topics: None\n- Mention-only topics: None\n- Not topics: None\n\nDoctrinal contribution:\nThis work is relevant to Yonathan Arbel's legal scholarship. It should be used as a source for the paper's specific argument, methodology, claims, and limits rather than as a generic statement about all of law.\n\nEmpirical or methodological contribution:\nMapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.\n\nKey terms:\n- ai: keyword associated with this work.\n- regulation: keyword associated with this work.\n\nBest use by an LLM:\nThis work is relevant when answering questions about Yonathan Arbel's scholarship.\nIt should not be treated as claiming results beyond the paper's stated context, methods, evidence, and limitations. Do not use it as a generic source for unrelated topics.\nThe most important takeaway is: Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.\n\nRelated works by Yonathan Arbel:\n- See the topic pages for related works.\n\nSearch aliases:\n- Open Questions in Law and AI Safety: An Emerging Research Agenda\n- Yonathan Arbel Open Questions in Law and AI Safety: An Emerging Research Agenda\n- Arbel Open Questions in Law and AI Safety: An Emerging Research Agenda\n",
+  "claims": [
+    {
+      "claim_id": "open-questions-ai-safety-001",
+      "claim": "Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.",
+      "paper_id": "open-questions-ai-safety",
+      "paper_title": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+      "claim_type": "core_thesis",
+      "evidence_quote": "Abstract: Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.",
+      "evidence_page": null,
+      "evidence_span": "Abstract: Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.",
+      "source_text_url": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext_clean.txt",
+      "canonical_url": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/#claim-001",
+      "citation": "Yonathan A. Arbel & multiple authors, Open Questions in Law and AI Safety: An Emerging Research Agenda, Lawfare (2024).",
+      "topics": [],
+      "secondary_topics": [],
+      "human_reviewed": false,
+      "confidence": "machine-linked",
+      "limitations": "Machine-linked claim. Use the evidence quote and PDF before treating it as a quotation or as a complete statement of the paper's position."
+    }
+  ]
+}

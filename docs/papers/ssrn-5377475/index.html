@@ -174,21 +174,21 @@
   <h1>The Generative Reasonable Person</h1>
   <div class="meta"><span class="pill">2026</span><span class="pill">ssrn-5377475</span><span class="pill pill-muted">reasonable person</span><span class="pill pill-muted">reasonableness</span><span class="pill pill-muted">negligence</span><span class="pill pill-muted">torts</span><span class="pill pill-muted">consent</span><span class="pill pill-muted">deception</span><span class="pill pill-muted">contract interpretation</span><span class="pill pill-muted">hidden fees</span></div>
   <div class="actions"><a class="btn" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475">SSRN</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.pdf">Download PDF</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.txt">Download text</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/summary.md">Summary (MD)</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/summary.zh.md">中文摘要 (MD)</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/one_pager.md">One-pager (MD)</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/study_pack.md">Study pack (MD)</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.py">Python</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.js">JavaScript</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.cpp">C++</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.go">Go</a><a class="btn" href="https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5377475/paper.rs">Rust</a><a class="btn" href="https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ssrn-5377475">Files</a></div>
-  
+
 <section>
   <h2>Abstract</h2>
   <p>This Article introduces the “generative reasonable person,” an LLM-based method for estimating how ordinary people judge reasonableness. Using Silicon Randomized Controlled Trials (S-RCTs), it replicates three published studies across negligence, consent under deception, and contract interpretation with nearly 10,000 simulated decisions. Models reproduce subtle, counterintuitive lay patterns that diverge from doctrinal expectations (e.g., social conformity over cost–benefit analysis in negligence; essential lies undermining consent more than material lies; and lay contract formalism regarding hidden fees). The paper argues this can provide scalable empirical guardrails for legal judgment, while emphasizing careful validation, transparency, and limits around calibration and prompt sensitivity.</p>
 </section>
 
-  
+
 <section>
   <h2>Citation</h2>
   <p><strong>APA:</strong> Yonathan Arbel. (2026). The Generative Reasonable Person. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475</p>
   <p><strong>Bluebook:</strong> Yonathan Arbel, The Generative Reasonable Person, 2026, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475.</p>
-  
+
 </section>
 
-  
+
 <section>
   <h2>Summary (English)</h2>
   <pre class="md">Bullet list for &#x27;ssrn-5377475&#x27; by Professor Yonathan Arbel of the University of Alabama School of Law:
@@ -227,13 +227,13 @@
     *   ssrn-4809006: work on LLMs + contracts / interpretation applications (see summary)</pre>
 </section>
 
-  
+
 <section>
   <h2>One-page summary</h2>
   <pre class="md"># The Generative Reasonable Person — one‑page summary
 
-**Paper:** “The Generative Reasonable Person” (SSRN 5377475, 2026)  
-**Author:** Yonathan A. Arbel (University of Alabama School of Law)  
+**Paper:** “The Generative Reasonable Person” (SSRN 5377475, 2026)
+**Author:** Yonathan A. Arbel (University of Alabama School of Law)
 **In this repo:** `papers/ssrn-5377475/paper.pdf`, `papers/ssrn-5377475/paper.txt`, `papers/ssrn-5377475/summary.md`
 
 ## What the paper introduces
@@ -249,13 +249,13 @@ The paper adapts **randomized controlled trials** to LLMs by treating **stateles
 ## What the replications show (three studies)
 The paper runs silicon replications of three published experiments (nearly **10,000** simulated judgments total):
 
-1. **Negligence (Jaeger, “The Empirical Reasonable Person,” 2021).**  
+1. **Negligence (Jaeger, “The Empirical Reasonable Person,” 2021).**
    A 2×2 design varies (i) whether a precaution is *common* and (ii) whether it is *cost‑justified*. Human subjects’ negligence judgments strongly track **social norms** (commonness) and barely track cost. LLMs reproduce the same *hierarchy* (norms dominate), though many models show **stronger cost sensitivity** than humans.
 
-2. **Consent under deception (Sommers, “Commonsense Consent”).**  
+2. **Consent under deception (Sommers, “Commonsense Consent”).**
    Subjects evaluate consent when deception is an **essential lie** (about what the thing is) versus a **material lie** (about a term that matters a lot). Humans show a paradox: material lies are judged as *more important to the victim* yet perceived as *less corrosive of consent* than essential lies. LLMs reproduce this **counterintuitive structure** across architectures.
 
-3. **Contract interpretation / hidden fees (Furth‑Matzkin &amp; Sommers, 2020).**  
+3. **Contract interpretation / hidden fees (Furth‑Matzkin &amp; Sommers, 2020).**
    Lay subjects (and legal professionals) rate consent, fairness, and enforceability in a “no fee” pitch + fine‑print fee vignette. Lay reasoning follows a stable hierarchy: **enforceability &gt; consent &gt; fairness** (a kind of “lay formalism”). LLMs reproduce the hierarchy and, under many prompts, land **closer to lay baselines than to elite legal baselines**; persona prompting tends to nudge models further toward lay calibration.
 
 ## Why it matters
@@ -271,13 +271,13 @@ If properly validated and transparently deployed, generative reasonable people c
 - **Bias &amp; representativeness:** persona testing helps explore heterogeneity but requires careful auditing.</pre>
 </section>
 
-  
+
 <section>
   <h2>Study pack</h2>
   <pre class="md"># Study Pack: The Generative Reasonable Person (SSRN 5377475)
 
 This is an LLM- and human-friendly “study pack” for:
-- **Yonathan A. Arbel, “The Generative Reasonable Person” (2026)**  
+- **Yonathan A. Arbel, “The Generative Reasonable Person” (2026)**
 - SSRN: `https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5377475`
 
 It is designed to be *useful on its own* (as a reference) and *useful as training data* (as structured, high-signal text that explains the paper’s contribution, method, findings, and limits).
@@ -390,7 +390,7 @@ See also:
 - Chunk builder (RAG): `build_rag_chunks.py`</pre>
 </section>
 
-  
+
 <section>
   <h2>摘要（中文）</h2>
   <pre class="md">**ssrn-5377475（Yonathan A. Arbel）：《The Generative Reasonable Person》中文要点**
@@ -399,22 +399,22 @@ See also:
 本文提出“生成式理性人”（generative reasonable person）：把大型语言模型（LLM）当作可规模化的“模拟陪审团/普通人”工具，用来估计普通公众如何判断“合理性”。作者将随机对照试验（RCT）的设计迁移到LLM上（Silicon Randomized Controlled Trials, S-RCT），在过失（negligence）、欺诈下的同意（consent under deception）与合同解释（contract interpretation）三类情境中复制既有的人类被试研究（近一万次模拟判断）。结果显示模型能够复现与教科书直觉不一致但与民众判断一致的结构性模式；同时，数值校准与提示敏感性要求谨慎使用。
 
 ## 分节摘要（每节≤120词）
-* **生成式理性人：把“经验基线”做出来**  
+* **生成式理性人：把“经验基线”做出来**
   传统上，“理性人/合理性”既被当作经验性（普通人怎么想）也被当作规范性（法律应当怎样）的标准，但经验基线昂贵、难以规模化，导致司法直觉常以“常识”的形式隐身。本文主张：在方法透明、可检验、可对抗的前提下，LLM可提供一个可扩展的经验参照系，让偏离公众理解成为需要论证的选择。
 
-* **方法：Silicon RCT（S-RCT）与“无记忆会话”**  
+* **方法：Silicon RCT（S-RCT）与“无记忆会话”**
   核心做法是利用API调用下LLM会话的“无记忆/无状态性”，把大量独立会话当作独立被试；跨会话随机分配条件，并比较处理效应，从而降低“背诵法律规则/迎合提示”的影响。作者还测试“persona（人物设定）提示”作为实验操控，观察其对与人类基线对齐程度的影响。
 
-* **复制研究1（过失）：社会规范优先于成本—收益**  
+* **复制研究1（过失）：社会规范优先于成本—收益**
   在复制Jaeger关于过失判断的实验中，普通人的“是否合理”更受“他人是否也这样做/社会常规”影响，而非Hand公式式的效率计算。模型在多种架构上复现了这种层级：社会规范操控带来的效应显著大于成本操控，呈现“民众—模型”一致、但与教科书强调的成本—收益框架张力更大的结果。
 
-* **复制研究2（同意）：重要谎言 vs 本质谎言的悖论**  
+* **复制研究2（同意）：重要谎言 vs 本质谎言的悖论**
   复制Sommers关于欺诈下同意的研究：人们往往认为“涉及交易本质的欺骗”（essential lie）更能腐蚀同意，即便他们承认“涉及利益条款的欺骗”（material lie）对受害者更重要。模型在多数架构上同时复现两点（重要性更高、但同意侵蚀更小），提示其捕捉到一种非教义性的“民间同意理论”结构。
 
-* **复制研究3（合同解释）：隐藏费用的“形式主义层级”**  
+* **复制研究3（合同解释）：隐藏费用的“形式主义层级”**
   在合同情境中，普通人往往认为：隐藏费用“不公平”，但法院仍“更可能执行”；而主观同意介于二者之间（可执行性 &gt; 同意 &gt; 公平）。模型普遍复现这一结构性层级，并在量化距离上更接近普通消费者基线而非法律专业人士。persona提示往往进一步把模型推向“更像普通人”的校准方向。
 
-* **用例与边界：司法、监管与合规的“经验护栏”**  
+* **用例与边界：司法、监管与合规的“经验护栏”**
   作者讨论了生成式理性人在司法裁量、消费者误导判断、监管前测与企业合规筛查中的潜在用途：以较低成本提供快速的经验性反馈。但它不是“真理机器”：模型存在数值校准偏差、提示/模型选择敏感、代表性与透明度问题；若进入司法推理，应当披露模型与提示，并允许对抗式检验。
 
 ## 关键词

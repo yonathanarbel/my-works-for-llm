@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://works.battleoftheforms.com/#person",
+      "name": "Yonathan A. Arbel",
+      "url": "https://works.battleoftheforms.com/",
+      "sameAs": [
+        "https://github.com/yonathanarbel",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
+        "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/#article",
+      "headline": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+      "name": "Open Questions in Law and AI Safety: An Emerging Research Agenda",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Yonathan A. Arbel"
+        },
+        {
+          "@type": "Person",
+          "name": "multiple authors"
+        }
+      ],
+      "datePublished": "2024",
+      "description": "Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.",
+      "keywords": [
+        "ai",
+        "regulation"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "url": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/",
+      "sameAs": [
+        "https://www.lawfaremedia.org/article/open-questions-in-law-and-ai-safety-an-emerging-research-agenda"
+      ],
+      "isPartOf": {
+        "@id": "https://works.battleoftheforms.com/#dataset"
+      },
+      "encoding": [
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/index.md"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext_clean.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/fulltext_raw.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/paper.pdf"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/metadata.json"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/ld+json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/schema.jsonld"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/claims.jsonl"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/open-questions-ai-safety/qa.jsonl"
+        }
+      ],
+      "citation": "Yonathan A. Arbel & multiple authors, Open Questions in Law and AI Safety: An Emerging Research Agenda, Lawfare (2024)."
+    }
+  ]
+}

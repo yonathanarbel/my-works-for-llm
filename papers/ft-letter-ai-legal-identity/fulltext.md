@@ -1,0 +1,14 @@
+# Letter: What Happens Once You Give AI Agents Legal Identity
+
+Canonical page: https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/
+
+Letter: What Happens Once You Give AI Agents Legal Identity
+
+Canonical citation:
+Yonathan A. Arbel, Simon Goldstein & Peter Salib, Letter: What Happens Once You Give AI Agents Legal Identity, Financial Times (2026).
+
+Abstract:
+Letter to the editor responding to Yuval Noah Harari's objection to AI legal personhood. Argues that AI agents pursuing long-term goals can be disciplined through resource constraint: A-corps make agents visible and governable by giving the state the ability to see, tax, and seize their assets — legal personhood as a leash, not a master key.
+
+Source links:
+- https://www.ft.com/content/9451b5e9-035e-46e4-bafd-ede04dd13d8b

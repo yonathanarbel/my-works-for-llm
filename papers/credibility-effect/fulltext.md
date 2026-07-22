@@ -1,0 +1,14 @@
+# The Credibility Effect: Defamation Law and Audiences
+
+Canonical page: https://works.battleoftheforms.com/papers/credibility-effect/
+
+The Credibility Effect: Defamation Law and Audiences
+
+Canonical citation:
+Yonathan A. Arbel, The Credibility Effect: Defamation Law and Audiences, Journal of Legal Studies (2023).
+
+Abstract:
+Analyzing how audience perception and credibility interact with defamation law's doctrinal framework.
+
+Source links:
+- https://chicagounbound.uchicago.edu/jls/vol52/iss2/5/

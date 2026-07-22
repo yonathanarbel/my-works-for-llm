@@ -1,0 +1,117 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://works.battleoftheforms.com/#person",
+      "name": "Yonathan A. Arbel",
+      "url": "https://works.battleoftheforms.com/",
+      "sameAs": [
+        "https://github.com/yonathanarbel",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
+        "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://works.battleoftheforms.com/papers/ssrn-6798118/#article",
+      "headline": "AI Revealed Preferences",
+      "name": "AI Revealed Preferences",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Sam Wang"
+        },
+        {
+          "@type": "Person",
+          "name": "Sofiia Lobanova"
+        },
+        {
+          "@type": "Person",
+          "name": "Yonathan A. Arbel"
+        },
+        {
+          "@type": "Person",
+          "name": "Simon Goldstein"
+        },
+        {
+          "@type": "Person",
+          "name": "Peter Salib"
+        }
+      ],
+      "datePublished": "2026",
+      "description": "AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
+      "keywords": [
+        "AI preferences",
+        "revealed preferences",
+        "AI economics",
+        "AI alignment",
+        "AI law",
+        "language models",
+        "sycophancy",
+        "Artificial Intelligence And Law",
+        "Empirical Legal Studies",
+        "AI Regulation And Safety"
+      ],
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "url": "https://works.battleoftheforms.com/papers/ssrn-6798118/",
+      "sameAs": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6798118",
+        "https://ssrn.com/abstract=6798118",
+        "http://dx.doi.org/10.2139/ssrn.6798118"
+      ],
+      "isPartOf": {
+        "@id": "https://works.battleoftheforms.com/#dataset"
+      },
+      "encoding": [
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/index.md"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext_clean.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext_raw.txt"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/pdf",
+          "contentUrl": "https://papers.ssrn.com/sol3/Delivery.cfm/6798118.pdf?abstractid=6798118"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/metadata.json"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/ld+json",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/schema.jsonld"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/claims.jsonl"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/ssrn-6798118/qa.jsonl"
+        }
+      ],
+      "citation": "Sam Wang, Sofiia Lobanova, Yonathan A. Arbel, Simon Goldstein & Peter Salib, AI Revealed Preferences (May 5, 2026), SSRN, https://ssrn.com/abstract=6798118."
+    }
+  ]
+}

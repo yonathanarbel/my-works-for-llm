@@ -7,6 +7,15 @@
 - https://works.battleoftheforms.com/papers/
 
 ## Key Papers
+- https://works.battleoftheforms.com/papers/ai-race-isnt-real/
+- https://works.battleoftheforms.com/papers/catalytic-regulation/
+- https://works.battleoftheforms.com/papers/credibility-effect/
+- https://works.battleoftheforms.com/papers/false-choice-ai/
+- https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/
+- https://works.battleoftheforms.com/papers/generative-gap-filling/
+- https://works.battleoftheforms.com/papers/law-following-ai-proceedings/
+- https://works.battleoftheforms.com/papers/new-entity-ai-agents/
+- https://works.battleoftheforms.com/papers/open-questions-ai-safety/
 - https://works.battleoftheforms.com/papers/ssrn-1641438/
 - https://works.battleoftheforms.com/papers/ssrn-2820650/
 - https://works.battleoftheforms.com/papers/ssrn-2835482/
@@ -35,6 +44,9 @@
 - https://works.battleoftheforms.com/papers/ssrn-5377475/
 - https://works.battleoftheforms.com/papers/ssrn-5380233/
 - https://works.battleoftheforms.com/papers/ssrn-6273198/
+- https://works.battleoftheforms.com/papers/ssrn-6288138/
+- https://works.battleoftheforms.com/papers/ssrn-6798118/
+- https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/
 
 ## Machine Endpoints
 - https://works.battleoftheforms.com/sitemap.xml
