@@ -118,7 +118,7 @@ def _read_text(path: Path) -> str:
 
 
 def _write_text(path: Path, text: str) -> None:
-    path.write_text(text, encoding="utf-8", newline="\n")
+    path.write_text(text, encoding="utf-8")
 
 
 def _normalize_doi(doi: str) -> str:
@@ -164,7 +164,7 @@ def update_dataset_jsonld(path: Path, doi: str) -> bool:
     out = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     if out == src:
         return False
-    path.write_text(out, encoding="utf-8", newline="\n")
+    path.write_text(out, encoding="utf-8")
     return True
 
 
@@ -187,7 +187,7 @@ def update_zenodo_json(path: Path, doi: str) -> bool:
     if description2 != description:
         data["description"] = description2
         out = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
-        path.write_text(out, encoding="utf-8", newline="\n")
+        path.write_text(out, encoding="utf-8")
         return True
     return False
 

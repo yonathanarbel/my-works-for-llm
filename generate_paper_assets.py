@@ -35,7 +35,7 @@ def _read_json(path: Path) -> dict[str, Any]:
 
 
 def _write_text(path: Path, text: str) -> None:
-    path.write_text(text, encoding="utf-8", newline="\n")
+    path.write_text(text, encoding="utf-8")
 
 
 def _first_nonempty_line(text: str) -> str | None:

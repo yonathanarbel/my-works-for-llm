@@ -14,11 +14,11 @@
       "value": "5380233"
     }
   ],
-  "url": "https://yonathanarbel.github.io/my-works-for-llm/papers/ssrn-5380233/",
+  "url": "https://works.battleoftheforms.com/papers/ssrn-5380233/",
   "isPartOf": {
     "@type": "Dataset",
     "name": "my-works-for-llm",
-    "url": "https://github.com/yonathanarbel/my-works-for-llm",
+    "url": "https://works.battleoftheforms.com/",
     "identifier": {
       "@type": "PropertyValue",
       "propertyID": "DOI",

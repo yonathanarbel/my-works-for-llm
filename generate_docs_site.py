@@ -25,6 +25,7 @@ from urllib.parse import urlparse
 
 
 DEFAULT_BASE_URL = "https://yonathanarbel.github.io/my-works-for-llm/"
+DEFAULT_CANONICAL_BASE_URL = "https://works.battleoftheforms.com/"
 RAW_BASE = "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/"
 REPO_BASE = "https://github.com/yonathanarbel/my-works-for-llm"
 DATASET_DOI = "10.5281/zenodo.18781458"
@@ -366,7 +367,7 @@ def _render_layout(
 """
 
 
-def _render_index(base_url: str, papers: list[PaperInfo]) -> str:
+def _render_index(base_url: str, canonical_base_url: str, papers: list[PaperInfo]) -> str:
     site_path = _site_path(base_url)
     rows: list[str] = []
     for p in papers:
@@ -403,7 +404,7 @@ def _render_index(base_url: str, papers: list[PaperInfo]) -> str:
 </section>
 """
 
-    canonical = base_url.rstrip("/") + "/"
+    canonical = canonical_base_url.rstrip("/") + "/"
     return _render_layout(
         title="my-works-for-llm — Yonathan Arbel corpus",
         description="Machine-readable corpus of Professor Yonathan Arbel’s scholarship for LLM research (summaries + full text + metadata).",
@@ -414,7 +415,7 @@ def _render_index(base_url: str, papers: list[PaperInfo]) -> str:
     )
 
 
-def _render_papers_index(base_url: str, papers: list[PaperInfo]) -> str:
+def _render_papers_index(base_url: str, canonical_base_url: str, papers: list[PaperInfo]) -> str:
     site_path = _site_path(base_url)
     items: list[str] = []
     for p in papers:
@@ -436,7 +437,7 @@ def _render_papers_index(base_url: str, papers: list[PaperInfo]) -> str:
 </section>
 """
 
-    canonical = base_url.rstrip("/") + "/papers/"
+    canonical = canonical_base_url.rstrip("/") + "/papers/"
     return _render_layout(
         title="my-works-for-llm — papers",
         description="Index of all paper pages in the my-works-for-llm corpus.",
@@ -447,9 +448,10 @@ def _render_papers_index(base_url: str, papers: list[PaperInfo]) -> str:
     )
 
 
-def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
+def _render_paper_page(base_url: str, canonical_base_url: str, paper: PaperInfo) -> str:
     site_path = _site_path(base_url)
     urls = _paper_urls(base_url, paper.paper_id)
+    canonical_urls = _paper_urls(canonical_base_url, paper.paper_id)
 
     abstract_text = paper.abstract
     if not abstract_text and paper.summary_md:
@@ -577,10 +579,11 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
 """
 
     extra_head = scholarly_json
+    title_suffix = "Yonathan Arbel" + (f" ({paper.year})" if paper.year else "")
     return _render_layout(
-        title=f"{paper.title} — {paper.paper_id}",
+        title=f"{paper.title} — {title_suffix}",
         description=description,
-        canonical_url=urls["page"],
+        canonical_url=canonical_urls["page"],
         site_path=site_path,
         body_html=body,
         extra_head=extra_head,
@@ -589,7 +592,7 @@ def _render_paper_page(base_url: str, paper: PaperInfo) -> str:
 
 def _write(path: Path, content: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(content, encoding="utf-8", newline="\n")
+    path.write_text(content, encoding="utf-8")
 
 
 def _write_llm_descriptors(out_dir: Path, base_url: str, papers: list[PaperInfo]) -> None:
@@ -858,12 +861,18 @@ Sitemap: {base_url}sitemap.xml
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate GitHub Pages site under docs/.")
-    parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="Base URL for the published site.")
+    parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="Base URL for the GitHub Pages mirror.")
+    parser.add_argument(
+        "--canonical-base-url",
+        default=DEFAULT_CANONICAL_BASE_URL,
+        help="Canonical corpus URL used in metadata, feeds, sitemaps, and crawler descriptors.",
+    )
     parser.add_argument("--papers-dir", default="papers", help="Papers directory (default: papers).")
     parser.add_argument("--out-dir", default="docs", help="Output directory (default: docs).")
     args = parser.parse_args()
 
     base_url = args.base_url.rstrip("/") + "/"
+    canonical_base_url = args.canonical_base_url.rstrip("/") + "/"
     papers_dir = Path(args.papers_dir)
     out_dir = Path(args.out_dir)
 
@@ -878,19 +887,19 @@ def main() -> int:
     # Static assets
     _write_style(out_dir / "assets" / "style.css")
     _write(out_dir / ".nojekyll", "")
-    _write_llm_descriptors(out_dir, base_url, papers)
+    _write_llm_descriptors(out_dir, canonical_base_url, papers)
     _write_full_corpus_dump(out_dir / "llms-full.txt", papers, papers_dir)
 
     # Pages
-    _write(out_dir / "index.html", _render_index(base_url, papers))
-    _write(out_dir / "papers" / "index.html", _render_papers_index(base_url, papers))
+    _write(out_dir / "index.html", _render_index(base_url, canonical_base_url, papers))
+    _write(out_dir / "papers" / "index.html", _render_papers_index(base_url, canonical_base_url, papers))
     for paper in papers:
-        _write(out_dir / "papers" / paper.paper_id / "index.html", _render_paper_page(base_url, paper))
+        _write(out_dir / "papers" / paper.paper_id / "index.html", _render_paper_page(base_url, canonical_base_url, paper))
 
     # Feed + sitemap + robots
-    _write_atom(out_dir / "atom.xml", base_url, papers)
-    _write_pages_sitemap(out_dir / "sitemap.xml", base_url, papers)
-    _write_robots(out_dir / "robots.txt", base_url)
+    _write_atom(out_dir / "atom.xml", canonical_base_url, papers)
+    _write_pages_sitemap(out_dir / "sitemap.xml", canonical_base_url, papers)
+    _write_robots(out_dir / "robots.txt", canonical_base_url)
 
     return 0
 

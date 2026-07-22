@@ -101,7 +101,7 @@ def main() -> int:
         raise SystemExit(f"Papers directory not found: {papers_dir}")
 
     xml = build_sitemap_xml(args.base_url, papers_dir)
-    Path(args.out).write_text(xml, encoding="utf-8", newline="\n")
+    Path(args.out).write_text(xml, encoding="utf-8")
     return 0
 
 

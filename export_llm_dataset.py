@@ -193,7 +193,7 @@ def _write_combined_markdown(path: Path, records: Sequence[ExportRecord]) -> Non
             lines.append("")
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main(argv: Sequence[str] | None = None) -> int:

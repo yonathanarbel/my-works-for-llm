@@ -17,7 +17,7 @@ from typing import Any
 
 RAW_DEFAULT = "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/"
 REPO_DEFAULT = "https://github.com/yonathanarbel/my-works-for-llm"
-PAGES_DEFAULT = "https://yonathanarbel.github.io/my-works-for-llm/"
+PAGES_DEFAULT = "https://works.battleoftheforms.com/"
 
 
 def _read_text(path: Path) -> str:
@@ -313,9 +313,9 @@ def main() -> int:
     parser.add_argument("--papers-dir", default="papers", help="Papers directory (default: papers).")
     parser.add_argument("--raw-base", default=RAW_DEFAULT, help="Raw content base URL.")
     parser.add_argument("--repo-url", default=REPO_DEFAULT, help="Repository URL.")
-    parser.add_argument("--pages-base", default=PAGES_DEFAULT, help="GitHub Pages base URL (set empty to disable).")
+    parser.add_argument("--pages-base", default=PAGES_DEFAULT, help="Canonical paper-page base URL (set empty to disable).")
     parser.add_argument("--dataset-name", default="my-works-for-llm", help="Dataset name for isPartOf.")
-    parser.add_argument("--dataset-url", default=REPO_DEFAULT, help="Dataset URL for isPartOf.")
+    parser.add_argument("--dataset-url", default=PAGES_DEFAULT, help="Canonical dataset URL for isPartOf.")
     parser.add_argument(
         "--dataset-doi",
         default="",
@@ -348,7 +348,7 @@ def main() -> int:
             dataset_doi=dataset_doi,
         )
         out_path = paper_dir / "scholarlyarticle.jsonld"
-        out_path.write_text(json.dumps(schema, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+        out_path.write_text(json.dumps(schema, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     return 0
 
