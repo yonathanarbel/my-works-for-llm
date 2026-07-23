@@ -5,11 +5,15 @@
       "@type": "Person",
       "@id": "https://works.battleoftheforms.com/#person",
       "name": "Yonathan A. Arbel",
-      "url": "https://works.battleoftheforms.com/",
+      "url": "https://yonathanarbel.com/",
       "sameAs": [
+        "https://yonathanarbel.com/",
+        "https://works.battleoftheforms.com/",
         "https://github.com/yonathanarbel",
-        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
-        "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+        "https://orcid.org/0000-0003-0770-613X",
+        "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1060160",
+        "https://scholar.google.com/citations?user=8QlkRNMAAAAJ",
+        "https://www.wikidata.org/wiki/Q140679377"
       ]
     },
     {
@@ -47,7 +51,10 @@
       "sameAs": [
         "https://yonathanarbel.com/downloads/Generative-Gap-Filling.pdf",
         "https://works.battleoftheforms.com/papers/generative-gap-filling/",
-        "https://github.com/yonathanarbel/my-works-for-llm"
+        "https://github.com/yonathanarbel/my-works-for-llm",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7153418",
+        "https://osf.io/5bqda/",
+        "https://www.wikidata.org/wiki/Q140679419"
       ],
       "isPartOf": {
         "@id": "https://works.battleoftheforms.com/#dataset"

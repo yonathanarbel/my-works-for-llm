@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/thinking-unthinkable-ai-justice/
 - Paper ID: thinking-unthinkable-ai-justice
 - SSRN ID: not recorded
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/index.md
 - PDF: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/paper.pdf

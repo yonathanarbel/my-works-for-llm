@@ -274,8 +274,14 @@ def generate_for_paper(
 
     schema["identifier"] = [x for x in schema["identifier"] if x is not None]
 
+    same_as: list[str] = []
     if ssrn_url:
-        schema["sameAs"] = [ssrn_url]
+        same_as.append(ssrn_url)
+    metadata_same_as = metadata.get("same_as")
+    if isinstance(metadata_same_as, list):
+        same_as.extend(item for item in metadata_same_as if isinstance(item, str) and item.strip())
+    if same_as:
+        schema["sameAs"] = list(dict.fromkeys(same_as))
 
     year = metadata.get("year")
     if isinstance(year, int):

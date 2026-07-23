@@ -1,8 +1,8 @@
 # my-works-for-llm: Full Corpus Dump
 
-Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 License: CC0-1.0
-Generated (UTC): 2026-07-22T15:04:48Z
+Generated (UTC): 2026-07-23T21:06:01Z
 
 This file concatenates corpus content into a single ingestible artifact.
 

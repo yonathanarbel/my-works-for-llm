@@ -1,0 +1,94 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Generative Gap Filling",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "generative-gap-filling"
+    }
+  ],
+  "url": "https://works.battleoftheforms.com/papers/generative-gap-filling/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://works.battleoftheforms.com/",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781457"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781457"
+    ]
+  },
+  "sameAs": [
+    "https://yonathanarbel.com/downloads/Generative-Gap-Filling.pdf",
+    "https://works.battleoftheforms.com/papers/generative-gap-filling/",
+    "https://github.com/yonathanarbel/my-works-for-llm",
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7153418",
+    "https://osf.io/5bqda/",
+    "https://www.wikidata.org/wiki/Q140679419"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan A. Arbel"
+    },
+    {
+      "@type": "Person",
+      "name": "David A. Hoffman"
+    }
+  ],
+  "abstract": "Tests whether an apparent contractual gap really marks the point where a document has run out of meaning. The study removes negotiated terms from real contracts and asks lay readers, law students, practicing lawyers, and six frontier language models to reconstruct them. Lay readers were correct 55% of the time, lawyers nearly 60%, and the models 88.3%; the models also recovered masked clauses in 87% of 119 additional unseen commercial agreements. The paper argues that hypothetical bargains are often statistically legible, while proposing adversarial safeguards and Choice of Model clauses for legal use.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "contract law",
+    "contract interpretation",
+    "gap filling",
+    "large language models",
+    "legal AI",
+    "masked language modeling",
+    "empirical legal studies",
+    "hypothetical bargain",
+    "Choice of Model clauses",
+    "commercial contracts"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/generative-gap-filling/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/generative-gap-filling/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/generative-gap-filling/paper.pdf",
+      "encodingFormat": "application/pdf",
+      "name": "papers/generative-gap-filling/paper.pdf"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/generative-gap-filling"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "The AI Race Isn’t Real",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "ai-race-isnt-real"
+    }
+  ],
+  "url": "https://works.battleoftheforms.com/papers/ai-race-isnt-real/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://works.battleoftheforms.com/",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781457"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781457"
+    ]
+  },
+  "sameAs": [
+    "https://www.lawfaremedia.org/article/the-ai-race-isn-t-real"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan A. Arbel"
+    },
+    {
+      "@type": "Person",
+      "name": "Matthew Tokson"
+    }
+  ],
+  "abstract": "Argues that the AI race frame is descriptively flawed and normatively dangerous: AI competition has no finish line, knowledge diffusion weakens durable first-mover advantages, and race dynamics can erode safety, destabilize deterrence, and narrow the set of available policy tools.",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "keywords": [
+    "ai",
+    "regulation"
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/ai-race-isnt-real"
+  }
+}

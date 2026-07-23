@@ -7,7 +7,7 @@
   "identifier": {
     "@type": "PropertyValue",
     "propertyID": "DOI",
-    "value": "10.5281/zenodo.18781458"
+    "value": "10.5281/zenodo.18781457"
   },
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "creator": {
@@ -19,9 +19,13 @@
       "name": "University of Alabama School of Law"
     },
     "sameAs": [
+      "https://yonathanarbel.com/",
+      "https://works.battleoftheforms.com/",
       "https://github.com/yonathanarbel",
-      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1207152",
-      "https://scholar.google.com/citations?user=4N9ss8YAAAAJ"
+      "https://orcid.org/0000-0003-0770-613X",
+      "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1060160",
+      "https://scholar.google.com/citations?user=8QlkRNMAAAAJ",
+      "https://www.wikidata.org/wiki/Q140679377"
     ]
   },
   "keywords": [
@@ -33,7 +37,8 @@
     "specific performance"
   ],
   "sameAs": [
-    "https://doi.org/10.5281/zenodo.18781458",
+    "https://doi.org/10.5281/zenodo.18781457",
+    "https://zenodo.org/records/21496395",
     "https://github.com/yonathanarbel/my-works-for-llm",
     "https://huggingface.co/datasets/yonathanarbel/my-works-for-llm",
     "https://yonathanarbel.github.io/my-works-for-llm/"

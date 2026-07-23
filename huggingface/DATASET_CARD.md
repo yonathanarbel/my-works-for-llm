@@ -31,7 +31,7 @@ question answering, evaluation, and LLM research.
 
 Canonical site: https://works.battleoftheforms.com/
 
-DOI: https://doi.org/10.5281/zenodo.18781458
+DOI: https://doi.org/10.5281/zenodo.18781457
 
 Source: https://github.com/yonathanarbel/my-works-for-llm
 
@@ -98,9 +98,9 @@ See the repository license and per-paper metadata (papers are dedicated under `C
 See `CITATION.cff` in the GitHub repo, or cite the Zenodo record directly:
 
 ```bibtex
-@misc{https://doi.org/10.5281/zenodo.18781458,
-  doi = {10.5281/ZENODO.18781458},
-  url = {https://zenodo.org/doi/10.5281/zenodo.18781458},
+@misc{https://doi.org/10.5281/zenodo.18781457,
+  doi = {10.5281/ZENODO.18781457},
+  url = {https://zenodo.org/doi/10.5281/zenodo.18781457},
   author = {Arbel, Yonathan A.},
   keywords = {contracts, artificial intelligence, legal scholarship, empirical legal studies, consumer protection},
   title = {my-works-for-llm: Machine-readable corpus of Yonathan Arbel's scholarship},

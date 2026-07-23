@@ -28,7 +28,7 @@ DEFAULT_BASE_URL = "https://yonathanarbel.github.io/my-works-for-llm/"
 DEFAULT_CANONICAL_BASE_URL = "https://works.battleoftheforms.com/"
 RAW_BASE = "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/"
 REPO_BASE = "https://github.com/yonathanarbel/my-works-for-llm"
-DATASET_DOI = "10.5281/zenodo.18781458"
+DATASET_DOI = "10.5281/zenodo.18781457"
 DATASET_DOI_URL = f"https://doi.org/{DATASET_DOI}"
 DATASET_DOI_BADGE = f"https://zenodo.org/badge/DOI/{DATASET_DOI}.svg"
 

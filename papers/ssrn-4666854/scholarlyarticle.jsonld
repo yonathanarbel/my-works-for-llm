@@ -22,14 +22,15 @@
     "identifier": {
       "@type": "PropertyValue",
       "propertyID": "DOI",
-      "value": "10.5281/zenodo.18781458"
+      "value": "10.5281/zenodo.18781457"
     },
     "sameAs": [
-      "https://doi.org/10.5281/zenodo.18781458"
+      "https://doi.org/10.5281/zenodo.18781457"
     ]
   },
   "sameAs": [
-    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666854"
+    "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666854",
+    "https://www.wikidata.org/wiki/Q140679404"
   ],
   "datePublished": "2024",
   "author": [
