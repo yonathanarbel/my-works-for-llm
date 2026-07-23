@@ -20,7 +20,7 @@ def require(condition: bool, message: str) -> None:
 def main() -> int:
     dataset = json.loads((ROOT / "dataset.jsonld").read_text(encoding="utf-8"))
     require(dataset.get("url") == CANONICAL_BASE, "dataset.jsonld must use the canonical corpus URL")
-    require(dataset.get("identifier", {}).get("value") == "10.5281/zenodo.18781458", "dataset DOI is missing")
+    require(dataset.get("identifier", {}).get("value") == "10.5281/zenodo.18781457", "dataset DOI is missing")
     require(len(dataset.get("distribution", [])) >= 3, "dataset distributions are incomplete")
 
     card = (ROOT / "huggingface" / "DATASET_CARD.md").read_text(encoding="utf-8")

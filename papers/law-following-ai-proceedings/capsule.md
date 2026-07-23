@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/law-following-ai-proceedings/
 - Paper ID: law-following-ai-proceedings
 - SSRN ID: not recorded
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/law-following-ai-proceedings/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/law-following-ai-proceedings/index.md
 - PDF: https://s3.documentcloud.org/documents/28104532/proceedings-of-the-2025-workshop-on-law-following-ai-1.pdf

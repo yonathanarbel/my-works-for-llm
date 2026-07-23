@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/credibility-effect/
 - Paper ID: credibility-effect
 - SSRN ID: not recorded
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/credibility-effect/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/credibility-effect/index.md
 - PDF: https://works.battleoftheforms.com/papers/credibility-effect/paper.pdf

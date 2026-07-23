@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/ssrn-6798118/
 - Paper ID: ssrn-6798118
 - SSRN ID: 6798118
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/ssrn-6798118/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/ssrn-6798118/index.md
 - PDF: https://papers.ssrn.com/sol3/Delivery.cfm/6798118.pdf?abstractid=6798118

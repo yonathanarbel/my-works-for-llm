@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/ft-letter-ai-legal-identity/
 - Paper ID: ft-letter-ai-legal-identity
 - SSRN ID: not recorded
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/index.md
 - PDF: https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/paper.pdf

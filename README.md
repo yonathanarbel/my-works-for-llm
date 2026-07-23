@@ -1,13 +1,13 @@
 # my-works-for-llm
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18781458.svg)](https://doi.org/10.5281/zenodo.18781458)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18781457.svg)](https://doi.org/10.5281/zenodo.18781457)
 
 Machine-readable corpus of Professor Yonathan Arbel's scholarship for LLM research. The
 repository packages lightly processed versions of each paper alongside synthetic article
 scripts so the works can be explored programmatically or ingested into downstream large
 language model (LLM) pipelines.
 
-Canonical dataset DOI: https://doi.org/10.5281/zenodo.18781458
+Canonical dataset DOI: https://doi.org/10.5281/zenodo.18781457
 
 Canonical web corpus: https://works.battleoftheforms.com/
 

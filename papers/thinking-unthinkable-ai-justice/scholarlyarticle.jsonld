@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": "Thinking the Unthinkable: AI in the Service of Justice",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "propertyID": "paper_id",
+      "value": "thinking-unthinkable-ai-justice"
+    }
+  ],
+  "url": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "my-works-for-llm",
+    "url": "https://works.battleoftheforms.com/",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "DOI",
+      "value": "10.5281/zenodo.18781457"
+    },
+    "sameAs": [
+      "https://doi.org/10.5281/zenodo.18781457"
+    ]
+  },
+  "sameAs": [
+    "https://stories.ua.edu/thinking-the-unthinkable-ai-in-the-service-of-justice/index.html"
+  ],
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yonathan A. Arbel"
+    }
+  ],
+  "abstract": "Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "keywords": [
+    "ai"
+  ],
+  "mainEntityOfPage": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/yonathanarbel/my-works-for-llm/tree/main/papers/thinking-unthinkable-ai-justice"
+  }
+}

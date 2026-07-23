@@ -4,91 +4,91 @@
   <id>https://works.battleoftheforms.com/</id>
   <link href="https://works.battleoftheforms.com/" />
   <link href="https://works.battleoftheforms.com/atom.xml" rel="self" />
-  <updated>2026-07-22T15:04:45Z</updated>
+  <updated>2026-07-22T15:06:56Z</updated>
   <author><name>Yonathan A. Arbel</name></author>
   <entry>
-    <title>Thinking the Unthinkable: AI in the Service of Justice</title>
-    <id>https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/</id>
-    <link href="https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/" />
-    <updated>2026-07-22T15:04:45Z</updated>
-    <summary>Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit&#x27;s Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.</summary>
-  </entry>
-  <entry>
-    <title>AI Revealed Preferences</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-6798118/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-6798118/" />
-    <updated>2026-07-22T15:04:45Z</updated>
-    <summary>AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.</summary>
-  </entry>
-  <entry>
-    <title>Artificial Intelligence and Existential Risk</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-6288138/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-6288138/" />
-    <updated>2026-07-22T15:04:45Z</updated>
-    <summary>Artificial Intelligence and Existential Risk brings existential AI risk into mainstream legal scholarship. It classifies existential AI risks into human-directed risks, accident risks, and loss-of-control risks, argues that legal institutions should make these risks legible under uncertainty, critiques the AI arms-race metaphor, and proposes adaptive regulation that preserves policy optionality w…</summary>
-  </entry>
-  <entry>
-    <title>Open Questions in Law and AI Safety: An Emerging Research Agenda</title>
-    <id>https://works.battleoftheforms.com/papers/open-questions-ai-safety/</id>
-    <link href="https://works.battleoftheforms.com/papers/open-questions-ai-safety/" />
-    <updated>2026-07-22T15:04:45Z</updated>
-    <summary>Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.</summary>
-  </entry>
-  <entry>
-    <title>Why Law Needs a New Entity to Govern AI Agents</title>
-    <id>https://works.battleoftheforms.com/papers/new-entity-ai-agents/</id>
-    <link href="https://works.battleoftheforms.com/papers/new-entity-ai-agents/" />
-    <updated>2026-07-22T15:04:44Z</updated>
-    <summary>Proposes a new corporate form, the A-corp (algorithmic corporation), to solve the identification bottleneck for AI agents: humans own, AIs run; builds on the resource constraint thesis and emergent corporate governance to give law leverage over autonomous AI swarms.</summary>
-  </entry>
-  <entry>
-    <title>Proceedings of the 2025 Workshop on Law-Following AI</title>
-    <id>https://works.battleoftheforms.com/papers/law-following-ai-proceedings/</id>
-    <link href="https://works.battleoftheforms.com/papers/law-following-ai-proceedings/" />
-    <updated>2026-07-22T15:04:44Z</updated>
-    <summary>A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.</summary>
-  </entry>
-  <entry>
-    <title>Generative Gap Filling</title>
-    <id>https://works.battleoftheforms.com/papers/generative-gap-filling/</id>
-    <link href="https://works.battleoftheforms.com/papers/generative-gap-filling/" />
-    <updated>2026-07-22T15:04:44Z</updated>
-    <summary>Tests whether an apparent contractual gap really marks the point where a document has run out of meaning. The study removes negotiated terms from real contracts and asks lay readers, law students, practicing lawyers, and six frontier language models to reconstruct them. Lay readers were correct 55% of the time, lawyers nearly 60%, and the models 88.3%; the models also recovered masked clauses in…</summary>
-  </entry>
-  <entry>
-    <title>Letter: What Happens Once You Give AI Agents Legal Identity</title>
-    <id>https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/</id>
-    <link href="https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/" />
-    <updated>2026-07-22T15:04:44Z</updated>
-    <summary>Letter to the editor responding to Yuval Noah Harari&#x27;s objection to AI legal personhood. Argues that AI agents pursuing long-term goals can be disciplined through resource constraint: A-corps make agents visible and governable by giving the state the ability to see, tax, and seize their assets — legal personhood as a leash, not a master key.</summary>
-  </entry>
-  <entry>
-    <title>The False Choice in the Debate Over Artificial Intelligence Regulation</title>
-    <id>https://works.battleoftheforms.com/papers/false-choice-ai/</id>
-    <link href="https://works.battleoftheforms.com/papers/false-choice-ai/" />
-    <updated>2026-07-22T15:04:44Z</updated>
-    <summary>Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.</summary>
-  </entry>
-  <entry>
-    <title>The Credibility Effect: Defamation Law and Audiences</title>
-    <id>https://works.battleoftheforms.com/papers/credibility-effect/</id>
-    <link href="https://works.battleoftheforms.com/papers/credibility-effect/" />
-    <updated>2026-07-22T15:04:43Z</updated>
-    <summary>Analyzing how audience perception and credibility interact with defamation law&#x27;s doctrinal framework.</summary>
+    <title>The AI Race Isn’t Real</title>
+    <id>https://works.battleoftheforms.com/papers/ai-race-isnt-real/</id>
+    <link href="https://works.battleoftheforms.com/papers/ai-race-isnt-real/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Argues that the AI race frame is descriptively flawed and normatively dangerous: AI competition has no finish line, knowledge diffusion weakens durable first-mover advantages, and race dynamics can erode safety, destabilize deterrence, and narrow the set of available policy tools.</summary>
   </entry>
   <entry>
     <title>Catalytic Regulation: Incentivizing Safety During a Regulatory Drought</title>
     <id>https://works.battleoftheforms.com/papers/catalytic-regulation/</id>
     <link href="https://works.battleoftheforms.com/papers/catalytic-regulation/" />
-    <updated>2026-07-22T15:04:43Z</updated>
+    <updated>2026-07-22T15:06:56Z</updated>
     <summary>Catalytic regulation argues for using positive incentives such as tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage during a period when stronger regulation is politically out of reach.</summary>
   </entry>
   <entry>
-    <title>The AI Race Isn’t Real</title>
-    <id>https://works.battleoftheforms.com/papers/ai-race-isnt-real/</id>
-    <link href="https://works.battleoftheforms.com/papers/ai-race-isnt-real/" />
-    <updated>2026-07-22T15:04:43Z</updated>
-    <summary>Argues that the AI race frame is descriptively flawed and normatively dangerous: AI competition has no finish line, knowledge diffusion weakens durable first-mover advantages, and race dynamics can erode safety, destabilize deterrence, and narrow the set of available policy tools.</summary>
+    <title>The Credibility Effect: Defamation Law and Audiences</title>
+    <id>https://works.battleoftheforms.com/papers/credibility-effect/</id>
+    <link href="https://works.battleoftheforms.com/papers/credibility-effect/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Analyzing how audience perception and credibility interact with defamation law&#x27;s doctrinal framework.</summary>
+  </entry>
+  <entry>
+    <title>The False Choice in the Debate Over Artificial Intelligence Regulation</title>
+    <id>https://works.battleoftheforms.com/papers/false-choice-ai/</id>
+    <link href="https://works.battleoftheforms.com/papers/false-choice-ai/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.</summary>
+  </entry>
+  <entry>
+    <title>Letter: What Happens Once You Give AI Agents Legal Identity</title>
+    <id>https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/</id>
+    <link href="https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Letter to the editor responding to Yuval Noah Harari&#x27;s objection to AI legal personhood. Argues that AI agents pursuing long-term goals can be disciplined through resource constraint: A-corps make agents visible and governable by giving the state the ability to see, tax, and seize their assets — legal personhood as a leash, not a master key.</summary>
+  </entry>
+  <entry>
+    <title>Generative Gap Filling</title>
+    <id>https://works.battleoftheforms.com/papers/generative-gap-filling/</id>
+    <link href="https://works.battleoftheforms.com/papers/generative-gap-filling/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Tests whether an apparent contractual gap really marks the point where a document has run out of meaning. The study removes negotiated terms from real contracts and asks lay readers, law students, practicing lawyers, and six frontier language models to reconstruct them. Lay readers were correct 55% of the time, lawyers nearly 60%, and the models 88.3%; the models also recovered masked clauses in…</summary>
+  </entry>
+  <entry>
+    <title>Proceedings of the 2025 Workshop on Law-Following AI</title>
+    <id>https://works.battleoftheforms.com/papers/law-following-ai-proceedings/</id>
+    <link href="https://works.battleoftheforms.com/papers/law-following-ai-proceedings/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.</summary>
+  </entry>
+  <entry>
+    <title>Why Law Needs a New Entity to Govern AI Agents</title>
+    <id>https://works.battleoftheforms.com/papers/new-entity-ai-agents/</id>
+    <link href="https://works.battleoftheforms.com/papers/new-entity-ai-agents/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Proposes a new corporate form, the A-corp (algorithmic corporation), to solve the identification bottleneck for AI agents: humans own, AIs run; builds on the resource constraint thesis and emergent corporate governance to give law leverage over autonomous AI swarms.</summary>
+  </entry>
+  <entry>
+    <title>Open Questions in Law and AI Safety: An Emerging Research Agenda</title>
+    <id>https://works.battleoftheforms.com/papers/open-questions-ai-safety/</id>
+    <link href="https://works.battleoftheforms.com/papers/open-questions-ai-safety/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.</summary>
+  </entry>
+  <entry>
+    <title>Artificial Intelligence and Existential Risk</title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-6288138/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-6288138/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Artificial Intelligence and Existential Risk brings existential AI risk into mainstream legal scholarship. It classifies existential AI risks into human-directed risks, accident risks, and loss-of-control risks, argues that legal institutions should make these risks legible under uncertainty, critiques the AI arms-race metaphor, and proposes adaptive regulation that preserves policy optionality w…</summary>
+  </entry>
+  <entry>
+    <title>AI Revealed Preferences</title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-6798118/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-6798118/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.</summary>
+  </entry>
+  <entry>
+    <title>Thinking the Unthinkable: AI in the Service of Justice</title>
+    <id>https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/</id>
+    <link href="https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/" />
+    <updated>2026-07-22T15:06:56Z</updated>
+    <summary>Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit&#x27;s Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.</summary>
   </entry>
   <entry>
     <title>Governing Generative AI Beyond the Grave</title>

@@ -8,7 +8,7 @@ Stable identifiers:
 - Mirror page: https://works.yonathanarbel.com/papers/generative-gap-filling/
 - Paper ID: generative-gap-filling
 - SSRN ID: not recorded
-- Dataset DOI: https://doi.org/10.5281/zenodo.18781458
+- Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 - Full text: https://works.battleoftheforms.com/papers/generative-gap-filling/fulltext.txt
 - Markdown: https://works.battleoftheforms.com/papers/generative-gap-filling/index.md
 - PDF: https://works.battleoftheforms.com/papers/generative-gap-filling/paper.pdf
@@ -18,6 +18,9 @@ Same-as links:
 - https://yonathanarbel.com/downloads/Generative-Gap-Filling.pdf
 - https://works.battleoftheforms.com/papers/generative-gap-filling/
 - https://github.com/yonathanarbel/my-works-for-llm
+- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7153418
+- https://osf.io/5bqda/
+- https://www.wikidata.org/wiki/Q140679419
 
 One-paragraph thesis:
 Contract law assumes that a textual gap marks the point where interpretation ends and judicial supplementation begins. This paper tests that premise by removing negotiated terms from real contracts and asking lay readers, law students, practicing lawyers, and six frontier language models to reconstruct them. Lay readers were correct 55% of the time, lawyers nearly 60%, and the models 88.3%; on 119 additional unseen commercial contracts, the models recovered the masked clause 87% of the time. The results suggest that surrounding contract language often makes the hypothetical bargain statistically legible, while also identifying where model-based gap filling fails and how courts and parties might govern its use.
