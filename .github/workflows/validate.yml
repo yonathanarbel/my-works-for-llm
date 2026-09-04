@@ -36,6 +36,10 @@ jobs:
     - name: Validate discovery metadata
       run: |
         python validate_discovery.py
+
+    - name: Validate thick descriptions
+      run: |
+        python build_thick_descriptions.py --check
     
     - name: Display corpus statistics
       run: |
