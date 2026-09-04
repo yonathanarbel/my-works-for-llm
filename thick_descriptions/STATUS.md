@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **12 of 40**
-- Proposition records: **322**
-- Papers remaining: **28**
+- Papers with proposition descriptions: **13 of 40**
+- Proposition records: **378**
+- Papers remaining: **27**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -13,6 +13,7 @@ These records are produced one paper at a time from page-level source review. `m
 - [Shielding of Assets and Lending Contracts](../papers/ssrn-2820650/propositions.md) — 28 propositions
 - [Tort Reform through the Backdoor: A Critique of Law and Apologies](../papers/ssrn-2835482/propositions.md) — 38 propositions
 - [Adminization: Gatekeeping Consumer Contracts](../papers/ssrn-3015569/propositions.md) — 42 propositions
+- [Reputation Failure: The Limits of Market Discipline in Consumer Markets](../papers/ssrn-3239995/propositions.md) — 56 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
@@ -31,7 +32,6 @@ These records are produced one paper at a time from page-level source review. `m
 - `law-following-ai-proceedings`
 - `new-entity-ai-agents`
 - `open-questions-ai-safety`
-- `ssrn-3239995`
 - `ssrn-3272595`
 - `ssrn-3311527`
 - `ssrn-3452662`
