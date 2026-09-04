@@ -1,13 +1,14 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **2 of 40**
-- Proposition records: **24**
-- Papers remaining: **38**
+- Papers with proposition descriptions: **3 of 40**
+- Proposition records: **42**
+- Papers remaining: **37**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
 ## Completed papers
 
+- [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
 
@@ -35,7 +36,6 @@ These records are produced one paper at a time from page-level source review. `m
 - `ssrn-3547007`
 - `ssrn-3568768`
 - `ssrn-3681083`
-- `ssrn-3740356`
 - `ssrn-4021605`
 - `ssrn-4181890`
 - `ssrn-4204862`
