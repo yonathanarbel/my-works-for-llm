@@ -1,14 +1,15 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **1 of 40**
-- Proposition records: **12**
-- Papers remaining: **39**
+- Papers with proposition descriptions: **2 of 40**
+- Proposition records: **24**
+- Papers remaining: **38**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
 ## Completed papers
 
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
+- [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
 
 ## Remaining paper IDs
 
@@ -45,7 +46,6 @@ These records are produced one paper at a time from page-level source review. `m
 - `ssrn-4873649`
 - `ssrn-4962098`
 - `ssrn-5181207`
-- `ssrn-5377475`
 - `ssrn-5380233`
 - `ssrn-6273198`
 - `ssrn-6288138`
