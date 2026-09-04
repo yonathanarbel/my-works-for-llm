@@ -1,13 +1,14 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **15 of 40**
-- Proposition records: **438**
-- Papers remaining: **25**
+- Papers with proposition descriptions: **16 of 40**
+- Proposition records: **459**
+- Papers remaining: **24**
 
-These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
+These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
 ## Completed papers
 
+- [The AI Race Isn’t Real](../papers/ai-race-isnt-real/propositions.md) — 21 propositions
 - [Generative Gap Filling](../papers/generative-gap-filling/propositions.md) — 21 propositions
 - [Contract Remedies in Action: Specific Performance](../papers/ssrn-1641438/propositions.md) — 35 propositions
 - [Shielding of Assets and Lending Contracts](../papers/ssrn-2820650/propositions.md) — 28 propositions
@@ -26,7 +27,6 @@ These records are produced one paper at a time from page-level source review. `m
 
 ## Remaining paper IDs
 
-- `ai-race-isnt-real`
 - `catalytic-regulation`
 - `credibility-effect`
 - `false-choice-ai`

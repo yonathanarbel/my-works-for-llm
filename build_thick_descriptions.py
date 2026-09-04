@@ -44,6 +44,7 @@ REQUIRED_FIELDS = (
 )
 
 PAGE_RANGE_RE = re.compile(r"^\d+(?:-\d+)?$")
+UNPAGINATED = "unpaginated"
 
 
 class ValidationError(ValueError):
@@ -79,10 +80,20 @@ def validate_record(record: dict, path: Path, line_number: int) -> None:
         raise ValidationError(
             f"{where}: proposition_id must begin with {expected_paper_id}-p"
         )
-    if not PAGE_RANGE_RE.fullmatch(record["printed_pages"]):
-        raise ValidationError(f"{where}: printed_pages must be N or N-N")
-    if not PAGE_RANGE_RE.fullmatch(record["pdf_pages"]):
-        raise ValidationError(f"{where}: pdf_pages must be N or N-N")
+    printed_pages = record["printed_pages"]
+    pdf_pages = record["pdf_pages"]
+    if printed_pages == UNPAGINATED or pdf_pages == UNPAGINATED:
+        if printed_pages != UNPAGINATED or pdf_pages != UNPAGINATED:
+            raise ValidationError(
+                f"{where}: unpaginated sources must mark both page fields unpaginated"
+            )
+    else:
+        if not PAGE_RANGE_RE.fullmatch(printed_pages):
+            raise ValidationError(
+                f"{where}: printed_pages must be N, N-N, or unpaginated"
+            )
+        if not PAGE_RANGE_RE.fullmatch(pdf_pages):
+            raise ValidationError(f"{where}: pdf_pages must be N, N-N, or unpaginated")
 
     description = record["thick_description"]
     if not description.startswith(("Professor ", "Professors ")):
@@ -144,6 +155,15 @@ def aggregate_text(records: list[dict]) -> str:
 def paper_markdown(records: list[dict]) -> str:
     first = records[0]
     human_count = sum(record["human_reviewed"] for record in records)
+    if first["printed_pages"] == UNPAGINATED:
+        source_location_note = (
+            "This online-only work uses section-level unpaginated anchors."
+        )
+    else:
+        source_location_note = (
+            "Page references use the printed pagination and, separately, the 1-based PDF "
+            "page number."
+        )
     lines = [
         f"# Propositions from {first['paper_title']}",
         "",
@@ -153,20 +173,23 @@ def paper_markdown(records: list[dict]) -> str:
         "",
         (
             f"**Review status:** {len(records) - human_count} model-drafted, source-checked; "
-            f"{human_count} human-reviewed. Page references use the printed pagination and, "
-            "separately, the 1-based PDF page number."
+            f"{human_count} human-reviewed. {source_location_note}"
         ),
         "",
     ]
     for index, record in enumerate(records, 1):
+        if record["printed_pages"] == UNPAGINATED:
+            location = f"**Location:** {record['section']}, unpaginated online source"
+        else:
+            location = (
+                f"**Location:** {record['section']}, printed pp. {record['printed_pages']} "
+                f"(PDF pp. {record['pdf_pages']})"
+            )
         lines.extend(
             [
                 f"## {index}. {record['claim']}",
                 "",
-                (
-                    f"**Location:** {record['section']}, printed pp. {record['printed_pages']} "
-                    f"(PDF pp. {record['pdf_pages']})"
-                ),
+                location,
                 "",
                 record["thick_description"],
                 "",
@@ -197,9 +220,10 @@ def status_markdown(records: list[dict], all_papers: list[str]) -> str:
         f"- Proposition records: **{len(records)}**",
         f"- Papers remaining: **{len(remaining)}**",
         "",
-        "These records are produced one paper at a time from page-level source review. "
-        "`machine-drafted-source-checked` means the wording and page anchors were checked "
-        "against the source by an AI system but have not been approved by a human author or editor.",
+        "These records are produced one work at a time from page-level or section-level source "
+        "review. `machine-drafted-source-checked` means the wording and source anchors were "
+        "checked against the source by an AI system but have not been approved by a human author "
+        "or editor.",
         "",
         "## Completed papers",
         "",
