@@ -4,8 +4,15 @@
   <id>https://works.battleoftheforms.com/</id>
   <link href="https://works.battleoftheforms.com/" />
   <link href="https://works.battleoftheforms.com/atom.xml" rel="self" />
-  <updated>2026-07-23T21:09:19Z</updated>
+  <updated>2026-09-04T20:16:14Z</updated>
   <author><name>Yonathan A. Arbel</name></author>
+  <entry>
+    <title>Generative Interpretation</title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-4526219/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-4526219/" />
+    <updated>2026-09-04T20:16:14Z</updated>
+    <summary>Generative interpretation is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges.</summary>
+  </entry>
   <entry>
     <title>The AI Race Isn’t Real</title>
     <id>https://works.battleoftheforms.com/papers/ai-race-isnt-real/</id>
@@ -68,13 +75,6 @@
     <link href="https://works.battleoftheforms.com/papers/open-questions-ai-safety/" />
     <updated>2026-07-23T21:09:19Z</updated>
     <summary>Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.</summary>
-  </entry>
-  <entry>
-    <title>Generative Interpretation</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-4526219/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-4526219/" />
-    <updated>2026-07-23T21:09:19Z</updated>
-    <summary>Generative interpretation is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges.</summary>
   </entry>
   <entry>
     <title>Systemic Regulation of Artificial Intelligence</title>

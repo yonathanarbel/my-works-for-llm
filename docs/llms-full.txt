@@ -2,7 +2,7 @@
 
 Dataset DOI: https://doi.org/10.5281/zenodo.18781457
 License: corpus-authored metadata is CC-BY-4.0; article text and PDFs retain source-specific rights.
-Generated (UTC): 2026-09-04T20:15:38Z
+Generated (UTC): 2026-09-04T20:29:12Z
 
 This file concatenates corpus content into a single ingestible artifact.
 
