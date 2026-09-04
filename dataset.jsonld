@@ -9,7 +9,8 @@
     "propertyID": "DOI",
     "value": "10.5281/zenodo.18781457"
   },
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "usageInfo": "https://github.com/yonathanarbel/my-works-for-llm/blob/main/LICENSE",
   "creator": {
     "@type": "Person",
     "name": "Yonathan A. Arbel",

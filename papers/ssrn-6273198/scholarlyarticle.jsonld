@@ -59,7 +59,7 @@
     }
   ],
   "abstract": "The Article diagnoses the legal problem of identifying AI agents. It distinguishes thin identification, which ties every AI action to a human principal for accountability, from thick identification, which treats AI agents as persistent units with coherent goals. It proposes the Algorithmic Corporation, or A-corp, as a legal-fictional entity that can own property, contract, and litigate while being run by AIs and owned by humans.",
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
     "AI agents",
     "individuation",

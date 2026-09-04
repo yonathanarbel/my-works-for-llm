@@ -58,11 +58,16 @@ def _infer_dataset_doi(repo_root: Path) -> str | None:
 
 
 def _license_to_url(license_value: str | None) -> str | None:
+    in_copyright = "https://rightsstatements.org/page/InC/1.0/"
     if not license_value:
-        return None
+        return in_copyright
     mapping = {
-        "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+        # Historical corpus metadata over-applied CC0 to article files. Until a
+        # paper-specific rights review says otherwise, publish the conservative
+        # in-copyright statement instead.
+        "CC0-1.0": in_copyright,
+        "CC0 1.0": in_copyright,
+        "https://creativecommons.org/publicdomain/zero/1.0/": in_copyright,
     }
     return mapping.get(license_value, license_value)
 

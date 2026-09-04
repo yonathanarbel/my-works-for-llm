@@ -11,6 +11,17 @@ Canonical dataset DOI: https://doi.org/10.5281/zenodo.18781457
 
 Canonical web corpus: https://works.battleoftheforms.com/
 
+## Key terms and findings
+
+- [Generative interpretation](https://works.battleoftheforms.com/papers/ssrn-4526219/) is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges.
+- [Smart readers](https://works.battleoftheforms.com/papers/ssrn-3740356/) are AI tools that read consumer contracts for users; Arbel and Shmuel I. Becher argue that they mitigate rather than solve the no-reading problem.
+- [Nano contracts](https://works.battleoftheforms.com/papers/ssrn-4631897/) are very small-scale agreements that force private law to take contractual scale seriously.
+- An [A-corp, or algorithmic corporation](https://works.battleoftheforms.com/papers/ssrn-6273198/), is an entity proposed by Arbel, Peter Salib, and Simon Goldstein so AI agents can be identified, resourced, taxed, and sued without treating them as natural persons.
+- [Adminization](https://works.battleoftheforms.com/papers/ssrn-3015569/) is administrative gatekeeping, rather than only ex post litigation, used to police consumer contracts.
+- [The nudnik](https://works.battleoftheforms.com/papers/ssrn-3501175/) is the motivated complainant who supplies market discipline that ordinary disclosure and reputation do not.
+- [The generative reasonable person](https://works.battleoftheforms.com/papers/ssrn-5377475/) is an LLM-based method for estimating ordinary judgments of reasonableness and comparing them with published experiments.
+- [Catalytic regulation](https://works.battleoftheforms.com/papers/catalytic-regulation/) uses tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage when stronger regulation is politically unavailable.
+
 **📚 New to this repository?** Start with the [Quick Start Guide](QUICK_START.md) | [Usage Examples](USAGE_EXAMPLES.md) | [Jupyter Notebook](examples/explore_corpus.ipynb)
 
 ## Citation & discovery
@@ -254,8 +265,8 @@ python corpus_cli.py list --format json > papers.json
   passages.
 - **Metadata tagging.** Combine filenames, SSRN identifiers, and the metadata in
   `dataset.jsonld` to construct provenance-aware training examples.
-- **Augmentation.** Consider mixing the human-authored summaries with the full paper text
-  located in `papers/*/paper.txt` for multi-granularity corpora.
+- **Augmentation.** Treat generated summaries and unreviewed claim/Q&A records as staging
+  material, not author-approved scholarly propositions. Verify them against the paper text.
 - **Evaluation sets.** Reserve a subset of summaries (e.g., specific SSRN IDs) for
   evaluation when benchmarking retrieval or question-answering tasks.
 
@@ -274,7 +285,7 @@ Optional explicit target:
 python sync_hf_mirror.py --repo-id yonathanarbel/my-works-for-llm-github-mirror
 ```
 
-The mirror command also writes Hugging Face dataset card metadata (`license: cc0-1.0`) into the mirrored `README.md`.
+The mirror command writes Hugging Face dataset card metadata with `license: other` because article text and publisher PDFs retain source-specific rights.
 
 ## Contributing improvements
 
@@ -291,5 +302,4 @@ mirrors, backlinks, and the monthly measurement loop.
 
 ## Licensing
 
-The repository is distributed under CC0 1.0 Universal (public domain dedication).
-See `LICENSE` for details.
+Corpus-authored metadata, capsules, and reviewed claim/Q&A records are available under CC BY 4.0. Article text and PDFs retain their source- or publisher-specific rights; no blanket license is granted for them. See `LICENSE` for the scoped terms.

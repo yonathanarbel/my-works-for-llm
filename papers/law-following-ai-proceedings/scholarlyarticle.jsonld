@@ -38,7 +38,7 @@
     }
   ],
   "abstract": "A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.",
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
     "ai",
     "regulation"

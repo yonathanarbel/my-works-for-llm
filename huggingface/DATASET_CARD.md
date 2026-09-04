@@ -2,7 +2,7 @@
 language:
 - en
 - zh
-license: cc0-1.0
+license: other
 size_categories:
 - n<1K
 task_categories:
@@ -78,8 +78,9 @@ The single `train` split contains multiple representations of a paper. Use
 
 The corpus is small and author-specific, so it is not representative of legal
 scholarship as a whole. Verify quotations and legal propositions against the
-paper text and cited publication. Publisher-hosted versions may have terms that
-differ from the corpus-level CC0 dedication.
+paper text and cited publication. Article text and PDFs retain source- or
+publisher-specific rights; the corpus metadata license does not grant
+permission to reuse those works.
 
 ## How to build the dataset files
 
@@ -91,7 +92,9 @@ python export_llm_dataset.py --out-jsonl dist/arbel-corpus.jsonl
 
 ## License
 
-See the repository license and per-paper metadata (papers are dedicated under `CC0-1.0`).
+Corpus-authored metadata is CC BY 4.0. Article text and PDFs retain their
+source- or publisher-specific rights. See the repository `LICENSE` and the
+per-paper rights statements.
 
 ## Citation
 
@@ -106,6 +109,6 @@ See `CITATION.cff` in the GitHub repo, or cite the Zenodo record directly:
   title = {my-works-for-llm: Machine-readable corpus of Yonathan Arbel's scholarship},
   publisher = {Zenodo},
   year = {2026},
-  copyright = {Creative Commons Zero v1.0 Universal}
+  copyright = {Mixed rights; see per-file rights statements}
 }
 ```

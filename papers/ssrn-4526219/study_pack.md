@@ -1,4 +1,4 @@
-# Study pack: Public Law and Legal Theory Research Paper Series (ssrn-4526219)
+# Study pack: Generative Interpretation (ssrn-4526219)
 
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4526219
 - Full text: `papers/ssrn-4526219/paper.txt`
@@ -7,11 +7,11 @@
 
 ## Elevator pitch
 
-Professor Yonathan Arbel of the University of Alabama School of Law argues that Large Language Models (LLMs) introduce "Generative Interpretation," a paradigm shift in legal text analysis. This approach enables AI to parse contracts, identify ambiguities, and predict judicial outcomes, offering a potentially cheaper, more accurate, and accessible method than traditional textualism or contextualism. He posits that generative interpretation can resolve long-standing interpretive debates, enhance access to justice, and fundamentally re-equip legal theory for AI's role as an active interpretive agent in contract law.
+Generative interpretation is the use of large language models to estimate contractual meaning, ordinary meaning, ambiguity, and gaps. The article develops the method through worked examples and examines its risks and institutional implications; it does not test judicial accuracy at scale or claim that models should replace judges.
 
 ## Keywords / concepts
 
-contracts; AI; law
+generative interpretation; contract interpretation; large language models; ambiguity; gap filling; judicial decision making
 
 ## Suggested questions (for RAG / study)
 

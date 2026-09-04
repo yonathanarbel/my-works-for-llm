@@ -1,8 +1,8 @@
 # my-works-for-llm: Full Corpus Dump
 
 Dataset DOI: https://doi.org/10.5281/zenodo.18781457
-License: CC0-1.0
-Generated (UTC): 2026-07-23T21:06:01Z
+License: corpus-authored metadata is CC-BY-4.0; article text and PDFs retain source-specific rights.
+Generated (UTC): 2026-09-04T20:15:38Z
 
 This file concatenates corpus content into a single ingestible artifact.
 
@@ -7824,9 +7824,9 @@ Electronic copy available at: https://ssrn.com/abstract=2835482
 
 ---
 
-## ssrn-3015569: Arbel_Galley (Do Not Delete) 1/2/2018 4:17 PM
+## ssrn-3015569: Adminization: Gatekeeping Consumer Contracts
 Year: 2018
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel
 Source: papers/ssrn-3015569/paper.txt
 
 Arbel_Galley (Do Not Delete) 1/2/2018 4:17 PM
@@ -17742,9 +17742,9 @@ Electronic copy available at: https://ssrn.com/abstract=3452662
 
 ---
 
-## ssrn-3501175: 1_Arbel Shapira (Do Not Delete) 5/12/2020 5:51 PM
+## ssrn-3501175: Theory of the Nudnik: The Future of Consumer Activism and What We Can Do to Stop It
 Year: 2020
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel, Roy Shapira
 Source: papers/ssrn-3501175/paper.txt
 
 1_Arbel Shapira (Do Not Delete) 5/12/2020 5:51 PM
@@ -27550,9 +27550,9 @@ Electronic copy available at: https://ssrn.com/abstract=3681083
 
 ---
 
-## ssrn-3740356: \\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20
+## ssrn-3740356: Contracts in the Age of Smart Readers
 Year: 2022
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel, Shmuel I. Becher
 Source: papers/ssrn-3740356/paper.txt
 
 \\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20
@@ -38569,9 +38569,9 @@ Electronic copy available at: https://ssrn.com/abstract=4491043
 
 ---
 
-## ssrn-4526219: Public Law and Legal Theory Research Paper Series
+## ssrn-4526219: Generative Interpretation
 Year: 2023
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel, David A. Hoffman
 Source: papers/ssrn-4526219/paper.txt
 
 Public Law and Legal Theory Research Paper Series
@@ -40898,9 +40898,9 @@ sheets as deal motivators).
 
 ---
 
-## ssrn-4631897: NANO CONTRACTS 11/14/2023 2:12 AM
+## ssrn-4631897: On the Scales of Private Law: Nano Contracts
 Year: 2023
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel
 Source: papers/ssrn-4631897/paper.txt
 
 NANO CONTRACTS 11/14/2023 2:12 AM
@@ -51810,7 +51810,7 @@ FIN. 1234, 1234 (2020) (examining the impact of centralization and decentralizat
 
 ## ssrn-5377475: The Generative Reasonable Person
 Year: 2026
-Authors: Yonathan Arbel
+Authors: Yonathan A. Arbel
 Source: papers/ssrn-5377475/paper.txt
 
 The Generative Reasonable Person
@@ -54919,7 +54919,7 @@ By embedding adaptable default rules in our legal infrastructure now, we prepare
 
 ## ssrn-6273198: How to Count AIs: Individuation and Liability for AI Agents
 Year: 2026
-Authors: Yonathan Arbel, Simon Goldstein, Peter N. Salib
+Authors: Yonathan A. Arbel, Peter Salib, Simon Goldstein
 Source: papers/ssrn-6273198/paper.txt
 
 --- Page 1 ---

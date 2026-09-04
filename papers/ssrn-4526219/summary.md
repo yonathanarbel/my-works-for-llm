@@ -1,7 +1,7 @@
-Here's the requested information for 'ssrn-4526219' by Professor Yonathan Arbel:
+Here's the requested information for 'ssrn-4526219' by Yonathan A. Arbel and David A. Hoffman:
 
 1.  ## TL;DR ≤100 words
-    Professor Yonathan Arbel of the University of Alabama School of Law argues that Large Language Models (LLMs) introduce "Generative Interpretation," a paradigm shift in legal text analysis. This approach enables AI to parse contracts, identify ambiguities, and predict judicial outcomes, offering a potentially cheaper, more accurate, and accessible method than traditional textualism or contextualism. He posits that generative interpretation can resolve long-standing interpretive debates, enhance access to justice, and fundamentally re-equip legal theory for AI's role as an active interpretive agent in contract law.
+    Generative interpretation is the use of large language models to estimate contractual meaning, ordinary meaning, ambiguity, and gaps. The article develops the method through worked examples and examines its risks and institutional implications; it does not test judicial accuracy at scale or claim that models should replace judges.
 
 2.  ## Section Summaries ≤120 words each
     *   Professor Yonathan Arbel of the University of Alabama School of Law writes that Large Language Models (LLMs) can now interpret legal texts, a capability he terms "Generative Interpretation." This signifies a paradigm shift where AI becomes an active interpretive agent, a development for which current legal theory is unprepared. He introduces generative interpretation as a new approach using LLMs to estimate contractual meaning, ascertain ordinary meaning, quantify ambiguity, and fill gaps. This method aims to offer courts a cheaper, more accurate way to discern parties' intentions, potentially resolving the textualist-contextualist stalemate and providing a more accessible and transparent tool for contract analysis.

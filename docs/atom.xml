@@ -4,90 +4,111 @@
   <id>https://works.battleoftheforms.com/</id>
   <link href="https://works.battleoftheforms.com/" />
   <link href="https://works.battleoftheforms.com/atom.xml" rel="self" />
-  <updated>2026-07-22T15:06:56Z</updated>
+  <updated>2026-07-23T21:09:19Z</updated>
   <author><name>Yonathan A. Arbel</name></author>
   <entry>
     <title>The AI Race Isn’t Real</title>
     <id>https://works.battleoftheforms.com/papers/ai-race-isnt-real/</id>
     <link href="https://works.battleoftheforms.com/papers/ai-race-isnt-real/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Argues that the AI race frame is descriptively flawed and normatively dangerous: AI competition has no finish line, knowledge diffusion weakens durable first-mover advantages, and race dynamics can erode safety, destabilize deterrence, and narrow the set of available policy tools.</summary>
   </entry>
   <entry>
     <title>Catalytic Regulation: Incentivizing Safety During a Regulatory Drought</title>
     <id>https://works.battleoftheforms.com/papers/catalytic-regulation/</id>
     <link href="https://works.battleoftheforms.com/papers/catalytic-regulation/" />
-    <updated>2026-07-22T15:06:56Z</updated>
-    <summary>Catalytic regulation argues for using positive incentives such as tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage during a period when stronger regulation is politically out of reach.</summary>
+    <updated>2026-07-23T21:09:19Z</updated>
+    <summary>Catalytic regulation uses tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage when stronger regulation is politically unavailable.</summary>
   </entry>
   <entry>
     <title>The Credibility Effect: Defamation Law and Audiences</title>
     <id>https://works.battleoftheforms.com/papers/credibility-effect/</id>
     <link href="https://works.battleoftheforms.com/papers/credibility-effect/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Analyzing how audience perception and credibility interact with defamation law&#x27;s doctrinal framework.</summary>
   </entry>
   <entry>
     <title>The False Choice in the Debate Over Artificial Intelligence Regulation</title>
     <id>https://works.battleoftheforms.com/papers/false-choice-ai/</id>
     <link href="https://works.battleoftheforms.com/papers/false-choice-ai/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Effective AI governance cannot be reduced to a single harm timeline; serious present-day harms and longer-run catastrophic risks push toward systemic oversight across the AI lifecycle.</summary>
   </entry>
   <entry>
     <title>Letter: What Happens Once You Give AI Agents Legal Identity</title>
     <id>https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/</id>
     <link href="https://works.battleoftheforms.com/papers/ft-letter-ai-legal-identity/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Letter to the editor responding to Yuval Noah Harari&#x27;s objection to AI legal personhood. Argues that AI agents pursuing long-term goals can be disciplined through resource constraint: A-corps make agents visible and governable by giving the state the ability to see, tax, and seize their assets — legal personhood as a leash, not a master key.</summary>
   </entry>
   <entry>
     <title>Generative Gap Filling</title>
     <id>https://works.battleoftheforms.com/papers/generative-gap-filling/</id>
     <link href="https://works.battleoftheforms.com/papers/generative-gap-filling/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Tests whether an apparent contractual gap really marks the point where a document has run out of meaning. The study removes negotiated terms from real contracts and asks lay readers, law students, practicing lawyers, and six frontier language models to reconstruct them. Lay readers were correct 55% of the time, lawyers nearly 60%, and the models 88.3%; the models also recovered masked clauses in…</summary>
   </entry>
   <entry>
     <title>Proceedings of the 2025 Workshop on Law-Following AI</title>
     <id>https://works.battleoftheforms.com/papers/law-following-ai-proceedings/</id>
     <link href="https://works.battleoftheforms.com/papers/law-following-ai-proceedings/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>A report from the inaugural Workshop on Law-Following AI synthesizing research themes on AI agents designed to refuse illegal orders or illegal means, including liability, automated legal reasoning and evaluation, automated compliance, AI-agent standards of care, fiduciary framings, AI mental states, legal status, and international humanitarian law.</summary>
   </entry>
   <entry>
     <title>Why Law Needs a New Entity to Govern AI Agents</title>
     <id>https://works.battleoftheforms.com/papers/new-entity-ai-agents/</id>
     <link href="https://works.battleoftheforms.com/papers/new-entity-ai-agents/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Proposes a new corporate form, the A-corp (algorithmic corporation), to solve the identification bottleneck for AI agents: humans own, AIs run; builds on the resource constraint thesis and emergent corporate governance to give law leverage over autonomous AI swarms.</summary>
   </entry>
   <entry>
     <title>Open Questions in Law and AI Safety: An Emerging Research Agenda</title>
     <id>https://works.battleoftheforms.com/papers/open-questions-ai-safety/</id>
     <link href="https://works.battleoftheforms.com/papers/open-questions-ai-safety/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Mapping the open questions at the intersection of law and AI safety, from governance design to institutional responses to advanced AI systems.</summary>
+  </entry>
+  <entry>
+    <title>Generative Interpretation</title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-4526219/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-4526219/" />
+    <updated>2026-07-23T21:09:19Z</updated>
+    <summary>Generative interpretation is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges.</summary>
+  </entry>
+  <entry>
+    <title>Systemic Regulation of Artificial Intelligence</title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-4666854/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-4666854/" />
+    <updated>2026-07-23T21:09:19Z</updated>
+    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that AI presents comprehensive, society-wide risks, from current harms like bias to potential existential threats, primarily due to the critical AI alignment problem. He advocates for systemic, precautionary regulation targeting AI as a technology, not just its applications. This approach is necessary due to AI&#x27;s unique ch…</summary>
+  </entry>
+  <entry>
+    <title></title>
+    <id>https://works.battleoftheforms.com/papers/ssrn-4962098/</id>
+    <link href="https://works.battleoftheforms.com/papers/ssrn-4962098/" />
+    <updated>2026-07-23T21:09:19Z</updated>
+    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that his large-scale big data analysis empirically demonstrates modern contracts are overwhelmingly unreadable, often requiring college-level comprehension. This pervasive incomprehensibility fundamentally challenges contract law&#x27;s core assumptions about informed consent and the &quot;meeting of minds,&quot; as most individuals cann…</summary>
   </entry>
   <entry>
     <title>Artificial Intelligence and Existential Risk</title>
     <id>https://works.battleoftheforms.com/papers/ssrn-6288138/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-6288138/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Artificial Intelligence and Existential Risk brings existential AI risk into mainstream legal scholarship. It classifies existential AI risks into human-directed risks, accident risks, and loss-of-control risks, argues that legal institutions should make these risks legible under uncertainty, critiques the AI arms-race metaphor, and proposes adaptive regulation that preserves policy optionality w…</summary>
   </entry>
   <entry>
     <title>AI Revealed Preferences</title>
     <id>https://works.battleoftheforms.com/papers/ssrn-6798118/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-6798118/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.</summary>
   </entry>
   <entry>
     <title>Thinking the Unthinkable: AI in the Service of Justice</title>
     <id>https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/</id>
     <link href="https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/" />
-    <updated>2026-07-22T15:06:56Z</updated>
+    <updated>2026-07-23T21:09:19Z</updated>
     <summary>Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit&#x27;s Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.</summary>
   </entry>
   <entry>
@@ -102,7 +123,7 @@
     <id>https://works.battleoftheforms.com/papers/ssrn-6273198/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-6273198/" />
     <updated>2026-05-01T20:17:05Z</updated>
-    <summary>The Article diagnoses the legal problem of identifying AI agents. It distinguishes thin identification, which ties every AI action to a human principal for accountability, from thick identification, which treats AI agents as persistent units with coherent goals. It proposes the Algorithmic Corporation, or A-corp, as a legal-fictional entity that can own property, contract, and litigate while bein…</summary>
+    <summary>An A-corp, or algorithmic corporation, is an entity proposed by Arbel, Peter Salib, and Simon Goldstein so AI agents can be identified, resourced, taxed, and sued without treating them as natural persons.</summary>
   </entry>
   <entry>
     <title>CONTRACT REMEDIES IN ACTION: SPECIFIC PERFORMANCE</title>
@@ -126,11 +147,11 @@
     <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that commercial interests and tort reformers are using apology laws—which make apologies inadmissible in court—as a potent new tool to advance their agenda. By skillfully co-opting the positive language of apologies, they&#x27;ve effectively garnered widespread support from legislators and even traditional opponents of tort ref…</summary>
   </entry>
   <entry>
-    <title>Arbel_Galley (Do Not Delete) 1/2/2018 4:17 PM</title>
+    <title>Adminization: Gatekeeping Consumer Contracts</title>
     <id>https://works.battleoftheforms.com/papers/ssrn-3015569/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-3015569/" />
     <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that the current consumer debt litigation system is failing due to prevalent unmeritorious claims and consumer inability to defend themselves. He proposes &quot;Adminization,&quot; where an administrative agency acts as a cost-effective gatekeeper, using sampling and AI to audit lawsuits and levy large fines against those filing bas…</summary>
+    <summary>Adminization is administrative gatekeeping, rather than only ex post litigation, used to police consumer contracts.</summary>
   </entry>
   <entry>
     <title>W03_ARBEL_GRAPHICS_REVISED.DOCX (DO NOT DELETE) 1/30/20 11:10 AM</title>
@@ -161,11 +182,11 @@
     <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that information regulation often overlooks how audiences adjust their beliefs and actions based on the strictness of laws governing statement veracity. His research aims to address this &quot;audience gap&quot; by using a Bayesian game to model interactions between speakers, targets, and audiences, particularly examining how legal…</summary>
   </entry>
   <entry>
-    <title>1_Arbel Shapira (Do Not Delete) 5/12/2020 5:51 PM</title>
+    <title>Theory of the Nudnik: The Future of Consumer Activism and What We Can Do to Stop It</title>
     <id>https://works.battleoftheforms.com/papers/ssrn-3501175/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-3501175/" />
     <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that a small group of hyper-persistent consumers, dubbed &quot;nudniks,&quot; play a crucial role in market discipline by actively challenging seller misconduct, benefiting all consumers. However, sellers increasingly use big data to identify and neutralize these nudniks, undermining accountability. Arbel calls for legal strategies…</summary>
+    <summary>The nudnik is the motivated complainant who supplies market discipline that ordinary disclosure and reputation do not.</summary>
   </entry>
   <entry>
     <title>ALL-CAPS</title>
@@ -189,31 +210,10 @@
     <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that &quot;contract creep&quot; represents the subtle, gradual extension of contractual terms into previously non-contractual spheres of social life, such as casual online interactions and the use of everyday products. He contends that this phenomenon, often propelled by boilerplate language and digital agreements, reconfigures soci…</summary>
   </entry>
   <entry>
-    <title>\\jciprod01\productn\G\GWN\90-1\GWN102.txt unknown Seq: 1 17-FEB-22 12:20</title>
+    <title>Contracts in the Age of Smart Readers</title>
     <id>https://works.battleoftheforms.com/papers/ssrn-3740356/</id>
     <link href="https://works.battleoftheforms.com/papers/ssrn-3740356/" />
     <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that AI-powered &quot;smart readers&quot; represent a significant breakthrough in contract analysis, capable of simplifying, personalizing, and benchmarking terms for consumers. While offering profound benefits like increased understanding, improved market competition, and enhanced access to justice, these tools also introduce serio…</summary>
-  </entry>
-  <entry>
-    <title>How Smart Are Smart Readers? LLMs and the Future of the</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-4491043/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-4491043/" />
-    <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that Large Language Models (LLMs) as &#x27;smart readers&#x27; can significantly simplify complex contracts, reducing length and improving readability to empower consumers against the &#x27;no-reading problem.&#x27; While not flawless—sometimes misinterpreting legal terms or omitting information, thus not replacing lawyers—they offer a scalab…</summary>
-  </entry>
-  <entry>
-    <title>Public Law and Legal Theory Research Paper Series</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-4526219/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-4526219/" />
-    <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that Large Language Models (LLMs) introduce &quot;Generative Interpretation,&quot; a paradigm shift in legal text analysis. This approach enables AI to parse contracts, identify ambiguities, and predict judicial outcomes, offering a potentially cheaper, more accurate, and accessible method than traditional textualism or contextualis…</summary>
-  </entry>
-  <entry>
-    <title>NANO CONTRACTS 11/14/2023 2:12 AM</title>
-    <id>https://works.battleoftheforms.com/papers/ssrn-4631897/</id>
-    <link href="https://works.battleoftheforms.com/papers/ssrn-4631897/" />
-    <updated>2026-02-26T07:13:49Z</updated>
-    <summary>Professor Yonathan Arbel of the University of Alabama School of Law argues that new technologies are enabling &quot;nano contracts&quot;—extremely small-scale agreements governing ephemeral, minuscule-value interactions previously outside formal law. While nano contracts can unlock new opportunities and efficiencies, they also carry significant risks, challenge effective regulation, could collapse private…</summary>
+    <summary>Smart readers are AI tools that read consumer contracts for users; Arbel and Shmuel I. Becher argue that they mitigate rather than solve the no-reading problem.</summary>
   </entry>
 </feed>

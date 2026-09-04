@@ -68,7 +68,7 @@ def _write_hf_readme(mirror_dir: Path, repo_id: str, source_repo_url: str, head_
             "language:",
             "- en",
             "- zh",
-            "license: cc0-1.0",
+            "license: other",
             "tags:",
             "- legal",
             "- law",
@@ -87,6 +87,7 @@ def _write_hf_readme(mirror_dir: Path, repo_id: str, source_repo_url: str, head_
             "",
             f"Automated mirror of `{source_repo_url}`.",
             f"Source commit: `{head_sha}`.",
+            "Licensing is file-specific: corpus-authored metadata is CC BY 4.0; article text and PDFs retain source or publisher rights.",
             "",
         ]
     )

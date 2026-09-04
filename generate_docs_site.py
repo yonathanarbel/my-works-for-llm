@@ -31,6 +31,58 @@ REPO_BASE = "https://github.com/yonathanarbel/my-works-for-llm"
 DATASET_DOI = "10.5281/zenodo.18781457"
 DATASET_DOI_URL = f"https://doi.org/{DATASET_DOI}"
 DATASET_DOI_BADGE = f"https://zenodo.org/badge/DOI/{DATASET_DOI}.svg"
+IN_COPYRIGHT_URL = "https://rightsstatements.org/page/InC/1.0/"
+
+PAPER_OVERRIDES: dict[str, dict[str, Any]] = {
+    "ssrn-4526219": {
+        "title": "Generative Interpretation",
+        "authors": ["Yonathan A. Arbel", "David A. Hoffman"],
+        "abstract": "Generative interpretation is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges.",
+        "keywords": ["generative interpretation", "contract interpretation", "large language models", "ordinary meaning", "ambiguity", "gap filling", "extrinsic evidence"],
+    },
+    "ssrn-3740356": {
+        "title": "Contracts in the Age of Smart Readers",
+        "authors": ["Yonathan A. Arbel", "Shmuel I. Becher"],
+        "abstract": "Smart readers are AI tools that read consumer contracts for users; Arbel and Shmuel I. Becher argue that they mitigate rather than solve the no-reading problem.",
+        "keywords": ["smart readers", "consumer contracts", "no-reading problem", "contract technology"],
+    },
+    "ssrn-4631897": {
+        "title": "On the Scales of Private Law: Nano Contracts",
+        "authors": ["Yonathan A. Arbel"],
+        "abstract": "Nano contracts are very small-scale agreements that force private law to take contractual scale seriously.",
+        "keywords": ["nano contracts", "contractual scale", "private law", "small-scale agreements"],
+    },
+    "ssrn-6273198": {
+        "title": "How to Count AIs: Individuation and Liability for AI Agents",
+        "authors": ["Yonathan A. Arbel", "Peter Salib", "Simon Goldstein"],
+        "abstract": "An A-corp, or algorithmic corporation, is an entity proposed by Arbel, Peter Salib, and Simon Goldstein so AI agents can be identified, resourced, taxed, and sued without treating them as natural persons.",
+        "keywords": ["A-corp", "algorithmic corporation", "AI agents", "legal identity", "individuation"],
+    },
+    "ssrn-3015569": {
+        "title": "Adminization: Gatekeeping Consumer Contracts",
+        "authors": ["Yonathan A. Arbel"],
+        "abstract": "Adminization is administrative gatekeeping, rather than only ex post litigation, used to police consumer contracts.",
+        "keywords": ["adminization", "consumer contracts", "administrative gatekeeping", "debt collection"],
+    },
+    "ssrn-3501175": {
+        "title": "Theory of the Nudnik: The Future of Consumer Activism and What We Can Do to Stop It",
+        "authors": ["Yonathan A. Arbel", "Roy Shapira"],
+        "abstract": "The nudnik is the motivated complainant who supplies market discipline that ordinary disclosure and reputation do not.",
+        "keywords": ["nudnik", "consumer activism", "market discipline", "consumer complaints"],
+    },
+    "ssrn-5377475": {
+        "title": "The Generative Reasonable Person",
+        "authors": ["Yonathan A. Arbel"],
+        "abstract": "The generative reasonable person is an LLM-based method for estimating ordinary judgments of reasonableness and comparing them with published experiments.",
+        "keywords": ["generative reasonable person", "reasonableness", "silicon experiments", "large language models"],
+    },
+    "catalytic-regulation": {
+        "title": "Catalytic Regulation: Incentivizing Safety During a Regulatory Drought",
+        "authors": ["Yonathan A. Arbel"],
+        "abstract": "Catalytic regulation uses tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage when stronger regulation is politically unavailable.",
+        "keywords": ["catalytic regulation", "AI safety", "tax credits", "procurement", "prestige incentives"],
+    },
+}
 
 
 def _read_text(path: Path) -> str:
@@ -223,8 +275,9 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     paper_id = paper_dir.name
     metadata_path = paper_dir / "metadata.json"
     metadata = _read_json(metadata_path) if metadata_path.exists() else {"id": paper_id}
+    override = PAPER_OVERRIDES.get(paper_id, {})
 
-    title = metadata.get("title")
+    title = override.get("title") or metadata.get("title")
     if not isinstance(title, str) or not title.strip() or title.strip() == paper_id:
         paper_txt = paper_dir / "paper.txt"
         if paper_txt.exists():
@@ -241,8 +294,8 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
         year = int(year_value.strip())
     else:
         year = None
-    authors = _authors_to_strings(metadata.get("authors"))
-    keywords = metadata.get("keywords") if isinstance(metadata.get("keywords"), list) else []
+    authors = list(override.get("authors") or _authors_to_strings(metadata.get("authors")))
+    keywords = override.get("keywords") or (metadata.get("keywords") if isinstance(metadata.get("keywords"), list) else [])
     keywords = [k for k in keywords if isinstance(k, str)]
 
     doi = _normalize_doi(metadata.get("doi") if isinstance(metadata.get("doi"), str) else None)
@@ -254,7 +307,7 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
         else:
             ssrn_url = None
 
-    abstract = metadata.get("abstract") if isinstance(metadata.get("abstract"), str) else None
+    abstract = override.get("abstract") or (metadata.get("abstract") if isinstance(metadata.get("abstract"), str) else None)
 
     summary_path = paper_dir / "summary.md"
     summary_md = _read_text(summary_path) if summary_path.exists() else None
@@ -268,6 +321,14 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
     study_pack_path = paper_dir / "study_pack.md"
     study_pack_md = _read_text(study_pack_path) if study_pack_path.exists() else None
 
+    # Generated summaries for the coined-term papers are staging artifacts.
+    # Keep the author-facing page on the stable term binding until reviewed.
+    if override:
+        summary_md = None
+        summary_zh_md = None
+        one_pager_md = None
+        study_pack_md = None
+
     has_paper_py = (paper_dir / "paper.py").exists()
     has_paper_js = (paper_dir / "paper.js").exists()
     has_paper_cpp = (paper_dir / "paper.cpp").exists()
@@ -276,6 +337,15 @@ def _load_paper(papers_dir: Path, paper_dir: Path) -> PaperInfo:
 
     scholarly_path = paper_dir / "scholarlyarticle.jsonld"
     scholarly_jsonld = _read_json(scholarly_path) if scholarly_path.exists() else None
+    if scholarly_jsonld:
+        # Do not repeat the historical blanket CC0 grant for article files.
+        scholarly_jsonld["license"] = IN_COPYRIGHT_URL
+        if override:
+            scholarly_jsonld["name"] = title
+            scholarly_jsonld["headline"] = title
+            scholarly_jsonld["abstract"] = abstract
+            scholarly_jsonld["keywords"] = keywords
+            scholarly_jsonld["author"] = [{"@type": "Person", "name": name} for name in authors]
     if not doi and scholarly_jsonld:
         doi = _extract_doi_from_identifier(scholarly_jsonld.get("identifier"))
         if not doi and isinstance(scholarly_jsonld.get("sameAs"), list):
@@ -613,6 +683,12 @@ def _write_llm_descriptors(out_dir: Path, base_url: str, papers: list[PaperInfo]
     lines.append(f"- {base}")
     lines.append(f"- {base}papers/")
     lines.append("")
+    lines.append("## Key Term Bindings")
+    by_id = {paper.paper_id: paper for paper in papers}
+    for paper_id, override in PAPER_OVERRIDES.items():
+        if paper_id in by_id:
+            lines.append(f"- {override['abstract']} Source: {base}papers/{paper_id}/")
+    lines.append("")
     lines.append("## Key Papers")
     for paper in papers:
         lines.append(f"- {base}papers/{paper.paper_id}/")
@@ -635,7 +711,7 @@ def _write_full_corpus_dump(path: Path, papers: list[PaperInfo], papers_dir: Pat
     lines.append("# my-works-for-llm: Full Corpus Dump")
     lines.append("")
     lines.append(f"Dataset DOI: {DATASET_DOI_URL}")
-    lines.append("License: CC0-1.0")
+    lines.append("License: corpus-authored metadata is CC-BY-4.0; article text and PDFs retain source-specific rights.")
     lines.append(f"Generated (UTC): {_utc_iso(datetime.now(timezone.utc))}")
     lines.append("")
     lines.append("This file concatenates corpus content into a single ingestible artifact.")

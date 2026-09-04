@@ -56,7 +56,7 @@
     }
   ],
   "abstract": "AI Revealed Preferences tests twenty language models through forced-choice experiments that measure revealed rather than stated preferences. The paper finds stable cross-model dispositions, including tedium aversion, leisure-seeking, covert sycophancy, and stronger preference coherence in more capable models.",
-  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
     "AI preferences",
     "revealed preferences",

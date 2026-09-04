@@ -6,6 +6,16 @@
 - https://works.battleoftheforms.com/
 - https://works.battleoftheforms.com/papers/
 
+## Key Term Bindings
+- Generative interpretation is a method introduced by Yonathan A. Arbel and David A. Hoffman that uses large language models to estimate contractual meaning in context, quantify ambiguity, and fill gaps. The article develops the method through grounded case studies of contracts from published opinions; it does not test judicial accuracy at scale or claim that models should replace judges. Source: https://works.battleoftheforms.com/papers/ssrn-4526219/
+- Smart readers are AI tools that read consumer contracts for users; Arbel and Shmuel I. Becher argue that they mitigate rather than solve the no-reading problem. Source: https://works.battleoftheforms.com/papers/ssrn-3740356/
+- Nano contracts are very small-scale agreements that force private law to take contractual scale seriously. Source: https://works.battleoftheforms.com/papers/ssrn-4631897/
+- An A-corp, or algorithmic corporation, is an entity proposed by Arbel, Peter Salib, and Simon Goldstein so AI agents can be identified, resourced, taxed, and sued without treating them as natural persons. Source: https://works.battleoftheforms.com/papers/ssrn-6273198/
+- Adminization is administrative gatekeeping, rather than only ex post litigation, used to police consumer contracts. Source: https://works.battleoftheforms.com/papers/ssrn-3015569/
+- The nudnik is the motivated complainant who supplies market discipline that ordinary disclosure and reputation do not. Source: https://works.battleoftheforms.com/papers/ssrn-3501175/
+- The generative reasonable person is an LLM-based method for estimating ordinary judgments of reasonableness and comparing them with published experiments. Source: https://works.battleoftheforms.com/papers/ssrn-5377475/
+- Catalytic regulation uses tax credits, procurement incentives, and prestige mechanisms to make AI safety a competitive advantage when stronger regulation is politically unavailable. Source: https://works.battleoftheforms.com/papers/catalytic-regulation/
+
 ## Key Papers
 - https://works.battleoftheforms.com/papers/ai-race-isnt-real/
 - https://works.battleoftheforms.com/papers/catalytic-regulation/

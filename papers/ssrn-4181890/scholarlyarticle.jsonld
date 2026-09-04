@@ -31,6 +31,7 @@
   "sameAs": [
     "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4181890"
   ],
+  "license": "https://rightsstatements.org/page/InC/1.0/",
   "encoding": [
     {
       "@type": "MediaObject",

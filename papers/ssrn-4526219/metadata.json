@@ -1,21 +1,30 @@
 {
-  "title": "ssrn-4526219",
+  "title": "Generative Interpretation",
   "slug": "ssrn-4526219",
   "year": 2023,
   "authors": [
     {
-      "given": "Yonathan",
+      "given": "Yonathan A.",
       "family": "Arbel",
       "affiliation": "University of Alabama School of Law"
+    },
+    {
+      "given": "David A.",
+      "family": "Hoffman",
+      "affiliation": "University of Pennsylvania Carey Law School"
     }
   ],
   "author_zh": "约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
-  "license_pdf": "CC0-1.0",
-  "license_pdf_zh": "? ????????CC0 1.0",
+  "license_pdf": "https://rightsstatements.org/page/InC/1.0/",
+  "license_pdf_zh": "In Copyright; see source or publisher terms",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "generative interpretation",
+    "contract interpretation",
+    "large language models",
+    "ordinary meaning",
+    "ambiguity",
+    "gap filling",
+    "extrinsic evidence"
   ],
   "keywords_zh": [
     "合同法",
