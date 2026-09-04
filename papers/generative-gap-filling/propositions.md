@@ -1,0 +1,301 @@
+# Propositions from Generative Gap Filling
+
+**Citation:** Yonathan A. Arbel & David A. Hoffman, Generative Gap Filling (Working Paper 2026), arXiv:2608.21401
+
+**Source:** [July 2026 working-paper PDF](https://works.battleoftheforms.com/papers/generative-gap-filling/paper.pdf)
+
+**Review status:** 21 model-drafted, source-checked; 0 human-reviewed. Page references use the printed pagination and, separately, the 1-based PDF page number.
+
+## 1. Contract law’s interpretation-construction boundary rests on an untested empirical premise that the rest of a silent contract contains little recoverable information about the missing term
+
+**Location:** Introduction, printed pp. 3-9 (PDF pp. 3-9)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 3–9, that contract theory has treated a supposed boundary between interpretation and construction as if it also marked the point at which the document runs out of meaning. They test that premise by masking consequential terms that real parties negotiated and asking laypeople, legally trained humans, and language models to recover them from the remaining contract. This is significant because successful reconstruction would convert at least some apparent gap filling from unbounded judicial supplementation into evidence-based inference from the deal itself. It connects to the hypothetical bargain, interpretation versus construction, empirical legal studies, masked-language modeling, party intent, judicial discretion, and the authors’ earlier project on Generative Interpretation.
+
+**Evidence anchor:** The introduction defines the conventional boundary, explains the masking design, previews human and model accuracy, reports broader-contract and perturbation tests, and introduces contestable model evidence and Choice of Model clauses as legal responses.
+
+**Boundary:** The design most directly tests recovery of terms that parties actually drafted; it does not itself establish how courts should resolve deliberate disagreement, expressly normative gaps, or every term the parties never wrote.
+
+**Connections:** contract interpretation; contract construction; hypothetical bargain; masked-language modeling; party intent; judicial discretion; Generative Interpretation
+
+**Record:** `generative-gap-filling-p01` · `machine-drafted-source-checked`
+
+## 2. Competing schools of gap-filling theory share the assumption that contractual silence is informationally thin
+
+**Location:** Part I, Gap Filling’s Empirical Gap, printed pp. 9-13 (PDF pp. 9-13)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 9–13, that default-rule theorists, contextualists, policy-oriented scholars, and formalists disagree over what counts as a gap and what courts should supply, yet largely share an empirical premise: once the contract does not speak directly, the remaining document offers little reliable evidence of the parties’ case-specific intent. That premise pushes scholars toward majoritarian defaults, penalty defaults, trade usage, good faith, policy, or refusal to fill. This is significant because the most visible normative divisions in the literature may all depend on the same unmeasured view of how much information contractual language still carries. It connects to majoritarian and penalty defaults, trade usage, contextualism, formalism, hypothetical bargains, transaction-cost theory, and the interpretation-construction distinction.
+
+**Evidence anchor:** Part I surveys gap-filling approaches and shows how each turns to nontextual rules or policy after assuming that the document supplies too little evidence of the omitted term.
+
+**Boundary:** The authors use an operational distinction between text-supplied interpretation and externally supplied construction for this study; they do not claim to settle the contested taxonomy for all doctrinal purposes.
+
+**Connections:** default rules; penalty defaults; trade usage; formalism; contextualism; hypothetical bargain; transaction costs
+
+**Record:** `generative-gap-filling-p02` · `machine-drafted-source-checked`
+
+## 3. Classic implied-term decisions already infer missing obligations from the structure and interdependence of the visible agreement
+
+**Location:** Part I, Textual Inference in Implied-Term Doctrine, printed pp. 13-15 (PDF pp. 13-15)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 13–15, that courts have long suspected contractual text remains informative despite an apparent omission. Cardozo’s inference of reasonable efforts in Wood v. Lucy arose from exclusivity, compensation, and collateral undertakings; the business-efficacy and officious-bystander tests likewise infer what a functioning deal or obvious shared understanding requires. This is significant because generative gap filling systematizes an inferential practice already embedded in doctrine rather than inventing an alien objective for contract law. It connects to Wood v. Lucy, The Moorcock, Shirlaw, Restatement section 204, good faith, implied warranties, business efficacy, and debates over whether interpretation and implication are continuous or distinct.
+
+**Evidence anchor:** The discussion reconstructs leading U.S. and U.K. implied-term cases and rules, emphasizing that their legitimacy rests partly on inferences from the agreement’s structure and commercial function.
+
+**Boundary:** Historical doctrine establishes that judges make textual inferences, not how accurate those inferences are or how far the available text can support them in any given case.
+
+**Connections:** Wood v. Lucy; business efficacy; officious bystander; Restatement section 204; implied terms; good faith; contract structure
+
+**Record:** `generative-gap-filling-p03` · `machine-drafted-source-checked`
+
+## 4. The informational and normative significance of silence depends on whether it records disagreement, economical nondrafting, or inadvertence
+
+**Location:** Part I, Three Sources of Contractual Silence, printed pp. 15-17 (PDF pp. 15-17)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 15–17, that contractual silence can arise from at least three partly overlapping causes: strategic disagreement the parties declined to resolve, a shared understanding they deliberately did not pay to memorialize, or simple failure to anticipate a contingency. Silence after disagreement supplies no convergent bargain to recover, but economical nondrafting and inadvertence leave evidence in the parties’ priorities, types, transaction structure, and surrounding allocations. This is significant because treating every silence as equally empty confuses situations in which intent is absent with situations in which it is merely implicit. It connects to strategic vagueness, incomplete contracts, drafting costs, delegation to future decisionmakers, relational contracting, default rules, and judicial diagnosis of why a term is missing.
+
+**Evidence anchor:** The paper develops three modes of silence, explains their distinct implications, and argues that measurement can narrow the domain in which courts must resort to defaults and policy rather than recovered intent.
+
+**Boundary:** The categories are not cleanly observable or mutually exclusive; negligence can be reframed as a precaution choice, and courts need additional evidence to distinguish purposeful from inadvertent silence.
+
+**Connections:** strategic disagreement; strategic nondrafting; inadvertent omission; incomplete contracts; relational contracting; drafting costs; party autonomy
+
+**Record:** `generative-gap-filling-p04` · `machine-drafted-source-checked`
+
+## 5. Masking a negotiated clause creates a knowable answer key for measuring contract interpretation without substituting surveys, judges, or researchers’ intuitions for party meaning
+
+**Location:** Part II.A, Ground Truth and Interpretation, printed pp. 18-22 (PDF pp. 18-22)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 18–22, that empirical interpretation research normally lacks a ground truth because modal survey answers, judicial opinions, and corpus frequencies do not necessarily reveal what the contracting parties meant. Their masking method hides a consequential provision from an executed agreement and scores an interpreter against the language the parties actually drafted. This is significant because correctness becomes an observable recovery event rather than the researcher’s judgment that an output seems plausible. It connects to supervised learning, cloze tasks, LegalBench, ordinary-meaning surveys, corpus linguistics, wisdom-of-crowds methods, and the epistemic critique that generative legal interpretations cannot be validated.
+
+**Evidence anchor:** The authors explain the ground-truth problem, adapt machine-learning masking to executed contracts, define the recovery task, and expressly delimit the kinds of gap filling the experiment represents.
+
+**Boundary:** A masked written term may leave cross-references or other traces that a genuinely unwritten term would not; the method best approximates agreed or readily convergent terms and says little about deliberate disagreement or explicitly normative choice.
+
+**Connections:** ground truth; masked-language modeling; cloze procedure; LegalBench; ordinary meaning; corpus linguistics; empirical interpretation
+
+**Record:** `generative-gap-filling-p05` · `machine-drafted-source-checked`
+
+## 6. Three real agreements test whether readers can reconstruct both a masked clause’s headline effect and its operative limits across varied commercial settings
+
+**Location:** Part II.B, Three Scenarios, printed pp. 22-28 (PDF pp. 22-28)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 22–28, that a rigorous reconstruction task should use genuine, consequential provisions and demand more than a vague approximation. Their artist-engagement scenario masks a commission entitlement and gross-negligence carveout; the contingency-fee scenario masks the fee owed after a client settles without counsel; and the bottle-supply scenario masks liability for forecast-driven inventory and its pricing rule. Respondents first choose the clause’s legal effect and, if correct, answer a narrower follow-up about its limit or measure. This is significant because the second question distinguishes recovery of operative meaning from a lucky or coarse-grained headline guess. It connects to force majeure, attorney liens and contingency fees, requirements contracts, inventory forecasts, commercial risk allocation, multiple-choice validation, and sensitivity to answer ordering.
+
+**Evidence anchor:** The section reproduces the masked provisions, surrounding clues, fact patterns, randomized answer choices, correct headline answers, and follow-up answers for all three contracts.
+
+**Boundary:** The researchers wrote the disputes and used four-option questions, names and details were altered, and the scenarios cannot represent the full diversity of omissions or open-ended judicial reasoning.
+
+**Connections:** artist agreements; contingency fees; requirements contracts; commercial forecasts; risk allocation; strict reconstruction; answer-order randomization
+
+**Record:** `generative-gap-filling-p06` · `machine-drafted-source-checked`
+
+## 7. The preregistered study compares attentive lay respondents, law students, experienced lawyers, and six frontier models under controlled conditions
+
+**Location:** Part II.C, Measures and Methods, printed pp. 28-31 (PDF pp. 28-31)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 28–31, that the human-machine comparison rests on a structured design rather than anecdotal prompting. The analyzed human samples include 465 attentive Prolific respondents, seventy-seven law students, and forty-eight lawyers with a median 18.5 years in practice. The model panel contains six frontier systems, twenty runs per model, temperature set to zero, browsing disabled, and answer order varied; the models were frozen to the contemporaneous panel to reduce later contamination risk. This is significant because legal expertise, model identity, browsing, repetition, and option position can all confound claims about interpretive performance. It connects to preregistration, attention checks, human-subject sampling, professional expertise, benchmark contamination, deterministic settings, and controlled model evaluation.
+
+**Evidence anchor:** The methods section reports recruitment, compensation, attention and AI-use checks, demographics, legal-experience samples, model selection, run count, browsing restriction, temperature, and answer-order randomization.
+
+**Boundary:** The lay sample is more educated and liberal than the U.S. population, lawyers are a convenience sample, model runs are not independent human observations, and the paper reserves preregistered political and racial-concordance analyses for separate work.
+
+**Connections:** preregistration; Prolific sampling; legal expertise; frontier models; benchmark contamination; attention checks; experimental controls
+
+**Record:** `generative-gap-filling-p07` · `machine-drafted-source-checked`
+
+## 8. Humans reconstruct masked terms well above chance, and domain familiarity helps lawyers when the agreement follows—but hurts when it departs from—expected patterns
+
+**Location:** Part II.D, Human Results, printed pp. 31-33 (PDF pp. 31-33)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 31–33, that lay respondents recovered the headline meaning of masked clauses 55% of the time, more than twice the 25% chance rate. Law students did marginally but not significantly better, and lawyers reached nearly 60% overall. Yet performance varied sharply: lay accuracy ranged from 32.3% for the artist agreement to 71.1% for the contingency fee, and lawyers reached 82.6% on the familiar fee contract while underperforming other humans on the atypical bottle arrangement. This is significant because legal expertise appears to operate partly through pattern matching, producing leverage when the deal is conventional and error when the parties contracted around the convention. It connects to situation sense, professional judgment, schemas, domain expertise, nonstandard drafting, and the value of low-information decisionmakers.
+
+**Evidence anchor:** Figures 1–3 report group and scenario accuracy and the text explains how familiarity with contingency-fee norms helped lawyers while a sensible industry-default inference misled them in the bottle contract.
+
+**Boundary:** Differences among human groups were not statistically significant in this sample, scenario difficulty varied substantially, and multiple-choice precision constrains estimates of nuanced interpretive skill.
+
+**Connections:** professional expertise; pattern matching; situation sense; contract schemas; atypical terms; human interpretation; chance benchmarks
+
+**Record:** `generative-gap-filling-p08` · `machine-drafted-source-checked`
+
+## 9. Frontier models far outperform human groups on headline reconstruction, but a technical follow-up reveals a concentrated shared failure
+
+**Location:** Part II.D, Model Results and Strict Reconstruction, printed pp. 34-37 (PDF pp. 34-37)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 34–37, that the six-model panel achieved 88.3% scenario-balanced accuracy on the masked headline terms, with individual systems ranging from 70% to 100%. On the stricter two-question measure, where chance is 6.25%, roughly 26% of humans and about twice that proportion of model runs recovered both the outcome and its operative detail. But all eighty-four model runs that got the bottle headline right missed its pricing follow-up, usually substituting the conspicuous contract price for the masked market-or-materials-plus-storage rule. This is significant because aggregate superiority coexists with systematic, highly correlated blindness to a technical exception. It connects to benchmark accuracy, strict reconstruction, model convergence, correlated error, salience, contractual pricing, and the difference between coarse outcome prediction and precise legal reading.
+
+**Evidence anchor:** Figures 4–7 compare model and human performance, report per-model headline accuracy and the stricter measure, and document unanimous failure on the bottle-pricing follow-up.
+
+**Boundary:** Performance is task-, model-, and version-specific; every model failed the same technical follow-up, and the benchmark does not show that models can independently decide normative legal questions.
+
+**Connections:** frontier-model evaluation; strict reconstruction; correlated model error; pricing clauses; salience bias; model convergence; legal benchmarks
+
+**Record:** `generative-gap-filling-p09` · `machine-drafted-source-checked`
+
+## 10. Perturbation shows that models combine general contract schemas with agreement-specific language rather than merely hacking answer choices
+
+**Location:** Part II.E, Robustness Checks: Perturbed Contracts, printed pp. 37-39 (PDF pp. 37-39)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 37–39, that model success draws from two sources: baseline expectations about contract types and information particular to the supplied agreement. Redrafting the contracts to reverse their distributional direction reduced model accuracy from about 88% to 60%, while withholding the contract entirely produced 68% accuracy. No-contract performance remained strong for familiar bottle and contingency-fee patterns but collapsed near chance for the unusual artist deal. This is significant because the perturbations show both that models respond to internal text and that generic schemas can dominate when a deal resembles market convention. It connects to causal robustness checks, test hacking, contract priors, counterfactual redrafting, industry defaults, textual sensitivity, and the interpretive danger of bespoke terms.
+
+**Evidence anchor:** The authors compare original, direction-flipped, and no-contract conditions and interpret the scenario-level differences as evidence that models use both market expectations and particularized contractual language.
+
+**Boundary:** The perturbations are researcher-created, changes in accuracy vary by scenario, and the design estimates the two information sources only approximately rather than isolating every causal feature.
+
+**Connections:** robustness testing; contract schemas; counterfactual perturbation; industry defaults; textual sensitivity; test hacking; model priors
+
+**Record:** `generative-gap-filling-p10` · `machine-drafted-source-checked`
+
+## 11. The main accuracy result generalizes across 119 largely recent SEC agreements, with errors concentrated in bespoke or anti-default clauses
+
+**Location:** Part II.F, Scaling Up: 119 Unseen Contracts, printed pp. 39-43 (PDF pp. 39-43)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 39–43, that six models recovered one masked material clause in each of 119 unseen SEC commercial agreements with 87% aggregate accuracy, and every model fell between 84% and 92%. Accuracy was highest for templated promissory notes, securities agreements, and credit facilities, but lower for negotiated indemnification, registration-rights, and employment provisions. Fifteen difficult contracts generated roughly three quarters of all errors, and all six models missed the same five clauses, each suggestively classified as reversing a market or legal default. This is significant because broad replication weakens a cherry-picking objection while locating model risk in predictable kinds of nonstandard drafting. It connects to EDGAR exhibits, external validation, boilerplate, anti-default clauses, model ensembles, disagreement as an uncertainty signal, and benchmark contamination.
+
+**Evidence anchor:** Figures 10–12 report overall and contract-type accuracy, error concentration, shared misses, model disagreement, and exploratory comparisons between default-conforming and anti-default provisions.
+
+**Boundary:** Specific training-data exposure cannot be fully audited; clause classification was model-assisted and suggestive; the contracts are predominantly 2025–2026 SEC exhibits; and performance on four-choice masked clauses does not equal general adjudicative competence.
+
+**Connections:** SEC EDGAR; external validity; commercial boilerplate; anti-default terms; model ensembles; uncertainty signals; benchmark contamination
+
+**Record:** `generative-gap-filling-p11` · `machine-drafted-source-checked`
+
+## 12. Interdependent contract terms carry mutual information that permits reconstruction of missing provisions much as redundancy permits recovery of a noisy radio signal
+
+**Location:** Part II.G, Mutual Information and General Discussion, printed pp. 43-45 (PDF pp. 43-45)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 43–45, that readers infer missing terms from both general knowledge about the transaction and mutual information distributed across the agreement. Price reflects risk allocation; risk allocation interacts with termination and excuse; and the deal’s provisions therefore are not independent. Like redundancy in a radio transmission, these relationships let an interpreter rebuild part of a lost message from what remains. This is significant because it supplies a mechanism for the empirical result and explains why the hypothetical bargain can be statistically legible without being expressly written. It connects to Shannon information theory, contractual modularity, risk-price tradeoffs, precedent terms, noisy-channel recovery, pattern recognition, and holistic interpretation of an agreement.
+
+**Evidence anchor:** The general discussion links domain knowledge and surrounding clauses to recovery, reports 88.3% headline and 54% strict model accuracy, and analogizes contractual redundancy to Shannon’s reconstruction of degraded signals.
+
+**Boundary:** The radio metaphor describes patterned dependence in human-drafted agreements; it does not prove every omission is recoverable or that statistical prediction alone determines the legally appropriate term.
+
+**Connections:** mutual information; information theory; contractual interdependence; risk allocation; noisy channels; holistic interpretation; hypothetical bargain
+
+**Record:** `generative-gap-filling-p12` · `machine-drafted-source-checked`
+
+## 13. Pattern-based expertise is simultaneously an interpretive advantage and a source of error, while masked written terms may be harder—not easier—than ordinary omitted terms
+
+**Location:** Part II.G, Expertise and External Validity, printed pp. 45-47 (PDF pp. 45-47)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 45–47, that both lawyers and language models gain competence by matching a dispute to learned patterns, but the same process can pull them away from a bespoke term. Lawyers defaulted toward purchase-order liability and models toward the conspicuous stated price even though the masked bottle clause departed from both expectations. They further argue that manufactured gaps do not necessarily overstate external validity: parties tend to spend drafting effort on provisions that are least obvious from the rest of the deal, while leaving more predictable matters unwritten. This is significant because written masked clauses may represent a comparatively difficult subset of the silences courts face. It connects to expert intuition, situation types, standard operating procedures, selection effects in drafting, bespoke contracts, external validity, and the possible value of juries as lower-prior decisionmakers.
+
+**Evidence anchor:** The authors analyze shared errors as overreliance on standard patterns and answer the manufactured-gap objection by arguing that marginal drafting selects unusually nonobvious terms for inclusion.
+
+**Boundary:** The extension from manufactured to natural gaps remains an inference, not direct evidence; genuinely unwritten terms may differ, and the authors do not claim recovery where the parties deliberately disagreed.
+
+**Connections:** expert intuition; situation types; bespoke agreements; selection effects; external validity; drafting economics; jury decisionmaking
+
+**Record:** `generative-gap-filling-p13` · `machine-drafted-source-checked`
+
+## 14. Model predictions should enter litigation as contestable evidence, not replace judges with an interpretive oracle
+
+**Location:** Part III.A, Generative Gap Filling Within Contract Litigation, printed pp. 48-53 (PDF pp. 48-53)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 48–53, that accurate prediction does not make automated adjudication legitimate. They propose that a party offer a model’s probability distribution as evidence about what the surrounding contract implies; disclose the model and query; permit the opponent to run competing analyses; and leave the judge to assess prompts, model weaknesses, corpus fit, sensitivity, and the complete record in a reasoned, appealable opinion. This is significant because it preserves human responsibility and sociological legitimacy while making tacit judicial inference more open to measurement and challenge. It connects to adversarial evidence, expert testimony, Rule 706 neutral experts, procedural legitimacy, reason-giving, sensitivity analysis, dictionaries, and the distinction between a decision aid and a decisionmaker.
+
+**Evidence anchor:** The section rejects an oracle model, works through a forecast dispute, describes party and court queries, and contrasts contestable on-record deductions with unarticulated inference inside a decisionmaker’s mind.
+
+**Boundary:** Dueling models can add cost and indeterminacy, adversarial expert systems have familiar biases, and a prediction about likely party intent does not itself answer whether that intent should control.
+
+**Connections:** adversarial evidence; expert testimony; Rule 706; judicial legitimacy; reasoned opinions; sensitivity analysis; human judgment
+
+**Record:** `generative-gap-filling-p14` · `machine-drafted-source-checked`
+
+## 15. Reproducibility, harness disclosure, sanctions for fabrication, and judicial gatekeeping are minimum safeguards for model-derived gap-filling evidence
+
+**Location:** Part III.A, Procedural Rules of the Road, printed pp. 52-54 (PDF pp. 52-54)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 52–54, that a proponent of model evidence should disclose the system, version, full prompt, system instructions, run settings, and harness, including access to the web, private data, tools, or prior chats. Courts should impose severe, visible sanctions for fabricated outputs and retain authority to exclude model evidence that is not probative for the kind of silence at issue. This is significant because apparently identical model names can produce materially different evidence depending on configuration and hidden context, while strategic steering can masquerade as hallucination. It connects to reproducibility, discovery, expert-report disclosure, model provenance, retrieval and tool access, litigation misconduct, evidentiary gatekeeping, and sanctions for fabricated citations.
+
+**Evidence anchor:** The authors specify four rules: disclose query details, disclose the deployment harness, punish fabrication rather than excuse it as hallucination, and screen whether model output is probative for the particular gap.
+
+**Boundary:** Disclosure cannot eliminate proprietary opacity or every form of steering, and ordinary adversarial safeguards may still be expensive or unequal between litigants.
+
+**Connections:** reproducibility; model provenance; system prompts; AI harnesses; litigation sanctions; evidentiary gatekeeping; fabricated outputs
+
+**Record:** `generative-gap-filling-p15` · `machine-drafted-source-checked`
+
+## 16. Sophisticated parties can govern later AI-assisted interpretation by selecting a model, version rule, prompt protocol, and aggregation procedure in advance
+
+**Location:** Part III.B, Choice of Model Clauses, printed pp. 54-57 (PDF pp. 54-57)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 54–57, that parties can add a Choice of Model clause specifying which model or panel, harness, prompt protocol, weighting rule, and abstention procedure will supply first-instance inferences about ambiguous or omitted terms. The device resembles choice-of-law, forum, merger, and incorporation-by-reference clauses because it privately orders the method of future interpretation. An undated model reference should presumptively incorporate successor versions, while parties who want the signing-date model frozen should say so. This is significant because ex ante selection reduces the post-dispute opportunity to shop among models and prompts for a favorable output. It connects to contract meta-interpretation, technical standards, ISDA and AIA definitions, arbitral design, incorporation by reference, versioning, model panels, and contractual control of interpretive methodology.
+
+**Evidence anchor:** The section offers sample clause language, possible panel variants, cautions from the 119-contract benchmark, and analogies to contractual incorporation of evolving technical and interpretive resources.
+
+**Boundary:** Courts may not give full force to a privately selected interpretive method; correlated errors limit the value of panels; divergence should trigger scrutiny; and parties must specify aggregation, ties, abstention, and version treatment.
+
+**Connections:** Choice of Model clauses; meta-interpretation; incorporation by reference; versioning; choice of law; arbitration; model panels
+
+**Record:** `generative-gap-filling-p16` · `machine-drafted-source-checked`
+
+## 17. Pre-signing use of a chosen model will reduce inadvertent gaps and make remaining silence more likely to represent either endorsement or unresolved strategy
+
+**Location:** Part III.B, Equilibrium Drafting Effects, printed pp. 57-60 (PDF pp. 57-60)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 57–60, that enforceable Choice of Model clauses will change drafting behavior. Sophisticated parties will test contracts and generated contingencies before signing, reducing inadvertent omissions. A remaining silence may then mean both sides saw and endorsed the model’s prediction, much like incorporation by reference, or that one side disliked the prediction but declined to reopen a costly disagreement. This is significant because the same silence has different autonomy and remedial implications depending on the parties’ precontract exposure to the model output. It connects to equilibrium effects of legal rules, assent to defaults, strategic incompleteness, good faith, unconscionability, penalty defaults, drafting discovery, the parol evidence rule, and governance of foundation-model markets.
+
+**Evidence anchor:** The authors trace how pretesting changes the three-part silence taxonomy, distinguish endorsement from strategic disagreement, and identify evidence courts could use to diagnose the remaining silence.
+
+**Boundary:** Model access and bargaining power may be unequal; discovery into drafting can conflict with evidentiary rules; public policy remains irreducible; and dominant providers raise unresolved antitrust and administrative-law questions.
+
+**Connections:** equilibrium drafting; endorsed silence; strategic silence; assent; unconscionability; penalty defaults; drafting discovery; AI market governance
+
+**Record:** `generative-gap-filling-p17` · `machine-drafted-source-checked`
+
+## 18. A judge’s undisclosed, case-specific model query is functionally an uncross-examined expert report and requires notice, disclosure, or a neutral expert
+
+**Location:** Part III.C, Generative Gap Filling in the Chambers, printed pp. 60-61 (PDF pp. 60-61)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 60–61, that judicial AI use varies by function. A general query about ordinary language resembles consulting a dictionary or corpus and should at least be candidly disclosed. A query that infers these parties’ intent from a silent contract instead generates case-specific evidence, making undisclosed in-chambers use comparable to commissioning an expert whom neither side can examine. This is significant because procedural safeguards should turn on what the model is doing, not simply whether a judge labels it research. It connects to judicial notice, sua sponte research, corpus linguistics, Rule 706, appellate contestability, notice and an opportunity to be heard, and limits on AI-drafted judicial opinions.
+
+**Evidence anchor:** The section distinguishes general language research, case-specific gap reconstruction, and model-written decisions, prescribing advance disclosure or a neutral expert for the second and rejecting support for the third.
+
+**Boundary:** The authors do not endorse model-drafted decisions, and their experiment provides no evidence that delegating opinion writing or adjudication to a model is accurate or legitimate.
+
+**Connections:** judicial AI use; judicial notice; neutral experts; Rule 706; ordinary meaning; procedural fairness; appellate review
+
+**Record:** `generative-gap-filling-p18` · `machine-drafted-source-checked`
+
+## 19. Generative gap filling has a weaker autonomy rationale in consumer contracts and bespoke cross-community deals, so scope must depend on transaction type and party choice
+
+**Location:** Part III.D, How Far Does This Go?, printed pp. 61-63 (PDF pp. 61-63)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 61–63, that commercial repeat-player contracts are the strongest setting for model-assisted reconstruction because parties can bargain over a Choice of Model and spread drafting costs. Consumer contracts lack meaningful reading and bargaining, although a model may still be cheaper and more contestable than surveys of reasonable expectations. One-off deals across unusual linguistic or trade communities pose a different danger: a majoritarian model may miss the parties’ distinctive social context. This is significant because technical accuracy on ordinary contracts does not justify universal textualism or erase concerns about consent, distribution, and subcommunity meaning. It connects to consumer boilerplate, reasonable-expectations doctrine, survey evidence, trade usage, ordinary meaning, linguistic minorities, bespoke agreements, and opt-in private ordering.
+
+**Evidence anchor:** The authors compare model inference with consumer surveys, discuss how existing forms shape expectations, and use cross-community cases to show where text-oriented majoritarian models may omit decisive context.
+
+**Boundary:** Model-based consumer interpretation may reproduce firm-favoring expectations; specialized calibration adds cost and complexity; and a Choice of Model clause is most plausible for sophisticated parties, not adherents.
+
+**Connections:** consumer contracts; reasonable expectations; linguistic communities; trade usage; bespoke transactions; majoritarian inference; opt-in design
+
+**Record:** `generative-gap-filling-p19` · `machine-drafted-source-checked`
+
+## 20. Model reliability must be evaluated comparatively and through measurable uncertainty, while operational safeguards cannot eliminate bias, opacity, or overconfidence
+
+**Location:** Part III.E, Gaps in Generative Gap Filling and the Limits of the Method, printed pp. 63-68 (PDF pp. 63-68)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 63–68, that hallucination, prompt sensitivity, sycophancy, nondeterminism, opaque reasoning, and automation-induced overconfidence are real risks, especially for busy or hubristic judges. Yet human judgments also vary with hidden and legally irrelevant conditions, and interhuman disagreement may exceed the spread among models. Their experiments show convergence across model families, prompts, settings, and option orders, while the 119-contract benchmark shows that disagreement itself can flag likely error. This is significant because model uncertainty is at least partly measurable and can guide when legal actors should use, replicate, or distrust an output. It connects to judicial noise, automation bias, prompt robustness, calibration, sycophancy, legal legitimacy, comparative institutional analysis, and epistemic critiques of simulated reasoning.
+
+**Evidence anchor:** The limits section canvasses reliability, bias, legitimacy, human-noise comparisons, convergence evidence, confidence measurement, and the epistemic value of a benchmark with a known answer.
+
+**Boundary:** Convergence can produce shared error, verbal explanations may not reveal operative model reasons, published skeptical measures disagree, models and protocols change rapidly, and courts still need training and humility.
+
+**Connections:** model reliability; judicial noise; prompt sensitivity; sycophancy; automation bias; calibration; epistemic opacity; comparative institutional analysis
+
+**Record:** `generative-gap-filling-p20` · `machine-drafted-source-checked`
+
+## 21. Human judgment retains the irreducible normative role for human bargains, but AI-authored contracts may eventually break the paper’s intent-recovery framework
+
+**Location:** Part IV, Conclusion, printed pp. 68-71 (PDF pp. 68-71)
+
+Professors Yonathan A. Arbel and David A. Hoffman claim, in “Generative Gap Filling” on pages 68–71, that models should operate as human agents: sharpening prediction, supporting narrower and contestable opinions, and helping parties avoid disputes, while judges retain the normative question whether a predicted bargain should be honored. That framework depends on contracts being fossil records of human tradeoffs. When AI agents assemble agreements no human read, drafted, or contemplated, familiar doctrines of intent, assent, hypothetical bargain, reasonable expectations, and contra proferentem lose their human mental-state target. This is significant because a technique validated for human-authored contracts also reveals the boundary beyond which its own ground truth may disappear. It connects to human-centered adjudication, gradual disempowerment, agentic commerce, agency law, neuralese, nano-contracts, prompt evidence, merger clauses for models, and the future ontology of contractual meaning.
+
+**Evidence anchor:** The conclusion assigns models an evidentiary and predictive role, reserves normative judgment to humans, and explains why AI-generated agreements sever the link between textual redundancy and a human sender whose bargain can be recovered.
+
+**Boundary:** The paper flags rather than resolves attribution of meaning in machine-authored agreements; its evidence concerns human-drafted contracts and cannot establish that AI-to-AI text expresses human intent.
+
+**Connections:** human judicial judgment; agentic commerce; agency law; AI-authored contracts; contractual intent; neuralese; nano-contracts; future contract doctrine
+
+**Record:** `generative-gap-filling-p21` · `machine-drafted-source-checked`

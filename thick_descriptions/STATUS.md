@@ -1,13 +1,14 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **3 of 40**
-- Proposition records: **42**
-- Papers remaining: **37**
+- Papers with proposition descriptions: **4 of 40**
+- Proposition records: **63**
+- Papers remaining: **36**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
 ## Completed papers
 
+- [Generative Gap Filling](../papers/generative-gap-filling/propositions.md) — 21 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
@@ -19,7 +20,6 @@ These records are produced one paper at a time from page-level source review. `m
 - `credibility-effect`
 - `false-choice-ai`
 - `ft-letter-ai-legal-identity`
-- `generative-gap-filling`
 - `law-following-ai-proceedings`
 - `new-entity-ai-agents`
 - `open-questions-ai-safety`
