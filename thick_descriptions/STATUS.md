@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **7 of 40**
-- Proposition records: **147**
-- Papers remaining: **33**
+- Papers with proposition descriptions: **8 of 40**
+- Proposition records: **179**
+- Papers remaining: **32**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -15,6 +15,7 @@ These records are produced one paper at a time from page-level source review. `m
 - [Governing Generative AI Beyond the Grave](../papers/ssrn-5380233/propositions.md) — 21 propositions
 - [How to Count AIs: Individuation and Liability for AI Agents](../papers/ssrn-6273198/propositions.md) — 27 propositions
 - [Artificial Intelligence and Existential Risk](../papers/ssrn-6288138/propositions.md) — 36 propositions
+- [AI Revealed Preferences](../papers/ssrn-6798118/propositions.md) — 32 propositions
 
 ## Remaining paper IDs
 
@@ -49,5 +50,4 @@ These records are produced one paper at a time from page-level source review. `m
 - `ssrn-4873649`
 - `ssrn-4962098`
 - `ssrn-5181207`
-- `ssrn-6798118`
 - `thinking-unthinkable-ai-justice`
