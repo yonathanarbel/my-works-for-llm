@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **9 of 40**
-- Proposition records: **214**
-- Papers remaining: **31**
+- Papers with proposition descriptions: **10 of 40**
+- Proposition records: **242**
+- Papers remaining: **30**
 
 These records are produced one paper at a time from page-level source review. `machine-drafted-source-checked` means the wording and page anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -10,6 +10,7 @@ These records are produced one paper at a time from page-level source review. `m
 
 - [Generative Gap Filling](../papers/generative-gap-filling/propositions.md) — 21 propositions
 - [Contract Remedies in Action: Specific Performance](../papers/ssrn-1641438/propositions.md) — 35 propositions
+- [Shielding of Assets and Lending Contracts](../papers/ssrn-2820650/propositions.md) — 28 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
@@ -28,7 +29,6 @@ These records are produced one paper at a time from page-level source review. `m
 - `law-following-ai-proceedings`
 - `new-entity-ai-agents`
 - `open-questions-ai-safety`
-- `ssrn-2820650`
 - `ssrn-2835482`
 - `ssrn-3015569`
 - `ssrn-3239995`
