@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **33 of 40**
-- Proposition records: **1116**
-- Papers remaining: **7**
+- Papers with proposition descriptions: **34 of 40**
+- Proposition records: **1207**
+- Papers remaining: **6**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -36,6 +36,7 @@ These records are produced one work at a time from page-level or section-level s
 - [Truth Bounties: A Market Solution to Fake News](../papers/ssrn-4204862/propositions.md) — 74 propositions
 - [How Smart Are Smart Readers? LLMs and the Future of the No-Reading Problem](../papers/ssrn-4491043/propositions.md) — 68 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
+- [On the Scales of Private Law: Nano Contracts](../papers/ssrn-4631897/propositions.md) — 91 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
 - [Governing Generative AI Beyond the Grave](../papers/ssrn-5380233/propositions.md) — 21 propositions
 - [How to Count AIs: Individuation and Liability for AI Agents](../papers/ssrn-6273198/propositions.md) — 27 propositions
@@ -44,7 +45,6 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `ssrn-4631897`
 - `ssrn-4666854`
 - `ssrn-4809006`
 - `ssrn-4873649`
