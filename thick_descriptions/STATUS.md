@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **22 of 40**
-- Proposition records: **622**
-- Papers remaining: **18**
+- Papers with proposition descriptions: **23 of 40**
+- Proposition records: **654**
+- Papers remaining: **17**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -16,6 +16,7 @@ These records are produced one work at a time from page-level or section-level s
 - [Generative Gap Filling](../papers/generative-gap-filling/propositions.md) — 21 propositions
 - [Proceedings of the 2025 Workshop on Law-Following AI](../papers/law-following-ai-proceedings/propositions.md) — 45 propositions
 - [Why Law Needs a New Entity to Govern AI Agents](../papers/new-entity-ai-agents/propositions.md) — 29 propositions
+- [Open Questions in Law and AI Safety: An Emerging Research Agenda](../papers/open-questions-ai-safety/propositions.md) — 32 propositions
 - [Contract Remedies in Action: Specific Performance](../papers/ssrn-1641438/propositions.md) — 35 propositions
 - [Shielding of Assets and Lending Contracts](../papers/ssrn-2820650/propositions.md) — 28 propositions
 - [Tort Reform through the Backdoor: A Critique of Law and Apologies](../papers/ssrn-2835482/propositions.md) — 38 propositions
@@ -33,7 +34,6 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `open-questions-ai-safety`
 - `ssrn-3452662`
 - `ssrn-3501175`
 - `ssrn-3519630`
