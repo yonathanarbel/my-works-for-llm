@@ -289,7 +289,10 @@ def render_one_pager(p: PaperInputs) -> str:
     if p.summary_zh_md is not None:
         lines.append(f"- Summary (ZH): `papers/{p.paper_id}/summary.zh.md`")
     lines.append("")
-    lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._")
+    if Path(f"papers/{p.paper_id}/paper.pdf").exists():
+        lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._")
+    else:
+        lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt` and the cited authoritative online source._")
     lines.append("")
 
     return "\n".join(lines)
@@ -345,7 +348,10 @@ def render_study_pack(p: PaperInputs) -> str:
     lines.append("- What are the limitations or failure modes the author flags?")
     lines.append("- How does this connect to the author’s other papers in this corpus?")
     lines.append("")
-    lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._")
+    if Path(f"papers/{p.paper_id}/paper.pdf").exists():
+        lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._")
+    else:
+        lines.append("_Auto-generated study aid. For canonical content, rely on `paper.txt` and the cited authoritative online source._")
     lines.append("")
 
     return "\n".join(lines)

@@ -28,12 +28,19 @@
         }
       ],
       "datePublished": "2024",
-      "description": "Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+      "description": "Argues that large language models can provide context-sensitive evidence of ordinary meaning as a supplement to dictionaries, precedent, interpretive canons, and judicial intuition. Using Judge Kevin Newsom's concurrence in the Eleventh Circuit's Snell trampoline-insurance dispute, the essay explains generative interpretation and proposes safeguards for responsible use.",
       "keywords": [
-        "ai"
+        "generative interpretation",
+        "large language models",
+        "ordinary meaning",
+        "legal interpretation",
+        "judicial decision-making",
+        "prompt documentation",
+        "human oversight",
+        "access to justice"
       ],
       "isAccessibleForFree": true,
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license": "https://rightsstatements.org/page/InC/1.0/",
       "url": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/",
       "sameAs": [
         "https://stories.ua.edu/thinking-the-unthinkable-ai-in-the-service-of-justice/index.html"
@@ -64,8 +71,8 @@
         },
         {
           "@type": "MediaObject",
-          "encodingFormat": "application/pdf",
-          "contentUrl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/paper.pdf"
+          "encodingFormat": "text/plain",
+          "contentUrl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/paper.txt"
         },
         {
           "@type": "MediaObject",
@@ -86,6 +93,16 @@
           "@type": "MediaObject",
           "encodingFormat": "application/jsonl",
           "contentUrl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/qa.jsonl"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "application/jsonl",
+          "contentUrl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.jsonl"
+        },
+        {
+          "@type": "MediaObject",
+          "encodingFormat": "text/markdown",
+          "contentUrl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.md"
         }
       ],
       "citation": "Yonathan A. Arbel, Thinking the Unthinkable: AI in the Service of Justice, Capstone Lawyer (2024)."

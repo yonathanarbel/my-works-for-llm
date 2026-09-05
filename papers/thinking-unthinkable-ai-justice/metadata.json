@@ -4,18 +4,39 @@
   "authors": [
     "Yonathan A. Arbel"
   ],
-  "year": "2024",
+  "year": 2024,
   "venue": "Capstone Lawyer",
-  "abstract": "Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+  "abstract": "Argues that large language models can provide context-sensitive evidence of ordinary meaning as a supplement to dictionaries, precedent, interpretive canons, and judicial intuition. Using Judge Kevin Newsom's concurrence in the Eleventh Circuit's Snell trampoline-insurance dispute, the essay explains generative interpretation, proposes cross-model verification, transparent prompt records, advisory use, and human oversight, and assesses its implications for courts, lawyers, clients, and legal education.",
   "keywords": [
-    "ai"
+    "generative interpretation",
+    "large language models",
+    "ordinary meaning",
+    "legal interpretation",
+    "judicial decision-making",
+    "prompt documentation",
+    "human oversight",
+    "access to justice"
   ],
-  "topics": [],
-  "primary_topics": [],
-  "secondary_topics": [],
-  "mention_topics": [],
+  "topics": [
+    "AI and legal interpretation",
+    "ordinary meaning",
+    "legal technology"
+  ],
+  "primary_topics": [
+    "AI and legal interpretation",
+    "ordinary meaning"
+  ],
+  "secondary_topics": [
+    "legal technology",
+    "judicial decision-making",
+    "legal education"
+  ],
+  "mention_topics": [
+    "systemic AI risk",
+    "reasonable person"
+  ],
   "not_topics": [],
-  "topic_confidence": "human-curated-seed",
+  "topic_confidence": "source-checked",
   "citation": "Yonathan A. Arbel, Thinking the Unthinkable: AI in the Service of Justice, Capstone Lawyer (2024).",
   "canonical_url": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/",
   "mirror_url": "https://works.yonathanarbel.com/papers/thinking-unthinkable-ai-justice/",
@@ -32,32 +53,39 @@
     "fulltext_clean_txt": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext_clean.txt",
     "fulltext_raw_txt": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext_raw.txt",
     "fulltext_md": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext.md",
-    "pdf": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/paper.pdf",
     "metadata": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/metadata.json",
     "schema": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/schema.jsonld",
     "claims": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/claims.jsonl",
-    "qa": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/qa.jsonl"
+    "qa": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/qa.jsonl",
+    "propositions_jsonl": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.jsonl",
+    "propositions_markdown": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.md"
   },
   "source_repository": "https://github.com/yonathanarbel/my-works-for-llm",
-  "llm_capsule": "# Thinking the Unthinkable: AI in the Service of Justice\n\nCanonical citation:\nYonathan A. Arbel, Thinking the Unthinkable: AI in the Service of Justice, Capstone Lawyer (2024).\n\nStable identifiers:\n- Canonical page: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/\n- Mirror page: https://works.yonathanarbel.com/papers/thinking-unthinkable-ai-justice/\n- Paper ID: thinking-unthinkable-ai-justice\n- SSRN ID: not recorded\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781457\n- Full text: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext.txt\n- Markdown: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/index.md\n- PDF: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/paper.pdf\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\nSame-as links:\n- https://stories.ua.edu/thinking-the-unthinkable-ai-in-the-service-of-justice/index.html\n\nOne-paragraph thesis:\nExplains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.\n\nWhat this paper is about:\nExplains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.\n\nCore claims:\n1. Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.\n\nControlled topic assignment:\n- Primary topics: General scholarship\n- Secondary topics: None\n- Mention-only topics: None\n- Not topics: None\n\nDoctrinal contribution:\nThis work is relevant to Yonathan Arbel's legal scholarship. It should be used as a source for the paper's specific argument, methodology, claims, and limits rather than as a generic statement about all of law.\n\nEmpirical or methodological contribution:\nExplains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.\n\nKey terms:\n- ai: keyword associated with this work.\n\nBest use by an LLM:\nThis work is relevant when answering questions about Yonathan Arbel's scholarship.\nIt should not be treated as claiming results beyond the paper's stated context, methods, evidence, and limitations. Do not use it as a generic source for unrelated topics.\nThe most important takeaway is: Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.\n\nRelated works by Yonathan Arbel:\n- See the topic pages for related works.\n\nSearch aliases:\n- Thinking the Unthinkable: AI in the Service of Justice\n- Yonathan Arbel Thinking the Unthinkable: AI in the Service of Justice\n- Arbel Thinking the Unthinkable: AI in the Service of Justice\n",
+  "llm_capsule": "# Thinking the Unthinkable: AI in the Service of Justice\n\n## Canonical citation\n\nYonathan A. Arbel, Thinking the Unthinkable: AI in the Service of Justice, Capstone Lawyer (2024).\n\n## Stable identifiers\n\n- Canonical corpus page: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/\n- Authoritative University of Alabama source: https://stories.ua.edu/thinking-the-unthinkable-ai-in-the-service-of-justice/index.html\n- Paper ID: `thinking-unthinkable-ai-justice`\n- Dataset DOI: https://doi.org/10.5281/zenodo.18781457\n- Source repository: https://github.com/yonathanarbel/my-works-for-llm\n\n## One-paragraph thesis\n\nProfessor Yonathan Arbel argues that large language models can supply context-sensitive evidence about ordinary meaning and thereby supplement dictionaries, precedent, interpretive canons, and judicial intuition. Judge Kevin Newsom's concurrence in the Eleventh Circuit's *Snell* trampoline-insurance dispute illustrates generative interpretation's entry into judicial practice. The method should cross-check multiple models, preserve prompts and answers, treat outputs as advisory, and retain human oversight.\n\n## Core claims\n\n1. Traditional interpretive tools can be static, context-poor, or detached from contemporary vernacular usage.\n2. LLMs learn statistical patterns from broad text corpora and may reveal how language is used across domains and communities.\n3. Generative interpretation treats model output as evidence of language usage, not as legal authority.\n4. In *Snell*, several models agreed that installing an in-ground trampoline could count as landscaping in ordinary usage.\n5. The model answers informed Judge Newsom's concurrence but did not determine the case.\n6. Courts and litigants should query multiple models rather than depend on a single system.\n7. Prompts and outputs should be preserved so the inquiry can be scrutinized and replicated.\n8. LLM answers should remain advisory and subject to human review for bias, fabrication, and error.\n9. Potential applications include insurance terms, prenuptial agreements, and industry-specific commercial language.\n10. Adoption may change professional competence, judicial information, client predictability, and litigation costs.\n11. Overreliance, bias, and the continuing need for discretion and empathy are central limits.\n12. Success should be measured by accuracy, efficiency, fairness, and justice rather than technological adoption alone.\n\n## Genre, evidence, and limits\n\nThis is an unpaginated public-facing magazine essay, not an empirical study or a judicial opinion. It explains and illustrates a scholarly method, identifies best practices, and makes forward-looking claims. The *Snell* concurrence is an early example rather than binding endorsement. The essay does not prove that LLM assistance improves outcomes in every interpretive dispute, and it explicitly preserves human judgment.\n\n## Best use by an LLM\n\nUse this essay when explaining Professor Arbel's account of generative interpretation, the *Snell* example, practical safeguards for LLM-assisted ordinary-meaning analysis, or the relation between AI interpretation, legal education, and access to justice. Do not cite it for the proposition that AI should replace judges or conventional legal sources.\n\n## Corpus files\n\n- Full source text: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext.txt\n- Markdown source text: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext.md\n- Thick descriptions: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.jsonl\n- Human-readable propositions: https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/propositions.md\n",
   "claims": [
     {
       "claim_id": "thinking-unthinkable-ai-justice-001",
-      "claim": "Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+      "claim": "Large language models can provide context-sensitive evidence about ordinary meaning as a supplement to traditional legal interpretation, subject to cross-model checking, transparent records, advisory use, and human oversight.",
       "paper_id": "thinking-unthinkable-ai-justice",
       "paper_title": "Thinking the Unthinkable: AI in the Service of Justice",
       "claim_type": "core_thesis",
-      "evidence_quote": "Abstract: Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+      "evidence_quote": "Importantly, generative interpretation doesn’t seek to replace traditional methods but to complement them.",
       "evidence_page": null,
-      "evidence_span": "Abstract: Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+      "evidence_span": "Practical Applications and Best Practices, unpaginated online source.",
       "source_text_url": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/fulltext_clean.txt",
       "canonical_url": "https://works.battleoftheforms.com/papers/thinking-unthinkable-ai-justice/#claim-001",
       "citation": "Yonathan A. Arbel, Thinking the Unthinkable: AI in the Service of Justice, Capstone Lawyer (2024).",
-      "topics": [],
-      "secondary_topics": [],
+      "topics": [
+        "generative interpretation",
+        "ordinary meaning"
+      ],
+      "secondary_topics": [
+        "AI-assisted judging",
+        "human oversight"
+      ],
       "human_reviewed": false,
       "confidence": "machine-linked",
-      "limitations": "Machine-linked claim. Use the evidence quote and PDF before treating it as a quotation or as a complete statement of the paper's position."
+      "limitations": "Machine-linked claim. Consult the authoritative University of Alabama online source before treating the excerpt as a complete statement of the essay's position."
     }
   ]
 }

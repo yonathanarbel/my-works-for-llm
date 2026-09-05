@@ -65,69 +65,69 @@
   "encoding": [
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/summary.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.md",
       "encodingFormat": "text/markdown",
-      "name": "paper39-subset-20260904a/ssrn-5181207/summary.md"
+      "name": "papers/ssrn-5181207/summary.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/summary.zh.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.zh.md",
       "encodingFormat": "text/markdown",
-      "name": "paper39-subset-20260904a/ssrn-5181207/summary.zh.md"
+      "name": "papers/ssrn-5181207/summary.zh.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/one_pager.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/one_pager.md",
       "encodingFormat": "text/markdown",
-      "name": "paper39-subset-20260904a/ssrn-5181207/one_pager.md"
+      "name": "papers/ssrn-5181207/one_pager.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/study_pack.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/study_pack.md",
       "encodingFormat": "text/markdown",
-      "name": "paper39-subset-20260904a/ssrn-5181207/study_pack.md"
+      "name": "papers/ssrn-5181207/study_pack.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.txt",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.txt",
       "encodingFormat": "text/plain",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.txt"
+      "name": "papers/ssrn-5181207/paper.txt"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.pdf",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.pdf",
       "encodingFormat": "application/pdf",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.pdf"
+      "name": "papers/ssrn-5181207/paper.pdf"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.py",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.py",
       "encodingFormat": "text/x-python",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.py"
+      "name": "papers/ssrn-5181207/paper.py"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.js",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.js",
       "encodingFormat": "application/javascript",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.js"
+      "name": "papers/ssrn-5181207/paper.js"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.cpp",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.cpp",
       "encodingFormat": "text/x-c++src",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.cpp"
+      "name": "papers/ssrn-5181207/paper.cpp"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.go",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.go",
       "encodingFormat": "text/x-go",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.go"
+      "name": "papers/ssrn-5181207/paper.go"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.rs",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.rs",
       "encodingFormat": "text/x-rust",
-      "name": "paper39-subset-20260904a/ssrn-5181207/paper.rs"
+      "name": "papers/ssrn-5181207/paper.rs"
     }
   ],
   "mainEntityOfPage": {

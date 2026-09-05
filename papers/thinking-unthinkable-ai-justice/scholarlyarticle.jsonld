@@ -26,16 +26,86 @@
   "sameAs": [
     "https://stories.ua.edu/thinking-the-unthinkable-ai-in-the-service-of-justice/index.html"
   ],
+  "datePublished": "2024",
   "author": [
     {
       "@type": "Person",
       "name": "Yonathan A. Arbel"
     }
   ],
-  "abstract": "Explains how generative interpretation and large language models can assist legal interpretation, using the Eleventh Circuit's Snell trampoline-insurance dispute as an example of AI entering mainstream legal reasoning.",
+  "abstract": "Argues that large language models can provide context-sensitive evidence of ordinary meaning as a supplement to dictionaries, precedent, interpretive canons, and judicial intuition. Using Judge Kevin Newsom's concurrence in the Eleventh Circuit's Snell trampoline-insurance dispute, the essay explains generative interpretation, proposes cross-model verification, transparent prompt records, advisory use, and human oversight, and assesses its implications for courts, lawyers, clients, and legal education.",
   "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
-    "ai"
+    "generative interpretation",
+    "large language models",
+    "ordinary meaning",
+    "legal interpretation",
+    "judicial decision-making",
+    "prompt documentation",
+    "human oversight",
+    "access to justice"
+  ],
+  "encoding": [
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/summary.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/thinking-unthinkable-ai-justice/summary.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/summary.zh.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/thinking-unthinkable-ai-justice/summary.zh.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/one_pager.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/thinking-unthinkable-ai-justice/one_pager.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/study_pack.md",
+      "encodingFormat": "text/markdown",
+      "name": "papers/thinking-unthinkable-ai-justice/study_pack.md"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.txt",
+      "encodingFormat": "text/plain",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.txt"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.py",
+      "encodingFormat": "text/x-python",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.py"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.js",
+      "encodingFormat": "application/javascript",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.js"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.cpp",
+      "encodingFormat": "text/x-c++src",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.cpp"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.go",
+      "encodingFormat": "text/x-go",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.go"
+    },
+    {
+      "@type": "MediaObject",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/thinking-unthinkable-ai-justice/paper.rs",
+      "encodingFormat": "text/x-rust",
+      "name": "papers/thinking-unthinkable-ai-justice/paper.rs"
+    }
   ],
   "mainEntityOfPage": {
     "@type": "CreativeWork",
