@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **25 of 40**
-- Proposition records: **726**
-- Papers remaining: **15**
+- Papers with proposition descriptions: **26 of 40**
+- Proposition records: **758**
+- Papers remaining: **14**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -26,6 +26,7 @@ These records are produced one work at a time from page-level or section-level s
 - [The Case Against Expanding Defamation Law](../papers/ssrn-3311527/propositions.md) — 44 propositions
 - [Regulating Information with Bayesian Audiences](../papers/ssrn-3452662/propositions.md) — 34 propositions
 - [Theory of the Nudnik: The Future of Consumer Activism and What We Can Do to Stop It](../papers/ssrn-3501175/propositions.md) — 38 propositions
+- [ALL-CAPS](../papers/ssrn-3519630/propositions.md) — 32 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
@@ -36,7 +37,6 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `ssrn-3519630`
 - `ssrn-3547007`
 - `ssrn-3568768`
 - `ssrn-3681083`
