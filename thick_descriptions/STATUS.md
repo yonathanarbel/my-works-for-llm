@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **30 of 40**
-- Proposition records: **936**
-- Papers remaining: **10**
+- Papers with proposition descriptions: **31 of 40**
+- Proposition records: **974**
+- Papers remaining: **9**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -32,6 +32,7 @@ These records are produced one work at a time from page-level or section-level s
 - [Slicing Defamation by Contract](../papers/ssrn-3681083/propositions.md) — 28 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [A Status Theory of Defamation Law](../papers/ssrn-4021605/propositions.md) — 60 propositions
+- [Defamation with Bayesian Audiences](../papers/ssrn-4181890/propositions.md) — 38 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
 - [Governing Generative AI Beyond the Grave](../papers/ssrn-5380233/propositions.md) — 21 propositions
@@ -41,7 +42,6 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `ssrn-4181890`
 - `ssrn-4204862`
 - `ssrn-4491043`
 - `ssrn-4631897`
