@@ -1,81 +1,112 @@
 /*!
-TAX LEVERS FOR A SAFER AI FUTURE (ssrn-5181207) — corpus code wrapper
+Tax Levers for a Safer AI Future (ssrn-5181207) — corpus code wrapper
 
 This file intentionally embeds the paper text and study assets in code form.
 It helps code-centric ingestion pipelines and makes the corpus easy to load programmatically.
 */
 
 pub const PAPER_ID: &str = "ssrn-5181207";
-pub const TITLE: &str = r#"TAX LEVERS FOR A SAFER AI FUTURE"#;
+pub const TITLE: &str = r#"Tax Levers for a Safer AI Future"#;
 pub const SSRN_URL: &str = r#"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5181207"#;
 pub const YEAR: i32 = 2025;
 
 pub static AUTHORS: &[&str] = &[
+  r#"Mirit Eyal"#,
   r#"Yonathan Arbel"#,
 ];
 
 pub static KEYWORDS: &[&str] = &[
-  r#"contracts"#,
-  r#"AI"#,
-  r#"law"#,
+  r#"AI safety"#,
+  r#"tax policy"#,
+  r#"R&D tax credit"#,
+  r#"capability-safety gap"#,
+  r#"social misalignment"#,
+  r#"Pigouvian taxes"#,
+  r#"product certification"#,
+  r#"innovation policy"#,
 ];
 
-pub const SUMMARY_MD: &str = r#"Here's the bullet list summary for 'ssrn-5181207' by Professor Yonathan Arbel:
+pub const SUMMARY_MD: &str = r#"# Tax Levers for a Safer AI Future — structured summary
+
+**Authors:** Mirit Eyal and Yonathan A. Arbel
+
+**Source version:** February 11, 2025 working-paper PDF
+
+**Version note:** SSRN later revised the paper under the title *Racing to Safety: Tax Policy for AI Safety-by-Design*. This summary follows the repository PDF.
 
 1.  ## TL;DR
-    Professor Yonathan Arbel of the University of Alabama School of Law argues that a "capability-safety gap" in AI development, where private firms reap rewards while society bears risks, creates a social misalignment. He proposes using tax policy to address this by re-conceptualizing R&D credits to incentivize safety research, offering consumer credits for safe AI, imposing penalties for non-compliance, and redistributing penalty revenue. This approach aims to embed safety imperatives directly into the economic architecture of AI development, aligning private profit with social welfare.
+    Professors Mirit Eyal and Yonathan Arbel argue that AI development suffers from a capability-safety gap rooted in social misalignment: developers capture the rewards from stronger systems while many risks are shifted to society. They propose an integrated fiscal framework that rewards producer investment in safety research, stimulates consumer demand for certified safe AI, and imposes corrective taxes or recaptures prior benefits after unsafe development. The framework uses existing tax-administration capacities but is meant to complement, not replace, other regulation.
 
 2.  ## Section Summaries
 
-    ## The Capability-Safety Gap and the Case for Tax Intervention
-    Professor Yonathan Arbel of the University of Alabama School of Law writes that a dangerous "capability-safety gap" in AI is widening, as developers gain private rewards while society bears cascading risks, creating a social misalignment. Professor Yonathan Arbel of the University of Alabama School of Law writes that fiscal policy, specifically taxation, offers a powerful and adaptable tool to embed safety imperatives into AI's economic architecture, aiming to align private profit with social welfare and address the urgent need for intervention due to traditional regulatory failures and the collapse of industry self-regulation.
+    *   **AI safety, capability, and social misalignment**
+        The paper organizes foundational AI-safety risks into malicious misuse, accidental failure, and autonomous behavior that departs from human intentions. Capability benchmarks have advanced and saturated rapidly, while safety metrics remain incomplete even in comparatively mature settings such as autonomous driving. Competitive pressure, delayed and diffuse harms, and concentrated private returns cause firms to underinvest in safety despite sincere commitments.
 
-    ## Business Tax-Incentives for Investments in AI Safety
-    Professor Yonathan Arbel of the University of Alabama School of Law writes that specific business tax-incentives, such as credits or enhanced deductions, should directly encourage substantial corporate investments in AI safety research, development, and deployment. Professor Yonathan Arbel of the University of Alabama School of Law writes that these fiscal mechanisms, including a proposed "AI Safety Research Tax Credit" and adjusted expensing rules favoring safety R&D (like testing and alignment) over pure capability enhancements, aim to make safety-enhancing activities economically attractive, addressing underinvestment by aligning financial interests with societal well-being.
+    *   **Existing fiscal precedents for safety**
+        Energy, infrastructure, road, environmental, and workplace policies already use grants, tax credits, accelerated depreciation, conditional bonuses, excise-tax revenue, and certification to encourage precaution. Existing R&D rules, however, often exclude routine quality assurance, post-market testing, compliance verification, training, and other activities central to AI safety. These precedents show both the feasibility of fiscal safety policy and the gap in present research incentives.
 
-    ## Consumer-Side Incentives and Market-Based Certification
-    Professor Yonathan Arbel of the University of Alabama School of Law writes that consumer-side incentives are crucial for fostering a market for safe AI, proposing an "AI Reliability Credit" for consumers purchasing AI products certified as reliable and safe, mirroring energy efficiency tax incentives. Professor Yonathan Arbel of the University of Alabama School of Law writes that this credit would incentivize producers to pursue rigorous safety certifications (e.g., for bias mitigation, data protection), thereby spurring consumer demand for safer AI and aligning private firm incentives with societal goals through market-based certification.
+    *   **Producer-side AI-safety incentives**
+        The authors propose an AI Safety Research Tax Credit covering work such as red teaming, interpretability, alignment, robustness, monitoring, and guardrails. Higher or refundable credits could assist startups and later-stage validation. Immediate expensing would favor verified safety work, while longer amortization of pure capability investments would change their relative price. A specialized basic-research credit would support collaborations among companies, universities, and nonprofit research institutions.
 
-    ## Corrective Taxes and Penalties for Non-Compliance
-    Professor Yonathan Arbel of the University of Alabama School of Law writes that to penalize unsafe AI development, corrective Pigouvian taxes should make firms internalize the external harms they create. Professor Yonathan Arbel of the University of Alabama School of Law writes that a comprehensive penalty framework, featuring graduated penalties like tax surcharges and benefit recapture for AI posing public safety risks, aims to internalize social costs, create strong ex ante incentives for responsible innovation, and ensure public funds do not subsidize harmful AI, building on precedents where tax benefits are compliance-contingent.
+    *   **Consumer demand and certification**
+        An AI Reliability Credit, modeled on energy-efficiency incentives, would subsidize purchases of consumer AI products certified against public or independent safety and reliability benchmarks. Product labels and retained documentation would make reliability salient to buyers. By increasing demand for verified safety, the credit would transmit economic pressure back to producers.
 
-    ## Administrative Advantages and Challenges of a Tax-Based Approach
-    Professor Yonathan Arbel of the University of Alabama School of Law writes that tax policy offers distinctive advantages for AI safety, harnessing existing institutional frameworks like the IRS, preserving market dynamics, and potentially reshaping organizational culture. Professor Yonathan Arbel of the University of Alabama School of Law writes that while challenges include political economy concerns and distinguishing genuine safety from "safety-washing," his framework suggests the IRS leverage its R&D evaluation experience, mandate detailed safety documentation, and use emerging industry benchmarks to address these issues and effectively mobilize private sector expertise for AI safety."#;
-pub const SUMMARY_ZH_MD: &str = r#"以下为 Yonathan Arbel 教授关于“ssrn-5181207”研究的要点总结：
+    *   **Corrective taxes and benefit recapture**
+        Graduated surcharges and recapture of earlier credits or deductions would require firms to internalize the social cost of preventable failures. Eligibility could also depend on devoting a minimum share of development spending to safety. Penalty revenue would support public safety research and standards, joining ex ante investment requirements with ex post enforcement.
 
-1.  ## 核心观点
-    阿拉巴马大学法学院的 Yonathan Arbel 教授认为，人工智能发展中存在的“能力-安全鸿沟”（即私营企业获得回报，而社会承担风险）造成了社会失调。他提议通过税收政策来解决此问题，具体措施包括：重新定义研发税收抵免以激励安全研究；为购买安全人工智能产品的消费者提供税收抵免；对违规行为处以罚款；并将罚款收入进行再分配。此方法旨在将安全准则直接嵌入人工智能发展的经济架构中，从而使私人利润与社会福祉相一致。
+    *   **Advantages, limits, and administration**
+        Fiscal tools may reshape organizational culture, mobilize private expertise, support knowledge sharing, and preserve implementation flexibility. The authors nevertheless acknowledge foregone revenue, political capture, compliance cost, measurement difficulty, and “safety-washing.” They respond with upstream targeting, distributed oversight, contemporaneous documentation, third-party or pre-certification, emerging technical benchmarks, targeted audits, and periodic review. Tax policy remains one layer in a plural regulatory system rather than a complete solution.
+"#;
+pub const SUMMARY_ZH_MD: &str = r#"# 《以税收杠杆塑造更安全的人工智能未来》结构化摘要
 
-2.  ## 各章节摘要
+**作者：** Mirit Eyal 与 Yonathan A. Arbel
 
-    ## 能力-安全鸿沟与税收干预的理由
-    阿拉巴马大学法学院的 Yonathan Arbel 教授指出，人工智能领域危险的“能力-安全鸿沟”正在扩大，开发者获得私人回报，而社会则承担着级联风险，这造成了社会失调。Arbel 教授认为，财政政策，特别是税收，提供了一种强大且适应性强的工具，可将安全准则嵌入人工智能的经济架构中，旨在使私人利润与社会福祉相一致，并应对因传统监管失灵和行业自律崩溃而产生的紧迫干预需求。
+**来源版本：** 2025 年 2 月 11 日工作论文 PDF
 
-    ## 针对人工智能安全投资的企业税收激励
-    阿拉巴马大学法学院的 Yonathan Arbel 教授认为，应通过特定的企业税收激励措施（如税收抵免或增强型费用扣除）直接鼓励企业在人工智能安全研究、开发和部署方面进行大量投资。Arbel 教授指出，这些财政机制，包括拟议的“人工智能安全研究税收抵免”以及调整后的、优先支持安全研发（如测试与对齐）而非单纯能力增强的费用化规则，旨在使增强安全的活动在经济上具有吸引力，通过协调财务利益与社会福祉来解决投资不足的问题。
+**版本说明：** SSRN 后来以 *Racing to Safety: Tax Policy for AI Safety-by-Design* 为题修订了论文。本摘要依据本资料库中的早期 PDF。
 
-    ## 消费者端激励与基于市场的认证
-    阿拉巴马大学法学院的 Yonathan Arbel 教授认为，消费者端激励对于培育安全人工智能市场至关重要。他提议设立“人工智能可靠性税收抵免”，为购买经认证可靠且安全的人工智能产品的消费者提供税收优惠，这与能源效率税收激励措施类似。Arbel 教授指出，这种税收抵免将激励生产者寻求严格的安全认证（例如，偏见缓解、数据保护认证），从而刺激消费者对更安全人工智能的需求，并通过基于市场的认证使私营企业激励与社会目标相一致。
+## 核心观点
 
-    ## 纠正性税收与违规处罚
-    阿拉巴马大学法学院的 Yonathan Arbel 教授认为，为惩罚不安全的人工智能开发行为，应采用纠正性庇古税，使企业将其造成的外部损害内部化。Arbel 教授指出，一个全面的处罚框架——包括针对构成公共安全风险的人工智能设定分级处罚（如税收附加费和优惠追回）——旨在内部化社会成本，为负责任的创新建立强有力的事前激励，并确保公共资金不被用于补贴有害的人工智能。该框架借鉴了税收优惠以合规为条件的相关先例。
+Eyal 与 Arbel 教授认为，人工智能发展存在由“社会失调”造成的能力与安全鸿沟：开发者获得更强系统带来的集中收益，而大量风险则由社会承担。他们提出一套相互配合的财政框架：奖励生产者投资安全研究；通过认证产品的消费者税收抵免培育安全需求；并对不安全开发征收纠正性税收或追回先前税收优惠。该框架利用现有税务行政能力，但不能取代其他监管工具。
 
-    ## 基于税收的方法的行政优势与挑战
-    阿拉巴马大学法学院的 Yonathan Arbel 教授认为，税收政策在人工智能安全方面具有独特优势，它能利用现有制度框架（如美国国税局），保持市场动态，并可能重塑组织文化。Arbel 教授指出，尽管面临政治经济学方面的顾虑以及区分真正安全与“安全清洗”（或称“伪安全”）等挑战，但其框架建议美国国税局利用其研发评估经验，强制要求提供详细的安全文件，并采用新兴行业基准来解决这些问题，从而有效动员私营部门的专业知识以促进人工智能安全。"#;
-pub const ONE_PAGER_MD: &str = r#"# TAX LEVERS FOR A SAFER AI FUTURE — one-page summary
+## 人工智能安全与社会失调
+
+论文将基础性人工智能安全风险分为恶意滥用、意外故障以及偏离人类意图的自主行为。能力基准迅速提高甚至饱和，而安全衡量仍很薄弱。竞争压力、延迟且分散的损害以及私人收益的集中，使企业即使真诚重视安全，也会在安全方面投资不足。
+
+## 现有安全财政政策的先例
+
+能源、基础设施、道路、环境与职业安全政策已经使用补助、税收抵免、加速折旧、附条件奖金、消费税收入和认证来鼓励预防。然而，现行研发税法往往排除常规质量保证、上市后测试、合规验证和培训等人工智能安全活动。
+
+## 生产者、消费者与纠正性工具
+
+论文建议设立人工智能安全研究税收抵免，涵盖红队测试、可解释性、对齐、稳健性、监测和护栏。经认证的安全支出可立即费用化，而纯能力投资可延长摊销期；基础研究抵免还可支持企业、大学与非营利机构合作。消费者端的“人工智能可靠性抵免”将补贴购买经认证的安全产品。发生可预防的严重安全失败时，分级附加税和税收优惠追回会使企业内部化社会成本，并可为公共安全研究提供资金。
+
+## 优点、边界与行政安排
+
+财政工具可以改变组织文化、调动私营部门专长、促进知识共享并保留实施弹性。但作者也承认收入损失、政治俘获、合规成本、衡量困难和“安全漂绿”等风险。论文提出上游聚焦、分散监督、同期记录、第三方或预先认证、技术基准、针对性审计和定期复核等保障。税收政策只是多元监管体系的一层，而不是完整答案。
+"#;
+pub const ONE_PAGER_MD: &str = r#"# Tax Levers for a Safer AI Future — one-page summary
 
 **Paper ID:** `ssrn-5181207`
 **Year:** 2025
-**Author(s):** Yonathan Arbel
+**Author(s):** Mirit Eyal, Yonathan Arbel
 **SSRN:** https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5181207
 
 ## TL;DR
 
-Professor Yonathan Arbel of the University of Alabama School of Law argues that a "capability-safety gap" in AI development, where private firms reap rewards while society bears risks, creates a social misalignment. He proposes using tax policy to address this by re-conceptualizing R&D credits to incentivize safety research, offering consumer credits for safe AI, imposing penalties for non-compliance, and redistributing penalty revenue. This approach aims to embed safety imperatives directly into the economic architecture of AI development, aligning private profit with social welfare.
+Professors Mirit Eyal and Yonathan Arbel argue that AI development suffers from a capability-safety gap rooted in social misalignment: developers capture the rewards from stronger systems while many risks are shifted to society. They propose an integrated fiscal framework that rewards producer investment in safety research, stimulates consumer demand for certified safe AI, and imposes corrective taxes or recaptures prior benefits after unsafe development. The framework uses existing tax-administration capacities but is meant to complement, not replace, other regulation.
+
+## Key Sections (from `summary.md`)
+
+- **AI safety, capability, and social misalignment:** The paper organizes foundational AI-safety risks into malicious misuse, accidental failure, and autonomous behavior that departs from human intentions. Capability benchmarks have advanced and saturated rapidly, while safety metrics remain incomplete even in comparatively mature settings such as autonomous driving. Competitive pressure, delayed and diffuse harms, and concentrated private returns cause firms to underinvest in safety despite sincere commitments.
+- **Existing fiscal precedents for safety:** Energy, infrastructure, road, environmental, and workplace policies already use grants, tax credits, accelerated depreciation, conditional bonuses, excise-tax revenue, and certification to encourage precaution. Existing R&D rules, however, often exclude routine quality assurance, post-market testing, compliance verification, training, and other activities central to AI safety. These precedents show both the feasibility of fiscal safety policy and the gap in present research incentives.
+- **Producer-side AI-safety incentives:** The authors propose an AI Safety Research Tax Credit covering work such as red teaming, interpretability, alignment, robustness, monitoring, and guardrails. Higher or refundable credits could assist startups and later-stage validation. Immediate expensing would favor verified safety work, while longer amortization of pure capability investments would change their relative price. A specialized basic-research credit would support collaborations among companies, universities, and nonprofit research institutions.
+- **Consumer demand and certification:** An AI Reliability Credit, modeled on energy-efficiency incentives, would subsidize purchases of consumer AI products certified against public or independent safety and reliability benchmarks. Product labels and retained documentation would make reliability salient to buyers. By increasing demand for verified safety, the credit would transmit economic pressure back to producers.
+- **Corrective taxes and benefit recapture:** Graduated surcharges and recapture of earlier credits or deductions would require firms to internalize the social cost of preventable failures. Eligibility could also depend on devoting a minimum share of development spending to safety. Penalty revenue would support public safety research and standards, joining ex ante investment requirements with ex post enforcement.
 
 ## Keywords
 
-contracts; AI; law
+AI safety; tax policy; R&D tax credit; capability-safety gap; social misalignment; Pigouvian taxes; product certification; innovation policy
 
 ## Files
 
@@ -86,7 +117,7 @@ contracts; AI; law
 
 _Auto-generated study aid. For canonical content, rely on `paper.txt`/`paper.pdf`._
 "#;
-pub const STUDY_PACK_MD: &str = r#"# Study pack: TAX LEVERS FOR A SAFER AI FUTURE (ssrn-5181207)
+pub const STUDY_PACK_MD: &str = r#"# Study pack: Tax Levers for a Safer AI Future (ssrn-5181207)
 
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5181207
 - Full text: `papers/ssrn-5181207/paper.txt`
@@ -95,11 +126,37 @@ pub const STUDY_PACK_MD: &str = r#"# Study pack: TAX LEVERS FOR A SAFER AI FUTUR
 
 ## Elevator pitch
 
-Professor Yonathan Arbel of the University of Alabama School of Law argues that a "capability-safety gap" in AI development, where private firms reap rewards while society bears risks, creates a social misalignment. He proposes using tax policy to address this by re-conceptualizing R&D credits to incentivize safety research, offering consumer credits for safe AI, imposing penalties for non-compliance, and redistributing penalty revenue. This approach aims to embed safety imperatives directly into the economic architecture of AI development, aligning private profit with social welfare.
+Professors Mirit Eyal and Yonathan Arbel argue that AI development suffers from a capability-safety gap rooted in social misalignment: developers capture the rewards from stronger systems while many risks are shifted to society. They propose an integrated fiscal framework that rewards producer investment in safety research, stimulates consumer demand for certified safe AI, and imposes corrective taxes or recaptures prior benefits after unsafe development. The framework uses existing tax-administration capacities but is meant to complement, not replace, other regulation.
+
+## Structured outline (high-signal)
+
+### AI safety, capability, and social misalignment
+
+The paper organizes foundational AI-safety risks into malicious misuse, accidental failure, and autonomous behavior that departs from human intentions. Capability benchmarks have advanced and saturated rapidly, while safety metrics remain incomplete even in comparatively mature settings such as autonomous driving. Competitive pressure, delayed and diffuse harms, and concentrated private returns cause firms to underinvest in safety despite sincere commitments.
+
+### Existing fiscal precedents for safety
+
+Energy, infrastructure, road, environmental, and workplace policies already use grants, tax credits, accelerated depreciation, conditional bonuses, excise-tax revenue, and certification to encourage precaution. Existing R&D rules, however, often exclude routine quality assurance, post-market testing, compliance verification, training, and other activities central to AI safety. These precedents show both the feasibility of fiscal safety policy and the gap in present research incentives.
+
+### Producer-side AI-safety incentives
+
+The authors propose an AI Safety Research Tax Credit covering work such as red teaming, interpretability, alignment, robustness, monitoring, and guardrails. Higher or refundable credits could assist startups and later-stage validation. Immediate expensing would favor verified safety work, while longer amortization of pure capability investments would change their relative price. A specialized basic-research credit would support collaborations among companies, universities, and nonprofit research institutions.
+
+### Consumer demand and certification
+
+An AI Reliability Credit, modeled on energy-efficiency incentives, would subsidize purchases of consumer AI products certified against public or independent safety and reliability benchmarks. Product labels and retained documentation would make reliability salient to buyers. By increasing demand for verified safety, the credit would transmit economic pressure back to producers.
+
+### Corrective taxes and benefit recapture
+
+Graduated surcharges and recapture of earlier credits or deductions would require firms to internalize the social cost of preventable failures. Eligibility could also depend on devoting a minimum share of development spending to safety. Penalty revenue would support public safety research and standards, joining ex ante investment requirements with ex post enforcement.
+
+### Advantages, limits, and administration
+
+Fiscal tools may reshape organizational culture, mobilize private expertise, support knowledge sharing, and preserve implementation flexibility. The authors nevertheless acknowledge foregone revenue, political capture, compliance cost, measurement difficulty, and “safety-washing.” They respond with upstream targeting, distributed oversight, contemporaneous documentation, third-party or pre-certification, emerging technical benchmarks, targeted audits, and periodic review. Tax policy remains one layer in a plural regulatory system rather than a complete solution.
 
 ## Keywords / concepts
 
-contracts; AI; law
+AI safety; tax policy; R&D tax credit; capability-safety gap; social misalignment; Pigouvian taxes; product certification; innovation policy
 
 ## Suggested questions (for RAG / study)
 

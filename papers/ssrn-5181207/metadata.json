@@ -1,26 +1,44 @@
 {
-  "title": "ssrn-5181207",
+  "title": "Tax Levers for a Safer AI Future",
   "slug": "ssrn-5181207",
   "year": 2025,
   "authors": [
+    {
+      "given": "Mirit",
+      "family": "Eyal",
+      "affiliation": "University of Alabama School of Law"
+    },
     {
       "given": "Yonathan",
       "family": "Arbel",
       "affiliation": "University of Alabama School of Law"
     }
   ],
-  "author_zh": "约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
+  "author_zh": "米里特·埃亚尔与约纳坦·阿贝尔，美国阿拉巴马大学法学院教授",
   "license_pdf": "https://rightsstatements.org/page/InC/1.0/",
   "license_pdf_zh": "In Copyright; see source or publisher terms",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "AI safety",
+    "tax policy",
+    "R&D tax credit",
+    "capability-safety gap",
+    "social misalignment",
+    "Pigouvian taxes",
+    "product certification",
+    "innovation policy"
   ],
   "keywords_zh": [
-    "合同法",
-    "人工智能",
-    "法律"
+    "人工智能安全",
+    "税收政策",
+    "研发税收抵免",
+    "能力与安全鸿沟",
+    "社会失调",
+    "庇古税",
+    "产品认证",
+    "创新政策"
   ],
+  "ssrn_id": 5181207,
+  "ssrn_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5181207",
+  "version_note": "The repository PDF is the February 11, 2025 working-paper version titled Tax Levers for a Safer AI Future. SSRN later revised the paper on July 30, 2025 under the title Racing to Safety: Tax Policy for AI Safety-by-Design.",
   "repeat_name": true
 }

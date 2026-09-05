@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "name": "TAX LEVERS FOR A SAFER AI FUTURE",
+  "name": "Tax Levers for a Safer AI Future",
   "identifier": [
     {
       "@type": "PropertyValue",
@@ -35,6 +35,14 @@
   "author": [
     {
       "@type": "Person",
+      "name": "Mirit Eyal",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of Alabama School of Law"
+      }
+    },
+    {
+      "@type": "Person",
       "name": "Yonathan Arbel",
       "affiliation": {
         "@type": "Organization",
@@ -42,79 +50,84 @@
       }
     }
   ],
-  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that a \"capability-safety gap\" in AI development, where private firms reap rewards while society bears risks, creates a social misalignment. He proposes using tax policy to address this by re-conceptualizing R&D credits to incentivize safety research, offering consumer credits for safe AI, imposing penalties for non-compliance, and redistributing penalty revenue. This approach aims to embed safety imperatives directly into the economic architecture of AI development, aligning private profit with social welfare.",
+  "abstract": "Professors Mirit Eyal and Yonathan Arbel argue that AI development suffers from a capability-safety gap rooted in social misalignment: developers capture the rewards from stronger systems while many risks are shifted to society. They propose an integrated fiscal framework that rewards producer investment in safety research, stimulates consumer demand for certified safe AI, and imposes corrective taxes or recaptures prior benefits after unsafe development. The framework uses existing tax-administration capacities but is meant to complement, not replace, other regulation.",
   "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "AI safety",
+    "tax policy",
+    "R&D tax credit",
+    "capability-safety gap",
+    "social misalignment",
+    "Pigouvian taxes",
+    "product certification",
+    "innovation policy"
   ],
   "encoding": [
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/summary.md",
       "encodingFormat": "text/markdown",
-      "name": "papers/ssrn-5181207/summary.md"
+      "name": "paper39-subset-20260904a/ssrn-5181207/summary.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/summary.zh.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/summary.zh.md",
       "encodingFormat": "text/markdown",
-      "name": "papers/ssrn-5181207/summary.zh.md"
+      "name": "paper39-subset-20260904a/ssrn-5181207/summary.zh.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/one_pager.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/one_pager.md",
       "encodingFormat": "text/markdown",
-      "name": "papers/ssrn-5181207/one_pager.md"
+      "name": "paper39-subset-20260904a/ssrn-5181207/one_pager.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/study_pack.md",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/study_pack.md",
       "encodingFormat": "text/markdown",
-      "name": "papers/ssrn-5181207/study_pack.md"
+      "name": "paper39-subset-20260904a/ssrn-5181207/study_pack.md"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.txt",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.txt",
       "encodingFormat": "text/plain",
-      "name": "papers/ssrn-5181207/paper.txt"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.txt"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.pdf",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.pdf",
       "encodingFormat": "application/pdf",
-      "name": "papers/ssrn-5181207/paper.pdf"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.pdf"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.py",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.py",
       "encodingFormat": "text/x-python",
-      "name": "papers/ssrn-5181207/paper.py"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.py"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.js",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.js",
       "encodingFormat": "application/javascript",
-      "name": "papers/ssrn-5181207/paper.js"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.js"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.cpp",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.cpp",
       "encodingFormat": "text/x-c++src",
-      "name": "papers/ssrn-5181207/paper.cpp"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.cpp"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.go",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.go",
       "encodingFormat": "text/x-go",
-      "name": "papers/ssrn-5181207/paper.go"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.go"
     },
     {
       "@type": "MediaObject",
-      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/papers/ssrn-5181207/paper.rs",
+      "contentUrl": "https://raw.githubusercontent.com/yonathanarbel/my-works-for-llm/main/paper39-subset-20260904a/ssrn-5181207/paper.rs",
       "encodingFormat": "text/x-rust",
-      "name": "papers/ssrn-5181207/paper.rs"
+      "name": "paper39-subset-20260904a/ssrn-5181207/paper.rs"
     }
   ],
   "mainEntityOfPage": {

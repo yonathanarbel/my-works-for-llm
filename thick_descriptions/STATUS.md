@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **38 of 40**
-- Proposition records: **1778**
-- Papers remaining: **2**
+- Papers with proposition descriptions: **39 of 40**
+- Proposition records: **1947**
+- Papers remaining: **1**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -41,6 +41,7 @@ These records are produced one work at a time from page-level or section-level s
 - [Time and Contract Interpretation: Lessons from Machine Learning](../papers/ssrn-4809006/propositions.md) — 98 propositions
 - [Judicial Economy in the Age of AI](../papers/ssrn-4873649/propositions.md) — 136 propositions
 - [The Readability of Contracts: Big Data Analysis](../papers/ssrn-4962098/propositions.md) — 178 propositions
+- [Tax Levers for a Safer AI Future](../papers/ssrn-5181207/propositions.md) — 169 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
 - [Governing Generative AI Beyond the Grave](../papers/ssrn-5380233/propositions.md) — 21 propositions
 - [How to Count AIs: Individuation and Liability for AI Agents](../papers/ssrn-6273198/propositions.md) — 27 propositions
@@ -49,5 +50,4 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `ssrn-5181207`
 - `thinking-unthinkable-ai-justice`
