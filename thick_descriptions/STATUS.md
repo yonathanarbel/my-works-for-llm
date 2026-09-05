@@ -1,8 +1,8 @@
 # Thick-description progress
 
-- Papers with proposition descriptions: **28 of 40**
-- Proposition records: **848**
-- Papers remaining: **12**
+- Papers with proposition descriptions: **29 of 40**
+- Proposition records: **876**
+- Papers remaining: **11**
 
 These records are produced one work at a time from page-level or section-level source review. `machine-drafted-source-checked` means the wording and source anchors were checked against the source by an AI system but have not been approved by a human author or editor.
 
@@ -29,6 +29,7 @@ These records are produced one work at a time from page-level or section-level s
 - [ALL-CAPS](../papers/ssrn-3519630/propositions.md) — 32 propositions
 - [Payday](../papers/ssrn-3547007/propositions.md) — 52 propositions
 - [Consumer Activism: From the Informed Minority to the Crusading Minority](../papers/ssrn-3568768/propositions.md) — 38 propositions
+- [Slicing Defamation by Contract](../papers/ssrn-3681083/propositions.md) — 28 propositions
 - [Contracts in the Age of Smart Readers](../papers/ssrn-3740356/propositions.md) — 18 propositions
 - [Generative Interpretation](../papers/ssrn-4526219/propositions.md) — 12 propositions
 - [The Generative Reasonable Person](../papers/ssrn-5377475/propositions.md) — 12 propositions
@@ -39,7 +40,6 @@ These records are produced one work at a time from page-level or section-level s
 
 ## Remaining paper IDs
 
-- `ssrn-3681083`
 - `ssrn-4021605`
 - `ssrn-4181890`
 - `ssrn-4204862`
