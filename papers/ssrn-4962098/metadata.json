@@ -1,5 +1,5 @@
 {
-  "title": "ssrn-4962098",
+  "title": "The Readability of Contracts: Big Data Analysis",
   "slug": "ssrn-4962098",
   "year": 2024,
   "authors": [
@@ -13,14 +13,20 @@
   "license_pdf": "https://rightsstatements.org/page/InC/1.0/",
   "license_pdf_zh": "In Copyright; see source or publisher terms",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "contract readability",
+    "plain language",
+    "consumer contracts",
+    "empirical legal studies",
+    "readability metrics",
+    "smart readers"
   ],
   "keywords_zh": [
-    "合同法",
-    "人工智能",
-    "法律"
+    "合同可读性",
+    "简明语言",
+    "消费者合同",
+    "实证法律研究",
+    "可读性指标",
+    "智能阅读器"
   ],
   "same_as": [
     "https://www.wikidata.org/wiki/Q140679410"

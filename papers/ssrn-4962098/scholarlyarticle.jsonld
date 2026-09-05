@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
-  "name": "",
+  "name": "The Readability of Contracts: Big Data Analysis",
   "identifier": [
     {
       "@type": "PropertyValue",
@@ -43,12 +43,15 @@
       }
     }
   ],
-  "abstract": "Professor Yonathan Arbel of the University of Alabama School of Law argues that his large-scale big data analysis empirically demonstrates modern contracts are overwhelmingly unreadable, often requiring college-level comprehension. This pervasive incomprehensibility fundamentally challenges contract law's core assumptions about informed consent and the \"meeting of minds,\" as most individuals cannot understand the terms binding them. Arbel suggests this \"readability crisis,\" with readability often worsening over time, necessitates a reevaluation of legal doctrines and a push for greater contractual clarity to ensure fairness and true agreement in economic and social interactions.",
+  "abstract": "Professor Yonathan Arbel tests the empirical premises of the plain-language movement using nearly two million contracts and a large benchmark corpus of texts adults voluntarily read. Consumer credit-card agreements have median readability scores close to daily news, while privacy policies are somewhat harder and commercial contracts and franchise disclosures are substantially harder. The article also finds that standard readability formulas are unreliable, implementation-sensitive, and weakly connected to consumer outcomes, and that the familiar claim that most American adults read only at a sixth- or eighth-grade level lacks adequate support. It recommends greater attention to substantive market problems, genuinely vulnerable readers, and governed consumer-side smart readers rather than universal grade-level drafting mandates.",
   "license": "https://rightsstatements.org/page/InC/1.0/",
   "keywords": [
-    "contracts",
-    "AI",
-    "law"
+    "contract readability",
+    "plain language",
+    "consumer contracts",
+    "empirical legal studies",
+    "readability metrics",
+    "smart readers"
   ],
   "encoding": [
     {
